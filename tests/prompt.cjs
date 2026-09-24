@@ -15,7 +15,7 @@ for(const year of ['year7','year8','year9','year10']){
  assert(hint.hidden,'Hinweis bleibt stehen, nachdem Opposites abgewaehlt wurde');
  count.value='5';d.querySelector('#promptBalance').click();form.dispatchEvent(new w.Event('submit',{cancelable:true}));let prompt=d.querySelector('#promptText').value;
  const klasse=Number(year.replace('year',''));
- for(const muss of ['genau 5','Total : / 5','Klasse '+klasse,(klasse-6)+'. Lernjahr','Französisch-Vokabeltest','À plus !',
+ for(const muss of ['genau 5','Total : / 5','Klasse '+klasse,(klasse-6)+'. Lernjahr','Französisch-Vokabeltest',
    'zwei getrennte','EINER einzigen Zeile','fett UND kursiv','Name / Klasse / Datum',
    'Écris le mot français. Pour les noms, écris aussi l\'article.','Die Übersetzungsaufgabe enthält nur deutsche Bedeutungen',
    'Aufbau: {"Unité": [["Französisch","Deutsch","Wortart"]','qn und qc','derselben Wortfamilie','nummerierten Liste der gewählten Zielwörter',

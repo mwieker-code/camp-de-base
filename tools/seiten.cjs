@@ -5,9 +5,9 @@
    English Basecamp. Geschrieben werden sie aber nicht von Hand, sondern
    aus content/:
 
-     content/aplusN.json            Stichwort, Bedeutung, Wortart, Fundstelle
-                                    (aus den Excel-Listen, tools/import-aplus.py)
-     content/beispiele-aplusN.tsv   eigene Beispielsaetze, Luecke in [ ], und
+     content/klasseN.json           Stichwort, Bedeutung, Wortart, Fundstelle
+                                    (aus den Excel-Listen, tools/import-liste.py)
+     content/beispiele-klasseN.tsv  eigene Beispielsaetze, Luecke in [ ], und
                                     Wortarten, wo die Liste keine nennt.
                                     Tabulatorgetrennt - laesst sich in Excel
                                     oeffnen und wieder als Text speichern.
@@ -32,7 +32,7 @@ const path = require('node:path');
 
 const ROOT = path.resolve(__dirname, '..');
 const VORLAGE = path.join(ROOT, 'year7', 'index.html');
-const BAENDE = [1, 2, 3, 4];
+const KLASSEN = [7, 8, 9, 10];
 
 /* Eine Farbe je Kapitel, in der Reihenfolge des Buchs. Hell geschrieben;
    tools/nacht.cjs rechnet das dunkle Gegenstueck. */
@@ -78,11 +78,10 @@ function beispiel(satz) {
   return { example_en: satz.replace(/\[([^\]]+)\]/g, '$1'), luecke: m[1], luecke_bei: m.index };
 }
 
-function daten(band) {
-  const buch = lies('aplus' + band + '.json');
-  const saetze = tabelle('beispiele-aplus' + band + '.tsv');
-  const j = buch.jahrgang;
-  const years = [{ id: 'y' + j, label: 'Klasse ' + j, book: 'À plus ! ' + band, units: [] }];
+function daten(j) {
+  const buch = lies('klasse' + j + '.json');
+  const saetze = tabelle('beispiele-klasse' + j + '.tsv');
+  const years = [{ id: 'y' + j, label: 'Klasse ' + j, book: '', units: [] }];
   const topics = [];
   const sets = {};
   const hoechste = Math.max(0, ...buch.einheiten.filter(e => /^u\d+$/.test(e.id)).map(e => Number(e.id.slice(1))));
@@ -94,7 +93,7 @@ function daten(band) {
     years[0].units.push({ id: unit, name: e.name });
     for (const t of e.teile) {
       const tid = unit + '-' + t.id;
-      topics.push({ id: tid, year: String(j), yearName: 'À plus ! ' + band,
+      topics.push({ id: tid, year: String(j), yearName: 'Klasse ' + j,
                     unit, unitName: e.name, name: t.name });
       sets[tid] = t.woerter.map((w, i) => {
         const extra = saetze[w.fund + '|' + w.fr];
@@ -109,8 +108,8 @@ function daten(band) {
      Tippfehler in der Tabelle - oder die Liste hat sich geaendert. */
   const bekannt = new Set(buch.einheiten.flatMap(e => e.teile.flatMap(t => t.woerter.map(w => w.fund + '|' + w.fr))));
   const fremd = Object.keys(saetze).filter(k => !bekannt.has(k));
-  if (fremd.length) throw new Error('Band ' + band + ': Schluessel ohne Eintrag: ' + fremd.slice(0, 5).join(' ; '));
-  return { j, band, years, topics, sets };
+  if (fremd.length) throw new Error('Klasse ' + j + ': Schluessel ohne Eintrag: ' + fremd.slice(0, 5).join(' ; '));
+  return { j, years, topics, sets };
 }
 
 function datenblock(d) {
@@ -149,7 +148,7 @@ function seite(vorlage, d) {
                 '<meta name="apple-mobile-web-app-title" content="Camp de Base">')
        .replace(/<h1>[\s\S]*?<\/h1>/, '<h1>Camp de <span class="title-accent">Base</span></h1>')
        .replace(/<div class="sub">[^<]*<\/div>/,
-                '<div class="sub">Klasse ' + d.j + ' · À plus ! ' + d.band + '</div>')
+                '<div class="sub">Klasse ' + d.j + ' · Französisch</div>')
        .replace(/&larr; Alle Jahrg&auml;nge/, '&larr; Alle Klassen')
        .replace(/"fr\d+:(progress|test)"/g, (_, k) => '"fr' + d.j + ':' + k + '"');
   return s;
@@ -163,8 +162,8 @@ const ohneNacht = s => s.replace(/<style media="screen" data-nacht>[\s\S]*?<\/st
 const pruefen = process.argv.includes('--check');
 const vorlage = fs.readFileSync(VORLAGE, 'utf8');
 let veraltet = 0;
-for (const band of BAENDE) {
-  const d = daten(band);
+for (const klasse of KLASSEN) {
+  const d = daten(klasse);
   const ziel = path.join(ROOT, 'year' + d.j, 'index.html');
   const neu = seite(vorlage, d);
   const alt = fs.existsSync(ziel) ? fs.readFileSync(ziel, 'utf8') : '';

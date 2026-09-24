@@ -1,7 +1,7 @@
 /* Wo die Luecke im Beispielsatz sitzt.
 
    Die Beispielsaetze von Camp de Base sind eigens geschrieben, und jeder
-   traegt seine Luecke selbst: in content/beispiele-aplusN.tsv in
+   traegt seine Luecke selbst: in content/beispiele-klasseN.tsv in
    eckigen Klammern, auf der Seite als "luecke" samt Stelle "luecke_bei".
 
    Der Fehler, gegen den dieser Test steht: Gesucht wurde die Luecke

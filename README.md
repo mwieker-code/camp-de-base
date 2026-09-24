@@ -1,13 +1,13 @@
 # Camp de Base – Französisch-Vokabeltrainer
 
-Statischer Vokabeltrainer für Französisch als zweite Fremdsprache, Klasse 7 bis 10, zum Lehrwerk *À plus !* (Band 1–4). Schwesterprojekt von [English Basecamp](https://github.com/mwieker-code/vokabeltrainer): Das technische Gerüst ist dasselbe, getrennt sind Vokabular, Gestaltung und Speicher.
+Statischer Vokabeltrainer für Französisch als zweite Fremdsprache, Klasse 7 bis 10. Schwesterprojekt von [English Basecamp](https://github.com/mwieker-code/vokabeltrainer): Das technische Gerüst ist dasselbe, getrennt sind Vokabular, Gestaltung und Speicher.
 
-| Seite     | Lehrwerk   | Wörter | eigene Beispielsätze |
-|-----------|------------|-------:|---------------------:|
-| `year7/`  | À plus ! 1 |    729 |                  729 |
-| `year8/`  | À plus ! 2 |    513 |        – (noch offen) |
-| `year9/`  | À plus ! 3 |    311 |        – (noch offen) |
-| `year10/` | À plus ! 4 |    350 |        – (noch offen) |
+| Seite     | Lernjahr | Wörter | eigene Beispielsätze |
+|-----------|----------|-------:|---------------------:|
+| `year7/`  | 1.       |    729 |                  729 |
+| `year8/`  | 2.       |    513 |        – (noch offen) |
+| `year9/`  | 3.       |    311 |        – (noch offen) |
+| `year10/` | 4.       |    350 |        – (noch offen) |
 
 Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden nicht übernommen.
 
@@ -27,21 +27,21 @@ Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden
 Die Klassenseiten tragen ihre Vokabeln selbst, werden aber aus `content/` geschrieben:
 
 ```
-content/aplusN.json           Stichwort, Bedeutung, Wortart, Fundstelle
-                              (aus den Excel-Listen des Verlags)
-content/beispiele-aplusN.tsv  eigene Beispielsätze und fehlende Wortarten
+content/klasseN.json           Stichwort, Bedeutung, Wortart, Fundstelle
+                               (aus den Excel-Listen des Lehrwerks)
+content/beispiele-klasseN.tsv  eigene Beispielsätze und fehlende Wortarten
 ```
 
 **Excel-Liste neu einlesen** (die Excel-Dateien gehören nicht ins Repository):
 
 ```
 pip install openpyxl
-python3 tools/import-aplus.py Aplus1.xlsx Aplus2.xlsx Aplus3.xlsx Aplus4.xlsx
+python3 tools/import-liste.py Klasse7.xlsx Klasse8.xlsx Klasse9.xlsx Klasse10.xlsx
 ```
 
-Übernommen werden nur Fundstelle, Stichwort, Bedeutung, Genus und Wortart, nicht die Kontextsätze des Verlags. Ein unregelmäßiger Plural (`le château / ((!))les châteaux`) wandert in den Hinweis.
+Welche Klasse eine Datei enthält, steht in ihrer Spalte „Band“ (Band 1 = Klasse 7). Übernommen werden nur Fundstelle, Stichwort, Bedeutung, Genus und Wortart, nicht die Kontextsätze der Liste. Ein unregelmäßiger Plural (`le château / ((!))les châteaux`) wandert in den Hinweis.
 
-**Beispielsätze** stehen in `content/beispiele-aplusN.tsv`. Die Datei ist tabulatorgetrennt und lässt sich in Excel öffnen und wieder als „Text (Tabstopp-getrennt)“ speichern. Die drei Spalten:
+**Beispielsätze** stehen in `content/beispiele-klasseN.tsv`. Die Datei ist tabulatorgetrennt und lässt sich in Excel öffnen und wieder als „Text (Tabstopp-getrennt)“ speichern. Die drei Spalten:
 
 1. Schlüssel `Fundstelle|Stichwort`, genau wie in der Liste, z. B. `2/3|écouter (qn/qc)`
 2. Wortart (`-` = die aus der Liste gilt), z. B. `Verb` oder `Nomen, f.`
@@ -67,7 +67,7 @@ Lokal: `python3 -m http.server 8765`, danach http://localhost:8765 öffnen. Für
 
 ## Noch offen
 
-- Beispielsätze für À plus ! 2–4 (Klasse 8–10).
+- Beispielsätze für Klasse 8–10.
 - Sprachliche Durchsicht der Beispielsätze für Klasse 7 durch die Fachschaft.
 - Echte Titel der Unités: Die Seiten zeigen bisher „Unité 1“, „Teil A“, „Vocabulaire“, „Module 1“, abgeleitet aus der Fundstelle.
 - Wortarten in Band 1: Die Excel-Liste hat keine Wortart-Spalte; sie sind beim Schreiben der Beispielsätze ergänzt worden und sollten mitgeprüft werden.

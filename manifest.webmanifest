@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Camp de Base",
   "short_name": "Camp de Base",
-  "description": "Vokabeltrainer für den Französischunterricht, Klasse 7 bis 10 (À plus !).",
+  "description": "Vokabeltrainer für den Französischunterricht, Klasse 7 bis 10.",
   "lang": "de",
   "dir": "ltr",
   "start_url": "./",
