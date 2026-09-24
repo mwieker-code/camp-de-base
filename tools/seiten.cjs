@@ -155,9 +155,10 @@ function seite(vorlage, d) {
   return s;
 }
 
-/* Den dunklen Block schreibt tools/nacht.cjs, nicht dieses Werkzeug -
-   verglichen wird deshalb ohne ihn. */
-const ohneNacht = s => s.replace(/<style media="screen" data-nacht>[\s\S]*?<\/style>\n?/g, '');
+/* Den dunklen Block und den Hell/Nacht-Schalter schreibt tools/nacht.cjs,
+   nicht dieses Werkzeug - verglichen wird deshalb ohne sie. */
+const ohneNacht = s => s.replace(/<style media="screen" data-nacht>[\s\S]*?<\/style>\n?/g, '')
+                         .replace(/<script data-nacht src="[^"]*"><\/script>\n?/g, '');
 
 const pruefen = process.argv.includes('--check');
 const vorlage = fs.readFileSync(VORLAGE, 'utf8');

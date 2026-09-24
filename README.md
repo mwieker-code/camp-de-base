@@ -20,6 +20,7 @@ Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden
 - **KI-Prompt** für Vokabeltests auf Französisch: Lückentext (in Klasse 7 mit alphabetischer Wortliste), Übersetzen DE → FR, Gegensätze, eigene Sätze; Zeitformen présent bis futur simple.
 - **Speicher:** Die Schlüssel beginnen mit `fr7:` … `fr10:` statt `vt…`. Beide Trainer liegen auf derselben GitHub-Pages-Domain und teilen sich den Browserspeicher, deshalb überschreiben sie sich so nicht gegenseitig.
 - **Gestaltung „L'heure bleue“:** das Nachtaufstieg-Gerüst mit Mohnrot (`#FF6B7A`) und Kornblumenblau (`#7AA2FF`) statt Alpenglühen und Gletscher; eigene Symbole auf der Startseite und ein eigenes App-Symbol.
+- **Hell oder Nacht** (`assets/thema.js`, wie im Englisch-Trainer): Automatisch folgt dem Gerät, dazu Hell und Nacht fest. Der Schalter sitzt auf der Startseite oben rechts und im Menü der Lernseiten. Die Wahl wird unter `fr:thema` gespeichert, getrennt vom Englisch-Trainer. Helle Akzente: Mohnrot `#EE5A6C`, Kornblumenblau `#3563D6`.
 
 ## Vokabular pflegen
 
