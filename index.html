@@ -86,11 +86,16 @@ a{color:inherit}
    sichtbar hakelig. Stattdessen fliegen die Buchstaben einmal herein,
    nur mit transform und opacity, die die Grafikeinheit allein rechnet. */
 @media (hover:none),(max-width:620px){
-  .title span[aria-hidden]{font-variation-settings:'wght' 700,'opsz' 96;transition:none;
-    animation:einflug .7s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--n) * 45ms + 80ms)}
+  .title span[aria-hidden]{font-variation-settings:'wght' 700,'opsz' 96;transition:none;will-change:transform;
+    animation:einflug .7s cubic-bezier(.2,.8,.2,1) backwards,welle 3.2s ease-in-out infinite;
+    animation-delay:calc(var(--n) * 45ms + 80ms),calc(var(--n) * .14s + 1.2s)}
   .title .line + .line span[aria-hidden]{font-variation-settings:'wght' 500,'opsz' 96}
 }
 @keyframes einflug{from{opacity:0;transform:translateY(.35em) rotate(4deg)}}
+/* Die Welle am Telefon: Die Buchstaben heben sich nacheinander und
+   strecken sich ein wenig - das liest sich wie das Anschwellen der
+   Schrift, braucht aber nur transform. */
+@keyframes welle{0%,100%{transform:none}50%{transform:translateY(-.07em) scale(1.05,1.08)}}
 .title.follow span[aria-hidden]{animation:none}
 @keyframes kin{0%,100%{font-variation-settings:'wght' 300,'opsz' 96}50%{font-variation-settings:'wght' 800,'opsz' 96}}
 .cta{margin-top:40px;display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;
