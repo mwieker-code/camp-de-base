@@ -166,7 +166,7 @@ Wenn kein geeignetes Paar existiert oder die verlangte Anzahl bzw. Verteilung ni
         return '{'+[...byUnit].map(([unit,pairs])=>JSON.stringify(unit)+':[\n'
           +pairs.map(pair=>JSON.stringify(pair)).join(',\n')+'\n]').join(',\n')+'}';
       })();
-      let prompt=`Erstelle einen Französisch-Vokabeltest für ${level} am Gymnasium. Lehrwerk: À plus ! (Cornelsen).
+      let prompt=`Erstelle einen Französisch-Vokabeltest für ${level} am Gymnasium.
 Thema/Vokabelbereich: ${[...new Set(rows.map(r=>r.unit))].join('; ')}.
 Wähle genau ${count} verschiedene Testvokabeln aus dem unten stehenden Vorrat von ${rows.length} Einträgen. Nutze keine zusätzlichen Testvokabeln. Doppelte Wörter mit derselben Bedeutung zählen nur einmal; reicht der Vorrat dadurch nicht aus, frage nach, statt Wörter zu erfinden.
 Trägt ein Eintrag mehrere Bedeutungen oder Formen, getrennt durch Komma, Schrägstrich oder Semikolon, so ist er trotzdem ein einziger Eintrag: Eine Bedeutung genügt für die Aufgabe. Halte im Lösungsschlüssel fest, welche du verwendet hast. Männliche und weibliche Form eines Eintrags (petit/petite, le chanteur / la chanteuse) gelten beide als richtig, sofern der Satz nicht eine bestimmte verlangt.

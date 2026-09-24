@@ -1,8 +1,7 @@
 /* Die Buchangabe war im Englisch-Trainer in allen Jahrgaengen leer. Wo
    sie ohne Pruefung eingesetzt wird, steht auf jeder Karte "Year 5 () -
    alle Units" und in der Uebersicht eine leere Zeile neben dem Jahrgang.
-   Camp de Base traegt sie ("À plus ! 1") - die Pruefung bleibt, damit
-   eine Klasse ohne Buch nicht wieder leere Klammern zeigt. */
+   Camp de Base laesst sie ebenfalls leer - die Pruefung bleibt. */
 {
   const fs=require('fs'), path=require('path'), assert=require('node:assert/strict');
   const wurzel=path.resolve(__dirname,'..');

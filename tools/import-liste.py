@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""Vokabellisten von "À plus !" (Excel) -> content/aplusN.json
+"""Vokabellisten des Lehrwerks (Excel) -> content/klasseN.json
 
 Aufruf:
-    python3 tools/import-aplus.py Aplus1.xlsx Aplus2.xlsx Aplus3.xlsx Aplus4.xlsx
+    python3 tools/import-liste.py Klasse7.xlsx Klasse8.xlsx Klasse9.xlsx Klasse10.xlsx
 
-Welcher Band in einer Datei steckt, steht in ihrer Spalte "Band". Die
-Excel-Dateien selbst gehoeren nicht ins Repository.
+Welcher Band in einer Datei steckt, steht in ihrer Spalte "Band"; Band 1
+ist Klasse 7, Band 4 Klasse 10. Die Excel-Dateien selbst gehoeren nicht
+ins Repository.
 
 Uebernommen werden nur Fundstelle, das franzoesische Stichwort, die
 deutsche Bedeutung, Genus und Wortart. Die Kontextsaetze des Verlags
 (Spalten "Kontext mit Tilde" bis "Kontextsatz Deutsch") bleiben
 bewusst aussen vor: Die Beispielsaetze im Trainer sind eigene und
-stehen in content/beispiele-aplusN.json.
+stehen in content/beispiele-klasseN.tsv.
 
 Eintraege der Wortart "civ" (Landeskunde: Staedte, Fluesse,
 Bauwerke) werden nicht uebernommen - sie sind Sachinformation, kein
@@ -106,7 +107,7 @@ def wortart(pos, genus, fr):
     art = WORTART.get(pos, '')
     if not art and not pos:
         # Band 1 hat keine Wortart-Spalte: Nur der Artikel verraet das Nomen.
-        # Die uebrigen Wortarten ergaenzt content/wortarten-aplus1.json.
+        # Die uebrigen Wortarten ergaenzt content/beispiele-klasse7.tsv.
         if re.match(r"^(?:(?:le|la|les)\s+|l[’'])\S", fr) and '/' not in fr.split(' ')[0]:
             art = 'Nomen'
             if fr.startswith('le '):
@@ -191,7 +192,7 @@ def gliedern(band, eintraege):
             e = einheit('u0', 'Einstieg')
             t = teil(e, re.sub(r'\W', '', a.lower()), 'Einstieg')
         t['woerter'].append({k: v for k, v in w.items() if v})
-    return {'band': band, 'jahrgang': JAHRGANG[band], 'einheiten': einheiten}
+    return {'jahrgang': JAHRGANG[band], 'einheiten': einheiten}
 
 
 def main(pfade):
@@ -200,11 +201,11 @@ def main(pfade):
     for pfad in pfade:
         band, eintraege = lies(pfad)
         daten = gliedern(band, eintraege)
-        ziel = ROOT / 'content' / ('aplus%d.json' % band)
+        ziel = ROOT / 'content' / ('klasse%d.json' % daten['jahrgang'])
         ziel.parent.mkdir(exist_ok=True)
         ziel.write_text(json.dumps(daten, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
         n = sum(len(t['woerter']) for e in daten['einheiten'] for t in e['teile'])
-        print('%s: Band %d, %d Woerter -> %s' % (Path(pfad).name, band, n, ziel.relative_to(ROOT)))
+        print('%s: Klasse %d, %d Woerter -> %s' % (Path(pfad).name, daten['jahrgang'], n, ziel.relative_to(ROOT)))
 
 
 if __name__ == '__main__':
