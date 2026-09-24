@@ -1,0 +1,514 @@
+Schlüssel (Fundstelle|Stichwort)	Wortart (- = aus der Liste)	Beispielsatz (Lücke in [ ])
+1/A|le château	-	Nous avons visité un vieux [château] au bord de la Loire.
+1/A|l'éléphant	-	Au zoo, l'[éléphant] prend une douche avec sa trompe.
+1/A|la machine	-	Cette grande [machine] fait du bruit toute la journée.
+1/A|l'île	-	En été, on prend le bateau pour aller sur l'[île].
+1/A|le centre-ville	-	Le samedi, il y a beaucoup de monde dans le [centre-ville].
+1/A|le skatepark	-	Après l'école, Nico retrouve ses copains au [skatepark].
+1/Voc|le bâtiment	-	Ce grand [bâtiment] blanc, c'est la mairie.
+1/Voc|la maison	-	Mes grands-parents habitent dans une petite [maison] à la campagne.
+1/Voc|le monument	-	L'Arc de Triomphe est un [monument] très connu.
+1/Voc|l'œuvre d'art	-	Dans ce musée, chaque [œuvre d'art] a son histoire.
+1/Voc|le port	-	Les bateaux de pêche rentrent au [port] le soir.
+1/Voc|le pont	-	Pour aller sur l'autre rive, on traverse le [pont].
+1/Voc|le fleuve	-	La Loire est le plus long [fleuve] de France.
+1/Voc|la place	-	On se retrouve sur la [place] devant l'église.
+1/Voc|la rue piétonne	-	Dans la [rue piétonne], il n'y a pas de voitures.
+1/Voc|le tram	-	Je vais au collège en [tram].
+1/Voc|l'arrêt	-	Descends au prochain [arrêt], c'est là.
+1/Voc|le carrefour	-	Au [carrefour], tu tournes à gauche.
+1/Voc|présenter qn/qc	-	Aujourd'hui, Léa [présente] sa ville à la classe.
+1/Voc|qui	-	J'ai une amie [qui] habite à Nantes.
+1/Voc|il/elle se trouve	-	Où est la gare ? – [Elle se trouve] derrière le parc.
+1/Voc|traverser qc	-	Attention quand tu [traverses] la rue !
+1/1|célèbre	-	Victor Hugo est un écrivain très [célèbre].
+1/1|l'auteur / l'auteure	-	L'[auteure] de ce livre vient de Belgique.
+1/1|le voyage	-	Bon [voyage] et à bientôt !
+1/1|extraordinaire	-	Cette journée à la mer était [extraordinaire] !
+1/1|où	-	C'est la ville [où] je suis née.
+1/1|la spécialité	-	Les crêpes sont une [spécialité] de la Bretagne.
+1/1|le parcours	-	Le [parcours] passe par le château et le port.
+1/1|le/la jeune	-	Beaucoup de [jeunes] aiment ce festival.
+1/1|sortir	-	Le samedi soir, ma sœur [sort] avec ses amies.
+1/1|chiller	-	Après le match, on a [chillé] au parc.
+1/1|l'arbre	-	Le chat est monté dans l'[arbre].
+1/1|le ping-pong	-	À la récré, on joue au [ping-pong].
+1/1|ils/elles se trouvent	-	Les toilettes ? [Elles se trouvent] au fond du couloir.
+1/1|(être) né/née	-	Ma mère [est née] à Marseille.
+1/1|partir	-	Le train [part] à huit heures.
+1/1|partir en week-end	-	Samedi, nous allons [partir en week-end] à la mer.
+1/1|le vélo	-	Mon [vélo] est dans le garage.
+1/1|à vélo	-	Je vais au collège [à vélo].
+1/1|le bateau	-	Nous faisons un tour en [bateau] sur le lac.
+1/1|moderne	-	Ce musée est très [moderne].
+1/1|la chaîne	-	Il regarde les vidéos de sa [chaîne] préférée.
+1/1|sur	-	Un pont passe [sur] le fleuve.
+1/2|prendre (à gauche / à droite)	-	Au carrefour, [prends à droite].
+1/2|continuer	-	Ne tourne pas, [continue] jusqu'au pont.
+1/2|tout droit	-	La gare ? Allez [tout droit], c'est à deux minutes.
+1/2|jusqu'à	-	Continue [jusqu'à] la place.
+1/2|deuxième	-	Prenez la [deuxième] rue à gauche.
+1/2|en face	-	La boulangerie est juste [en face].
+1/2|venir	-	Tu [viens] avec nous au cinéma ?
+1/2|important/importante	-	C'est un match très [important] pour notre équipe.
+1/2|beaucoup de monde	-	Au marché, il y a toujours [beaucoup de monde].
+1/2|quel/quelle/quels/quelles	-	[Quelle] est ta couleur préférée ?
+1/2|le nom	-	Écris ton [nom] sur la feuille.
+1/2|le trampoline	-	Les enfants sautent sur le [trampoline].
+1/2|la longueur	-	Quelle est la [longueur] de ce pont ?
+1/2|la hauteur	-	La [hauteur] de la tour est impressionnante.
+1/2|le mètre	-	La piscine fait vingt-cinq [mètres] de long.
+1/2|la couleur	-	Le bleu est ma [couleur] préférée.
+1/2|À vous, maintenant !	-	J'ai fini ma présentation. [À vous, maintenant] !
+1/2|C’est ça.	-	– Tu habites à Lyon ? – Oui, [c'est ça].
+1/2|vrai/vraie	-	C'est une histoire [vraie].
+1/2|le/la touriste	-	En été, il y a beaucoup de [touristes] à Paris.
+1/2|marcher	-	Nous aimons [marcher] dans la forêt.
+1/2|non ?	-	Il fait beau aujourd'hui, [non] ?
+1/2|la fin	-	À la [fin] du film, tout le monde pleure.
+1/3|le départ	-	Le [départ] du train est à neuf heures.
+1/3|pour	-	Le train [pour] Lyon part de la voie 3.
+1/3|content/contente	-	Je suis très [contente] de te voir !
+1/3|le train	-	Nous allons à Paris en [train].
+1/3|quand	-	[Quand] il pleut, je reste à la maison.
+1/3|attendre (qn/qc)	-	J'[attends] le bus depuis dix minutes.
+1/3|le billet	-	N'oublie pas ton [billet] !
+1/3|la valise	-	Ma [valise] est trop lourde.
+1/3|l'annonce	-	Écoute l'[annonce] : notre train a du retard.
+1/3|la voie	-	Le TGV pour Nice part de la [voie] 5.
+1/3|répéter qc	-	Tu peux [répéter] la question, s'il te plaît ?
+1/3|Allez !	-	[Allez], on court, le bus arrive !
+1/3|On y va !	-	Tout le monde est prêt ? [On y va] !
+1/3|la minute	-	Attends-moi, j'arrive dans cinq [minutes].
+1/3|arriver	-	Le bus [arrive] dans deux minutes.
+1/3|il faut	-	[Il faut] acheter un billet avant de monter.
+1/3|il ne faut pas	-	[Il ne faut pas] manger dans le musée.
+1/3|rater qn/qc	-	Vite, on va [rater] le train !
+1/3|le message	-	J'ai reçu un [message] de ma cousine.
+1/3|le quai	-	Les voyageurs attendent sur le [quai].
+1/3|répondre (à qn/qc)	-	Pourquoi tu ne [réponds] pas à mes messages ?
+1/3|Zut !	-	[Zut] ! J'ai oublié mes clés.
+1/3|la batterie	-	La [batterie] de mon portable est vide.
+1/3|descendre	-	Nous [descendons] du bus devant le musée.
+M1|corriger qc	-	Le prof [corrige] nos contrôles le week-end.
+M1|lire (qc)	-	Le soir, je [lis] une BD dans mon lit.
+M1|Est-ce que je peux ouvrir la fenêtre ?	-	Il fait chaud ici. [Est-ce que je peux ouvrir la fenêtre] ?
+M1|la tablette	-	En cours, nous travaillons sur la [tablette].
+M1|les écouteurs	-	Mets tes [écouteurs] pour écouter le texte.
+M1|l'exercice	-	Faites l'[exercice] 4 à la page 20.
+M1|le numéro	-	Quel est ton [numéro] de téléphone ?
+M1|en groupe	-	Aujourd'hui, on travaille [en groupe].
+M1|la page	-	Ouvrez votre livre à la [page] 35.
+M1|Ça y est !	-	[Ça y est] ! J'ai fini mon exercice.
+M1|Vous avez fini ?	-	Posez vos stylos. [Vous avez fini] ?
+M1|c'est à …	-	Maintenant, [c'est à] toi de lire.
+M1|apprendre qc	-	Pour demain, j'[apprends] mon vocabulaire.
+M1|le vocabulaire	-	Je révise le [vocabulaire] avec mon appli.
+M1|l'unité	-	Nous commençons l'[unité] 2 aujourd'hui.
+M1|le contrôle	-	Vendredi, on a un [contrôle] de français.
+2/A|l'aventure	-	Ce voyage en montagne était une vraie [aventure].
+2/A|le tour	-	Nous faisons un [tour] de la ville en bus.
+2/A|le bunker	-	Le vieux [bunker] près de la plage se visite.
+2/A|le sous-marin	-	À Saint-Nazaire, on peut visiter un [sous-marin].
+2/A|le passage	-	Ce petit [passage] mène à la plage.
+2/Voc|tôt	-	Le lundi, je me lève très [tôt].
+2/Voc|tard	-	Le week-end, je me couche [tard].
+2/Voc|en ville	-	Cet après-midi, je vais [en ville] avec ma mère.
+2/Voc|l'excursion	-	Demain, la classe fait une [excursion] à la mer.
+2/Voc|danser	-	À la fête, tout le monde a [dansé].
+2/Voc|chanter	-	Ma sœur [chante] dans une chorale.
+2/Voc|faire la fête	-	Pour mon anniversaire, on va [faire la fête].
+2/Voc|composer qc	-	Mon frère [compose] des chansons sur son ordinateur.
+2/Voc|la chanson	-	C'est ma [chanson] préférée !
+2/Voc|plein de	-	Il y a [plein de] touristes sur la plage.
+2/Voc|jouer au/à la/à l'/aux	-	Le mercredi, nous [jouons au] basket.
+2/Voc|jouer du/de la/de l'/des	-	Mon cousin [joue du] piano depuis cinq ans.
+2/Voc|les boules	-	Sur la place, les grands-pères jouent aux [boules].
+2/1|l'aventurier/l'aventurière	-	L'[aventurière] a traversé le désert à pied.
+2/1|français/française	-	La baguette est une spécialité [française].
+2/1|en	-	Mon père est né [en] 1985.
+2/1|l'année	-	Cette [année], je vais en Espagne.
+2/1|à … ans	-	[À six ans], j'ai appris à nager.
+2/1|voyager	-	Mes parents aiment [voyager] en train.
+2/1|le pays	-	La France est un grand [pays].
+2/1|surtout	-	J'aime les fruits, [surtout] les fraises.
+2/1|la tête	-	J'ai mal à la [tête].
+2/1|le monde	-	Il a fait le tour du [monde] en bateau.
+2/1|le roman	-	Je lis un [roman] policier.
+2/1|le héros / l'héroïne	-	L'[héroïne] du film est très courageuse.
+2/1|l'artiste	-	Cet [artiste] peint des tableaux très colorés.
+2/1|seulement	-	Il est [seulement] huit heures.
+2/1|gagner (qc)	-	Notre équipe a [gagné] le match !
+2/1|le prix	-	Elle a gagné le premier [prix].
+2/1|la mécanique	-	Mon oncle adore la [mécanique] et répare des motos.
+2/1|la passion	-	La musique, c'est ma [passion].
+2/1|imiter qn/qc	-	Mon petit frère [imite] toujours le chat.
+2/1|inventer qc	-	Qui a [inventé] le téléphone ?
+2/1|la saison	-	L'automne est ma [saison] préférée.
+2/1|la dent	-	Le soir, je me brosse les [dents].
+2/1|le centimètre	-	Ma petite sœur mesure cent vingt [centimètres].
+2/1|le trou	-	Il y a un [trou] dans mon pull.
+2/2|au début (de qc)	-	[Au début] du film, il ne se passe rien.
+2/2|et puis	-	Je suis allé au parc, [et puis] je suis rentré.
+2/2|avant	-	Lave-toi les mains [avant] le repas.
+2/2|tout à coup	-	[Tout à coup], il a commencé à pleuvoir.
+2/2|finalement	-	[Finalement], nous sommes restés à la maison.
+2/2|tout le temps	-	Mon petit frère parle [tout le temps].
+2/2|faire un tour	-	Après le dîner, on va [faire un tour] dans le quartier.
+2/2|monter	-	Nous [montons] au dernier étage de la tour.
+2/2|tomber	-	Attention, tu vas [tomber] !
+2/2|avoir peur	-	Mon chien [a peur] de l'orage.
+2/2|avoir mal	-	Après le match, j'[ai mal] aux jambes.
+2/2|c'était	-	Les vacances, [c'était] génial !
+2/2|l'aviron	-	Le samedi matin, ma sœur fait de l'[aviron] sur le lac.
+2/2|la course-poursuite	-	Dans ce film, il y a une [course-poursuite] en voiture.
+2/2|Aïe !	-	[Aïe] ! Je me suis coupé le doigt.
+2/3|la nuit	-	Cette [nuit], j'ai mal dormi.
+2/3|hier	-	[Hier], nous sommes allés au cinéma.
+2/3|après	-	[Après] les cours, je fais mes devoirs.
+2/3|la marée haute	-	À [marée haute], la plage est toute petite.
+2/3|la marée basse	-	À [marée basse], on peut marcher jusqu'à l'île.
+2/3|la balise	-	La [balise] rouge montre le chemin aux bateaux.
+2/3|rencontrer qn	-	J'ai [rencontré] ma meilleure amie en colonie.
+2/3|rigoler (bien)	-	Hier soir, on a [bien rigolé] !
+2/3|comprendre qn/qc	-	Je ne [comprends] pas cet exercice.
+2/3|au milieu (de qc)	-	Il y a une fontaine [au milieu] de la place.
+2/3|la pause	-	On fait une [pause] de dix minutes.
+2/3|ramasser qc	-	Sur la plage, nous [ramassons] des coquillages.
+2/3|le coquillage	-	J'ai trouvé un joli [coquillage] sur la plage.
+2/3|le bus	-	Le [bus] a dix minutes de retard.
+2/3|crier	-	Ne [crie] pas, le bébé dort !
+2/3|retourner	-	Cet été, nous allons [retourner] en Bretagne.
+2/3|la route	-	Cette [route] mène à la mer.
+2/3|la surprise	-	Pour son anniversaire, on lui prépare une [surprise].
+2/3|retrouver qn	-	Je [retrouve] mes amis devant le cinéma.
+2/3|tout de suite	-	Viens ici [tout de suite] !
+M2|le record	-	Elle a battu le [record] du monde.
+M2|haut/haute	-	Cette montagne est très [haute].
+M2|l'Europe	-	La France est un pays d'[Europe].
+M2|l'ouest	-	Brest se trouve à l'[ouest] de la France.
+M2|les Alpes	-	En hiver, nous faisons du ski dans les [Alpes].
+M2|court/courte	-	Le film est trop [court].
+M2|long/longue	-	La route est très [longue].
+M2|le village	-	Ma grand-mère habite dans un petit [village].
+M2|rapide	-	Le TGV est un train très [rapide].
+M2|rouler	-	Sur l'autoroute, les voitures [roulent] vite.
+M2|le kilomètre	-	Le collège est à deux [kilomètres] de chez moi.
+M2|moins … que	-	Le vélo est [moins rapide que] le train.
+M2|plus … que	-	Paris est [plus grand que] Lyon.
+M2|aussi … que	-	Mon frère est [aussi grand que] mon père.
+M2|meilleur/meilleure … que	-	Cette pizza est [meilleure que] l'autre.
+M2|l'or	-	La nageuse a gagné la médaille d'[or].
+M2|l'argent	-	Il a gagné la médaille d'[argent].
+M2|la femme	-	Cette [femme] est ma prof de maths.
+M2|l'homme	-	Cet [homme] est le père de mon ami.
+M2|puissant/puissante	-	Ce moteur est très [puissant].
+M2|le/la chef	-	Le [chef] de l'équipe donne les idées.
+M2|le/la chef de cuisine	-	Le [chef de cuisine] prépare un menu spécial.
+M2|devenir	-	Plus tard, je veux [devenir] pilote.
+M2|le meilleur / la meilleure	-	C'est la [meilleure] joueuse de l'équipe.
+M2|impressionnant/impressionnante	-	La vue du haut de la tour est [impressionnante].
+3/A|le moment	-	Ce concert, c'était un [moment] magique.
+3/A|compter (pour qn)	-	Mes amis [comptent] beaucoup pour moi.
+3/Voc|le conflit	-	Il y a souvent un [conflit] entre mon frère et moi.
+3/Voc|discuter (de qc)	-	Nous [discutons] du voyage de classe.
+3/Voc|C'est quoi, cette histoire ?	-	Tu as pris mon portable ? [C'est quoi, cette histoire] ?
+3/Voc|être en colère	-	Ma mère [est en colère] parce que je suis rentré tard.
+3/Voc|Et alors ?	-	– Tu as eu une mauvaise note ! – [Et alors] ?
+3/Voc|Tu ne comprends rien.	-	Mais non, ce n'est pas ça ! [Tu ne comprends rien].
+3/Voc|exagérer	-	Deux heures de devoirs ? Tu [exagères] !
+3/Voc|N'importe quoi !	-	Moi, amoureux de Léa ? [N'importe quoi] !
+3/Voc|Tu m'énerves !	-	Arrête de chanter, [tu m'énerves] !
+3/Voc|avoir raison	-	D'accord, tu [as raison].
+3/Voc|grave	-	Ce n'est pas [grave].
+3/Voc|Qu'est-ce que tu en penses ?	-	Je veux faire du théâtre. [Qu'est-ce que tu en penses] ?
+3/1|fier/fière (de qn/qc)	-	Mes parents sont [fiers] de moi.
+3/1|différent/différente	-	Mes deux sœurs sont très [différentes].
+3/1|ça explose	-	Quand mes frères jouent ensemble, souvent, [ça explose].
+3/1|le souvenir	-	J'ai acheté un [souvenir] pour ma grand-mère.
+3/1|partager qc	-	Je [partage] ma chambre avec mon frère.
+3/1|rapprocher qn/qc	-	Ce voyage a [rapproché] toute la famille.
+3/1|accompagner qn	-	Mon père m'[accompagne] au match.
+3/1|aider (qn)	-	Tu peux m'[aider] avec mes devoirs ?
+3/1|énerver qn	-	Le bruit de la rue m'[énerve].
+3/1|parler de qc	-	Dans ce livre, l'auteur [parle de] son enfance.
+3/1|c'est normal	-	Tu es fatigué après le match ? [C'est normal].
+3/1|faire la cuisine	-	Le dimanche, mon père [fait la cuisine].
+3/1|le travail	-	Ma mère part au [travail] à sept heures.
+3/1|filmer qn/qc	-	Mon cousin [filme] tous ses tricks au skatepark.
+3/1|La Réunion	-	L'île de [La Réunion] se trouve dans l'océan Indien.
+3/1|la chose	-	J'ai encore une [chose] à te dire.
+3/1|du coup	-	Il pleuvait, [du coup] on est restés à la maison.
+3/1|si	-	– Tu n'as pas faim ? – [Si], j'ai très faim !
+3/1|par	-	Le cours coûte dix euros [par] personne.
+3/1|le vide-grenier	-	Dimanche, nous vendons nos vieux jouets au [vide-grenier].
+3/1|trier qc	-	Je [trie] mes vieux vêtements.
+3/1|vendre qc (à qn)	-	Mon voisin [vend] son vélo.
+3/1|échanger qc (contre qc)	-	J'ai [échangé] mes cartes contre un jeu vidéo.
+3/2|la carrière	-	La chanteuse a commencé sa [carrière] à seize ans.
+3/2|le succès	-	Sa chanson a eu beaucoup de [succès].
+3/2|jeune	-	Mon oncle est encore très [jeune].
+3/2|d'ailleurs	-	J'aime le rap ; [d'ailleurs], j'écris mes propres textes.
+3/2|appeler qn	-	Mes amis m'[appellent] « Max ».
+3/2|la mélodie	-	La [mélodie] de cette chanson est très belle.
+3/2|que	-	Le livre [que] je lis est passionnant.
+3/2|créatif/créative	-	Ma sœur est très [créative] : elle dessine et elle chante.
+3/2|le message	-	Le [message] de la chanson est important.
+3/2|le champion / la championne	-	Elle est [championne] de France de natation.
+3/2|l'entraîneur / l'entraîneuse	-	Notre [entraîneur] est très exigeant.
+3/2|sportif/sportive	-	Mon frère est très [sportif].
+3/2|le ski	-	En février, nous faisons du [ski].
+3/2|le ski de bosses	-	Le [ski de bosses] est un sport difficile.
+3/2|l'équipe	-	Notre [équipe] a gagné le tournoi.
+3/2|remarquer qn/qc	-	Tu as [remarqué] sa nouvelle coiffure ?
+3/2|le talent	-	Tu as beaucoup de [talent] pour le dessin.
+3/2|compter sur qn	-	Tu peux [compter sur] moi !
+3/2|la médaille	-	Elle a gagné une [médaille] aux Jeux olympiques.
+3/2|courageux/courageuse	-	Le pompier a été très [courageux].
+3/2|heureux/heureuse	-	Je suis [heureuse] d'être en vacances.
+3/3|ce/cet/cette/ces	-	[Cette] maison est très grande.
+3/3|le fer à repasser	-	Attention, le [fer à repasser] est chaud !
+3/3|ne ... rien	-	Je [ne comprends rien].
+3/3|ne … jamais	-	Mon frère [ne range jamais] sa chambre.
+3/3|l'appli (fam.) / l'application	-	J'apprends le vocabulaire avec une [appli].
+3/3|l'échange	-	L'[échange] avec notre classe partenaire commence en mai.
+3/3|Quoi ?	-	[Quoi] ? Je n'ai pas compris.
+3/3|mettre qc	-	Il fait froid : [mets] ton manteau !
+3/3|en ligne	-	J'ai acheté mon billet [en ligne].
+3/3|utiliser qc	-	En cours, nous [utilisons] des tablettes.
+3/3|prêter qc (à qn)	-	Tu peux me [prêter] ton stylo ?
+3/3|le gaspillage	-	Le [gaspillage] de nourriture est un grand problème.
+3/3|tu sais	-	[Tu sais], je suis très content de te voir.
+3/3|écolo (fam.) / écologique	-	Ma tante est très [écolo] : elle va partout à vélo.
+3/3|emprunter qc	-	J'ai [emprunté] trois livres à la bibliothèque.
+3/3|coûter	-	Ce jeu vidéo [coûte] cinquante euros.
+3/3|Ce n'est pas pareil !	-	Un livre et un film ? [Ce n'est pas pareil] !
+3/3|commander qc	-	Au restaurant, j'ai [commandé] une pizza.
+3/3|la poubelle	-	Le papier va dans la [poubelle] jaune.
+3/3|mettre qc à la poubelle	-	Ne [mets pas le pain à la poubelle] !
+3/3|l'emballage	-	Il y a trop de plastique dans cet [emballage].
+M3|la finale	-	L'équipe de France est en [finale] !
+M3|le match	-	Le [match] commence à vingt et une heures.
+M3|le/la Croate	-	Le gardien est un [Croate] de Zagreb.
+M3|fort/forte	-	Cette équipe est très [forte].
+M3|le but	-	Quel beau [but] !
+M3|tirer	-	Le joueur [tire] et marque !
+M3|défendre (qn/qc)	-	Notre équipe [défend] très bien.
+M3|marquer un but	-	À la dernière minute, Léo a [marqué un but].
+M3|contre	-	Ce soir, la France joue [contre] l'Italie.
+M3|mener	-	À la mi-temps, Marseille [mène] deux à zéro.
+M3|(1) à (0)	-	Nous avons gagné [trois à un].
+M3|l'arbitre	-	L'[arbitre] siffle la fin du match.
+M3|le carton (jaune/rouge)	-	Après cette faute, il reçoit un [carton rouge].
+M3|le score	-	Quel est le [score] ?
+M3|le score est de … à …	-	À la mi-temps, [le score est de] un à un.
+M3|partout	-	Deux buts [partout] : le match est encore ouvert.
+M3|attaquer (qn)	-	Les Bleus [attaquent] sans arrêt.
+M3|la faute	-	L'arbitre a vu la [faute].
+M3|parler à qn	-	Je dois [parler à] ma prof.
+M3|le penalty	-	Il a marqué le [penalty].
+M3|la mi-temps	-	Pendant la [mi-temps], les joueurs boivent de l'eau.
+M3|le ballon	-	Le [ballon] est dans le but !
+M3|passer le ballon à qn	-	[Passe le ballon à] Hugo, il est seul !
+M3|le gardien / la gardienne (de but)	-	La [gardienne] a arrêté le penalty.
+M3|faire attention	-	[Fais attention] en traversant la rue !
+M3|il reste…	-	[Il reste] deux minutes de jeu.
+4/A|la planète	-	Nous devons protéger notre [planète].
+4/A|le médiateur / la médiatrice	-	Au collège, une [médiatrice] aide les élèves en conflit.
+4/A|l'intello	-	On dit qu'il est l'[intello] de la classe parce qu'il a toujours de bonnes notes.
+4/A|la brute	-	Dans le film, la [brute] embête les petits de sixième.
+4/A|le bavard / la bavarde	-	Ma voisine est une vraie [bavarde] : elle parle tout le temps.
+4/A|le geek	-	Mon cousin est un [geek] : il passe ses soirées devant l'ordinateur.
+4/A|le clown	-	Paul fait toujours le [clown] en cours.
+4/A|les inséparables	-	Léa et Inès sont les [inséparables] de la classe.
+4/A|le chouchou / la chouchoute	-	Tout le monde dit que Tom est le [chouchou] du prof.
+4/Voc|seul/seule	-	Le soir, mon chat est [seul] à la maison.
+4/Voc|poser une question (à qn)	-	Je peux [poser une question] ?
+4/Voc|l'excuse	-	Il a toujours une [excuse] quand il est en retard.
+4/Voc|la pression	-	Avant un contrôle, je sens la [pression].
+4/Voc|mettre la pression à qn	-	Mes parents me [mettent la pression] pour les notes.
+4/Voc|le temps	-	Je n'ai pas le [temps] aujourd'hui.
+4/Voc|dernier/dernière	-	C'est le [dernier] jour des vacances.
+4/Voc|réviser (qc)	-	Ce week-end, je [révise] pour le contrôle d'histoire.
+4/Voc|participer en cours	-	Pour avoir une bonne note, il faut [participer en cours].
+4/Voc|rendre qc (à qn)	-	Tu me [rends] mon livre demain ?
+4/Voc|mauvais/mauvaise	-	J'ai eu une [mauvaise] note en maths.
+4/Voc|la note	-	J'ai eu une bonne [note] en anglais.
+4/Voc|la moyenne	-	Ma [moyenne] en français est de quatorze.
+4/1|écrire qc (à qn)	-	J'[écris] une carte à ma grand-mère.
+4/1|laisser qn tranquille	-	Je travaille : [laisse-moi tranquille] !
+4/1|sérieux/sérieuse	-	Ma sœur est très [sérieuse] : elle fait toujours ses devoirs.
+4/1|débrouillard/débrouillarde	-	Nina est [débrouillarde] : elle trouve toujours une solution.
+4/1|populaire	-	Ce chanteur est très [populaire] chez les jeunes.
+4/1|malade	-	Je reste à la maison, je suis [malade].
+4/1|le voisin / la voisine	-	En cours, mon [voisin] m'aide souvent.
+4/1|le sac	-	Mon [sac] est trop lourd.
+4/1|le bulletin	-	Mes parents lisent mon [bulletin].
+4/1|le conseil	-	Tu peux me donner un [conseil] ?
+4/1|le résultat	-	Le [résultat] du test est très bon.
+4/1|le test	-	Fais ce [test] pour savoir quel animal tu es !
+4/1|le genre (de qc)	-	Quel [genre] de musique tu écoutes ?
+4/1|le réveil	-	Mon [réveil] sonne à six heures et demie.
+4/1|sonner	-	Le téléphone [sonne].
+4/1|plus	-	Je voudrais dormir [plus] le matin.
+4/1|sans	-	Il est parti [sans] dire au revoir.
+4/2|stresser qn	-	Les contrôles me [stressent].
+4/2|dire qc (à qn)	-	Qu'est-ce que tu [dis] ?
+4/2|que	-	Je pense [que] tu as raison.
+4/2|devoir	-	Je [dois] rentrer avant huit heures.
+4/2|au moins	-	Il faut dormir [au moins] huit heures.
+4/2|à cause de	-	Le match est annulé [à cause de] la pluie.
+4/2|l'impression	-	J'ai l'[impression] que tu es fatigué.
+4/2|à la place de (qn/qc)	-	[À la place de] la télé, lis un livre !
+4/2|passer du temps (avec qn)	-	J'aime [passer du temps] avec mes grands-parents.
+4/2|le contraire	-	« Grand » est le [contraire] de « petit ».
+4/2|demander (qc à qn)	-	Je vais [demander] la route à ce monsieur.
+4/2|demander si	-	Ma mère [demande si] tu restes pour le dîner.
+4/2|avoir besoin de qn/qc	-	J'[ai besoin d']un nouveau cahier.
+4/2|l'aide	-	Merci pour ton [aide] !
+4/2|oh là là	-	[Oh là là], quel bazar !
+4/2|vouloir savoir si	-	Mon père [veut savoir si] tu viens samedi.
+4/2|Je te jure !	-	Ce n'est pas moi, [je te jure] !
+4/2|le reste	-	Je mange le [reste] du gâteau.
+4/2|faire confiance à qn	-	Je [fais confiance à] ma meilleure amie.
+4/2|à mon avis	-	[À mon avis], ce film est génial.
+4/3|le système	-	Le [système] des notes est différent en France.
+4/3|sur	-	J'ai eu seize [sur] vingt !
+4/3|le stress	-	Avant les examens, il y a beaucoup de [stress].
+4/3|la lettre	-	Le mot « chat » a quatre [lettres].
+4/3|comme	-	Je travaille [comme] baby-sitter le samedi.
+4/3|calculer qc	-	[Calcule] la moyenne de tes notes.
+4/3|précis/précise	-	Ta réponse n'est pas assez [précise].
+4/3|exister	-	Ce magasin n'[existe] plus.
+4/3|le/la même	-	Nous avons le [même] sac !
+4/3|juste	-	Ce n'est pas [juste] !
+4/3|autre	-	Tu as une [autre] idée ?
+4/3|penser	-	Qu'est-ce que tu en [penses] ?
+4/3|motivant/motivante	-	Ce prof est vraiment [motivant].
+4/3|les gens	-	Les [gens] font la queue devant le cinéma.
+4/3|dur/dure	-	Ce contrôle était [dur].
+4/3|ça veut dire	-	« Merci », [ça veut dire] « danke ».
+4/3|la catastrophe	-	J'ai perdu mes clés, c'est la [catastrophe] !
+4/3|par contre	-	J'aime les maths ; [par contre], je déteste la physique.
+4/3|entendre qn/qc	-	Tu [entends] ce bruit ?
+4/3|avoir la moyenne	-	J'ai eu dix sur vingt : j'[ai la moyenne] !
+M4|le handball	-	Mon frère joue au [handball] dans un club.
+M4|la batterie	-	Ma cousine joue de la [batterie] dans un groupe de rock.
+M4|le repas	-	Le [repas] est prêt !
+M4|presque	-	Il est [presque] minuit.
+M4|sauf	-	Tout le monde est venu, [sauf] Paul.
+M4|végan/végane	-	Mon amie est [végane] : elle ne mange pas de produits animaux.
+M4|les céréales	-	Le matin, je mange des [céréales] avec du lait.
+M4|le petit-déjeuner	-	Au [petit-déjeuner], je bois un chocolat chaud.
+M4|porter qc	-	Aujourd'hui, je [porte] mon nouveau pull.
+M4|les vêtements	-	Mes [vêtements] sont dans l'armoire.
+M4|les sneakers	-	J'ai acheté des [sneakers] blanches.
+M4|les lunettes	-	Sans mes [lunettes], je ne vois rien.
+M4|le mois	-	Le [mois] de décembre est mon préféré.
+M4|l'appareil dentaire	-	Depuis un an, je porte un [appareil dentaire].
+M4|le caractère	-	Mon chien a un bon [caractère].
+M4|plutôt	-	Je suis [plutôt] timide.
+M4|timide	-	Le nouvel élève est un peu [timide].
+M4|l'avenir	-	Dans l'[avenir], je voudrais habiter à la mer.
+M4|plus tard	-	[Plus tard], je veux devenir vétérinaire.
+M4|le gamer / la gameuse	-	Ma sœur est une vraie [gameuse].
+M4|gagner de l'argent	-	Mon frère veut [gagner de l'argent] cet été.
+M4|la blague	-	Mon oncle raconte toujours des [blagues].
+5/A|liker qn/qc	-	J'ai [liké] ta photo !
+5/A|le youtubeur / la youtubeuse	-	Cette [youtubeuse] fait des vidéos de cuisine.
+5/A|l'acteur / l'actrice	-	Cette [actrice] joue dans ma série préférée.
+5/A|engagé/engagée	-	Ma grande sœur est très [engagée] pour l'environnement.
+5/A|l'astronaute	-	L'[astronaute] a passé six mois dans l'espace.
+5/Voc|l'activité	-	Nager, c'est mon [activité] préférée en été.
+5/Voc|télécharger qc	-	J'ai [téléchargé] une nouvelle appli.
+5/Voc|cliquer sur qc	-	[Clique sur] le bouton vert.
+5/Voc|le lien	-	Je t'envoie le [lien] de la vidéo.
+5/Voc|laisser qc	-	[Laisse] un commentaire sous la vidéo !
+5/Voc|poster qc	-	Hier, j'ai [posté] une photo de mon chat.
+5/Voc|le tuto (fam.) / le tutoriel	-	J'ai appris à dessiner avec un [tuto].
+5/Voc|enregistrer qc	-	N'oublie pas d'[enregistrer] ton document !
+5/Voc|les réseaux sociaux	-	Je passe trop de temps sur les [réseaux sociaux].
+5/Voc|être accro à qc	-	Mon frère [est accro aux] jeux vidéo.
+5/Voc|la victime	-	La [victime] a parlé à la police.
+5/Voc|le cyberharcèlement	-	Le [cyberharcèlement] est un grand problème dans les écoles.
+5/Voc|créer qc	-	Elle a [créé] sa propre chaîne.
+5/Voc|avoir … vues	-	Sa vidéo [a déjà mille vues].
+5/Voc|le million	-	Cette chanson a été vue un [million] de fois.
+5/Voc|l'abonné/l'abonnée	-	Elle a déjà cent mille [abonnés].
+5/1|intelligent/intelligente	-	Mon chien est très [intelligent].
+5/1|normal (m.) / normale (f.) / normaux (m. pl.) / normales (f. pl.)	-	Ce n'est pas [normal] !
+5/1|la culture	-	J'aime découvrir la [culture] d'autres pays.
+5/1|le cliché	-	Les Français mangent toujours des baguettes ? C'est un [cliché] !
+5/1|chinois/chinoise	-	Ce soir, nous mangeons dans un restaurant [chinois].
+5/1|génial (m.) / géniale (f.) / géniaux (m. pl.) / géniales (f. pl.)	-	Ton idée est [géniale] !
+5/1|voir qn/qc	-	Tu as [vu] le nouveau film ?
+5/1|être d'origine (f.) (allemande/française)	-	Mon père [est d'origine] italienne.
+5/1|asiatique	-	J'adore la cuisine [asiatique].
+5/1|l'Asie	-	La Chine se trouve en [Asie].
+5/1|le thème	-	Le [thème] de l'exposé, c'est l'environnement.
+5/1|critiquer (qn/qc)	-	Il [critique] toujours tout.
+5/1|national (m.) / nationale (f.) / nationaux (m. pl.) / nationales (f. pl.)	-	Le 14 juillet, c'est la fête [nationale].
+5/1|l'humour	-	J'aime son [humour].
+5/1|avant	-	[Avant], j'habitais à Lyon.
+5/1|faire des études	-	Ma sœur [fait des études] de médecine.
+5/1|l'ingénieur / l'ingénieure	-	Ma mère est [ingénieure].
+5/1|original (m.) / originale (f.) / originaux (m. pl.) / originales (f. pl.)	-	Ton cadeau est très [original] !
+5/1|adulte	-	Plus tard, quand je serai [adulte], j'habiterai à Paris.
+5/1|polonais/polonaise	-	Ma grand-mère est [polonaise].
+5/1|séparé/séparée	-	Mes parents sont [séparés].
+5/1|la beauté	-	La [beauté] de ce paysage est impressionnante.
+5/1|le policier / la policière	-	La [policière] aide les enfants à traverser.
+5/1|l'émission	-	Tu as regardé l'[émission] hier soir ?
+5/1|l'avis	-	Je voudrais ton [avis].
+5/1|autre chose	-	Tu veux [autre chose] ?
+5/2|finir qc	-	Je [finis] mes devoirs et j'arrive.
+5/2|grandir	-	J'ai [grandi] à la campagne.
+5/2|réussir (qc)	-	Elle a [réussi] son examen.
+5/2|choisir qn/qc	-	Je ne sais pas quel gâteau [choisir].
+5/2|quitter qn/qc	-	Nous avons [quitté] Paris il y a deux ans.
+5/2|participer à qc	-	Notre classe [participe à] un concours.
+5/2|baisser les bras	-	Ne [baisse pas les bras], tu vas y arriver !
+5/2|encourager qn	-	Les supporters [encouragent] leur équipe.
+5/2|perdre (qn/qc)	-	J'ai [perdu] mon portable.
+5/2|les médias	-	Les [médias] parlent beaucoup de ce film.
+5/2|l'album	-	Son nouvel [album] sort en mai.
+5/2|le concert	-	Hier soir, nous sommes allés à un [concert].
+5/2|les hauts et les bas	-	Dans la vie, il y a [les hauts et les bas].
+5/2|marocain/marocaine	-	Le couscous est un plat [marocain].
+5/2|tout le / toute la, tous les / toutes les	-	J'ai mangé [tout le] gâteau !
+5/2|tomber amoureux/amoureuse (de qn)	-	Dans le film, elle [tombe amoureuse] d'un pilote.
+5/2|difficile	-	Cet exercice est très [difficile].
+5/2|le jury	-	Le [jury] a choisi la meilleure chanson.
+5/2|la perruque	-	Pour la fête, il porte une [perruque] rose.
+5/2|le bac (fam.) / le baccalauréat	-	Ma sœur passe le [bac] cette année.
+5/2|homosexuel/homosexuelle	-	Le personnage principal du film est [homosexuel].
+M5|le blog	-	Elle écrit un [blog] sur ses voyages.
+M5|l'avion	-	Nous allons à La Réunion en [avion].
+M5|durer	-	Le voyage [dure] onze heures.
+M5|préparer qc	-	Ma grand-mère [prépare] un curry.
+M5|la personne	-	Il y a combien de [personnes] dans ta famille ?
+M5|le bonbon	-	Ne mange pas trop de [bonbons] !
+M5|le piment	-	Attention, ce [piment] est très fort !
+M5|le Réunionnais / la Réunionnaise	-	Mon ami est un [Réunionnais] de Saint-Denis.
+M5|le Français / la Française	-	Beaucoup de [Français] passent leurs vacances en Espagne.
+M5|le continent	-	L'Afrique est un grand [continent].
+M5|créole	-	Sur l'île, on parle français et [créole].
+M5|ça sent	-	Mmh, [ça sent] bon !
+M5|nager	-	En été, nous [nageons] dans la mer.
+M5|beau/bel (m.) / belle (f.) / beaux (m. pl.) / belles (f. pl.)	-	C'est une très [belle] plage.
+M5|la cascade	-	Nous avons pris une photo devant la [cascade].
+M5|la forêt	-	Nous nous promenons dans la [forêt].
+M5|vieux/vieil (m.) / vieille (f.) / vieux (m. pl.) / vieilles (f. pl.)	-	J'habite dans une [vieille] maison.
+M5|nouveau/nouvel (m.) / nouvelle (f.) / nouveaux (m. pl.) / nouvelles (f. pl.)	-	J'ai un [nouveau] vélo.
+M5|le paysage	-	Le [paysage] est magnifique.
+M5|la course	-	Il a gagné la [course].
+M5|fou/folle	-	Tu es [fou] !
+M5|la région	-	La Bretagne est une belle [région].
+M5|la capitale	-	Paris est la [capitale] de la France.
+M5|l'habitant / l'habitante	-	Mon village a mille [habitants].
+M5|l'été	-	En [été], il fait chaud.
+M5|le printemps	-	Au [printemps], les fleurs poussent.
+M5|l'automne	-	En [automne], les feuilles tombent.
+M5|l'hiver	-	En [hiver], il neige souvent dans les Alpes.
+M5|actif/active	-	Mon grand-père est encore très [actif].
+M5|le centre	-	Le cinéma est dans le [centre] de la ville.

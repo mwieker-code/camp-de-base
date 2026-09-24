@@ -5,9 +5,9 @@ Statischer Vokabeltrainer für Französisch als zweite Fremdsprache, Klasse 7 bi
 | Seite     | Lernjahr | Wörter | eigene Beispielsätze |
 |-----------|----------|-------:|---------------------:|
 | `year7/`  | 1.       |    729 |                  729 |
-| `year8/`  | 2.       |    513 |        – (noch offen) |
-| `year9/`  | 3.       |    311 |        – (noch offen) |
-| `year10/` | 4.       |    350 |        – (noch offen) |
+| `year8/`  | 2.       |    513 |                  513 |
+| `year9/`  | 3.       |    311 |                  311 |
+| `year10/` | 4.       |    350 |                  350 |
 
 Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden nicht übernommen.
 
@@ -16,7 +16,7 @@ Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden
 - **Aussprache** auf Französisch (`fr-FR`, auf Apple-Geräten bevorzugt die Stimme „Thomas“). Platzhalter und Hinweise wie `qn/qc`, `(fam.)`, `(+ inf.)` werden nicht mitgesprochen.
 - **Antwortprüfung:** Nomen werden mit Artikel gelernt. Fehlt der Artikel oder ein Akzent, zählt die Antwort als „Fast“ und bekommt einen eigenen Hinweis. `oe` statt `œ` gilt als richtig. Auf der deutschen Seite ist der Artikel frei. `qn/qc` und `jdn/jdm/etw.` sind Platzhalter, auch ausgeschrieben (`quelque chose`, `etwas`).
 - **Tastatur:** Auf dem Handy gibt es QWERTZ mit einer Akzentreihe (é è ê à â ç ù û ô î) und einem Apostroph neben dem „l“; ï, ë und œ liegen auf der 123-Ebene. Am Rechner steht unter dem Eingabefeld eine Leiste mit den Sonderzeichen, weil ç und œ auf deutschen Tastaturen fehlen.
-- **Lückensatz** nur, wo es Beispielsätze gibt (bisher Klasse 7). In Klasse 8–10 ist die Übungsart ausgeblendet.
+- **Lückensatz** in allen Klassen. Eine Klasse ohne Beispielsätze würde die Übungsart ausblenden.
 - **KI-Prompt** für Vokabeltests auf Französisch: Lückentext (in Klasse 7 mit alphabetischer Wortliste), Übersetzen DE → FR, Gegensätze, eigene Sätze; Zeitformen présent bis futur simple.
 - **Speicher:** Die Schlüssel beginnen mit `fr7:` … `fr10:` statt `vt…`. Beide Trainer liegen auf derselben GitHub-Pages-Domain und teilen sich den Browserspeicher, deshalb überschreiben sie sich so nicht gegenseitig.
 - **Gestaltung „L'heure bleue“:** das Nachtaufstieg-Gerüst mit Mohnrot (`#FF6B7A`) und Kornblumenblau (`#7AA2FF`) statt Alpenglühen und Gletscher; eigene Symbole auf der Startseite und ein eigenes App-Symbol.
@@ -67,8 +67,7 @@ Lokal: `python3 -m http.server 8765`, danach http://localhost:8765 öffnen. Für
 
 ## Noch offen
 
-- Beispielsätze für Klasse 8–10.
-- Sprachliche Durchsicht der Beispielsätze für Klasse 7 durch die Fachschaft.
+- Sprachliche Durchsicht der Beispielsätze für Klasse 7–10 durch die Fachschaft.
 - Echte Titel der Unités: Die Seiten zeigen bisher „Unité 1“, „Teil A“, „Vocabulaire“, „Module 1“, abgeleitet aus der Fundstelle.
 - Wortarten in Band 1: Die Excel-Liste hat keine Wortart-Spalte; sie sind beim Schreiben der Beispielsätze ergänzt worden und sollten mitgeprüft werden.
 - Grammatik (wie im Englisch-Trainer für Klasse 6) ist noch nicht vorgesehen.

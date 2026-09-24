@@ -28,7 +28,7 @@ window.onerror = function(msg, src, line, col){
 };
 </script>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/inter-400-latin.woff2">
-<script data-nacht src="../assets/thema.js?v=20260924-rueckblick"></script>
+<script data-nacht src="../assets/thema.js?v=20260924-saetze"></script>
 <link rel="stylesheet" href="../assets/fonts.css?v=2">
 
 <style>
@@ -398,8 +398,8 @@ button.primary:hover{background:#0B4A54}
 :where(html:not([data-thema="hell"])) .doc .warnbox{background:#231A0F}
 :where(html:not([data-thema="hell"])) .vex{color:#C8D9E3}
 </style>
-<link rel="stylesheet" href="../assets/learning.css?v=20260924-rueckblick">
-<link rel="stylesheet" media="screen" data-nacht href="../assets/learning-nacht.css?v=20260924-rueckblick">
+<link rel="stylesheet" href="../assets/learning.css?v=20260924-saetze">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/learning-nacht.css?v=20260924-saetze">
 
 <div class="wrap">
     <div class="masthead">
@@ -702,37 +702,55 @@ const SETS = {
    "id": "y8u1-a-001",
    "en": "le château",
    "de": "das Schloss",
-   "pos": "Nomen, m. · Plural: les châteaux"
+   "pos": "Nomen, m. · Plural: les châteaux",
+   "example_en": "Nous avons visité un vieux château au bord de la Loire.",
+   "luecke": "château",
+   "luecke_bei": 27
   },
   {
    "id": "y8u1-a-002",
    "en": "l'éléphant",
    "de": "der Elefant",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Au zoo, l'éléphant prend une douche avec sa trompe.",
+   "luecke": "éléphant",
+   "luecke_bei": 10
   },
   {
    "id": "y8u1-a-003",
    "en": "la machine",
    "de": "die Maschine",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Cette grande machine fait du bruit toute la journée.",
+   "luecke": "machine",
+   "luecke_bei": 13
   },
   {
    "id": "y8u1-a-004",
    "en": "l'île",
    "de": "die Insel",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "En été, on prend le bateau pour aller sur l'île.",
+   "luecke": "île",
+   "luecke_bei": 44
   },
   {
    "id": "y8u1-a-005",
    "en": "le centre-ville",
    "de": "das Stadtzentrum",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le samedi, il y a beaucoup de monde dans le centre-ville.",
+   "luecke": "centre-ville",
+   "luecke_bei": 44
   },
   {
    "id": "y8u1-a-006",
    "en": "le skatepark",
    "de": "der Skatepark",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Après l'école, Nico retrouve ses copains au skatepark.",
+   "luecke": "skatepark",
+   "luecke_bei": 44
   }
  ],
  "y8u1-voc": [
@@ -740,97 +758,145 @@ const SETS = {
    "id": "y8u1-voc-001",
    "en": "le bâtiment",
    "de": "das Gebäude",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ce grand bâtiment blanc, c'est la mairie.",
+   "luecke": "bâtiment",
+   "luecke_bei": 9
   },
   {
    "id": "y8u1-voc-002",
    "en": "la maison",
    "de": "das Haus",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Mes grands-parents habitent dans une petite maison à la campagne.",
+   "luecke": "maison",
+   "luecke_bei": 44
   },
   {
    "id": "y8u1-voc-003",
    "en": "le monument",
    "de": "das Bauwerk, das Denkmal",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "L'Arc de Triomphe est un monument très connu.",
+   "luecke": "monument",
+   "luecke_bei": 25
   },
   {
    "id": "y8u1-voc-004",
    "en": "l'œuvre d'art",
    "de": "das Kunstwerk",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Dans ce musée, chaque œuvre d'art a son histoire.",
+   "luecke": "œuvre d'art",
+   "luecke_bei": 22
   },
   {
    "id": "y8u1-voc-005",
    "en": "le port",
    "de": "der Hafen",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Les bateaux de pêche rentrent au port le soir.",
+   "luecke": "port",
+   "luecke_bei": 33
   },
   {
    "id": "y8u1-voc-006",
    "en": "le pont",
    "de": "die Brücke",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Pour aller sur l'autre rive, on traverse le pont.",
+   "luecke": "pont",
+   "luecke_bei": 44
   },
   {
    "id": "y8u1-voc-007",
    "en": "le fleuve",
    "de": "der Fluss",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "La Loire est le plus long fleuve de France.",
+   "luecke": "fleuve",
+   "luecke_bei": 26
   },
   {
    "id": "y8u1-voc-008",
    "en": "la place",
    "de": "der Platz",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "On se retrouve sur la place devant l'église.",
+   "luecke": "place",
+   "luecke_bei": 22
   },
   {
    "id": "y8u1-voc-009",
    "en": "la rue piétonne",
    "de": "die Fußgängerzone",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Dans la rue piétonne, il n'y a pas de voitures.",
+   "luecke": "rue piétonne",
+   "luecke_bei": 8
   },
   {
    "id": "y8u1-voc-010",
    "en": "le tram",
    "de": "die Straßenbahn",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Je vais au collège en tram.",
+   "luecke": "tram",
+   "luecke_bei": 22
   },
   {
    "id": "y8u1-voc-011",
    "en": "l'arrêt",
    "de": "die Haltestelle, der Halt",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Descends au prochain arrêt, c'est là.",
+   "luecke": "arrêt",
+   "luecke_bei": 21
   },
   {
    "id": "y8u1-voc-012",
    "en": "le carrefour",
    "de": "die Kreuzung",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Au carrefour, tu tournes à gauche.",
+   "luecke": "carrefour",
+   "luecke_bei": 3
   },
   {
    "id": "y8u1-voc-013",
    "en": "présenter qn/qc",
    "de": "jdn/etw. vorstellen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Aujourd'hui, Léa présente sa ville à la classe.",
+   "luecke": "présente",
+   "luecke_bei": 17
   },
   {
    "id": "y8u1-voc-014",
    "en": "qui",
    "de": "der/die/das",
-   "pos": "Pronomen"
+   "pos": "Pronomen",
+   "example_en": "J'ai une amie qui habite à Nantes.",
+   "luecke": "qui",
+   "luecke_bei": 14
   },
   {
    "id": "y8u1-voc-015",
    "en": "il/elle se trouve",
    "de": "er/sie/es befindet sich, er/sie/es liegt",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Où est la gare ? – Elle se trouve derrière le parc.",
+   "luecke": "Elle se trouve",
+   "luecke_bei": 19
   },
   {
    "id": "y8u1-voc-016",
    "en": "traverser qc",
    "de": "etw. durchqueren, etw. überqueren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Attention quand tu traverses la rue !",
+   "luecke": "traverses",
+   "luecke_bei": 19
   }
  ],
  "y8u1-1": [
@@ -838,133 +904,199 @@ const SETS = {
    "id": "y8u1-1-001",
    "en": "célèbre",
    "de": "berühmt",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Victor Hugo est un écrivain très célèbre.",
+   "luecke": "célèbre",
+   "luecke_bei": 33
   },
   {
    "id": "y8u1-1-002",
    "en": "l'auteur / l'auteure",
    "de": "der/die Autor/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "L'auteure de ce livre vient de Belgique.",
+   "luecke": "auteure",
+   "luecke_bei": 2
   },
   {
    "id": "y8u1-1-003",
    "en": "le voyage",
    "de": "die Reise",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Bon voyage et à bientôt !",
+   "luecke": "voyage",
+   "luecke_bei": 4
   },
   {
    "id": "y8u1-1-004",
    "en": "extraordinaire",
    "de": "außergewöhnlich",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Cette journée à la mer était extraordinaire !",
+   "luecke": "extraordinaire",
+   "luecke_bei": 29
   },
   {
    "id": "y8u1-1-005",
    "en": "où",
    "de": "wo",
-   "pos": "Pronomen"
+   "pos": "Pronomen",
+   "example_en": "C'est la ville où je suis née.",
+   "luecke": "où",
+   "luecke_bei": 15
   },
   {
    "id": "y8u1-1-006",
    "en": "la spécialité",
    "de": "die Spezialität",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Les crêpes sont une spécialité de la Bretagne.",
+   "luecke": "spécialité",
+   "luecke_bei": 20
   },
   {
    "id": "y8u1-1-007",
    "en": "le parcours",
    "de": "der Rundgang, die Strecke",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le parcours passe par le château et le port.",
+   "luecke": "parcours",
+   "luecke_bei": 3
   },
   {
    "id": "y8u1-1-008",
    "en": "le/la jeune",
    "de": "der/die Jugendliche",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Beaucoup de jeunes aiment ce festival.",
+   "luecke": "jeunes",
+   "luecke_bei": 12
   },
   {
    "id": "y8u1-1-009",
    "en": "sortir",
    "de": "ausgehen, hinausgehen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le samedi soir, ma sœur sort avec ses amies.",
+   "luecke": "sort",
+   "luecke_bei": 24
   },
   {
    "id": "y8u1-1-010",
    "en": "chiller",
    "de": "chillen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Après le match, on a chillé au parc.",
+   "luecke": "chillé",
+   "luecke_bei": 21
   },
   {
    "id": "y8u1-1-011",
    "en": "l'arbre",
    "de": "der Baum",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le chat est monté dans l'arbre.",
+   "luecke": "arbre",
+   "luecke_bei": 25
   },
   {
    "id": "y8u1-1-012",
    "en": "le ping-pong",
    "de": "Tischtennis",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "À la récré, on joue au ping-pong.",
+   "luecke": "ping-pong",
+   "luecke_bei": 23
   },
   {
    "id": "y8u1-1-013",
    "en": "ils/elles se trouvent",
    "de": "sie befinden sich, sie liegen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Les toilettes ? Elles se trouvent au fond du couloir.",
+   "luecke": "Elles se trouvent",
+   "luecke_bei": 16
   },
   {
    "id": "y8u1-1-014",
    "en": "(être) né/née",
    "de": "geboren (sein)",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Ma mère est née à Marseille.",
+   "luecke": "est née",
+   "luecke_bei": 8
   },
   {
    "id": "y8u1-1-015",
    "en": "partir",
    "de": "losgehen, wegfahren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le train part à huit heures.",
+   "luecke": "part",
+   "luecke_bei": 9
   },
   {
    "id": "y8u1-1-016",
    "en": "partir en week-end",
    "de": "am Wochenende wegfahren",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Samedi, nous allons partir en week-end à la mer.",
+   "luecke": "partir en week-end",
+   "luecke_bei": 20
   },
   {
    "id": "y8u1-1-017",
    "en": "le vélo",
    "de": "das Fahrrad",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Mon vélo est dans le garage.",
+   "luecke": "vélo",
+   "luecke_bei": 4
   },
   {
    "id": "y8u1-1-018",
    "en": "à vélo",
    "de": "mit dem Fahrrad",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Je vais au collège à vélo.",
+   "luecke": "à vélo",
+   "luecke_bei": 19
   },
   {
    "id": "y8u1-1-019",
    "en": "le bateau",
    "de": "das Schiff, das Boot",
-   "pos": "Nomen, m. · Plural: les bateaux"
+   "pos": "Nomen, m. · Plural: les bateaux",
+   "example_en": "Nous faisons un tour en bateau sur le lac.",
+   "luecke": "bateau",
+   "luecke_bei": 24
   },
   {
    "id": "y8u1-1-020",
    "en": "moderne",
    "de": "modern",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Ce musée est très moderne.",
+   "luecke": "moderne",
+   "luecke_bei": 18
   },
   {
    "id": "y8u1-1-021",
    "en": "la chaîne",
    "de": "der Kanal",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Il regarde les vidéos de sa chaîne préférée.",
+   "luecke": "chaîne",
+   "luecke_bei": 28
   },
   {
    "id": "y8u1-1-022",
    "en": "sur",
    "de": "(hier:) über",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Un pont passe sur le fleuve.",
+   "luecke": "sur",
+   "luecke_bei": 14
   }
  ],
  "y8u1-2": [
@@ -972,139 +1104,208 @@ const SETS = {
    "id": "y8u1-2-001",
    "en": "prendre (à gauche / à droite)",
    "de": "(links/rechts) abbiegen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Au carrefour, prends à droite.",
+   "luecke": "prends à droite",
+   "luecke_bei": 14
   },
   {
    "id": "y8u1-2-002",
    "en": "continuer",
    "de": "(hier:) weitergehen, weiterlaufen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ne tourne pas, continue jusqu'au pont.",
+   "luecke": "continue",
+   "luecke_bei": 15
   },
   {
    "id": "y8u1-2-003",
    "en": "tout droit",
    "de": "geradeaus",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "La gare ? Allez tout droit, c'est à deux minutes.",
+   "luecke": "tout droit",
+   "luecke_bei": 16
   },
   {
    "id": "y8u1-2-004",
    "en": "jusqu'à",
    "de": "bis",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Continue jusqu'à la place.",
+   "luecke": "jusqu'à",
+   "luecke_bei": 9
   },
   {
    "id": "y8u1-2-005",
    "en": "deuxième",
    "de": "zweiter/zweite/zweites",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Prenez la deuxième rue à gauche.",
+   "luecke": "deuxième",
+   "luecke_bei": 10
   },
   {
    "id": "y8u1-2-006",
    "en": "en face",
    "de": "gegenüber",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "La boulangerie est juste en face.",
+   "luecke": "en face",
+   "luecke_bei": 25
   },
   {
    "id": "y8u1-2-007",
    "en": "venir",
    "de": "kommen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu viens avec nous au cinéma ?",
+   "luecke": "viens",
+   "luecke_bei": 3
   },
   {
    "id": "y8u1-2-008",
    "en": "important/importante",
    "de": "wichtig",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "C'est un match très important pour notre équipe.",
+   "luecke": "important",
+   "luecke_bei": 20
   },
   {
    "id": "y8u1-2-009",
    "en": "beaucoup de monde",
    "de": "viele Leute",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Au marché, il y a toujours beaucoup de monde.",
+   "luecke": "beaucoup de monde",
+   "luecke_bei": 27
   },
   {
    "id": "y8u1-2-010",
    "en": "quel/quelle/quels/quelles",
    "de": "welcher/welche/welches, was für ein/eine",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Quelle est ta couleur préférée ?",
+   "luecke": "Quelle",
+   "luecke_bei": 0
   },
   {
    "id": "y8u1-2-011",
    "en": "le nom",
    "de": "der Name, der Nachname",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Écris ton nom sur la feuille.",
+   "luecke": "nom",
+   "luecke_bei": 10
   },
   {
    "id": "y8u1-2-012",
    "en": "le trampoline",
    "de": "das Trampolin",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Les enfants sautent sur le trampoline.",
+   "luecke": "trampoline",
+   "luecke_bei": 27
   },
   {
    "id": "y8u1-2-013",
    "en": "la longueur",
    "de": "die Länge",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Quelle est la longueur de ce pont ?",
+   "luecke": "longueur",
+   "luecke_bei": 14
   },
   {
    "id": "y8u1-2-014",
    "en": "la hauteur",
    "de": "die Höhe",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La hauteur de la tour est impressionnante.",
+   "luecke": "hauteur",
+   "luecke_bei": 3
   },
   {
    "id": "y8u1-2-015",
    "en": "le mètre",
    "de": "der Meter",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "La piscine fait vingt-cinq mètres de long.",
+   "luecke": "mètres",
+   "luecke_bei": 27
   },
   {
    "id": "y8u1-2-016",
    "en": "la couleur",
    "de": "die Farbe",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Le bleu est ma couleur préférée.",
+   "luecke": "couleur",
+   "luecke_bei": 15
   },
   {
    "id": "y8u1-2-017",
    "en": "À vous, maintenant !",
    "de": "Jetzt seid ihr dran!",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "J'ai fini ma présentation. À vous, maintenant !",
+   "luecke": "À vous, maintenant",
+   "luecke_bei": 27
   },
   {
    "id": "y8u1-2-018",
    "en": "C’est ça.",
    "de": "Genau., Das stimmt.",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "– Tu habites à Lyon ? – Oui, c'est ça.",
+   "luecke": "c'est ça",
+   "luecke_bei": 29
   },
   {
    "id": "y8u1-2-019",
    "en": "vrai/vraie",
    "de": "wahr, richtig, echt",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "C'est une histoire vraie.",
+   "luecke": "vraie",
+   "luecke_bei": 19
   },
   {
    "id": "y8u1-2-020",
    "en": "le/la touriste",
    "de": "der/die Tourist/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "En été, il y a beaucoup de touristes à Paris.",
+   "luecke": "touristes",
+   "luecke_bei": 27
   },
   {
    "id": "y8u1-2-021",
    "en": "marcher",
    "de": "laufen, gehen, (auch:) funktionieren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Nous aimons marcher dans la forêt.",
+   "luecke": "marcher",
+   "luecke_bei": 12
   },
   {
    "id": "y8u1-2-022",
    "en": "non ?",
    "de": "nicht wahr?, oder?",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Il fait beau aujourd'hui, non ?",
+   "luecke": "non",
+   "luecke_bei": 26
   },
   {
    "id": "y8u1-2-023",
    "en": "la fin",
    "de": "das Ende",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "À la fin du film, tout le monde pleure.",
+   "luecke": "fin",
+   "luecke_bei": 5
   }
  ],
  "y8u1-3": [
@@ -1112,145 +1313,217 @@ const SETS = {
    "id": "y8u1-3-001",
    "en": "le départ",
    "de": "die Abfahrt",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le départ du train est à neuf heures.",
+   "luecke": "départ",
+   "luecke_bei": 3
   },
   {
    "id": "y8u1-3-002",
    "en": "pour",
    "de": "(hier:) nach",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Le train pour Lyon part de la voie 3.",
+   "luecke": "pour",
+   "luecke_bei": 9
   },
   {
    "id": "y8u1-3-003",
    "en": "content/contente",
    "de": "zufrieden, froh",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Je suis très contente de te voir !",
+   "luecke": "contente",
+   "luecke_bei": 13
   },
   {
    "id": "y8u1-3-004",
    "en": "le train",
    "de": "der Zug",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Nous allons à Paris en train.",
+   "luecke": "train",
+   "luecke_bei": 23
   },
   {
    "id": "y8u1-3-005",
    "en": "quand",
    "de": "wenn, immer wenn, (auch:) als",
-   "pos": "Konjunktion"
+   "pos": "Konjunktion",
+   "example_en": "Quand il pleut, je reste à la maison.",
+   "luecke": "Quand",
+   "luecke_bei": 0
   },
   {
    "id": "y8u1-3-006",
    "en": "attendre (qn/qc)",
    "de": "(auf jdn/etw.) warten",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'attends le bus depuis dix minutes.",
+   "luecke": "attends",
+   "luecke_bei": 2
   },
   {
    "id": "y8u1-3-007",
    "en": "le billet",
    "de": "das Ticket, der Schein, (hier:) der Fahrschein",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "N'oublie pas ton billet !",
+   "luecke": "billet",
+   "luecke_bei": 17
   },
   {
    "id": "y8u1-3-008",
    "en": "la valise",
    "de": "der Koffer",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Ma valise est trop lourde.",
+   "luecke": "valise",
+   "luecke_bei": 3
   },
   {
    "id": "y8u1-3-009",
    "en": "l'annonce",
    "de": "die Anzeige, (hier:) die Ansage",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Écoute l'annonce : notre train a du retard.",
+   "luecke": "annonce",
+   "luecke_bei": 9
   },
   {
    "id": "y8u1-3-010",
    "en": "la voie",
    "de": "das Gleis",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Le TGV pour Nice part de la voie 5.",
+   "luecke": "voie",
+   "luecke_bei": 28
   },
   {
    "id": "y8u1-3-011",
    "en": "répéter qc",
    "de": "etw. wiederholen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu peux répéter la question, s'il te plaît ?",
+   "luecke": "répéter",
+   "luecke_bei": 8
   },
   {
    "id": "y8u1-3-012",
    "en": "Allez !",
    "de": "Los!, Kommt schon!",
-   "pos": "Ausruf"
+   "pos": "Ausruf",
+   "example_en": "Allez, on court, le bus arrive !",
+   "luecke": "Allez",
+   "luecke_bei": 0
   },
   {
    "id": "y8u1-3-013",
    "en": "On y va !",
    "de": "Los geht's!, Wir gehen dahin!",
-   "pos": "Ausruf"
+   "pos": "Ausruf",
+   "example_en": "Tout le monde est prêt ? On y va !",
+   "luecke": "On y va",
+   "luecke_bei": 25
   },
   {
    "id": "y8u1-3-014",
    "en": "la minute",
    "de": "die Minute",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Attends-moi, j'arrive dans cinq minutes.",
+   "luecke": "minutes",
+   "luecke_bei": 32
   },
   {
    "id": "y8u1-3-015",
    "en": "arriver",
    "de": "(hier:) kommen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le bus arrive dans deux minutes.",
+   "luecke": "arrive",
+   "luecke_bei": 7
   },
   {
    "id": "y8u1-3-016",
    "en": "il faut",
    "de": "man muss / wir müssen etw. tun",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Il faut acheter un billet avant de monter.",
+   "luecke": "Il faut",
+   "luecke_bei": 0
   },
   {
    "id": "y8u1-3-017",
    "en": "il ne faut pas",
    "de": "man darf/sollte etw. nicht tun, wir dürfen/sollten etw. nicht tun",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Il ne faut pas manger dans le musée.",
+   "luecke": "Il ne faut pas",
+   "luecke_bei": 0
   },
   {
    "id": "y8u1-3-018",
    "en": "rater qn/qc",
    "de": "jdn/etw. verpassen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Vite, on va rater le train !",
+   "luecke": "rater",
+   "luecke_bei": 12
   },
   {
    "id": "y8u1-3-019",
    "en": "le message",
    "de": "die Nachricht",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "J'ai reçu un message de ma cousine.",
+   "luecke": "message",
+   "luecke_bei": 13
   },
   {
    "id": "y8u1-3-020",
    "en": "le quai",
    "de": "der Bahnsteig",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Les voyageurs attendent sur le quai.",
+   "luecke": "quai",
+   "luecke_bei": 31
   },
   {
    "id": "y8u1-3-021",
    "en": "répondre (à qn/qc)",
    "de": "(jdm) antworten, etw. beantworten",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Pourquoi tu ne réponds pas à mes messages ?",
+   "luecke": "réponds",
+   "luecke_bei": 15
   },
   {
    "id": "y8u1-3-022",
    "en": "Zut !",
    "de": "Mist!",
-   "pos": "Ausruf"
+   "pos": "Ausruf",
+   "example_en": "Zut ! J'ai oublié mes clés.",
+   "luecke": "Zut",
+   "luecke_bei": 0
   },
   {
    "id": "y8u1-3-023",
    "en": "la batterie",
    "de": "der Akku",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La batterie de mon portable est vide.",
+   "luecke": "batterie",
+   "luecke_bei": 3
   },
   {
    "id": "y8u1-3-024",
    "en": "descendre",
    "de": "aussteigen, (auch:) hinuntergehen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Nous descendons du bus devant le musée.",
+   "luecke": "descendons",
+   "luecke_bei": 5
   }
  ],
  "y8u1-m1": [
@@ -1258,97 +1531,145 @@ const SETS = {
    "id": "y8u1-m1-001",
    "en": "corriger qc",
    "de": "etw. korrigieren, etw. berichtigen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le prof corrige nos contrôles le week-end.",
+   "luecke": "corrige",
+   "luecke_bei": 8
   },
   {
    "id": "y8u1-m1-002",
    "en": "lire (qc)",
    "de": "(etw.) lesen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le soir, je lis une BD dans mon lit.",
+   "luecke": "lis",
+   "luecke_bei": 12
   },
   {
    "id": "y8u1-m1-003",
    "en": "Est-ce que je peux ouvrir la fenêtre ?",
    "de": "Kann ich das Fenster öffnen?",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Il fait chaud ici. Est-ce que je peux ouvrir la fenêtre ?",
+   "luecke": "Est-ce que je peux ouvrir la fenêtre",
+   "luecke_bei": 19
   },
   {
    "id": "y8u1-m1-004",
    "en": "la tablette",
    "de": "das Tablet",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "En cours, nous travaillons sur la tablette.",
+   "luecke": "tablette",
+   "luecke_bei": 34
   },
   {
    "id": "y8u1-m1-005",
    "en": "les écouteurs",
    "de": "die Kopfhörer",
-   "pos": "Nomen, m. pl."
+   "pos": "Nomen, m. pl.",
+   "example_en": "Mets tes écouteurs pour écouter le texte.",
+   "luecke": "écouteurs",
+   "luecke_bei": 9
   },
   {
    "id": "y8u1-m1-006",
    "en": "l'exercice",
    "de": "die Übung",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Faites l'exercice 4 à la page 20.",
+   "luecke": "exercice",
+   "luecke_bei": 9
   },
   {
    "id": "y8u1-m1-007",
    "en": "le numéro",
    "de": "die Nummer",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Quel est ton numéro de téléphone ?",
+   "luecke": "numéro",
+   "luecke_bei": 13
   },
   {
    "id": "y8u1-m1-008",
    "en": "en groupe",
    "de": "in der Gruppe",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Aujourd'hui, on travaille en groupe.",
+   "luecke": "en groupe",
+   "luecke_bei": 26
   },
   {
    "id": "y8u1-m1-009",
    "en": "la page",
    "de": "die Seite",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Ouvrez votre livre à la page 35.",
+   "luecke": "page",
+   "luecke_bei": 24
   },
   {
    "id": "y8u1-m1-010",
    "en": "Ça y est !",
    "de": "so, es ist soweit",
-   "pos": "Ausruf"
+   "pos": "Ausruf",
+   "example_en": "Ça y est ! J'ai fini mon exercice.",
+   "luecke": "Ça y est",
+   "luecke_bei": 0
   },
   {
    "id": "y8u1-m1-011",
    "en": "Vous avez fini ?",
    "de": "Seid ihr fertig?",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Posez vos stylos. Vous avez fini ?",
+   "luecke": "Vous avez fini",
+   "luecke_bei": 18
   },
   {
    "id": "y8u1-m1-012",
    "en": "c'est à …",
    "de": "… ist dran",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Maintenant, c'est à toi de lire.",
+   "luecke": "c'est à",
+   "luecke_bei": 12
   },
   {
    "id": "y8u1-m1-013",
    "en": "apprendre qc",
    "de": "etw. lernen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Pour demain, j'apprends mon vocabulaire.",
+   "luecke": "apprends",
+   "luecke_bei": 15
   },
   {
    "id": "y8u1-m1-014",
    "en": "le vocabulaire",
    "de": "das Vokabular, der Wortschatz",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Je révise le vocabulaire avec mon appli.",
+   "luecke": "vocabulaire",
+   "luecke_bei": 13
   },
   {
    "id": "y8u1-m1-015",
    "en": "l'unité",
    "de": "die Lektion",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Nous commençons l'unité 2 aujourd'hui.",
+   "luecke": "unité",
+   "luecke_bei": 18
   },
   {
    "id": "y8u1-m1-016",
    "en": "le contrôle",
    "de": "die Kontrolle, (hier:) die Leistungskontrolle",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Vendredi, on a un contrôle de français.",
+   "luecke": "contrôle",
+   "luecke_bei": 18
   }
  ],
  "y8u2-a": [
@@ -1356,31 +1677,46 @@ const SETS = {
    "id": "y8u2-a-001",
    "en": "l'aventure",
    "de": "das Abenteuer",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Ce voyage en montagne était une vraie aventure.",
+   "luecke": "aventure",
+   "luecke_bei": 38
   },
   {
    "id": "y8u2-a-002",
    "en": "le tour",
    "de": "die Tour, die Reise, die Rundfahrt",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Nous faisons un tour de la ville en bus.",
+   "luecke": "tour",
+   "luecke_bei": 16
   },
   {
    "id": "y8u2-a-003",
    "en": "le bunker",
    "de": "der Bunker",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le vieux bunker près de la plage se visite.",
+   "luecke": "bunker",
+   "luecke_bei": 9
   },
   {
    "id": "y8u2-a-004",
    "en": "le sous-marin",
    "de": "das U-Boot",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "À Saint-Nazaire, on peut visiter un sous-marin.",
+   "luecke": "sous-marin",
+   "luecke_bei": 36
   },
   {
    "id": "y8u2-a-005",
    "en": "le passage",
    "de": "die Passage, der Durchgang",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ce petit passage mène à la plage.",
+   "luecke": "passage",
+   "luecke_bei": 9
   }
  ],
  "y8u2-voc": [
@@ -1388,79 +1724,118 @@ const SETS = {
    "id": "y8u2-voc-001",
    "en": "tôt",
    "de": "früh",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Le lundi, je me lève très tôt.",
+   "luecke": "tôt",
+   "luecke_bei": 26
   },
   {
    "id": "y8u2-voc-002",
    "en": "tard",
    "de": "spät",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Le week-end, je me couche tard.",
+   "luecke": "tard",
+   "luecke_bei": 26
   },
   {
    "id": "y8u2-voc-003",
    "en": "en ville",
    "de": "in die Stadt, in der Stadt",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Cet après-midi, je vais en ville avec ma mère.",
+   "luecke": "en ville",
+   "luecke_bei": 24
   },
   {
    "id": "y8u2-voc-004",
    "en": "l'excursion",
    "de": "der Ausflug",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Demain, la classe fait une excursion à la mer.",
+   "luecke": "excursion",
+   "luecke_bei": 27
   },
   {
    "id": "y8u2-voc-005",
    "en": "danser",
    "de": "tanzen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "À la fête, tout le monde a dansé.",
+   "luecke": "dansé",
+   "luecke_bei": 27
   },
   {
    "id": "y8u2-voc-006",
    "en": "chanter",
    "de": "singen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ma sœur chante dans une chorale.",
+   "luecke": "chante",
+   "luecke_bei": 8
   },
   {
    "id": "y8u2-voc-007",
    "en": "faire la fête",
    "de": "feiern",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Pour mon anniversaire, on va faire la fête.",
+   "luecke": "faire la fête",
+   "luecke_bei": 29
   },
   {
    "id": "y8u2-voc-008",
    "en": "composer qc",
    "de": "etw. komponieren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Mon frère compose des chansons sur son ordinateur.",
+   "luecke": "compose",
+   "luecke_bei": 10
   },
   {
    "id": "y8u2-voc-009",
    "en": "la chanson",
    "de": "das Lied",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "C'est ma chanson préférée !",
+   "luecke": "chanson",
+   "luecke_bei": 9
   },
   {
    "id": "y8u2-voc-010",
    "en": "plein de",
    "de": "viel, viele",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Il y a plein de touristes sur la plage.",
+   "luecke": "plein de",
+   "luecke_bei": 7
   },
   {
    "id": "y8u2-voc-011",
    "en": "jouer au/à la/à l'/aux",
    "de": "etw. spielen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Le mercredi, nous jouons au basket.",
+   "luecke": "jouons au",
+   "luecke_bei": 18
   },
   {
    "id": "y8u2-voc-012",
    "en": "jouer du/de la/de l'/des",
    "de": "etw. spielen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon cousin joue du piano depuis cinq ans.",
+   "luecke": "joue du",
+   "luecke_bei": 11
   },
   {
    "id": "y8u2-voc-013",
    "en": "les boules",
    "de": "Boule, das Boulespiel",
-   "pos": "Nomen, f. pl."
+   "pos": "Nomen, f. pl.",
+   "example_en": "Sur la place, les grands-pères jouent aux boules.",
+   "luecke": "boules",
+   "luecke_bei": 42
   }
  ],
  "y8u2-1": [
@@ -1468,145 +1843,217 @@ const SETS = {
    "id": "y8u2-1-001",
    "en": "l'aventurier/l'aventurière",
    "de": "der/die Abenteurer/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "L'aventurière a traversé le désert à pied.",
+   "luecke": "aventurière",
+   "luecke_bei": 2
   },
   {
    "id": "y8u2-1-002",
    "en": "français/française",
    "de": "französisch",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "La baguette est une spécialité française.",
+   "luecke": "française",
+   "luecke_bei": 31
   },
   {
    "id": "y8u2-1-003",
    "en": "en",
    "de": "im Jahr (+ Jahreszahl)",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Mon père est né en 1985.",
+   "luecke": "en",
+   "luecke_bei": 16
   },
   {
    "id": "y8u2-1-004",
    "en": "l'année",
    "de": "das Jahr",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Cette année, je vais en Espagne.",
+   "luecke": "année",
+   "luecke_bei": 6
   },
   {
    "id": "y8u2-1-005",
    "en": "à … ans",
    "de": "mit … Jahren",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "À six ans, j'ai appris à nager.",
+   "luecke": "À six ans",
+   "luecke_bei": 0
   },
   {
    "id": "y8u2-1-006",
    "en": "voyager",
    "de": "reisen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Mes parents aiment voyager en train.",
+   "luecke": "voyager",
+   "luecke_bei": 19
   },
   {
    "id": "y8u2-1-007",
    "en": "le pays",
    "de": "das Land",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "La France est un grand pays.",
+   "luecke": "pays",
+   "luecke_bei": 23
   },
   {
    "id": "y8u2-1-008",
    "en": "surtout",
    "de": "vor allem",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "J'aime les fruits, surtout les fraises.",
+   "luecke": "surtout",
+   "luecke_bei": 19
   },
   {
    "id": "y8u2-1-009",
    "en": "la tête",
    "de": "der Kopf",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "J'ai mal à la tête.",
+   "luecke": "tête",
+   "luecke_bei": 14
   },
   {
    "id": "y8u2-1-010",
    "en": "le monde",
    "de": "die Welt",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Il a fait le tour du monde en bateau.",
+   "luecke": "monde",
+   "luecke_bei": 21
   },
   {
    "id": "y8u2-1-011",
    "en": "le roman",
    "de": "der Roman",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Je lis un roman policier.",
+   "luecke": "roman",
+   "luecke_bei": 10
   },
   {
    "id": "y8u2-1-012",
    "en": "le héros / l'héroïne",
    "de": "der/die Held/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "L'héroïne du film est très courageuse.",
+   "luecke": "héroïne",
+   "luecke_bei": 2
   },
   {
    "id": "y8u2-1-013",
    "en": "l'artiste",
    "de": "der/die Künstler/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Cet artiste peint des tableaux très colorés.",
+   "luecke": "artiste",
+   "luecke_bei": 4
   },
   {
    "id": "y8u2-1-014",
    "en": "seulement",
    "de": "nur (noch), erst",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Il est seulement huit heures.",
+   "luecke": "seulement",
+   "luecke_bei": 7
   },
   {
    "id": "y8u2-1-015",
    "en": "gagner (qc)",
    "de": "(etw.) gewinnen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Notre équipe a gagné le match !",
+   "luecke": "gagné",
+   "luecke_bei": 15
   },
   {
    "id": "y8u2-1-016",
    "en": "le prix",
    "de": "der Preis",
-   "pos": "Nomen, m. · Plural: les prix"
+   "pos": "Nomen, m. · Plural: les prix",
+   "example_en": "Elle a gagné le premier prix.",
+   "luecke": "prix",
+   "luecke_bei": 24
   },
   {
    "id": "y8u2-1-017",
    "en": "la mécanique",
    "de": "die Mechanik",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Mon oncle adore la mécanique et répare des motos.",
+   "luecke": "mécanique",
+   "luecke_bei": 19
   },
   {
    "id": "y8u2-1-018",
    "en": "la passion",
    "de": "die Leidenschaft",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La musique, c'est ma passion.",
+   "luecke": "passion",
+   "luecke_bei": 21
   },
   {
    "id": "y8u2-1-019",
    "en": "imiter qn/qc",
    "de": "jdn nachahmen, etw. nachmachen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Mon petit frère imite toujours le chat.",
+   "luecke": "imite",
+   "luecke_bei": 16
   },
   {
    "id": "y8u2-1-020",
    "en": "inventer qc",
    "de": "etw. erfinden",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Qui a inventé le téléphone ?",
+   "luecke": "inventé",
+   "luecke_bei": 6
   },
   {
    "id": "y8u2-1-021",
    "en": "la saison",
    "de": "die Jahreszeit, (auch:) die Staffel",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "L'automne est ma saison préférée.",
+   "luecke": "saison",
+   "luecke_bei": 17
   },
   {
    "id": "y8u2-1-022",
    "en": "la dent",
    "de": "der Zahn",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Le soir, je me brosse les dents.",
+   "luecke": "dents",
+   "luecke_bei": 26
   },
   {
    "id": "y8u2-1-023",
    "en": "le centimètre",
    "de": "der Zentimeter",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ma petite sœur mesure cent vingt centimètres.",
+   "luecke": "centimètres",
+   "luecke_bei": 33
   },
   {
    "id": "y8u2-1-024",
    "en": "le trou",
    "de": "das Loch",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Il y a un trou dans mon pull.",
+   "luecke": "trou",
+   "luecke_bei": 10
   }
  ],
  "y8u2-2": [
@@ -1614,91 +2061,136 @@ const SETS = {
    "id": "y8u2-2-001",
    "en": "au début (de qc)",
    "de": "am Anfang (von etw.), zuerst",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Au début du film, il ne se passe rien.",
+   "luecke": "Au début",
+   "luecke_bei": 0
   },
   {
    "id": "y8u2-2-002",
    "en": "et puis",
    "de": "außerdem",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Je suis allé au parc, et puis je suis rentré.",
+   "luecke": "et puis",
+   "luecke_bei": 22
   },
   {
    "id": "y8u2-2-003",
    "en": "avant",
    "de": "vor, davor",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Lave-toi les mains avant le repas.",
+   "luecke": "avant",
+   "luecke_bei": 19
   },
   {
    "id": "y8u2-2-004",
    "en": "tout à coup",
    "de": "plötzlich",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Tout à coup, il a commencé à pleuvoir.",
+   "luecke": "Tout à coup",
+   "luecke_bei": 0
   },
   {
    "id": "y8u2-2-005",
    "en": "finalement",
    "de": "letztendlich, schließlich",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Finalement, nous sommes restés à la maison.",
+   "luecke": "Finalement",
+   "luecke_bei": 0
   },
   {
    "id": "y8u2-2-006",
    "en": "tout le temps",
    "de": "die ganze Zeit, ständig",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon petit frère parle tout le temps.",
+   "luecke": "tout le temps",
+   "luecke_bei": 22
   },
   {
    "id": "y8u2-2-007",
    "en": "faire un tour",
    "de": "spazieren gehen, eine Runde drehen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Après le dîner, on va faire un tour dans le quartier.",
+   "luecke": "faire un tour",
+   "luecke_bei": 22
   },
   {
    "id": "y8u2-2-008",
    "en": "monter",
    "de": "steigen, hinaufsteigen, ansteigen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Nous montons au dernier étage de la tour.",
+   "luecke": "montons",
+   "luecke_bei": 5
   },
   {
    "id": "y8u2-2-009",
    "en": "tomber",
    "de": "fallen, hinfallen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Attention, tu vas tomber !",
+   "luecke": "tomber",
+   "luecke_bei": 18
   },
   {
    "id": "y8u2-2-010",
    "en": "avoir peur",
    "de": "Angst haben, Angst bekommen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon chien a peur de l'orage.",
+   "luecke": "a peur",
+   "luecke_bei": 10
   },
   {
    "id": "y8u2-2-011",
    "en": "avoir mal",
    "de": "Schmerzen haben",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Après le match, j'ai mal aux jambes.",
+   "luecke": "ai mal",
+   "luecke_bei": 18
   },
   {
    "id": "y8u2-2-012",
    "en": "c'était",
    "de": "das war, es war",
-   "pos": "Ausruf"
+   "pos": "Ausruf",
+   "example_en": "Les vacances, c'était génial !",
+   "luecke": "c'était",
+   "luecke_bei": 14
   },
   {
    "id": "y8u2-2-013",
    "en": "l'aviron",
    "de": "das Rudern",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le samedi matin, ma sœur fait de l'aviron sur le lac.",
+   "luecke": "aviron",
+   "luecke_bei": 35
   },
   {
    "id": "y8u2-2-014",
    "en": "la course-poursuite",
    "de": "die Verfolgungsjagd",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Dans ce film, il y a une course-poursuite en voiture.",
+   "luecke": "course-poursuite",
+   "luecke_bei": 25
   },
   {
    "id": "y8u2-2-015",
    "en": "Aïe !",
    "de": "Aua!",
-   "pos": "Ausruf"
+   "pos": "Ausruf",
+   "example_en": "Aïe ! Je me suis coupé le doigt.",
+   "luecke": "Aïe",
+   "luecke_bei": 0
   }
  ],
  "y8u2-3": [
@@ -1706,121 +2198,181 @@ const SETS = {
    "id": "y8u2-3-001",
    "en": "la nuit",
    "de": "die Nacht, nachts",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Cette nuit, j'ai mal dormi.",
+   "luecke": "nuit",
+   "luecke_bei": 6
   },
   {
    "id": "y8u2-3-002",
    "en": "hier",
    "de": "gestern",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Hier, nous sommes allés au cinéma.",
+   "luecke": "Hier",
+   "luecke_bei": 0
   },
   {
    "id": "y8u2-3-003",
    "en": "après",
    "de": "nach",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Après les cours, je fais mes devoirs.",
+   "luecke": "Après",
+   "luecke_bei": 0
   },
   {
    "id": "y8u2-3-004",
    "en": "la marée haute",
    "de": "die Flut, das Hochwasser",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "À marée haute, la plage est toute petite.",
+   "luecke": "marée haute",
+   "luecke_bei": 2
   },
   {
    "id": "y8u2-3-005",
    "en": "la marée basse",
    "de": "die Ebbe, das Niedrigwasser",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "À marée basse, on peut marcher jusqu'à l'île.",
+   "luecke": "marée basse",
+   "luecke_bei": 2
   },
   {
    "id": "y8u2-3-006",
    "en": "la balise",
    "de": "die Boje",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La balise rouge montre le chemin aux bateaux.",
+   "luecke": "balise",
+   "luecke_bei": 3
   },
   {
    "id": "y8u2-3-007",
    "en": "rencontrer qn",
    "de": "jdm begegnen, jdn treffen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'ai rencontré ma meilleure amie en colonie.",
+   "luecke": "rencontré",
+   "luecke_bei": 5
   },
   {
    "id": "y8u2-3-008",
    "en": "rigoler (bien)",
    "de": "(viel) lachen, (echt) Spaß haben",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Hier soir, on a bien rigolé !",
+   "luecke": "bien rigolé",
+   "luecke_bei": 16
   },
   {
    "id": "y8u2-3-009",
    "en": "comprendre qn/qc",
    "de": "jdn/etw. verstehen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je ne comprends pas cet exercice.",
+   "luecke": "comprends",
+   "luecke_bei": 6
   },
   {
    "id": "y8u2-3-010",
    "en": "au milieu (de qc)",
    "de": "in der Mitte (von etw.), mitten in",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Il y a une fontaine au milieu de la place.",
+   "luecke": "au milieu",
+   "luecke_bei": 20
   },
   {
    "id": "y8u2-3-011",
    "en": "la pause",
    "de": "die Pause",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "On fait une pause de dix minutes.",
+   "luecke": "pause",
+   "luecke_bei": 12
   },
   {
    "id": "y8u2-3-012",
    "en": "ramasser qc",
    "de": "etw. sammeln",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Sur la plage, nous ramassons des coquillages.",
+   "luecke": "ramassons",
+   "luecke_bei": 19
   },
   {
    "id": "y8u2-3-013",
    "en": "le coquillage",
    "de": "die Muschel",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "J'ai trouvé un joli coquillage sur la plage.",
+   "luecke": "coquillage",
+   "luecke_bei": 20
   },
   {
    "id": "y8u2-3-014",
    "en": "le bus",
    "de": "der Bus",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le bus a dix minutes de retard.",
+   "luecke": "bus",
+   "luecke_bei": 3
   },
   {
    "id": "y8u2-3-015",
    "en": "crier",
    "de": "schreien",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ne crie pas, le bébé dort !",
+   "luecke": "crie",
+   "luecke_bei": 3
   },
   {
    "id": "y8u2-3-016",
    "en": "retourner",
    "de": "zurückkehren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Cet été, nous allons retourner en Bretagne.",
+   "luecke": "retourner",
+   "luecke_bei": 21
   },
   {
    "id": "y8u2-3-017",
    "en": "la route",
    "de": "die Landstraße, die Fernverkehrsstraße",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Cette route mène à la mer.",
+   "luecke": "route",
+   "luecke_bei": 6
   },
   {
    "id": "y8u2-3-018",
    "en": "la surprise",
    "de": "die Überraschung",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Pour son anniversaire, on lui prépare une surprise.",
+   "luecke": "surprise",
+   "luecke_bei": 42
   },
   {
    "id": "y8u2-3-019",
    "en": "retrouver qn",
    "de": "jdn treffen, (hier:) jdn wiederfinden",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je retrouve mes amis devant le cinéma.",
+   "luecke": "retrouve",
+   "luecke_bei": 3
   },
   {
    "id": "y8u2-3-020",
    "en": "tout de suite",
    "de": "sofort",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Viens ici tout de suite !",
+   "luecke": "tout de suite",
+   "luecke_bei": 10
   }
  ],
  "y8u2-m2": [
@@ -1828,151 +2380,226 @@ const SETS = {
    "id": "y8u2-m2-001",
    "en": "le record",
    "de": "der Rekord",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Elle a battu le record du monde.",
+   "luecke": "record",
+   "luecke_bei": 16
   },
   {
    "id": "y8u2-m2-002",
    "en": "haut/haute",
    "de": "hoch",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Cette montagne est très haute.",
+   "luecke": "haute",
+   "luecke_bei": 24
   },
   {
    "id": "y8u2-m2-003",
    "en": "l'Europe",
    "de": "Europa",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La France est un pays d'Europe.",
+   "luecke": "Europe",
+   "luecke_bei": 24
   },
   {
    "id": "y8u2-m2-004",
    "en": "l'ouest",
    "de": "der Westen",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Brest se trouve à l'ouest de la France.",
+   "luecke": "ouest",
+   "luecke_bei": 20
   },
   {
    "id": "y8u2-m2-005",
    "en": "les Alpes",
    "de": "die Alpen",
-   "pos": "Nomen, f. pl."
+   "pos": "Nomen, f. pl.",
+   "example_en": "En hiver, nous faisons du ski dans les Alpes.",
+   "luecke": "Alpes",
+   "luecke_bei": 39
   },
   {
    "id": "y8u2-m2-006",
    "en": "court/courte",
    "de": "kurz",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Le film est trop court.",
+   "luecke": "court",
+   "luecke_bei": 17
   },
   {
    "id": "y8u2-m2-007",
    "en": "long/longue",
    "de": "lang",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "La route est très longue.",
+   "luecke": "longue",
+   "luecke_bei": 18
   },
   {
    "id": "y8u2-m2-008",
    "en": "le village",
    "de": "das Dorf",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ma grand-mère habite dans un petit village.",
+   "luecke": "village",
+   "luecke_bei": 35
   },
   {
    "id": "y8u2-m2-009",
    "en": "rapide",
    "de": "schnell",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Le TGV est un train très rapide.",
+   "luecke": "rapide",
+   "luecke_bei": 25
   },
   {
    "id": "y8u2-m2-010",
    "en": "rouler",
    "de": "fahren, rollen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Sur l'autoroute, les voitures roulent vite.",
+   "luecke": "roulent",
+   "luecke_bei": 30
   },
   {
    "id": "y8u2-m2-011",
    "en": "le kilomètre",
    "de": "der Kilometer",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le collège est à deux kilomètres de chez moi.",
+   "luecke": "kilomètres",
+   "luecke_bei": 22
   },
   {
    "id": "y8u2-m2-012",
    "en": "moins … que",
    "de": "weniger … als, nicht so … wie",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Le vélo est moins rapide que le train.",
+   "luecke": "moins rapide que",
+   "luecke_bei": 12
   },
   {
    "id": "y8u2-m2-013",
    "en": "plus … que",
    "de": "mehr … als",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Paris est plus grand que Lyon.",
+   "luecke": "plus grand que",
+   "luecke_bei": 10
   },
   {
    "id": "y8u2-m2-014",
    "en": "aussi … que",
    "de": "(genau) so … wie",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon frère est aussi grand que mon père.",
+   "luecke": "aussi grand que",
+   "luecke_bei": 14
   },
   {
    "id": "y8u2-m2-015",
    "en": "meilleur/meilleure … que",
    "de": "besser",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Cette pizza est meilleure que l'autre.",
+   "luecke": "meilleure que",
+   "luecke_bei": 16
   },
   {
    "id": "y8u2-m2-016",
    "en": "l'or",
    "de": "das Gold",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "La nageuse a gagné la médaille d'or.",
+   "luecke": "or",
+   "luecke_bei": 33
   },
   {
    "id": "y8u2-m2-017",
    "en": "l'argent",
    "de": "das Silber",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Il a gagné la médaille d'argent.",
+   "luecke": "argent",
+   "luecke_bei": 25
   },
   {
    "id": "y8u2-m2-018",
    "en": "la femme",
    "de": "die Frau, die Ehefrau",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Cette femme est ma prof de maths.",
+   "luecke": "femme",
+   "luecke_bei": 6
   },
   {
    "id": "y8u2-m2-019",
    "en": "l'homme",
    "de": "der Mann",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Cet homme est le père de mon ami.",
+   "luecke": "homme",
+   "luecke_bei": 4
   },
   {
    "id": "y8u2-m2-020",
    "en": "puissant/puissante",
    "de": "mächtig",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ce moteur est très puissant.",
+   "luecke": "puissant",
+   "luecke_bei": 19
   },
   {
    "id": "y8u2-m2-021",
    "en": "le/la chef",
    "de": "der/die Chef/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Le chef de l'équipe donne les idées.",
+   "luecke": "chef",
+   "luecke_bei": 3
   },
   {
    "id": "y8u2-m2-022",
    "en": "le/la chef de cuisine",
    "de": "der Chefkoch / die Chefköchin",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Le chef de cuisine prépare un menu spécial.",
+   "luecke": "chef de cuisine",
+   "luecke_bei": 3
   },
   {
    "id": "y8u2-m2-023",
    "en": "devenir",
    "de": "werden",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Plus tard, je veux devenir pilote.",
+   "luecke": "devenir",
+   "luecke_bei": 19
   },
   {
    "id": "y8u2-m2-024",
    "en": "le meilleur / la meilleure",
    "de": "der/die/das beste",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "C'est la meilleure joueuse de l'équipe.",
+   "luecke": "meilleure",
+   "luecke_bei": 9
   },
   {
    "id": "y8u2-m2-025",
    "en": "impressionnant/impressionnante",
    "de": "beeindruckend",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "La vue du haut de la tour est impressionnante.",
+   "luecke": "impressionnante",
+   "luecke_bei": 30
   }
  ],
  "y8u3-a": [
@@ -1980,13 +2607,19 @@ const SETS = {
    "id": "y8u3-a-001",
    "en": "le moment",
    "de": "der Moment, der Augenblick",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ce concert, c'était un moment magique.",
+   "luecke": "moment",
+   "luecke_bei": 23
   },
   {
    "id": "y8u3-a-002",
    "en": "compter (pour qn)",
    "de": "(jdm etw.) bedeuten, (für jdn etw.) zählen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mes amis comptent beaucoup pour moi.",
+   "luecke": "comptent",
+   "luecke_bei": 9
   }
  ],
  "y8u3-voc": [
@@ -1994,73 +2627,109 @@ const SETS = {
    "id": "y8u3-voc-001",
    "en": "le conflit",
    "de": "der Konflikt",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Il y a souvent un conflit entre mon frère et moi.",
+   "luecke": "conflit",
+   "luecke_bei": 18
   },
   {
    "id": "y8u3-voc-002",
    "en": "discuter (de qc)",
    "de": "(über etw.) reden, (über etw.) diskutieren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Nous discutons du voyage de classe.",
+   "luecke": "discutons",
+   "luecke_bei": 5
   },
   {
    "id": "y8u3-voc-003",
    "en": "C'est quoi, cette histoire ?",
    "de": "Was soll das?",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Tu as pris mon portable ? C'est quoi, cette histoire ?",
+   "luecke": "C'est quoi, cette histoire",
+   "luecke_bei": 26
   },
   {
    "id": "y8u3-voc-004",
    "en": "être en colère",
    "de": "sauer sein, wütend sein",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Ma mère est en colère parce que je suis rentré tard.",
+   "luecke": "est en colère",
+   "luecke_bei": 8
   },
   {
    "id": "y8u3-voc-005",
    "en": "Et alors ?",
    "de": "Na und?",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "– Tu as eu une mauvaise note ! – Et alors ?",
+   "luecke": "Et alors",
+   "luecke_bei": 33
   },
   {
    "id": "y8u3-voc-006",
    "en": "Tu ne comprends rien.",
    "de": "Du verstehst (gar) nichts.",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mais non, ce n'est pas ça ! Tu ne comprends rien.",
+   "luecke": "Tu ne comprends rien",
+   "luecke_bei": 28
   },
   {
    "id": "y8u3-voc-007",
    "en": "exagérer",
    "de": "übertreiben",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Deux heures de devoirs ? Tu exagères !",
+   "luecke": "exagères",
+   "luecke_bei": 28
   },
   {
    "id": "y8u3-voc-008",
    "en": "N'importe quoi !",
    "de": "So ein Quatsch!",
-   "pos": "Ausruf"
+   "pos": "Ausruf",
+   "example_en": "Moi, amoureux de Léa ? N'importe quoi !",
+   "luecke": "N'importe quoi",
+   "luecke_bei": 23
   },
   {
    "id": "y8u3-voc-009",
    "en": "Tu m'énerves !",
    "de": "Du nervst (mich)!",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Arrête de chanter, tu m'énerves !",
+   "luecke": "tu m'énerves",
+   "luecke_bei": 19
   },
   {
    "id": "y8u3-voc-010",
    "en": "avoir raison",
    "de": "recht haben",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "D'accord, tu as raison.",
+   "luecke": "as raison",
+   "luecke_bei": 13
   },
   {
    "id": "y8u3-voc-011",
    "en": "grave",
    "de": "schlimm",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Ce n'est pas grave.",
+   "luecke": "grave",
+   "luecke_bei": 13
   },
   {
    "id": "y8u3-voc-012",
    "en": "Qu'est-ce que tu en penses ?",
    "de": "Was hältst du davon?",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Je veux faire du théâtre. Qu'est-ce que tu en penses ?",
+   "luecke": "Qu'est-ce que tu en penses",
+   "luecke_bei": 26
   }
  ],
  "y8u3-1": [
@@ -2068,139 +2737,208 @@ const SETS = {
    "id": "y8u3-1-001",
    "en": "fier/fière (de qn/qc)",
    "de": "stolz (auf jdn/etw.)",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Mes parents sont fiers de moi.",
+   "luecke": "fiers",
+   "luecke_bei": 17
   },
   {
    "id": "y8u3-1-002",
    "en": "différent/différente",
    "de": "verschieden, unterschiedlich",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Mes deux sœurs sont très différentes.",
+   "luecke": "différentes",
+   "luecke_bei": 25
   },
   {
    "id": "y8u3-1-003",
    "en": "ça explose",
    "de": "es eskaliert, es kracht",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Quand mes frères jouent ensemble, souvent, ça explose.",
+   "luecke": "ça explose",
+   "luecke_bei": 43
   },
   {
    "id": "y8u3-1-004",
    "en": "le souvenir",
    "de": "die Erinnerung, das Souvenir",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "J'ai acheté un souvenir pour ma grand-mère.",
+   "luecke": "souvenir",
+   "luecke_bei": 15
   },
   {
    "id": "y8u3-1-005",
    "en": "partager qc",
    "de": "etw. teilen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je partage ma chambre avec mon frère.",
+   "luecke": "partage",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-1-006",
    "en": "rapprocher qn/qc",
    "de": "(hier:) jdn/etw. einander näherbringen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ce voyage a rapproché toute la famille.",
+   "luecke": "rapproché",
+   "luecke_bei": 12
   },
   {
    "id": "y8u3-1-007",
    "en": "accompagner qn",
    "de": "jdn begleiten",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Mon père m'accompagne au match.",
+   "luecke": "accompagne",
+   "luecke_bei": 11
   },
   {
    "id": "y8u3-1-008",
    "en": "aider (qn)",
    "de": "(jdm) helfen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu peux m'aider avec mes devoirs ?",
+   "luecke": "aider",
+   "luecke_bei": 10
   },
   {
    "id": "y8u3-1-009",
    "en": "énerver qn",
    "de": "jdn nerven, jdn ärgern",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le bruit de la rue m'énerve.",
+   "luecke": "énerve",
+   "luecke_bei": 21
   },
   {
    "id": "y8u3-1-010",
    "en": "parler de qc",
    "de": "über etw. sprechen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Dans ce livre, l'auteur parle de son enfance.",
+   "luecke": "parle de",
+   "luecke_bei": 24
   },
   {
    "id": "y8u3-1-011",
    "en": "c'est normal",
    "de": "das ist normal",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Tu es fatigué après le match ? C'est normal.",
+   "luecke": "C'est normal",
+   "luecke_bei": 31
   },
   {
    "id": "y8u3-1-012",
    "en": "faire la cuisine",
    "de": "kochen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Le dimanche, mon père fait la cuisine.",
+   "luecke": "fait la cuisine",
+   "luecke_bei": 22
   },
   {
    "id": "y8u3-1-013",
    "en": "le travail",
    "de": "die Arbeit",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ma mère part au travail à sept heures.",
+   "luecke": "travail",
+   "luecke_bei": 16
   },
   {
    "id": "y8u3-1-014",
    "en": "filmer qn/qc",
    "de": "jdn/etw. filmen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Mon cousin filme tous ses tricks au skatepark.",
+   "luecke": "filme",
+   "luecke_bei": 11
   },
   {
    "id": "y8u3-1-015",
    "en": "La Réunion",
    "de": "La Réunion",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "L'île de La Réunion se trouve dans l'océan Indien.",
+   "luecke": "La Réunion",
+   "luecke_bei": 9
   },
   {
    "id": "y8u3-1-016",
    "en": "la chose",
    "de": "die Sache, das Ding",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "J'ai encore une chose à te dire.",
+   "luecke": "chose",
+   "luecke_bei": 16
   },
   {
    "id": "y8u3-1-017",
    "en": "du coup",
    "de": "daraufhin, deshalb, daher",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Il pleuvait, du coup on est restés à la maison.",
+   "luecke": "du coup",
+   "luecke_bei": 13
   },
   {
    "id": "y8u3-1-018",
    "en": "si",
    "de": "doch",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "– Tu n'as pas faim ? – Si, j'ai très faim !",
+   "luecke": "Si",
+   "luecke_bei": 23
   },
   {
    "id": "y8u3-1-019",
    "en": "par",
    "de": "pro",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Le cours coûte dix euros par personne.",
+   "luecke": "par",
+   "luecke_bei": 25
   },
   {
    "id": "y8u3-1-020",
    "en": "le vide-grenier",
    "de": "der Flohmarkt, der Trödelmarkt",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Dimanche, nous vendons nos vieux jouets au vide-grenier.",
+   "luecke": "vide-grenier",
+   "luecke_bei": 43
   },
   {
    "id": "y8u3-1-021",
    "en": "trier qc",
    "de": "etw. aussortieren, etw. sortieren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je trie mes vieux vêtements.",
+   "luecke": "trie",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-1-022",
    "en": "vendre qc (à qn)",
    "de": "(jdm) etw. verkaufen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Mon voisin vend son vélo.",
+   "luecke": "vend",
+   "luecke_bei": 11
   },
   {
    "id": "y8u3-1-023",
    "en": "échanger qc (contre qc)",
    "de": "etw. austauschen, etw. (gegen etw.) tauschen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'ai échangé mes cartes contre un jeu vidéo.",
+   "luecke": "échangé",
+   "luecke_bei": 5
   }
  ],
  "y8u3-2": [
@@ -2208,127 +2946,190 @@ const SETS = {
    "id": "y8u3-2-001",
    "en": "la carrière",
    "de": "die Karriere",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La chanteuse a commencé sa carrière à seize ans.",
+   "luecke": "carrière",
+   "luecke_bei": 27
   },
   {
    "id": "y8u3-2-002",
    "en": "le succès",
    "de": "der Erfolg",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Sa chanson a eu beaucoup de succès.",
+   "luecke": "succès",
+   "luecke_bei": 28
   },
   {
    "id": "y8u3-2-003",
    "en": "jeune",
    "de": "jung",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Mon oncle est encore très jeune.",
+   "luecke": "jeune",
+   "luecke_bei": 26
   },
   {
    "id": "y8u3-2-004",
    "en": "d'ailleurs",
    "de": "übrigens",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "J'aime le rap ; d'ailleurs, j'écris mes propres textes.",
+   "luecke": "d'ailleurs",
+   "luecke_bei": 16
   },
   {
    "id": "y8u3-2-005",
    "en": "appeler qn",
    "de": "jdn nennen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Mes amis m'appellent « Max ».",
+   "luecke": "appellent",
+   "luecke_bei": 11
   },
   {
    "id": "y8u3-2-006",
    "en": "la mélodie",
    "de": "die Melodie",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La mélodie de cette chanson est très belle.",
+   "luecke": "mélodie",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-2-007",
    "en": "que",
    "de": "den/die/das",
-   "pos": "Pronomen"
+   "pos": "Pronomen",
+   "example_en": "Le livre que je lis est passionnant.",
+   "luecke": "que",
+   "luecke_bei": 9
   },
   {
    "id": "y8u3-2-008",
    "en": "créatif/créative",
    "de": "kreativ",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ma sœur est très créative : elle dessine et elle chante.",
+   "luecke": "créative",
+   "luecke_bei": 17
   },
   {
    "id": "y8u3-2-009",
    "en": "le message",
    "de": "(hier:) die Botschaft, die Aussage",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le message de la chanson est important.",
+   "luecke": "message",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-2-010",
    "en": "le champion / la championne",
    "de": "der Champion, der/die Meister/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Elle est championne de France de natation.",
+   "luecke": "championne",
+   "luecke_bei": 9
   },
   {
    "id": "y8u3-2-011",
    "en": "l'entraîneur / l'entraîneuse",
    "de": "der/die Trainer/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Notre entraîneur est très exigeant.",
+   "luecke": "entraîneur",
+   "luecke_bei": 6
   },
   {
    "id": "y8u3-2-012",
    "en": "sportif/sportive",
    "de": "sportlich",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Mon frère est très sportif.",
+   "luecke": "sportif",
+   "luecke_bei": 19
   },
   {
    "id": "y8u3-2-013",
    "en": "le ski",
    "de": "der Ski, das Skifahren",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "En février, nous faisons du ski.",
+   "luecke": "ski",
+   "luecke_bei": 28
   },
   {
    "id": "y8u3-2-014",
    "en": "le ski de bosses",
    "de": "das Buckelpistenfahren",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le ski de bosses est un sport difficile.",
+   "luecke": "ski de bosses",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-2-015",
    "en": "l'équipe",
    "de": "die Mannschaft, das Team",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Notre équipe a gagné le tournoi.",
+   "luecke": "équipe",
+   "luecke_bei": 6
   },
   {
    "id": "y8u3-2-016",
    "en": "remarquer qn/qc",
    "de": "jdn/etw. bemerken",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu as remarqué sa nouvelle coiffure ?",
+   "luecke": "remarqué",
+   "luecke_bei": 6
   },
   {
    "id": "y8u3-2-017",
    "en": "le talent",
    "de": "das Talent",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Tu as beaucoup de talent pour le dessin.",
+   "luecke": "talent",
+   "luecke_bei": 18
   },
   {
    "id": "y8u3-2-018",
    "en": "compter sur qn",
    "de": "auf jdn zählen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu peux compter sur moi !",
+   "luecke": "compter sur",
+   "luecke_bei": 8
   },
   {
    "id": "y8u3-2-019",
    "en": "la médaille",
    "de": "die Medaille",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Elle a gagné une médaille aux Jeux olympiques.",
+   "luecke": "médaille",
+   "luecke_bei": 17
   },
   {
    "id": "y8u3-2-020",
    "en": "courageux/courageuse",
    "de": "mutig",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Le pompier a été très courageux.",
+   "luecke": "courageux",
+   "luecke_bei": 22
   },
   {
    "id": "y8u3-2-021",
    "en": "heureux/heureuse",
    "de": "glücklich",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Je suis heureuse d'être en vacances.",
+   "luecke": "heureuse",
+   "luecke_bei": 8
   }
  ],
  "y8u3-3": [
@@ -2336,127 +3137,190 @@ const SETS = {
    "id": "y8u3-3-001",
    "en": "ce/cet/cette/ces",
    "de": "dieser/diese/dieses",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Cette maison est très grande.",
+   "luecke": "Cette",
+   "luecke_bei": 0
   },
   {
    "id": "y8u3-3-002",
    "en": "le fer à repasser",
    "de": "das Bügeleisen",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Attention, le fer à repasser est chaud !",
+   "luecke": "fer à repasser",
+   "luecke_bei": 14
   },
   {
    "id": "y8u3-3-003",
    "en": "ne ... rien",
    "de": "nichts",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Je ne comprends rien.",
+   "luecke": "ne comprends rien",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-3-004",
    "en": "ne … jamais",
    "de": "nie",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Mon frère ne range jamais sa chambre.",
+   "luecke": "ne range jamais",
+   "luecke_bei": 10
   },
   {
    "id": "y8u3-3-005",
    "en": "l'appli (fam.) / l'application",
    "de": "die App",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "J'apprends le vocabulaire avec une appli.",
+   "luecke": "appli",
+   "luecke_bei": 35
   },
   {
    "id": "y8u3-3-006",
    "en": "l'échange",
    "de": "der Tausch, (auch:) der Austausch",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "L'échange avec notre classe partenaire commence en mai.",
+   "luecke": "échange",
+   "luecke_bei": 2
   },
   {
    "id": "y8u3-3-007",
    "en": "Quoi ?",
    "de": "Was?",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Quoi ? Je n'ai pas compris.",
+   "luecke": "Quoi",
+   "luecke_bei": 0
   },
   {
    "id": "y8u3-3-008",
    "en": "mettre qc",
    "de": "etw. stellen, etw. setzen, etw. legen, (auch:) etw. anziehen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Il fait froid : mets ton manteau !",
+   "luecke": "mets",
+   "luecke_bei": 16
   },
   {
    "id": "y8u3-3-009",
    "en": "en ligne",
    "de": "online",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "J'ai acheté mon billet en ligne.",
+   "luecke": "en ligne",
+   "luecke_bei": 23
   },
   {
    "id": "y8u3-3-010",
    "en": "utiliser qc",
    "de": "etw. benutzen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "En cours, nous utilisons des tablettes.",
+   "luecke": "utilisons",
+   "luecke_bei": 15
   },
   {
    "id": "y8u3-3-011",
    "en": "prêter qc (à qn)",
    "de": "(jdm) etw. (ver-)leihen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu peux me prêter ton stylo ?",
+   "luecke": "prêter",
+   "luecke_bei": 11
   },
   {
    "id": "y8u3-3-012",
    "en": "le gaspillage",
    "de": "die Verschwendung",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le gaspillage de nourriture est un grand problème.",
+   "luecke": "gaspillage",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-3-013",
    "en": "tu sais",
    "de": "du weißt, weißt du",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Tu sais, je suis très content de te voir.",
+   "luecke": "Tu sais",
+   "luecke_bei": 0
   },
   {
    "id": "y8u3-3-014",
    "en": "écolo (fam.) / écologique",
    "de": "umweltbewusst, ökologisch, Öko-",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Ma tante est très écolo : elle va partout à vélo.",
+   "luecke": "écolo",
+   "luecke_bei": 18
   },
   {
    "id": "y8u3-3-015",
    "en": "emprunter qc",
    "de": "etw. (aus-)leihen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'ai emprunté trois livres à la bibliothèque.",
+   "luecke": "emprunté",
+   "luecke_bei": 5
   },
   {
    "id": "y8u3-3-016",
    "en": "coûter",
    "de": "kosten",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ce jeu vidéo coûte cinquante euros.",
+   "luecke": "coûte",
+   "luecke_bei": 13
   },
   {
    "id": "y8u3-3-017",
    "en": "Ce n'est pas pareil !",
    "de": "Das ist nicht das Gleiche!",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Un livre et un film ? Ce n'est pas pareil !",
+   "luecke": "Ce n'est pas pareil",
+   "luecke_bei": 22
   },
   {
    "id": "y8u3-3-018",
    "en": "commander qc",
    "de": "etw. bestellen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Au restaurant, j'ai commandé une pizza.",
+   "luecke": "commandé",
+   "luecke_bei": 20
   },
   {
    "id": "y8u3-3-019",
    "en": "la poubelle",
    "de": "der Mülleimer",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Le papier va dans la poubelle jaune.",
+   "luecke": "poubelle",
+   "luecke_bei": 21
   },
   {
    "id": "y8u3-3-020",
    "en": "mettre qc à la poubelle",
    "de": "etw. in den Müll werfen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Ne mets pas le pain à la poubelle !",
+   "luecke": "mets pas le pain à la poubelle",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-3-021",
    "en": "l'emballage",
    "de": "die Verpackung",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Il y a trop de plastique dans cet emballage.",
+   "luecke": "emballage",
+   "luecke_bei": 34
   }
  ],
  "y8u3-m3": [
@@ -2464,157 +3328,235 @@ const SETS = {
    "id": "y8u3-m3-001",
    "en": "la finale",
    "de": "das Finale",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "L'équipe de France est en finale !",
+   "luecke": "finale",
+   "luecke_bei": 26
   },
   {
    "id": "y8u3-m3-002",
    "en": "le match",
    "de": "das Spiel",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le match commence à vingt et une heures.",
+   "luecke": "match",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-m3-003",
    "en": "le/la Croate",
    "de": "der Kroate / die Kroatin",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Le gardien est un Croate de Zagreb.",
+   "luecke": "Croate",
+   "luecke_bei": 18
   },
   {
    "id": "y8u3-m3-004",
    "en": "fort/forte",
    "de": "stark",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Cette équipe est très forte.",
+   "luecke": "forte",
+   "luecke_bei": 22
   },
   {
    "id": "y8u3-m3-005",
    "en": "le but",
    "de": "das Ziel, (hier:) das Tor",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Quel beau but !",
+   "luecke": "but",
+   "luecke_bei": 10
   },
   {
    "id": "y8u3-m3-006",
    "en": "tirer",
    "de": "ziehen, (hier:) schießen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le joueur tire et marque !",
+   "luecke": "tire",
+   "luecke_bei": 10
   },
   {
    "id": "y8u3-m3-007",
    "en": "défendre (qn/qc)",
    "de": "(jdn/etw.) verteidigen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Notre équipe défend très bien.",
+   "luecke": "défend",
+   "luecke_bei": 13
   },
   {
    "id": "y8u3-m3-008",
    "en": "marquer un but",
    "de": "ein Tor schießen, treffen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "À la dernière minute, Léo a marqué un but.",
+   "luecke": "marqué un but",
+   "luecke_bei": 28
   },
   {
    "id": "y8u3-m3-009",
    "en": "contre",
    "de": "gegen, dagegen",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Ce soir, la France joue contre l'Italie.",
+   "luecke": "contre",
+   "luecke_bei": 24
   },
   {
    "id": "y8u3-m3-010",
    "en": "mener",
    "de": "führen, in Führung liegen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "À la mi-temps, Marseille mène deux à zéro.",
+   "luecke": "mène",
+   "luecke_bei": 25
   },
   {
    "id": "y8u3-m3-011",
    "en": "(1) à (0)",
    "de": "(1) zu (0)",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Nous avons gagné trois à un.",
+   "luecke": "trois à un",
+   "luecke_bei": 17
   },
   {
    "id": "y8u3-m3-012",
    "en": "l'arbitre",
    "de": "der/die Schiedsrichter/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "L'arbitre siffle la fin du match.",
+   "luecke": "arbitre",
+   "luecke_bei": 2
   },
   {
    "id": "y8u3-m3-013",
    "en": "le carton (jaune/rouge)",
    "de": "die (gelbe/rote) Karte",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Après cette faute, il reçoit un carton rouge.",
+   "luecke": "carton rouge",
+   "luecke_bei": 32
   },
   {
    "id": "y8u3-m3-014",
    "en": "le score",
    "de": "der Spielstand",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Quel est le score ?",
+   "luecke": "score",
+   "luecke_bei": 12
   },
   {
    "id": "y8u3-m3-015",
    "en": "le score est de … à …",
    "de": "es steht … zu …",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "À la mi-temps, le score est de un à un.",
+   "luecke": "le score est de",
+   "luecke_bei": 15
   },
   {
    "id": "y8u3-m3-016",
    "en": "partout",
    "de": "(hier:) unentschieden",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Deux buts partout : le match est encore ouvert.",
+   "luecke": "partout",
+   "luecke_bei": 10
   },
   {
    "id": "y8u3-m3-017",
    "en": "attaquer (qn)",
    "de": "(jdn) angreifen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Les Bleus attaquent sans arrêt.",
+   "luecke": "attaquent",
+   "luecke_bei": 10
   },
   {
    "id": "y8u3-m3-018",
    "en": "la faute",
    "de": "der Fehler, (hier:) das Foul",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "L'arbitre a vu la faute.",
+   "luecke": "faute",
+   "luecke_bei": 18
   },
   {
    "id": "y8u3-m3-019",
    "en": "parler à qn",
    "de": "mit jdm sprechen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je dois parler à ma prof.",
+   "luecke": "parler à",
+   "luecke_bei": 8
   },
   {
    "id": "y8u3-m3-020",
    "en": "le penalty",
    "de": "der Strafstoß, der Elfmeter",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Il a marqué le penalty.",
+   "luecke": "penalty",
+   "luecke_bei": 15
   },
   {
    "id": "y8u3-m3-021",
    "en": "la mi-temps",
    "de": "die Halbzeit",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Pendant la mi-temps, les joueurs boivent de l'eau.",
+   "luecke": "mi-temps",
+   "luecke_bei": 11
   },
   {
    "id": "y8u3-m3-022",
    "en": "le ballon",
    "de": "der Ball",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le ballon est dans le but !",
+   "luecke": "ballon",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-m3-023",
    "en": "passer le ballon à qn",
    "de": "jdm den Ball zuspielen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Passe le ballon à Hugo, il est seul !",
+   "luecke": "Passe le ballon à",
+   "luecke_bei": 0
   },
   {
    "id": "y8u3-m3-024",
    "en": "le gardien / la gardienne (de but)",
    "de": "der/die Torwart/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "La gardienne a arrêté le penalty.",
+   "luecke": "gardienne",
+   "luecke_bei": 3
   },
   {
    "id": "y8u3-m3-025",
    "en": "faire attention",
    "de": "aufpassen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Fais attention en traversant la rue !",
+   "luecke": "Fais attention",
+   "luecke_bei": 0
   },
   {
    "id": "y8u3-m3-026",
    "en": "il reste…",
    "de": "(nur) noch…",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Il reste deux minutes de jeu.",
+   "luecke": "Il reste",
+   "luecke_bei": 0
   }
  ],
  "y8u4-a": [
@@ -2622,55 +3564,82 @@ const SETS = {
    "id": "y8u4-a-001",
    "en": "la planète",
    "de": "der Planet",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Nous devons protéger notre planète.",
+   "luecke": "planète",
+   "luecke_bei": 27
   },
   {
    "id": "y8u4-a-002",
    "en": "le médiateur / la médiatrice",
    "de": "der/die Vermittler/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Au collège, une médiatrice aide les élèves en conflit.",
+   "luecke": "médiatrice",
+   "luecke_bei": 16
   },
   {
    "id": "y8u4-a-003",
    "en": "l'intello",
    "de": "der/die Streber/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "On dit qu'il est l'intello de la classe parce qu'il a toujours de bonnes notes.",
+   "luecke": "intello",
+   "luecke_bei": 19
   },
   {
    "id": "y8u4-a-004",
    "en": "la brute",
    "de": "der/die Unruhestifter/in",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Dans le film, la brute embête les petits de sixième.",
+   "luecke": "brute",
+   "luecke_bei": 17
   },
   {
    "id": "y8u4-a-005",
    "en": "le bavard / la bavarde",
    "de": "die Quasselstrippe",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Ma voisine est une vraie bavarde : elle parle tout le temps.",
+   "luecke": "bavarde",
+   "luecke_bei": 25
   },
   {
    "id": "y8u4-a-006",
    "en": "le geek",
    "de": "der Nerd, (auch:) der Computernerd",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Mon cousin est un geek : il passe ses soirées devant l'ordinateur.",
+   "luecke": "geek",
+   "luecke_bei": 18
   },
   {
    "id": "y8u4-a-007",
    "en": "le clown",
    "de": "der/die Clown/in",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Paul fait toujours le clown en cours.",
+   "luecke": "clown",
+   "luecke_bei": 22
   },
   {
    "id": "y8u4-a-008",
    "en": "les inséparables",
    "de": "die Unzertrennlichen",
-   "pos": "Nomen, m./f. pl."
+   "pos": "Nomen, m./f. pl.",
+   "example_en": "Léa et Inès sont les inséparables de la classe.",
+   "luecke": "inséparables",
+   "luecke_bei": 21
   },
   {
    "id": "y8u4-a-009",
    "en": "le chouchou / la chouchoute",
    "de": "der Liebling",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Tout le monde dit que Tom est le chouchou du prof.",
+   "luecke": "chouchou",
+   "luecke_bei": 33
   }
  ],
  "y8u4-voc": [
@@ -2678,79 +3647,118 @@ const SETS = {
    "id": "y8u4-voc-001",
    "en": "seul/seule",
    "de": "allein",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Le soir, mon chat est seul à la maison.",
+   "luecke": "seul",
+   "luecke_bei": 22
   },
   {
    "id": "y8u4-voc-002",
    "en": "poser une question (à qn)",
    "de": "(jdm) eine Frage stellen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Je peux poser une question ?",
+   "luecke": "poser une question",
+   "luecke_bei": 8
   },
   {
    "id": "y8u4-voc-003",
    "en": "l'excuse",
    "de": "die Entschuldigung, (auch:) die Ausrede",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Il a toujours une excuse quand il est en retard.",
+   "luecke": "excuse",
+   "luecke_bei": 18
   },
   {
    "id": "y8u4-voc-004",
    "en": "la pression",
    "de": "der Druck",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Avant un contrôle, je sens la pression.",
+   "luecke": "pression",
+   "luecke_bei": 30
   },
   {
    "id": "y8u4-voc-005",
    "en": "mettre la pression à qn",
    "de": "jdn unter Druck setzen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mes parents me mettent la pression pour les notes.",
+   "luecke": "mettent la pression",
+   "luecke_bei": 15
   },
   {
    "id": "y8u4-voc-006",
    "en": "le temps",
    "de": "die Zeit",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Je n'ai pas le temps aujourd'hui.",
+   "luecke": "temps",
+   "luecke_bei": 15
   },
   {
    "id": "y8u4-voc-007",
    "en": "dernier/dernière",
    "de": "letzter/letzte/letztes",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "C'est le dernier jour des vacances.",
+   "luecke": "dernier",
+   "luecke_bei": 9
   },
   {
    "id": "y8u4-voc-008",
    "en": "réviser (qc)",
    "de": "(etw.) lernen, etw. wiederholen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ce week-end, je révise pour le contrôle d'histoire.",
+   "luecke": "révise",
+   "luecke_bei": 16
   },
   {
    "id": "y8u4-voc-009",
    "en": "participer en cours",
    "de": "im Unterricht mitarbeiten",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Pour avoir une bonne note, il faut participer en cours.",
+   "luecke": "participer en cours",
+   "luecke_bei": 35
   },
   {
    "id": "y8u4-voc-010",
    "en": "rendre qc (à qn)",
    "de": "(jdm) etw. zurückgeben",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu me rends mon livre demain ?",
+   "luecke": "rends",
+   "luecke_bei": 6
   },
   {
    "id": "y8u4-voc-011",
    "en": "mauvais/mauvaise",
    "de": "schlecht",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "J'ai eu une mauvaise note en maths.",
+   "luecke": "mauvaise",
+   "luecke_bei": 12
   },
   {
    "id": "y8u4-voc-012",
    "en": "la note",
    "de": "die Note",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "J'ai eu une bonne note en anglais.",
+   "luecke": "note",
+   "luecke_bei": 18
   },
   {
    "id": "y8u4-voc-013",
    "en": "la moyenne",
    "de": "der Durchschnitt",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Ma moyenne en français est de quatorze.",
+   "luecke": "moyenne",
+   "luecke_bei": 3
   }
  ],
  "y8u4-1": [
@@ -2758,103 +3766,154 @@ const SETS = {
    "id": "y8u4-1-001",
    "en": "écrire qc (à qn)",
    "de": "(jdm) etw. schreiben",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'écris une carte à ma grand-mère.",
+   "luecke": "écris",
+   "luecke_bei": 2
   },
   {
    "id": "y8u4-1-002",
    "en": "laisser qn tranquille",
    "de": "jdn in Ruhe lassen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Je travaille : laisse-moi tranquille !",
+   "luecke": "laisse-moi tranquille",
+   "luecke_bei": 15
   },
   {
    "id": "y8u4-1-003",
    "en": "sérieux/sérieuse",
    "de": "ernst, ernsthaft",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ma sœur est très sérieuse : elle fait toujours ses devoirs.",
+   "luecke": "sérieuse",
+   "luecke_bei": 17
   },
   {
    "id": "y8u4-1-004",
    "en": "débrouillard/débrouillarde",
    "de": "geschickt, pfiffig",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Nina est débrouillarde : elle trouve toujours une solution.",
+   "luecke": "débrouillarde",
+   "luecke_bei": 9
   },
   {
    "id": "y8u4-1-005",
    "en": "populaire",
    "de": "beliebt",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Ce chanteur est très populaire chez les jeunes.",
+   "luecke": "populaire",
+   "luecke_bei": 21
   },
   {
    "id": "y8u4-1-006",
    "en": "malade",
    "de": "krank",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Je reste à la maison, je suis malade.",
+   "luecke": "malade",
+   "luecke_bei": 30
   },
   {
    "id": "y8u4-1-007",
    "en": "le voisin / la voisine",
    "de": "der/die (Sitz-)Nachbar/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "En cours, mon voisin m'aide souvent.",
+   "luecke": "voisin",
+   "luecke_bei": 14
   },
   {
    "id": "y8u4-1-008",
    "en": "le sac",
    "de": "die Tasche, (auch:) die Schultasche",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Mon sac est trop lourd.",
+   "luecke": "sac",
+   "luecke_bei": 4
   },
   {
    "id": "y8u4-1-009",
    "en": "le bulletin",
    "de": "das Zeugnis",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Mes parents lisent mon bulletin.",
+   "luecke": "bulletin",
+   "luecke_bei": 23
   },
   {
    "id": "y8u4-1-010",
    "en": "le conseil",
    "de": "der Rat, Ratschlag",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Tu peux me donner un conseil ?",
+   "luecke": "conseil",
+   "luecke_bei": 21
   },
   {
    "id": "y8u4-1-011",
    "en": "le résultat",
    "de": "das Ergebnis, das Resultat",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le résultat du test est très bon.",
+   "luecke": "résultat",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-1-012",
    "en": "le test",
    "de": "der Test",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Fais ce test pour savoir quel animal tu es !",
+   "luecke": "test",
+   "luecke_bei": 8
   },
   {
    "id": "y8u4-1-013",
    "en": "le genre (de qc)",
    "de": "die Art",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Quel genre de musique tu écoutes ?",
+   "luecke": "genre",
+   "luecke_bei": 5
   },
   {
    "id": "y8u4-1-014",
    "en": "le réveil",
    "de": "der Wecker",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Mon réveil sonne à six heures et demie.",
+   "luecke": "réveil",
+   "luecke_bei": 4
   },
   {
    "id": "y8u4-1-015",
    "en": "sonner",
    "de": "klingeln",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le téléphone sonne.",
+   "luecke": "sonne",
+   "luecke_bei": 13
   },
   {
    "id": "y8u4-1-016",
    "en": "plus",
    "de": "mehr",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Je voudrais dormir plus le matin.",
+   "luecke": "plus",
+   "luecke_bei": 19
   },
   {
    "id": "y8u4-1-017",
    "en": "sans",
    "de": "ohne etw. zu tun",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Il est parti sans dire au revoir.",
+   "luecke": "sans",
+   "luecke_bei": 13
   }
  ],
  "y8u4-2": [
@@ -2862,121 +3921,181 @@ const SETS = {
    "id": "y8u4-2-001",
    "en": "stresser qn",
    "de": "jdn stressen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Les contrôles me stressent.",
+   "luecke": "stressent",
+   "luecke_bei": 17
   },
   {
    "id": "y8u4-2-002",
    "en": "dire qc (à qn)",
    "de": "(jdm) etw. sagen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Qu'est-ce que tu dis ?",
+   "luecke": "dis",
+   "luecke_bei": 17
   },
   {
    "id": "y8u4-2-003",
    "en": "que",
    "de": "dass",
-   "pos": "Konjunktion"
+   "pos": "Konjunktion",
+   "example_en": "Je pense que tu as raison.",
+   "luecke": "que",
+   "luecke_bei": 9
   },
   {
    "id": "y8u4-2-004",
    "en": "devoir",
    "de": "etw. tun müssen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je dois rentrer avant huit heures.",
+   "luecke": "dois",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-2-005",
    "en": "au moins",
    "de": "mindestens, wenigstens",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Il faut dormir au moins huit heures.",
+   "luecke": "au moins",
+   "luecke_bei": 15
   },
   {
    "id": "y8u4-2-006",
    "en": "à cause de",
    "de": "wegen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Le match est annulé à cause de la pluie.",
+   "luecke": "à cause de",
+   "luecke_bei": 20
   },
   {
    "id": "y8u4-2-007",
    "en": "l'impression",
    "de": "der Eindruck",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "J'ai l'impression que tu es fatigué.",
+   "luecke": "impression",
+   "luecke_bei": 7
   },
   {
    "id": "y8u4-2-008",
    "en": "à la place de (qn/qc)",
    "de": "anstelle von (jdm/etw.), statt",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "À la place de la télé, lis un livre !",
+   "luecke": "À la place de",
+   "luecke_bei": 0
   },
   {
    "id": "y8u4-2-009",
    "en": "passer du temps (avec qn)",
    "de": "(mit jdm) Zeit verbringen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "J'aime passer du temps avec mes grands-parents.",
+   "luecke": "passer du temps",
+   "luecke_bei": 7
   },
   {
    "id": "y8u4-2-010",
    "en": "le contraire",
    "de": "das Gegenteil",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "« Grand » est le contraire de « petit ».",
+   "luecke": "contraire",
+   "luecke_bei": 17
   },
   {
    "id": "y8u4-2-011",
    "en": "demander (qc à qn)",
    "de": "(jdn nach etw.) fragen, jdn um etw. bitten",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je vais demander la route à ce monsieur.",
+   "luecke": "demander",
+   "luecke_bei": 8
   },
   {
    "id": "y8u4-2-012",
    "en": "demander si",
    "de": "fragen, ob",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Ma mère demande si tu restes pour le dîner.",
+   "luecke": "demande si",
+   "luecke_bei": 8
   },
   {
    "id": "y8u4-2-013",
    "en": "avoir besoin de qn/qc",
    "de": "jdn/etw. brauchen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "J'ai besoin d'un nouveau cahier.",
+   "luecke": "ai besoin d'",
+   "luecke_bei": 2
   },
   {
    "id": "y8u4-2-014",
    "en": "l'aide",
    "de": "die Hilfe",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Merci pour ton aide !",
+   "luecke": "aide",
+   "luecke_bei": 15
   },
   {
    "id": "y8u4-2-015",
    "en": "oh là là",
    "de": "oje",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Oh là là, quel bazar !",
+   "luecke": "Oh là là",
+   "luecke_bei": 0
   },
   {
    "id": "y8u4-2-016",
    "en": "vouloir savoir si",
    "de": "wissen wollen, ob",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon père veut savoir si tu viens samedi.",
+   "luecke": "veut savoir si",
+   "luecke_bei": 9
   },
   {
    "id": "y8u4-2-017",
    "en": "Je te jure !",
    "de": "(Ganz) Ehrlich!, Ich schwör's!",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Ce n'est pas moi, je te jure !",
+   "luecke": "je te jure",
+   "luecke_bei": 18
   },
   {
    "id": "y8u4-2-018",
    "en": "le reste",
    "de": "der Rest",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Je mange le reste du gâteau.",
+   "luecke": "reste",
+   "luecke_bei": 12
   },
   {
    "id": "y8u4-2-019",
    "en": "faire confiance à qn",
    "de": "jdm vertrauen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Je fais confiance à ma meilleure amie.",
+   "luecke": "fais confiance à",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-2-020",
    "en": "à mon avis",
    "de": "meiner Meinung nach",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "À mon avis, ce film est génial.",
+   "luecke": "À mon avis",
+   "luecke_bei": 0
   }
  ],
  "y8u4-3": [
@@ -2984,121 +4103,181 @@ const SETS = {
    "id": "y8u4-3-001",
    "en": "le système",
    "de": "das System",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le système des notes est différent en France.",
+   "luecke": "système",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-3-002",
    "en": "sur",
    "de": "(hier:) von",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "J'ai eu seize sur vingt !",
+   "luecke": "sur",
+   "luecke_bei": 14
   },
   {
    "id": "y8u4-3-003",
    "en": "le stress",
    "de": "der Stress",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Avant les examens, il y a beaucoup de stress.",
+   "luecke": "stress",
+   "luecke_bei": 38
   },
   {
    "id": "y8u4-3-004",
    "en": "la lettre",
    "de": "der Buchstabe",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Le mot « chat » a quatre lettres.",
+   "luecke": "lettres",
+   "luecke_bei": 25
   },
   {
    "id": "y8u4-3-005",
    "en": "comme",
    "de": "als",
-   "pos": "Konjunktion"
+   "pos": "Konjunktion",
+   "example_en": "Je travaille comme baby-sitter le samedi.",
+   "luecke": "comme",
+   "luecke_bei": 13
   },
   {
    "id": "y8u4-3-006",
    "en": "calculer qc",
    "de": "etw. berechnen, etw. ausrechnen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Calcule la moyenne de tes notes.",
+   "luecke": "Calcule",
+   "luecke_bei": 0
   },
   {
    "id": "y8u4-3-007",
    "en": "précis/précise",
    "de": "genau, exakt, klar",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ta réponse n'est pas assez précise.",
+   "luecke": "précise",
+   "luecke_bei": 27
   },
   {
    "id": "y8u4-3-008",
    "en": "exister",
    "de": "existieren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ce magasin n'existe plus.",
+   "luecke": "existe",
+   "luecke_bei": 13
   },
   {
    "id": "y8u4-3-009",
    "en": "le/la même",
    "de": "der-/die-/dasselbe, der/die/das Gleiche",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Nous avons le même sac !",
+   "luecke": "même",
+   "luecke_bei": 14
   },
   {
    "id": "y8u4-3-010",
    "en": "juste",
    "de": "gerecht",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Ce n'est pas juste !",
+   "luecke": "juste",
+   "luecke_bei": 13
   },
   {
    "id": "y8u4-3-011",
    "en": "autre",
    "de": "anderer/andere/anderes",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Tu as une autre idée ?",
+   "luecke": "autre",
+   "luecke_bei": 10
   },
   {
    "id": "y8u4-3-012",
    "en": "penser",
    "de": "denken",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Qu'est-ce que tu en penses ?",
+   "luecke": "penses",
+   "luecke_bei": 20
   },
   {
    "id": "y8u4-3-013",
    "en": "motivant/motivante",
    "de": "motivierend",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ce prof est vraiment motivant.",
+   "luecke": "motivant",
+   "luecke_bei": 21
   },
   {
    "id": "y8u4-3-014",
    "en": "les gens",
    "de": "die Leute",
-   "pos": "Nomen, m. pl."
+   "pos": "Nomen, m. pl.",
+   "example_en": "Les gens font la queue devant le cinéma.",
+   "luecke": "gens",
+   "luecke_bei": 4
   },
   {
    "id": "y8u4-3-015",
    "en": "dur/dure",
    "de": "hart, schwer",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ce contrôle était dur.",
+   "luecke": "dur",
+   "luecke_bei": 18
   },
   {
    "id": "y8u4-3-016",
    "en": "ça veut dire",
    "de": "das heißt",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "« Merci », ça veut dire « danke ».",
+   "luecke": "ça veut dire",
+   "luecke_bei": 11
   },
   {
    "id": "y8u4-3-017",
    "en": "la catastrophe",
    "de": "die Katastrophe",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "J'ai perdu mes clés, c'est la catastrophe !",
+   "luecke": "catastrophe",
+   "luecke_bei": 30
   },
   {
    "id": "y8u4-3-018",
    "en": "par contre",
    "de": "jedoch, allerdings",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "J'aime les maths ; par contre, je déteste la physique.",
+   "luecke": "par contre",
+   "luecke_bei": 19
   },
   {
    "id": "y8u4-3-019",
    "en": "entendre qn/qc",
    "de": "jdn/etw. hören",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu entends ce bruit ?",
+   "luecke": "entends",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-3-020",
    "en": "avoir la moyenne",
    "de": "bestehen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "J'ai eu dix sur vingt : j'ai la moyenne !",
+   "luecke": "ai la moyenne",
+   "luecke_bei": 26
   }
  ],
  "y8u4-m4": [
@@ -3106,133 +4285,199 @@ const SETS = {
    "id": "y8u4-m4-001",
    "en": "le handball",
    "de": "Handball, das Handballspielen",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Mon frère joue au handball dans un club.",
+   "luecke": "handball",
+   "luecke_bei": 18
   },
   {
    "id": "y8u4-m4-002",
    "en": "la batterie",
    "de": "das Schlagzeug",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Ma cousine joue de la batterie dans un groupe de rock.",
+   "luecke": "batterie",
+   "luecke_bei": 22
   },
   {
    "id": "y8u4-m4-003",
    "en": "le repas",
    "de": "das Essen, die Mahlzeit",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le repas est prêt !",
+   "luecke": "repas",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-m4-004",
    "en": "presque",
    "de": "fast, beinahe",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Il est presque minuit.",
+   "luecke": "presque",
+   "luecke_bei": 7
   },
   {
    "id": "y8u4-m4-005",
    "en": "sauf",
    "de": "außer, abgesehen von",
-   "pos": "Präposition"
+   "pos": "Präposition",
+   "example_en": "Tout le monde est venu, sauf Paul.",
+   "luecke": "sauf",
+   "luecke_bei": 24
   },
   {
    "id": "y8u4-m4-006",
    "en": "végan/végane",
    "de": "vegan",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Mon amie est végane : elle ne mange pas de produits animaux.",
+   "luecke": "végane",
+   "luecke_bei": 13
   },
   {
    "id": "y8u4-m4-007",
    "en": "les céréales",
    "de": "das Getreide, (hier:) das Müsli, die Cornflakes",
-   "pos": "Nomen, f. pl."
+   "pos": "Nomen, f. pl.",
+   "example_en": "Le matin, je mange des céréales avec du lait.",
+   "luecke": "céréales",
+   "luecke_bei": 23
   },
   {
    "id": "y8u4-m4-008",
    "en": "le petit-déjeuner",
    "de": "das Frühstück",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Au petit-déjeuner, je bois un chocolat chaud.",
+   "luecke": "petit-déjeuner",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-m4-009",
    "en": "porter qc",
    "de": "etw. tragen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Aujourd'hui, je porte mon nouveau pull.",
+   "luecke": "porte",
+   "luecke_bei": 16
   },
   {
    "id": "y8u4-m4-010",
    "en": "les vêtements",
    "de": "die Kleidung",
-   "pos": "Nomen, m. pl."
+   "pos": "Nomen, m. pl.",
+   "example_en": "Mes vêtements sont dans l'armoire.",
+   "luecke": "vêtements",
+   "luecke_bei": 4
   },
   {
    "id": "y8u4-m4-011",
    "en": "les sneakers",
    "de": "die Sneakers",
-   "pos": "Nomen, m. pl."
+   "pos": "Nomen, m. pl.",
+   "example_en": "J'ai acheté des sneakers blanches.",
+   "luecke": "sneakers",
+   "luecke_bei": 16
   },
   {
    "id": "y8u4-m4-012",
    "en": "les lunettes",
    "de": "die Brille",
-   "pos": "Nomen, f. pl."
+   "pos": "Nomen, f. pl.",
+   "example_en": "Sans mes lunettes, je ne vois rien.",
+   "luecke": "lunettes",
+   "luecke_bei": 9
   },
   {
    "id": "y8u4-m4-013",
    "en": "le mois",
    "de": "der Monat",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le mois de décembre est mon préféré.",
+   "luecke": "mois",
+   "luecke_bei": 3
   },
   {
    "id": "y8u4-m4-014",
    "en": "l'appareil dentaire",
    "de": "die Zahnspange",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Depuis un an, je porte un appareil dentaire.",
+   "luecke": "appareil dentaire",
+   "luecke_bei": 26
   },
   {
    "id": "y8u4-m4-015",
    "en": "le caractère",
    "de": "der Charakter",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Mon chien a un bon caractère.",
+   "luecke": "caractère",
+   "luecke_bei": 19
   },
   {
    "id": "y8u4-m4-016",
    "en": "plutôt",
    "de": "eher, lieber",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Je suis plutôt timide.",
+   "luecke": "plutôt",
+   "luecke_bei": 8
   },
   {
    "id": "y8u4-m4-017",
    "en": "timide",
    "de": "schüchtern",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Le nouvel élève est un peu timide.",
+   "luecke": "timide",
+   "luecke_bei": 27
   },
   {
    "id": "y8u4-m4-018",
    "en": "l'avenir",
    "de": "die Zukunft",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Dans l'avenir, je voudrais habiter à la mer.",
+   "luecke": "avenir",
+   "luecke_bei": 7
   },
   {
    "id": "y8u4-m4-019",
    "en": "plus tard",
    "de": "später",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Plus tard, je veux devenir vétérinaire.",
+   "luecke": "Plus tard",
+   "luecke_bei": 0
   },
   {
    "id": "y8u4-m4-020",
    "en": "le gamer / la gameuse",
    "de": "der/die Gamer/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Ma sœur est une vraie gameuse.",
+   "luecke": "gameuse",
+   "luecke_bei": 22
   },
   {
    "id": "y8u4-m4-021",
    "en": "gagner de l'argent",
    "de": "Geld verdienen",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon frère veut gagner de l'argent cet été.",
+   "luecke": "gagner de l'argent",
+   "luecke_bei": 15
   },
   {
    "id": "y8u4-m4-022",
    "en": "la blague",
    "de": "der Witz, der Scherz",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Mon oncle raconte toujours des blagues.",
+   "luecke": "blagues",
+   "luecke_bei": 31
   }
  ],
  "y8u5-a": [
@@ -3240,31 +4485,46 @@ const SETS = {
    "id": "y8u5-a-001",
    "en": "liker qn/qc",
    "de": "jdn/etw. liken",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'ai liké ta photo !",
+   "luecke": "liké",
+   "luecke_bei": 5
   },
   {
    "id": "y8u5-a-002",
    "en": "le youtubeur / la youtubeuse",
    "de": "der/die Youtuber/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Cette youtubeuse fait des vidéos de cuisine.",
+   "luecke": "youtubeuse",
+   "luecke_bei": 6
   },
   {
    "id": "y8u5-a-003",
    "en": "l'acteur / l'actrice",
    "de": "der/die Schauspieler/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Cette actrice joue dans ma série préférée.",
+   "luecke": "actrice",
+   "luecke_bei": 6
   },
   {
    "id": "y8u5-a-004",
    "en": "engagé/engagée",
    "de": "engagiert",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ma grande sœur est très engagée pour l'environnement.",
+   "luecke": "engagée",
+   "luecke_bei": 24
   },
   {
    "id": "y8u5-a-005",
    "en": "l'astronaute",
    "de": "der/die Astronaut/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "L'astronaute a passé six mois dans l'espace.",
+   "luecke": "astronaute",
+   "luecke_bei": 2
   }
  ],
  "y8u5-voc": [
@@ -3272,97 +4532,145 @@ const SETS = {
    "id": "y8u5-voc-001",
    "en": "l'activité",
    "de": "die Aktivität",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Nager, c'est mon activité préférée en été.",
+   "luecke": "activité",
+   "luecke_bei": 17
   },
   {
    "id": "y8u5-voc-002",
    "en": "télécharger qc",
    "de": "etw. herunterladen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'ai téléchargé une nouvelle appli.",
+   "luecke": "téléchargé",
+   "luecke_bei": 5
   },
   {
    "id": "y8u5-voc-003",
    "en": "cliquer sur qc",
    "de": "auf etw. klicken",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Clique sur le bouton vert.",
+   "luecke": "Clique sur",
+   "luecke_bei": 0
   },
   {
    "id": "y8u5-voc-004",
    "en": "le lien",
    "de": "der Link",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Je t'envoie le lien de la vidéo.",
+   "luecke": "lien",
+   "luecke_bei": 15
   },
   {
    "id": "y8u5-voc-005",
    "en": "laisser qc",
    "de": "etw. lassen, (hier:) etw. hinterlassen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Laisse un commentaire sous la vidéo !",
+   "luecke": "Laisse",
+   "luecke_bei": 0
   },
   {
    "id": "y8u5-voc-006",
    "en": "poster qc",
    "de": "etw. posten",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Hier, j'ai posté une photo de mon chat.",
+   "luecke": "posté",
+   "luecke_bei": 11
   },
   {
    "id": "y8u5-voc-007",
    "en": "le tuto (fam.) / le tutoriel",
    "de": "das Erklärvideo, das Tutorial",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "J'ai appris à dessiner avec un tuto.",
+   "luecke": "tuto",
+   "luecke_bei": 31
   },
   {
    "id": "y8u5-voc-008",
    "en": "enregistrer qc",
    "de": "etw. aufnehmen, etw. speichern",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "N'oublie pas d'enregistrer ton document !",
+   "luecke": "enregistrer",
+   "luecke_bei": 15
   },
   {
    "id": "y8u5-voc-009",
    "en": "les réseaux sociaux",
    "de": "die sozialen Netzwerke",
-   "pos": "Nomen, m. pl."
+   "pos": "Nomen, m. pl.",
+   "example_en": "Je passe trop de temps sur les réseaux sociaux.",
+   "luecke": "réseaux sociaux",
+   "luecke_bei": 31
   },
   {
    "id": "y8u5-voc-010",
    "en": "être accro à qc",
    "de": "nach etw. süchtig sein, von etw. abhängig sein",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon frère est accro aux jeux vidéo.",
+   "luecke": "est accro aux",
+   "luecke_bei": 10
   },
   {
    "id": "y8u5-voc-011",
    "en": "la victime",
    "de": "das Opfer",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La victime a parlé à la police.",
+   "luecke": "victime",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-voc-012",
    "en": "le cyberharcèlement",
    "de": "das Cybermobbing",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le cyberharcèlement est un grand problème dans les écoles.",
+   "luecke": "cyberharcèlement",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-voc-013",
    "en": "créer qc",
    "de": "etw. erschaffen, etw. gründen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Elle a créé sa propre chaîne.",
+   "luecke": "créé",
+   "luecke_bei": 7
   },
   {
    "id": "y8u5-voc-014",
    "en": "avoir … vues",
    "de": "… Aufrufe/Klicks haben",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Sa vidéo a déjà mille vues.",
+   "luecke": "a déjà mille vues",
+   "luecke_bei": 9
   },
   {
    "id": "y8u5-voc-015",
    "en": "le million",
    "de": "die Million",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Cette chanson a été vue un million de fois.",
+   "luecke": "million",
+   "luecke_bei": 27
   },
   {
    "id": "y8u5-voc-016",
    "en": "l'abonné/l'abonnée",
    "de": "der/die Abonnent/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Elle a déjà cent mille abonnés.",
+   "luecke": "abonnés",
+   "luecke_bei": 23
   }
  ],
  "y8u5-1": [
@@ -3370,157 +4678,235 @@ const SETS = {
    "id": "y8u5-1-001",
    "en": "intelligent/intelligente",
    "de": "intelligent",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Mon chien est très intelligent.",
+   "luecke": "intelligent",
+   "luecke_bei": 19
   },
   {
    "id": "y8u5-1-002",
    "en": "normal (m.) / normale (f.) / normaux (m. pl.) / normales (f. pl.)",
    "de": "normal",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ce n'est pas normal !",
+   "luecke": "normal",
+   "luecke_bei": 13
   },
   {
    "id": "y8u5-1-003",
    "en": "la culture",
    "de": "die Kultur",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "J'aime découvrir la culture d'autres pays.",
+   "luecke": "culture",
+   "luecke_bei": 20
   },
   {
    "id": "y8u5-1-004",
    "en": "le cliché",
    "de": "das Klischee",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Les Français mangent toujours des baguettes ? C'est un cliché !",
+   "luecke": "cliché",
+   "luecke_bei": 55
   },
   {
    "id": "y8u5-1-005",
    "en": "chinois/chinoise",
    "de": "chinesisch",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ce soir, nous mangeons dans un restaurant chinois.",
+   "luecke": "chinois",
+   "luecke_bei": 42
   },
   {
    "id": "y8u5-1-006",
    "en": "génial (m.) / géniale (f.) / géniaux (m. pl.) / géniales (f. pl.)",
    "de": "toll, genial",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ton idée est géniale !",
+   "luecke": "géniale",
+   "luecke_bei": 13
   },
   {
    "id": "y8u5-1-007",
    "en": "voir qn/qc",
    "de": "jdn/etw. sehen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Tu as vu le nouveau film ?",
+   "luecke": "vu",
+   "luecke_bei": 6
   },
   {
    "id": "y8u5-1-008",
    "en": "être d'origine (f.) (allemande/française)",
    "de": "(deutscher/französischer) Herkunft sein",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mon père est d'origine italienne.",
+   "luecke": "est d'origine",
+   "luecke_bei": 9
   },
   {
    "id": "y8u5-1-009",
    "en": "asiatique",
    "de": "asiatisch",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "J'adore la cuisine asiatique.",
+   "luecke": "asiatique",
+   "luecke_bei": 19
   },
   {
    "id": "y8u5-1-010",
    "en": "l'Asie",
    "de": "Asien",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La Chine se trouve en Asie.",
+   "luecke": "Asie",
+   "luecke_bei": 22
   },
   {
    "id": "y8u5-1-011",
    "en": "le thème",
    "de": "das Thema",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le thème de l'exposé, c'est l'environnement.",
+   "luecke": "thème",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-1-012",
    "en": "critiquer (qn/qc)",
    "de": "(jdn/etw.) kritisieren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Il critique toujours tout.",
+   "luecke": "critique",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-1-013",
    "en": "national (m.) / nationale (f.) / nationaux (m. pl.) / nationales (f. pl.)",
    "de": "national, National-",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Le 14 juillet, c'est la fête nationale.",
+   "luecke": "nationale",
+   "luecke_bei": 29
   },
   {
    "id": "y8u5-1-014",
    "en": "l'humour",
    "de": "der Humor",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "J'aime son humour.",
+   "luecke": "humour",
+   "luecke_bei": 11
   },
   {
    "id": "y8u5-1-015",
    "en": "avant",
    "de": "früher, vorher",
-   "pos": "Adverb"
+   "pos": "Adverb",
+   "example_en": "Avant, j'habitais à Lyon.",
+   "luecke": "Avant",
+   "luecke_bei": 0
   },
   {
    "id": "y8u5-1-016",
    "en": "faire des études",
    "de": "studieren",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Ma sœur fait des études de médecine.",
+   "luecke": "fait des études",
+   "luecke_bei": 8
   },
   {
    "id": "y8u5-1-017",
    "en": "l'ingénieur / l'ingénieure",
    "de": "der/die Ingenieur/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Ma mère est ingénieure.",
+   "luecke": "ingénieure",
+   "luecke_bei": 12
   },
   {
    "id": "y8u5-1-018",
    "en": "original (m.) / originale (f.) / originaux (m. pl.) / originales (f. pl.)",
    "de": "originell",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ton cadeau est très original !",
+   "luecke": "original",
+   "luecke_bei": 20
   },
   {
    "id": "y8u5-1-019",
    "en": "adulte",
    "de": "erwachsen",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Plus tard, quand je serai adulte, j'habiterai à Paris.",
+   "luecke": "adulte",
+   "luecke_bei": 26
   },
   {
    "id": "y8u5-1-020",
    "en": "polonais/polonaise",
    "de": "polnisch",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Ma grand-mère est polonaise.",
+   "luecke": "polonaise",
+   "luecke_bei": 18
   },
   {
    "id": "y8u5-1-021",
    "en": "séparé/séparée",
    "de": "getrennt",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Mes parents sont séparés.",
+   "luecke": "séparés",
+   "luecke_bei": 17
   },
   {
    "id": "y8u5-1-022",
    "en": "la beauté",
    "de": "die Schönheit",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La beauté de ce paysage est impressionnante.",
+   "luecke": "beauté",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-1-023",
    "en": "le policier / la policière",
    "de": "der/die Polizist/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "La policière aide les enfants à traverser.",
+   "luecke": "policière",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-1-024",
    "en": "l'émission",
    "de": "die Sendung",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Tu as regardé l'émission hier soir ?",
+   "luecke": "émission",
+   "luecke_bei": 16
   },
   {
    "id": "y8u5-1-025",
    "en": "l'avis",
    "de": "die Meinung",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Je voudrais ton avis.",
+   "luecke": "avis",
+   "luecke_bei": 16
   },
   {
    "id": "y8u5-1-026",
    "en": "autre chose",
    "de": "etwas anderes",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Tu veux autre chose ?",
+   "luecke": "autre chose",
+   "luecke_bei": 8
   }
  ],
  "y8u5-2": [
@@ -3528,127 +4914,190 @@ const SETS = {
    "id": "y8u5-2-001",
    "en": "finir qc",
    "de": "etw. beenden, enden",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je finis mes devoirs et j'arrive.",
+   "luecke": "finis",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-2-002",
    "en": "grandir",
    "de": "aufwachsen, wachsen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'ai grandi à la campagne.",
+   "luecke": "grandi",
+   "luecke_bei": 5
   },
   {
    "id": "y8u5-2-003",
    "en": "réussir (qc)",
    "de": "es/etw. schaffen, gelingen, etw. bestehen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Elle a réussi son examen.",
+   "luecke": "réussi",
+   "luecke_bei": 7
   },
   {
    "id": "y8u5-2-004",
    "en": "choisir qn/qc",
    "de": "jdn/etw. aussuchen, jdn/etw. auswählen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Je ne sais pas quel gâteau choisir.",
+   "luecke": "choisir",
+   "luecke_bei": 27
   },
   {
    "id": "y8u5-2-005",
    "en": "quitter qn/qc",
    "de": "jdn/etw. verlassen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Nous avons quitté Paris il y a deux ans.",
+   "luecke": "quitté",
+   "luecke_bei": 11
   },
   {
    "id": "y8u5-2-006",
    "en": "participer à qc",
    "de": "an etw. teilnehmen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Notre classe participe à un concours.",
+   "luecke": "participe à",
+   "luecke_bei": 13
   },
   {
    "id": "y8u5-2-007",
    "en": "baisser les bras",
    "de": "aufgeben",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Ne baisse pas les bras, tu vas y arriver !",
+   "luecke": "baisse pas les bras",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-2-008",
    "en": "encourager qn",
    "de": "jdn ermutigen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Les supporters encouragent leur équipe.",
+   "luecke": "encouragent",
+   "luecke_bei": 15
   },
   {
    "id": "y8u5-2-009",
    "en": "perdre (qn/qc)",
    "de": "(jdn/etw.) verlieren",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "J'ai perdu mon portable.",
+   "luecke": "perdu",
+   "luecke_bei": 5
   },
   {
    "id": "y8u5-2-010",
    "en": "les médias",
    "de": "die Medien",
-   "pos": "Nomen, m. pl."
+   "pos": "Nomen, m. pl.",
+   "example_en": "Les médias parlent beaucoup de ce film.",
+   "luecke": "médias",
+   "luecke_bei": 4
   },
   {
    "id": "y8u5-2-011",
    "en": "l'album",
    "de": "das Album",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Son nouvel album sort en mai.",
+   "luecke": "album",
+   "luecke_bei": 11
   },
   {
    "id": "y8u5-2-012",
    "en": "le concert",
    "de": "das Konzert",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Hier soir, nous sommes allés à un concert.",
+   "luecke": "concert",
+   "luecke_bei": 34
   },
   {
    "id": "y8u5-2-013",
    "en": "les hauts et les bas",
    "de": "die Höhen und Tiefen, das Auf und Ab",
-   "pos": "Ausdruck, m. pl."
+   "pos": "Ausdruck, m. pl.",
+   "example_en": "Dans la vie, il y a les hauts et les bas.",
+   "luecke": "les hauts et les bas",
+   "luecke_bei": 20
   },
   {
    "id": "y8u5-2-014",
    "en": "marocain/marocaine",
    "de": "marokkanisch",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Le couscous est un plat marocain.",
+   "luecke": "marocain",
+   "luecke_bei": 24
   },
   {
    "id": "y8u5-2-015",
    "en": "tout le / toute la, tous les / toutes les",
    "de": "ganzer/ganze/ganzes, alle",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "J'ai mangé tout le gâteau !",
+   "luecke": "tout le",
+   "luecke_bei": 11
   },
   {
    "id": "y8u5-2-016",
    "en": "tomber amoureux/amoureuse (de qn)",
    "de": "sich (in jdn) verlieben",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Dans le film, elle tombe amoureuse d'un pilote.",
+   "luecke": "tombe amoureuse",
+   "luecke_bei": 19
   },
   {
    "id": "y8u5-2-017",
    "en": "difficile",
    "de": "schwer, schwierig",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Cet exercice est très difficile.",
+   "luecke": "difficile",
+   "luecke_bei": 22
   },
   {
    "id": "y8u5-2-018",
    "en": "le jury",
    "de": "die Jury",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le jury a choisi la meilleure chanson.",
+   "luecke": "jury",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-2-019",
    "en": "la perruque",
    "de": "die Perücke",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Pour la fête, il porte une perruque rose.",
+   "luecke": "perruque",
+   "luecke_bei": 27
   },
   {
    "id": "y8u5-2-020",
    "en": "le bac (fam.) / le baccalauréat",
    "de": "das Abi, das Abitur",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ma sœur passe le bac cette année.",
+   "luecke": "bac",
+   "luecke_bei": 17
   },
   {
    "id": "y8u5-2-021",
    "en": "homosexuel/homosexuelle",
    "de": "homosexuell",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "Le personnage principal du film est homosexuel.",
+   "luecke": "homosexuel",
+   "luecke_bei": 36
   }
  ],
  "y8u5-m5": [
@@ -3656,181 +5105,271 @@ const SETS = {
    "id": "y8u5-m5-001",
    "en": "le blog",
    "de": "der Blog",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Elle écrit un blog sur ses voyages.",
+   "luecke": "blog",
+   "luecke_bei": 14
   },
   {
    "id": "y8u5-m5-002",
    "en": "l'avion",
    "de": "das Flugzeug",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Nous allons à La Réunion en avion.",
+   "luecke": "avion",
+   "luecke_bei": 28
   },
   {
    "id": "y8u5-m5-003",
    "en": "durer",
    "de": "dauern, andauern",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Le voyage dure onze heures.",
+   "luecke": "dure",
+   "luecke_bei": 10
   },
   {
    "id": "y8u5-m5-004",
    "en": "préparer qc",
    "de": "(hier:) etw. zubereiten",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "Ma grand-mère prépare un curry.",
+   "luecke": "prépare",
+   "luecke_bei": 14
   },
   {
    "id": "y8u5-m5-005",
    "en": "la personne",
    "de": "die Person",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Il y a combien de personnes dans ta famille ?",
+   "luecke": "personnes",
+   "luecke_bei": 18
   },
   {
    "id": "y8u5-m5-006",
    "en": "le bonbon",
    "de": "das Bonbon",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Ne mange pas trop de bonbons !",
+   "luecke": "bonbons",
+   "luecke_bei": 21
   },
   {
    "id": "y8u5-m5-007",
    "en": "le piment",
    "de": "die Chili(schote)",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Attention, ce piment est très fort !",
+   "luecke": "piment",
+   "luecke_bei": 14
   },
   {
    "id": "y8u5-m5-008",
    "en": "le Réunionnais / la Réunionnaise",
    "de": "der/die Reunionaiser/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Mon ami est un Réunionnais de Saint-Denis.",
+   "luecke": "Réunionnais",
+   "luecke_bei": 15
   },
   {
    "id": "y8u5-m5-009",
    "en": "le Français / la Française",
    "de": "der Franzose / die Französin",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Beaucoup de Français passent leurs vacances en Espagne.",
+   "luecke": "Français",
+   "luecke_bei": 12
   },
   {
    "id": "y8u5-m5-010",
    "en": "le continent",
    "de": "der Kontinent",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "L'Afrique est un grand continent.",
+   "luecke": "continent",
+   "luecke_bei": 23
   },
   {
    "id": "y8u5-m5-011",
    "en": "créole",
    "de": "kreolisch",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Sur l'île, on parle français et créole.",
+   "luecke": "créole",
+   "luecke_bei": 32
   },
   {
    "id": "y8u5-m5-012",
    "en": "ça sent",
    "de": "es riecht (nach)",
-   "pos": "Ausdruck"
+   "pos": "Ausdruck",
+   "example_en": "Mmh, ça sent bon !",
+   "luecke": "ça sent",
+   "luecke_bei": 5
   },
   {
    "id": "y8u5-m5-013",
    "en": "nager",
    "de": "schwimmen",
-   "pos": "Verb"
+   "pos": "Verb",
+   "example_en": "En été, nous nageons dans la mer.",
+   "luecke": "nageons",
+   "luecke_bei": 13
   },
   {
    "id": "y8u5-m5-014",
    "en": "beau/bel (m.) / belle (f.) / beaux (m. pl.) / belles (f. pl.)",
    "de": "schön",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "C'est une très belle plage.",
+   "luecke": "belle",
+   "luecke_bei": 15
   },
   {
    "id": "y8u5-m5-015",
    "en": "la cascade",
    "de": "der Wasserfall",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Nous avons pris une photo devant la cascade.",
+   "luecke": "cascade",
+   "luecke_bei": 36
   },
   {
    "id": "y8u5-m5-016",
    "en": "la forêt",
    "de": "der Wald",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Nous nous promenons dans la forêt.",
+   "luecke": "forêt",
+   "luecke_bei": 28
   },
   {
    "id": "y8u5-m5-017",
    "en": "vieux/vieil (m.) / vieille (f.) / vieux (m. pl.) / vieilles (f. pl.)",
    "de": "alt",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "J'habite dans une vieille maison.",
+   "luecke": "vieille",
+   "luecke_bei": 18
   },
   {
    "id": "y8u5-m5-018",
    "en": "nouveau/nouvel (m.) / nouvelle (f.) / nouveaux (m. pl.) / nouvelles (f. pl.)",
    "de": "neu",
-   "pos": "Adjektiv"
+   "pos": "Adjektiv",
+   "example_en": "J'ai un nouveau vélo.",
+   "luecke": "nouveau",
+   "luecke_bei": 8
   },
   {
    "id": "y8u5-m5-019",
    "en": "le paysage",
    "de": "die Landschaft",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le paysage est magnifique.",
+   "luecke": "paysage",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-m5-020",
    "en": "la course",
    "de": "der Lauf, das Rennen",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Il a gagné la course.",
+   "luecke": "course",
+   "luecke_bei": 14
   },
   {
    "id": "y8u5-m5-021",
    "en": "fou/folle",
    "de": "verrückt, wahnsinnig",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Tu es fou !",
+   "luecke": "fou",
+   "luecke_bei": 6
   },
   {
    "id": "y8u5-m5-022",
    "en": "la région",
    "de": "die Gegend, die Region",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "La Bretagne est une belle région.",
+   "luecke": "région",
+   "luecke_bei": 26
   },
   {
    "id": "y8u5-m5-023",
    "en": "la capitale",
    "de": "die Hauptstadt",
-   "pos": "Nomen, f."
+   "pos": "Nomen, f.",
+   "example_en": "Paris est la capitale de la France.",
+   "luecke": "capitale",
+   "luecke_bei": 13
   },
   {
    "id": "y8u5-m5-024",
    "en": "l'habitant / l'habitante",
    "de": "der/die Bewohner/in, der/die Einwohner/in",
-   "pos": "Nomen, m./f."
+   "pos": "Nomen, m./f.",
+   "example_en": "Mon village a mille habitants.",
+   "luecke": "habitants",
+   "luecke_bei": 20
   },
   {
    "id": "y8u5-m5-025",
    "en": "l'été",
    "de": "der Sommer",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "En été, il fait chaud.",
+   "luecke": "été",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-m5-026",
    "en": "le printemps",
    "de": "der Frühling",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Au printemps, les fleurs poussent.",
+   "luecke": "printemps",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-m5-027",
    "en": "l'automne",
    "de": "der Herbst",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "En automne, les feuilles tombent.",
+   "luecke": "automne",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-m5-028",
    "en": "l'hiver",
    "de": "der Winter",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "En hiver, il neige souvent dans les Alpes.",
+   "luecke": "hiver",
+   "luecke_bei": 3
   },
   {
    "id": "y8u5-m5-029",
    "en": "actif/active",
    "de": "aktiv",
-   "pos": "Adjektiv, m./f."
+   "pos": "Adjektiv, m./f.",
+   "example_en": "Mon grand-père est encore très actif.",
+   "luecke": "actif",
+   "luecke_bei": 31
   },
   {
    "id": "y8u5-m5-030",
    "en": "le centre",
    "de": "das Zentrum",
-   "pos": "Nomen, m."
+   "pos": "Nomen, m.",
+   "example_en": "Le cinéma est dans le centre de la ville.",
+   "luecke": "centre",
+   "luecke_bei": 22
   }
  ]
 };
@@ -4516,7 +6055,7 @@ function renderHelp(){
   d.push('<h3>Tippen</h3>');
   d.push('<p>Du schreibst die Übersetzung. Kleine Abweichungen können als „Fast" erscheinen. Sie zählen nicht als vollständig richtig; deine Eingabe und die Lösung helfen dir beim Vergleichen.</p>');
   d.push('<h3>Lückensatz</h3>');
-  d.push('<p>Ein französischer Beispielsatz mit einer Lücke, darunter die deutsche Bedeutung. Du schreibst das fehlende französische Wort – so, wie es im Satz stehen muss, also auch gebeugt. Lückensätze gibt es bisher für Klasse 7; in den anderen Klassen fehlt diese Übungsart noch. Hier lernst du nicht nur die Vokabel, sondern auch, wie sie im Satz benutzt wird — genau das brauchst du beim Schreiben.</p>');
+  d.push('<p>Ein französischer Beispielsatz mit einer Lücke, darunter die deutsche Bedeutung. Du schreibst das fehlende französische Wort – so, wie es im Satz stehen muss, also auch gebeugt. Hier lernst du nicht nur die Vokabel, sondern auch, wie sie im Satz benutzt wird — genau das brauchst du beim Schreiben.</p>');
 
   d.push('<h2>Abfragerichtung</h2>');
   d.push('<p>Standardmäßig übst du <b>DE → FR</b>: Du siehst Deutsch und antwortest auf Französisch. Mit dem Richtungsknopf schaltest du um. <b>FR → DE</b> heißt: Du siehst Französisch und sagst die deutsche Bedeutung. <b>DE → FR</b> ist die schwerere und für Klassenarbeiten wichtigere Richtung.</p><p>Nomen lernst du mit Artikel: <b>la maison</b>, nicht nur <i>maison</i>. Fehlt beim Tippen der Artikel oder ein Akzent, zählt die Antwort als „Fast“. Statt <b>œ</b> darfst du <b>oe</b> tippen.</p>');
@@ -4817,16 +6356,16 @@ try{
 </script>
 
 <script src="../assets/qr.js?v=20260921-anleitung"></script>
-<script src="../assets/learning.js?v=20260924-rueckblick"></script>
+<script src="../assets/learning.js?v=20260924-saetze"></script>
 
 <link rel="stylesheet" href="../assets/feedback.css?v=20260921-anleitung">
-<link rel="stylesheet" media="screen" data-nacht href="../assets/feedback-nacht.css?v=20260924-rueckblick">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/feedback-nacht.css?v=20260924-saetze">
 <script src="../assets/feedback.js?v=20260921-zustand"></script>
 
 <link rel="stylesheet" href="design/preview.css?v=20260917-teacher-prompt">
-<link rel="stylesheet" media="screen" data-nacht href="design/preview-nacht.css?v=20260924-rueckblick">
+<link rel="stylesheet" media="screen" data-nacht href="design/preview-nacht.css?v=20260924-saetze">
 
-<link rel="stylesheet" href="../assets/ascent.css?v=20260924-rueckblick">
-<link rel="stylesheet" media="screen" data-nacht href="../assets/ascent-nacht.css?v=20260924-rueckblick">
-<link rel="stylesheet" media="screen" data-nacht href="../assets/nacht-marke.css?v=20260924-rueckblick">
-<script src="../assets/ascent.js?v=20260924-rueckblick"></script>
+<link rel="stylesheet" href="../assets/ascent.css?v=20260924-saetze">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/ascent-nacht.css?v=20260924-saetze">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/nacht-marke.css?v=20260924-saetze">
+<script src="../assets/ascent.js?v=20260924-saetze"></script>

@@ -1,7 +1,7 @@
 /* Beispielsaetze: eigene, nicht aus dem Lehrwerk.
 
-   Klasse 7 traegt zu jedem Eintrag einen Satz aus
-   content/beispiele-klasse7.tsv. Die Seite muss genau diesen Satz zeigen,
+   Jede Klasse traegt zu jedem Eintrag einen Satz aus
+   content/beispiele-klasseN.tsv. Die Seite muss genau diesen Satz zeigen,
    ohne die eckigen Klammern der Luecke, und im Woerterbuch muss jeder
    Satz auftauchen. Klassen ohne Saetze duerfen keine leeren Zeilen
    zeigen. */
@@ -31,7 +31,7 @@ for(const [year,klasse] of [['year7',7],['year8',8],['year9',9],['year10',10]]){
   if(v.example_en){assert(!/[\[\]]/.test(v.example_en),year+': Klammer im Satz');assert(v.example_en.split(/\s+/).length>=2,year+': Satz zu kurz: '+v.example_en);}
  });
  const mit=words.filter(v=>v.example_en).length;
- if(year==='year7')assert.equal(mit,words.length,'year7: nicht jedes Wort hat einen Satz');
+ assert.equal(mit,words.length,year+': nicht jedes Wort hat einen Satz');
  const d=w.document;d.querySelector('#allBtn').click();assert.equal(d.querySelectorAll('.vex').length,mit,year+' example rows');
  for(const el of d.querySelectorAll('.vex'))assert(el.textContent.trim());
  count+=mit;console.log(year+': '+mit+' von '+words.length+' Eintraegen mit eigenem Beispielsatz, Woerterbuch zeigt sie');w.close();
