@@ -1,0 +1,4831 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Camp de Base">
+<meta name="theme-color" content="#0D1017">
+<title>Camp de Base – Klasse 8</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22%230E6878%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M32%2012%20L55%2051%20H9%20Z%22%2F%3E%3Cpath%20d%3D%22M32%2026%20L41%2051%22%2F%3E%3Cpath%20d%3D%22M32%2026%20L23%2051%22%2F%3E%3Cpath%20d%3D%22M4%2051%20H60%22%2F%3E%3C%2Fsvg%3E">
+<script>
+/* Faengt Fehler ab, die sonst zu einer leeren Seite fuehren, und zeigt sie an. */
+window.onerror = function(msg, src, line, col){
+  try{
+    var box = document.getElementById("warn");
+    if(!box){
+      box = document.createElement("div");
+      box.id = "warn";
+      document.body.insertBefore(box, document.body.firstChild);
+    }
+    box.innerHTML = '<div class="warn"><b>Diese Seite laeuft in deinem Browser nicht.</b><br>'
+      + 'Wahrscheinlich ist er zu alt fuer eine der verwendeten Funktionen. '
+      + 'Bitte diesen Text weitergeben:<br><span style="font-family:monospace;font-size:11px">'
+      + String(msg) + ' (Zeile ' + line + ':' + col + ')</span></div>';
+  }catch(e){}
+  return false;
+};
+</script>
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/inter-400-latin.woff2">
+<link rel="stylesheet" href="../assets/fonts.css?v=2">
+
+<style>
+:root{
+  --ground:#EEF1F3;
+  --card:#FFFFFF;
+  --ink:#16232B;
+  --ink-soft:#5A6B75;
+  --rule:#D6DCE0;
+  --petrol:#0E5A66;
+  --amber:#C9761E;
+  --moss:#3F7A4B;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Consolas,monospace;
+  --r:4px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:760px;margin:0 auto;padding:24px 20px 64px}
+
+/* ---------- Kopfzeile ---------- */
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+  border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:28px;flex-wrap:wrap}
+.mhead-text{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;min-width:0}
+@media(max-width:560px){
+  .masthead{align-items:center}
+  .mhead-text{gap:2px;display:block}
+}
+.masthead h1{font-family:var(--serif);font-weight:600;font-size:24px;margin:0;letter-spacing:-.01em}
+.masthead .sub{font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-soft)}
+.home-link{font-family:var(--mono);font-size:11px;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--ink-soft);text-decoration:none;
+  white-space:nowrap;align-self:flex-end}
+.home-link:hover{color:var(--ink);text-decoration:underline}
+
+/* ---------- Unit-Farben (Variante A: Rand und Kopf) ---------- */
+/* Im Schwarz-Weiss-Druck traegt die Kachelbeschriftung die Unterscheidung,
+   nicht die Farbe. */
+.y8u1{--unit:#2B5F8A; --unit-bg:#E6EDF4; --unit-ink:#1B3C56}
+.y8u2{--unit:#B0472A; --unit-bg:#F5E7E1; --unit-ink:#6E2C1A}
+.y8u3{--unit:#5B7A2E; --unit-bg:#EBF0E1; --unit-ink:#374A1C}
+.y8u4{--unit:#7A5C9E; --unit-bg:#EEE8F3; --unit-ink:#4B3763}
+.y8u5{--unit:#A36B1A; --unit-bg:#F5ECD9; --unit-ink:#63400F}
+
+/* Hauptmenue: eigene, von den Units unabhaengige Farbgebung, damit
+   Jahrgang, Gesamtliste und Anleitung auf einen Blick auseinanderzuhalten
+   sind. */
+.home-year{--unit:#0E5A66; --unit-bg:#E4EFF1; --unit-ink:#083C45}   /* Petrol   */
+.home-all{--unit:#3F5E8A;  --unit-bg:#E7ECF4; --unit-ink:#24344F}   /* Blau     */
+.home-help{--unit:#6B5E3F; --unit-bg:#F1EEE4; --unit-ink:#463C24}   /* Sand     */
+.topic.home-year, .topic.home-all, .topic.home-help{
+  border-left-color:var(--unit); border-left-width:4px;
+  background:var(--unit-bg); border-top-color:transparent;
+  border-right-color:transparent; border-bottom-color:transparent}
+.topic.home-year .t-name, .topic.home-all .t-name, .topic.home-help .t-name{color:var(--unit-ink)}
+.topic.home-year .t-count, .topic.home-all .t-count, .topic.home-help .t-count{color:var(--unit)}
+.topic.home-year .minirail i.f{background:var(--unit)}
+.topic.home-year:hover, .topic.home-all:hover, .topic.home-help:hover{
+  border-color:transparent; border-left-color:var(--unit-ink)}
+@media print{
+  .topic.home-year, .topic.home-all, .topic.home-help{background:#fff;border:1px solid #000;border-left-width:4px}
+  .topic.home-year .t-name, .topic.home-all .t-name, .topic.home-help .t-name,
+  .topic.home-year .t-count, .topic.home-all .t-count, .topic.home-help .t-count{color:#000}
+}
+.uall{--unit:#16232B; --unit-bg:#ECEFF1; --unit-ink:#16232B}
+
+/* ---------- Startseite ---------- */
+.yeargroup{margin-bottom:34px}
+.yeargroup[class*="u"]{border:none;background:none}
+.yearhead{display:flex;align-items:center;gap:12px;margin-bottom:12px;cursor:pointer;list-style:none}
+.yearhead::-webkit-details-marker{display:none}
+.yearhead::after{content:"+";margin-left:auto;font-family:var(--mono);font-size:15px;
+  color:var(--unit,var(--ink-soft));flex:0 0 auto}
+details[open] > .yearhead::after{content:"\2212"}
+.yearhead .tag{font-family:var(--mono);font-size:12px;background:var(--unit,var(--ink));
+  color:#fff;padding:2px 7px;border-radius:var(--radius-xs)}
+.yeargroup[class*="u"] .yearhead{border-bottom:1px solid var(--unit);padding-bottom:6px}
+.yeargroup[class*="u"] .yearhead .name{color:var(--unit)}
+.topic[class*="u"]{border-left-color:var(--unit);border-left-width:4px;
+  background:var(--unit-bg);border-top-color:transparent;
+  border-right-color:transparent;border-bottom-color:transparent}
+.topic[class*="u"] .t-name{color:var(--unit-ink)}
+.topic[class*="u"] .t-count{color:var(--unit)}
+.topic[class*="u"] .t-due{color:var(--unit-ink);font-weight:500}
+.topic[class*="u"] .minirail i{background:var(--card)}
+.topic[class*="u"] .minirail i.f{background:var(--unit)}
+.topic[class*="u"]:hover{border-color:transparent;border-left-color:var(--unit-ink)}
+@media print{
+  .topic[class*="u"]{background:#fff;border:1px solid #000;border-left-width:4px}
+  .topic[class*="u"] .t-name,
+  .topic[class*="u"] .t-count,
+  .topic[class*="u"] .t-due{color:#000}
+  .yearhead .tag{background:#000}
+  .yeargroup[class*="u"] .yearhead{border-bottom-color:#000}
+  .yeargroup[class*="u"] .yearhead .name{color:#000}
+}
+.yearhead .name{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink-soft)}
+
+.topic{display:block;width:100%;text-align:left;background:var(--card);border:1px solid var(--rule);
+  border-left:3px solid var(--rule);border-radius:var(--r);padding:13px 15px;margin-bottom:8px;
+  cursor:pointer;font:inherit;color:inherit;transition:border-color .15s,transform .15s}
+.topic:hover{border-left-color:var(--petrol);transform:translateX(2px)}
+.topic:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+.topic .t-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.topic .t-name{font-weight:500}
+.topic .t-count{font-family:var(--mono);font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.topic .t-due{color:var(--amber)}
+.minirail{display:flex;gap:2px;margin-top:9px}
+.minirail i{height:4px;flex:1;background:var(--rule);border-radius:var(--radius-xs)}
+.minirail i.f{background:var(--petrol)}
+
+.emptyhint{background:var(--card);border:1px dashed var(--rule);border-radius:var(--r);
+  padding:14px 16px;color:var(--ink-soft);font-size:14px}
+
+/* ---------- Sitzung: Leitner-Schiene (Signature) ---------- */
+.rail{display:flex;gap:6px;margin-bottom:22px}
+.slot{flex:1;background:var(--card);border:1px solid var(--rule);border-radius:var(--r);
+  padding:7px 6px 6px;text-align:center;position:relative;transition:border-color .2s,background .2s}
+.slot .n{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:.06em}
+.slot .c{font-family:var(--serif);font-size:19px;line-height:1.1;margin-top:1px}
+.slot .iv{font-family:var(--mono);font-size:9px;color:var(--ink-soft);margin-top:2px}
+.slot.here{border-color:var(--petrol);background:#E7F0F1}
+.slot.here::after{content:"";position:absolute;left:50%;bottom:-7px;width:8px;height:8px;
+  transform:translateX(-50%) rotate(45deg);background:#E7F0F1;
+  border-right:1px solid var(--petrol);border-bottom:1px solid var(--petrol)}
+.slot.land{animation:land .45s ease-out}
+@keyframes land{0%{transform:translateY(-6px)}60%{transform:translateY(2px)}100%{transform:none}}
+
+/* Unit-Farbe als Ortsangabe waehrend des Lernens: farbige Kante an der
+   Karte, farbige Kopfzeile, farbiges aktives Fach. Sonst nichts. */
+.stage[class*="u"] .vcard{border-top:3px solid var(--unit)}
+.eyebrow[class*="u"]{color:var(--unit);border-bottom-color:var(--unit)}
+.rail[class*="u"] .slot.here{border-color:var(--unit);background:var(--unit-bg)}
+.rail[class*="u"] .slot.here::after{background:var(--unit-bg);
+  border-right-color:var(--unit);border-bottom-color:var(--unit)}
+@media print{
+  .stage[class*="u"] .vcard{border-top-color:#000}
+  .eyebrow[class*="u"]{color:#000;border-bottom-color:#000}
+}
+
+/* ---------- Karte ---------- */
+.stage{position:relative}
+.vcard{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);
+  padding:30px 26px;min-height:250px;display:flex;flex-direction:column;
+  box-shadow:0 1px 0 var(--rule),0 6px 22px rgba(22,35,43,.06)}
+.vcard.deal{animation:deal .28s ease-out}
+@keyframes deal{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+.eyebrow{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);
+  border-bottom:1px solid var(--rule);padding-bottom:8px;margin-bottom:20px}
+.prompt{font-family:var(--serif);font-size:38px;line-height:1.15;letter-spacing:-.015em;margin:0}
+.pos{font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:15px;margin-top:5px}
+.phon{display:flex;align-items:center;gap:10px;margin-top:7px;flex-wrap:wrap}
+.ipa{font-family:var(--mono);font-size:13px;color:var(--ink-soft);letter-spacing:.01em}
+.speak{padding:5px 9px;line-height:0;border-color:var(--rule);color:var(--petrol)}
+.speak:hover{border-color:var(--petrol);background:#E7F0F1}
+.speak svg{width:15px;height:15px;display:block}
+.speak.on{background:var(--petrol);border-color:var(--petrol);color:#fff}
+.answer{margin-top:20px;padding-top:18px;border-top:1px solid var(--rule)}
+.answer .de{font-family:var(--serif);font-size:23px}
+.answer .coll{font-size:13px;color:var(--ink-soft);margin-top:8px}
+.answer .ex{font-family:var(--serif);font-style:italic;font-size:16px;margin-top:14px;
+  padding-left:12px;border-left:2px solid var(--petrol);color:#31434D}
+.answer .ex b{font-style:normal;font-weight:600;color:var(--ink);
+  box-shadow:inset 0 -.42em 0 rgba(14,90,102,.14)}
+.answer .ex .speak{margin-left:8px;vertical-align:middle;padding:4px 7px}
+.answer .ex .speak svg{width:13px;height:13px}
+.spacer{flex:1}
+
+/* Hinweis, welche Bedeutung gemeint ist - nur bei Woertern, deren
+   Schulbuchliste zwei getrennte Bedeutungen nennt. */
+.sense{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--ink-soft);
+  margin-top:8px;padding-left:11px;border-left:2px solid var(--rule)}
+
+/* ---------- Bedienelemente ---------- */
+.controls{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap}
+button{font:inherit;cursor:pointer;border-radius:var(--r);border:1px solid var(--rule);
+  background:var(--card);color:var(--ink);padding:11px 15px;transition:background .15s,border-color .15s}
+button:hover{border-color:var(--ink-soft)}
+button:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+button.primary{background:var(--petrol);border-color:var(--petrol);color:#fff;flex:1}
+button.primary:hover{background:#0B4A54}
+.rate{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 8px}
+.rate span{font-family:var(--mono);font-size:10px;color:var(--ink-soft);letter-spacing:.05em}
+.rate.again{border-color:var(--amber);color:var(--amber)}
+.rate.again:hover{background:#FBF2E6}
+.rate.hard{border-color:var(--ink-soft)}
+.rate.hard:hover{background:#EEF1F3}
+.rate.good{border-color:var(--moss);color:var(--moss)}
+.rate.good:hover{background:#EDF4EE}
+
+.opts{display:grid;gap:8px;margin-top:20px}
+.opt{text-align:left;padding:13px 15px;font-family:var(--serif);font-size:17px}
+.opt.right{border-color:var(--moss);background:#EDF4EE;color:var(--moss)}
+.opt.wrong{border-color:var(--amber);background:#FBF2E6;color:var(--amber)}
+.opt:disabled{cursor:default;opacity:1}
+
+.typebox{margin-top:20px}
+.typebox input{width:100%;font-family:var(--serif);font-size:22px;padding:12px 14px;
+  border:1px solid var(--rule);border-radius:var(--r);background:var(--ground);color:var(--ink)}
+.typebox input:focus{outline:2px solid var(--petrol);outline-offset:1px;background:var(--card)}
+.verdict{margin-top:12px;font-size:14px}
+.verdict.ok{color:var(--moss)}
+.verdict.near{color:var(--amber)}
+.verdict.no{color:var(--amber)}
+.verdict .sol{font-family:var(--serif);font-size:18px;color:var(--ink);display:block;margin-top:3px}
+
+/* ---------- Kopf der Sitzung ---------- */
+.sessionbar{display:flex;justify-content:space-between;align-items:center;gap:12px;
+  margin-bottom:18px;flex-wrap:wrap}
+.linkbtn{background:none;border:none;padding:4px 0;color:var(--petrol);text-decoration:underline;
+  text-underline-offset:3px}
+.switches{display:flex;gap:6px;flex-wrap:wrap}
+.switch{font-family:var(--mono);font-size:11px;letter-spacing:.05em;padding:6px 9px;
+  text-transform:uppercase}
+.switch[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}
+
+/* ---------- Abschluss ---------- */
+.done{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);padding:34px 26px;text-align:center}
+.done h2{font-family:var(--serif);font-weight:600;font-size:26px;margin:0 0 8px}
+.done p{color:var(--ink-soft);margin:0 0 20px}
+
+/* ---------- Fußzeile ---------- */
+.foot{margin-top:40px;padding-top:14px;border-top:1px solid var(--rule);
+  display:flex;gap:16px;flex-wrap:wrap;align-items:center;
+  font-family:var(--mono);font-size:11px;color:var(--ink-soft);letter-spacing:.04em}
+.foot button{padding:5px 9px;font-family:var(--mono);font-size:11px}
+.warn{background:#FBF2E6;border:1px solid var(--amber);color:#8A4E12;border-radius:var(--r);
+  padding:9px 12px;font-size:13px;margin-bottom:20px;line-height:1.4}
+
+/* ---------- Anleitung ---------- */
+.doc{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);
+  padding:26px 26px 30px;max-width:640px}
+.doc h2{font-family:var(--serif);font-weight:600;font-size:21px;margin:34px 0 8px;
+  letter-spacing:-.01em}
+.doc h2:first-child{margin-top:0}
+.doc h3{font-family:var(--sans);font-weight:600;font-size:15px;margin:20px 0 5px}
+.doc p{margin:0 0 12px;font-size:15px}
+.doc ul{margin:0 0 12px;padding-left:20px;font-size:15px}
+.doc li{margin-bottom:5px}
+.doc .lead{color:var(--ink-soft)}
+.doc code{font-family:var(--mono);font-size:12.5px;background:var(--ground);
+  padding:1px 5px;border-radius:var(--radius-xs)}
+.doc table{border-collapse:collapse;width:100%;margin:6px 0 14px;font-size:14px}
+.doc th,.doc td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--rule)}
+.doc th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+.doc td:first-child{font-family:var(--mono);font-size:12.5px;white-space:nowrap}
+.kbd{font-family:var(--mono);font-size:11.5px;border:1px solid var(--rule);
+  border-bottom-width:2px;border-radius:3px;padding:1px 6px;background:var(--ground)}
+.doc .warnbox{background:#FBF2E6;border:1px solid var(--amber);border-radius:var(--r);
+  padding:12px 14px;font-size:14.5px;margin:0 0 14px;line-height:1.5}
+.doc .teacher{border-top:2px solid var(--ink);margin-top:36px;padding-top:18px}
+@media print{
+  .doc{border:none;padding:0;max-width:none}
+  .doc h2{page-break-after:avoid}
+}
+
+/* ---------- Lueckensatz ---------- */
+.cloze{font-family:var(--serif);font-size:22px;line-height:1.55;margin:0}
+.cloze .gap{display:inline-block;min-width:5.5em;border-bottom:2px solid var(--petrol);
+  text-align:center;color:var(--petrol);font-family:var(--mono);font-size:15px;
+  vertical-align:baseline;padding:0 4px}
+.cloze b{font-style:normal;font-weight:600;
+  box-shadow:inset 0 -.42em 0 rgba(14,90,102,.18)}
+.clue{font-family:var(--serif);font-size:16px;color:var(--ink-soft);margin-top:14px}
+.clue span{color:var(--ink)}
+
+/* ---------- Listenansicht ---------- */
+.listctl{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.listctl input[type=search]{flex:1;min-width:180px;font:inherit;font-size:15px;
+  padding:10px 13px;border:1px solid var(--rule);border-radius:var(--r);
+  background:var(--card);color:var(--ink);-webkit-appearance:none}
+.listctl input[type=search]:focus{outline:2px solid var(--petrol);outline-offset:1px}
+.listcount{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-soft);margin-bottom:16px}
+
+.lsec{background:var(--card);border:1px solid var(--rule);border-radius:var(--r);
+  margin-bottom:8px;overflow:hidden}
+.lsec > summary{cursor:pointer;padding:13px 15px;display:flex;justify-content:space-between;
+  align-items:baseline;gap:12px;list-style:none;font-weight:500}
+.lsec > summary::-webkit-details-marker{display:none}
+.lsec > summary:hover{background:var(--ground)}
+.lsec > summary .lyear{font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  background:var(--ink);color:var(--ground);border-radius:var(--radius-xs);padding:2px 6px;margin-right:9px}
+.lsec > summary .lnum{font-family:var(--mono);font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.lsec[open] > summary{border-bottom:1px solid var(--rule)}
+.lbody{padding:4px 15px 12px}
+
+.vrow{display:grid;grid-template-columns:1fr 1fr;gap:4px 18px;
+  padding:9px 0;border-bottom:1px solid var(--ground);break-inside:avoid}
+.vrow:last-child{border-bottom:none}
+.ven{font-family:var(--serif);font-size:16px}
+.vipa{font-family:var(--mono);font-size:11.5px;color:var(--ink-soft);margin-left:7px;white-space:nowrap}
+.vpos{font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--ink-soft);margin-left:7px}
+.vde{font-size:14.5px}
+.vsense{display:block;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--ink-soft)}
+.vex{grid-column:1 / -1;font-family:var(--serif);font-style:italic;font-size:14px;
+  color:#31434D;padding-left:11px;border-left:2px solid var(--rule);margin-top:3px}
+.vlist.hide-ex .vex{display:none}
+.vlist.hide-ipa .vipa{display:none}
+.vrow.off{display:none}
+.lsec.off{display:none}
+.noresult{background:var(--card);border:1px dashed var(--rule);border-radius:var(--r);
+  padding:14px 16px;color:var(--ink-soft);font-size:14px}
+
+@media print{
+  body{background:#fff}
+  .wrap{max-width:none;padding:0}
+  .masthead{border-bottom:1px solid #000;margin-bottom:14px}
+  .sessionbar,.listctl,.foot,#warn,.listcount button{display:none!important}
+  .lsec{border:none;border-radius:0;margin:0 0 6mm;page-break-inside:auto}
+  .lsec + .lsec{page-break-before:always}
+  .lsec > summary{padding:0 0 4px;border-bottom:1px solid #000;font-size:14pt}
+  .lsec > summary .lnum{color:#000}
+  .lbody{padding:6px 0 0;columns:2;column-gap:10mm}
+  .vrow{grid-template-columns:1fr;gap:1px;padding:3px 0;
+    border-bottom:none;page-break-inside:avoid}
+  .ven{font-size:11pt}
+  .vde{font-size:10pt;color:#333}
+  .vipa{color:#555}
+  .vex{font-size:9.5pt;border-left:1px solid #999}
+}
+
+@media(max-width:560px){
+  .prompt{font-size:30px}
+  .slot .c{font-size:16px}
+  .slot .iv{display:none}
+  .vcard{padding:22px 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+}
+</style>
+<style media="screen" data-nacht>
+:root{--ground:#181D26;--card:#151A22;--ink:#D3E0E9;--ink-soft:#C0CFD8;--rule:#363B3E}
+.y8u1{--unit-bg:#191F26;--unit-ink:#BEDCF6}
+.y8u2{--unit-bg:#281C16;--unit-ink:#FFC6B6}
+.y8u3{--unit-bg:#1C2012;--unit-ink:#CADDB4}
+.y8u4{--unit-bg:#221C26;--unit-ink:#DECCF7}
+.y8u5{--unit-bg:#261D09;--unit-ink:#EFCEA8}
+.home-year{--unit-bg:#162022;--unit-ink:#BAE1E9}
+.home-all{--unit-bg:#1A1F26;--unit-ink:#C9DAF6}
+.home-help{--unit-bg:#211E14;--unit-ink:#E0D6BF}
+.uall{--unit:#D3E0E9;--unit-bg:#191E27;--unit-ink:#D3E0E9}
+.slot.here{background:#172021}
+.slot.here::after{background:#172021}
+.speak:hover{background:#172021}
+.answer .ex{color:#C8D9E3}
+.rate.again:hover{background:#231A0F}
+.rate.hard:hover{background:#181D26}
+.rate.good:hover{background:#181E19}
+.opt.right{background:#181E19}
+.opt.wrong{background:#231A0F}
+.warn{background:#231A0F;color:#F9C297}
+.doc .warnbox{background:#231A0F}
+.vex{color:#C8D9E3}
+</style>
+<link rel="stylesheet" href="../assets/learning.css?v=20260924-grat">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/learning-nacht.css?v=20260924-grat">
+
+<div class="wrap">
+    <div class="masthead">
+    <svg class="brandmark" width="68" height="68" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12 L55 51 H9 Z"/><path d="M32 26 L41 51"/><path d="M32 26 L23 51"/><path d="M4 51 H60"/></svg>
+    <div class="mhead-text">
+      <h1>Camp de <span class="title-accent">Base</span></h1>
+      <div class="sub">Klasse 8 · À plus ! 2</div>
+    </div>
+    <a class="home-link" href="../">&larr; Alle Klassen</a>
+  </div>
+  <div id="warn"></div>
+  <div id="view"></div>
+  <div class="foot">
+    <span id="footstat"></span>
+    <span class="foot-actions">
+      <button id="exportBtn">Fortschritt sichern</button>
+      <button id="importBtn">Fortschritt laden</button>
+    </span>
+    <input type="file" id="importFile" accept="application/json" hidden>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   VOKABELDATEN
+   Nicht von Hand aendern: Der Block wird von tools/seiten.cjs aus
+   content/ geschrieben. "en" ist hier das franzoesische Stichwort und
+   "example_en" der eigene Beispielsatz - die Namen stammen aus dem
+   gemeinsamen Code des Englisch-Trainers. "luecke" ist die Stelle im
+   Satz, die der Lueckensatz abfragt.
+   ========================================================================= */
+const YEARS = [
+ {
+  "id": "y8",
+  "label": "Klasse 8",
+  "book": "À plus ! 2",
+  "units": [
+   {
+    "id": "y8u1",
+    "name": "Unité 1"
+   },
+   {
+    "id": "y8u2",
+    "name": "Unité 2"
+   },
+   {
+    "id": "y8u3",
+    "name": "Unité 3"
+   },
+   {
+    "id": "y8u4",
+    "name": "Unité 4"
+   },
+   {
+    "id": "y8u5",
+    "name": "Unité 5"
+   }
+  ]
+ }
+];
+
+const TOPICS = [
+ {
+  "id": "y8u1-a",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u1",
+  "unitName": "Unité 1",
+  "name": "Teil A"
+ },
+ {
+  "id": "y8u1-voc",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u1",
+  "unitName": "Unité 1",
+  "name": "Vocabulaire"
+ },
+ {
+  "id": "y8u1-1",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u1",
+  "unitName": "Unité 1",
+  "name": "Teil 1"
+ },
+ {
+  "id": "y8u1-2",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u1",
+  "unitName": "Unité 1",
+  "name": "Teil 2"
+ },
+ {
+  "id": "y8u1-3",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u1",
+  "unitName": "Unité 1",
+  "name": "Teil 3"
+ },
+ {
+  "id": "y8u1-m1",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u1",
+  "unitName": "Unité 1",
+  "name": "Module 1"
+ },
+ {
+  "id": "y8u2-a",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u2",
+  "unitName": "Unité 2",
+  "name": "Teil A"
+ },
+ {
+  "id": "y8u2-voc",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u2",
+  "unitName": "Unité 2",
+  "name": "Vocabulaire"
+ },
+ {
+  "id": "y8u2-1",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u2",
+  "unitName": "Unité 2",
+  "name": "Teil 1"
+ },
+ {
+  "id": "y8u2-2",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u2",
+  "unitName": "Unité 2",
+  "name": "Teil 2"
+ },
+ {
+  "id": "y8u2-3",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u2",
+  "unitName": "Unité 2",
+  "name": "Teil 3"
+ },
+ {
+  "id": "y8u2-m2",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u2",
+  "unitName": "Unité 2",
+  "name": "Module 2"
+ },
+ {
+  "id": "y8u3-a",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u3",
+  "unitName": "Unité 3",
+  "name": "Teil A"
+ },
+ {
+  "id": "y8u3-voc",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u3",
+  "unitName": "Unité 3",
+  "name": "Vocabulaire"
+ },
+ {
+  "id": "y8u3-1",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u3",
+  "unitName": "Unité 3",
+  "name": "Teil 1"
+ },
+ {
+  "id": "y8u3-2",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u3",
+  "unitName": "Unité 3",
+  "name": "Teil 2"
+ },
+ {
+  "id": "y8u3-3",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u3",
+  "unitName": "Unité 3",
+  "name": "Teil 3"
+ },
+ {
+  "id": "y8u3-m3",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u3",
+  "unitName": "Unité 3",
+  "name": "Module 3"
+ },
+ {
+  "id": "y8u4-a",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u4",
+  "unitName": "Unité 4",
+  "name": "Teil A"
+ },
+ {
+  "id": "y8u4-voc",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u4",
+  "unitName": "Unité 4",
+  "name": "Vocabulaire"
+ },
+ {
+  "id": "y8u4-1",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u4",
+  "unitName": "Unité 4",
+  "name": "Teil 1"
+ },
+ {
+  "id": "y8u4-2",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u4",
+  "unitName": "Unité 4",
+  "name": "Teil 2"
+ },
+ {
+  "id": "y8u4-3",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u4",
+  "unitName": "Unité 4",
+  "name": "Teil 3"
+ },
+ {
+  "id": "y8u4-m4",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u4",
+  "unitName": "Unité 4",
+  "name": "Module 4"
+ },
+ {
+  "id": "y8u5-a",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u5",
+  "unitName": "Unité 5",
+  "name": "Teil A"
+ },
+ {
+  "id": "y8u5-voc",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u5",
+  "unitName": "Unité 5",
+  "name": "Vocabulaire"
+ },
+ {
+  "id": "y8u5-1",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u5",
+  "unitName": "Unité 5",
+  "name": "Teil 1"
+ },
+ {
+  "id": "y8u5-2",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u5",
+  "unitName": "Unité 5",
+  "name": "Teil 2"
+ },
+ {
+  "id": "y8u5-m5",
+  "year": "8",
+  "yearName": "À plus ! 2",
+  "unit": "y8u5",
+  "unitName": "Unité 5",
+  "name": "Module 5"
+ }
+];
+
+const SETS = {
+ "y8u1-a": [
+  {
+   "id": "y8u1-a-001",
+   "en": "le château",
+   "de": "das Schloss",
+   "pos": "Nomen, m. · Plural: les châteaux"
+  },
+  {
+   "id": "y8u1-a-002",
+   "en": "l'éléphant",
+   "de": "der Elefant",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-a-003",
+   "en": "la machine",
+   "de": "die Maschine",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-a-004",
+   "en": "l'île",
+   "de": "die Insel",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-a-005",
+   "en": "le centre-ville",
+   "de": "das Stadtzentrum",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-a-006",
+   "en": "le skatepark",
+   "de": "der Skatepark",
+   "pos": "Nomen, m."
+  }
+ ],
+ "y8u1-voc": [
+  {
+   "id": "y8u1-voc-001",
+   "en": "le bâtiment",
+   "de": "das Gebäude",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-002",
+   "en": "la maison",
+   "de": "das Haus",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-voc-003",
+   "en": "le monument",
+   "de": "das Bauwerk, das Denkmal",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-004",
+   "en": "l'œuvre d'art",
+   "de": "das Kunstwerk",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-voc-005",
+   "en": "le port",
+   "de": "der Hafen",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-006",
+   "en": "le pont",
+   "de": "die Brücke",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-007",
+   "en": "le fleuve",
+   "de": "der Fluss",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-008",
+   "en": "la place",
+   "de": "der Platz",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-voc-009",
+   "en": "la rue piétonne",
+   "de": "die Fußgängerzone",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-voc-010",
+   "en": "le tram",
+   "de": "die Straßenbahn",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-011",
+   "en": "l'arrêt",
+   "de": "die Haltestelle, der Halt",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-012",
+   "en": "le carrefour",
+   "de": "die Kreuzung",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-voc-013",
+   "en": "présenter qn/qc",
+   "de": "jdn/etw. vorstellen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-voc-014",
+   "en": "qui",
+   "de": "der/die/das",
+   "pos": "Pronomen"
+  },
+  {
+   "id": "y8u1-voc-015",
+   "en": "il/elle se trouve",
+   "de": "er/sie/es befindet sich, er/sie/es liegt",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-voc-016",
+   "en": "traverser qc",
+   "de": "etw. durchqueren, etw. überqueren",
+   "pos": "Verb"
+  }
+ ],
+ "y8u1-1": [
+  {
+   "id": "y8u1-1-001",
+   "en": "célèbre",
+   "de": "berühmt",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u1-1-002",
+   "en": "l'auteur / l'auteure",
+   "de": "der/die Autor/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u1-1-003",
+   "en": "le voyage",
+   "de": "die Reise",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-1-004",
+   "en": "extraordinaire",
+   "de": "außergewöhnlich",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u1-1-005",
+   "en": "où",
+   "de": "wo",
+   "pos": "Pronomen"
+  },
+  {
+   "id": "y8u1-1-006",
+   "en": "la spécialité",
+   "de": "die Spezialität",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-1-007",
+   "en": "le parcours",
+   "de": "der Rundgang, die Strecke",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-1-008",
+   "en": "le/la jeune",
+   "de": "der/die Jugendliche",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u1-1-009",
+   "en": "sortir",
+   "de": "ausgehen, hinausgehen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-1-010",
+   "en": "chiller",
+   "de": "chillen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-1-011",
+   "en": "l'arbre",
+   "de": "der Baum",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-1-012",
+   "en": "le ping-pong",
+   "de": "Tischtennis",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-1-013",
+   "en": "ils/elles se trouvent",
+   "de": "sie befinden sich, sie liegen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-1-014",
+   "en": "(être) né/née",
+   "de": "geboren (sein)",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-1-015",
+   "en": "partir",
+   "de": "losgehen, wegfahren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-1-016",
+   "en": "partir en week-end",
+   "de": "am Wochenende wegfahren",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-1-017",
+   "en": "le vélo",
+   "de": "das Fahrrad",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-1-018",
+   "en": "à vélo",
+   "de": "mit dem Fahrrad",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-1-019",
+   "en": "le bateau",
+   "de": "das Schiff, das Boot",
+   "pos": "Nomen, m. · Plural: les bateaux"
+  },
+  {
+   "id": "y8u1-1-020",
+   "en": "moderne",
+   "de": "modern",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u1-1-021",
+   "en": "la chaîne",
+   "de": "der Kanal",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-1-022",
+   "en": "sur",
+   "de": "(hier:) über",
+   "pos": "Präposition"
+  }
+ ],
+ "y8u1-2": [
+  {
+   "id": "y8u1-2-001",
+   "en": "prendre (à gauche / à droite)",
+   "de": "(links/rechts) abbiegen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-2-002",
+   "en": "continuer",
+   "de": "(hier:) weitergehen, weiterlaufen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-2-003",
+   "en": "tout droit",
+   "de": "geradeaus",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u1-2-004",
+   "en": "jusqu'à",
+   "de": "bis",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u1-2-005",
+   "en": "deuxième",
+   "de": "zweiter/zweite/zweites",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u1-2-006",
+   "en": "en face",
+   "de": "gegenüber",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u1-2-007",
+   "en": "venir",
+   "de": "kommen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-2-008",
+   "en": "important/importante",
+   "de": "wichtig",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u1-2-009",
+   "en": "beaucoup de monde",
+   "de": "viele Leute",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-2-010",
+   "en": "quel/quelle/quels/quelles",
+   "de": "welcher/welche/welches, was für ein/eine",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u1-2-011",
+   "en": "le nom",
+   "de": "der Name, der Nachname",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-2-012",
+   "en": "le trampoline",
+   "de": "das Trampolin",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-2-013",
+   "en": "la longueur",
+   "de": "die Länge",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-2-014",
+   "en": "la hauteur",
+   "de": "die Höhe",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-2-015",
+   "en": "le mètre",
+   "de": "der Meter",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-2-016",
+   "en": "la couleur",
+   "de": "die Farbe",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-2-017",
+   "en": "À vous, maintenant !",
+   "de": "Jetzt seid ihr dran!",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-2-018",
+   "en": "C’est ça.",
+   "de": "Genau., Das stimmt.",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-2-019",
+   "en": "vrai/vraie",
+   "de": "wahr, richtig, echt",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u1-2-020",
+   "en": "le/la touriste",
+   "de": "der/die Tourist/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u1-2-021",
+   "en": "marcher",
+   "de": "laufen, gehen, (auch:) funktionieren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-2-022",
+   "en": "non ?",
+   "de": "nicht wahr?, oder?",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u1-2-023",
+   "en": "la fin",
+   "de": "das Ende",
+   "pos": "Nomen, f."
+  }
+ ],
+ "y8u1-3": [
+  {
+   "id": "y8u1-3-001",
+   "en": "le départ",
+   "de": "die Abfahrt",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-3-002",
+   "en": "pour",
+   "de": "(hier:) nach",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u1-3-003",
+   "en": "content/contente",
+   "de": "zufrieden, froh",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u1-3-004",
+   "en": "le train",
+   "de": "der Zug",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-3-005",
+   "en": "quand",
+   "de": "wenn, immer wenn, (auch:) als",
+   "pos": "Konjunktion"
+  },
+  {
+   "id": "y8u1-3-006",
+   "en": "attendre (qn/qc)",
+   "de": "(auf jdn/etw.) warten",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-3-007",
+   "en": "le billet",
+   "de": "das Ticket, der Schein, (hier:) der Fahrschein",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-3-008",
+   "en": "la valise",
+   "de": "der Koffer",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-3-009",
+   "en": "l'annonce",
+   "de": "die Anzeige, (hier:) die Ansage",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-3-010",
+   "en": "la voie",
+   "de": "das Gleis",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-3-011",
+   "en": "répéter qc",
+   "de": "etw. wiederholen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-3-012",
+   "en": "Allez !",
+   "de": "Los!, Kommt schon!",
+   "pos": "Ausruf"
+  },
+  {
+   "id": "y8u1-3-013",
+   "en": "On y va !",
+   "de": "Los geht's!, Wir gehen dahin!",
+   "pos": "Ausruf"
+  },
+  {
+   "id": "y8u1-3-014",
+   "en": "la minute",
+   "de": "die Minute",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-3-015",
+   "en": "arriver",
+   "de": "(hier:) kommen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-3-016",
+   "en": "il faut",
+   "de": "man muss / wir müssen etw. tun",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-3-017",
+   "en": "il ne faut pas",
+   "de": "man darf/sollte etw. nicht tun, wir dürfen/sollten etw. nicht tun",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-3-018",
+   "en": "rater qn/qc",
+   "de": "jdn/etw. verpassen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-3-019",
+   "en": "le message",
+   "de": "die Nachricht",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-3-020",
+   "en": "le quai",
+   "de": "der Bahnsteig",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-3-021",
+   "en": "répondre (à qn/qc)",
+   "de": "(jdm) antworten, etw. beantworten",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-3-022",
+   "en": "Zut !",
+   "de": "Mist!",
+   "pos": "Ausruf"
+  },
+  {
+   "id": "y8u1-3-023",
+   "en": "la batterie",
+   "de": "der Akku",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-3-024",
+   "en": "descendre",
+   "de": "aussteigen, (auch:) hinuntergehen",
+   "pos": "Verb"
+  }
+ ],
+ "y8u1-m1": [
+  {
+   "id": "y8u1-m1-001",
+   "en": "corriger qc",
+   "de": "etw. korrigieren, etw. berichtigen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-m1-002",
+   "en": "lire (qc)",
+   "de": "(etw.) lesen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-m1-003",
+   "en": "Est-ce que je peux ouvrir la fenêtre ?",
+   "de": "Kann ich das Fenster öffnen?",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-m1-004",
+   "en": "la tablette",
+   "de": "das Tablet",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-m1-005",
+   "en": "les écouteurs",
+   "de": "die Kopfhörer",
+   "pos": "Nomen, m. pl."
+  },
+  {
+   "id": "y8u1-m1-006",
+   "en": "l'exercice",
+   "de": "die Übung",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-m1-007",
+   "en": "le numéro",
+   "de": "die Nummer",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-m1-008",
+   "en": "en groupe",
+   "de": "in der Gruppe",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-m1-009",
+   "en": "la page",
+   "de": "die Seite",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-m1-010",
+   "en": "Ça y est !",
+   "de": "so, es ist soweit",
+   "pos": "Ausruf"
+  },
+  {
+   "id": "y8u1-m1-011",
+   "en": "Vous avez fini ?",
+   "de": "Seid ihr fertig?",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-m1-012",
+   "en": "c'est à …",
+   "de": "… ist dran",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u1-m1-013",
+   "en": "apprendre qc",
+   "de": "etw. lernen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u1-m1-014",
+   "en": "le vocabulaire",
+   "de": "das Vokabular, der Wortschatz",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u1-m1-015",
+   "en": "l'unité",
+   "de": "die Lektion",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u1-m1-016",
+   "en": "le contrôle",
+   "de": "die Kontrolle, (hier:) die Leistungskontrolle",
+   "pos": "Nomen, m."
+  }
+ ],
+ "y8u2-a": [
+  {
+   "id": "y8u2-a-001",
+   "en": "l'aventure",
+   "de": "das Abenteuer",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-a-002",
+   "en": "le tour",
+   "de": "die Tour, die Reise, die Rundfahrt",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-a-003",
+   "en": "le bunker",
+   "de": "der Bunker",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-a-004",
+   "en": "le sous-marin",
+   "de": "das U-Boot",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-a-005",
+   "en": "le passage",
+   "de": "die Passage, der Durchgang",
+   "pos": "Nomen, m."
+  }
+ ],
+ "y8u2-voc": [
+  {
+   "id": "y8u2-voc-001",
+   "en": "tôt",
+   "de": "früh",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u2-voc-002",
+   "en": "tard",
+   "de": "spät",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u2-voc-003",
+   "en": "en ville",
+   "de": "in die Stadt, in der Stadt",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-voc-004",
+   "en": "l'excursion",
+   "de": "der Ausflug",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-voc-005",
+   "en": "danser",
+   "de": "tanzen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-voc-006",
+   "en": "chanter",
+   "de": "singen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-voc-007",
+   "en": "faire la fête",
+   "de": "feiern",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-voc-008",
+   "en": "composer qc",
+   "de": "etw. komponieren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-voc-009",
+   "en": "la chanson",
+   "de": "das Lied",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-voc-010",
+   "en": "plein de",
+   "de": "viel, viele",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u2-voc-011",
+   "en": "jouer au/à la/à l'/aux",
+   "de": "etw. spielen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-voc-012",
+   "en": "jouer du/de la/de l'/des",
+   "de": "etw. spielen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-voc-013",
+   "en": "les boules",
+   "de": "Boule, das Boulespiel",
+   "pos": "Nomen, f. pl."
+  }
+ ],
+ "y8u2-1": [
+  {
+   "id": "y8u2-1-001",
+   "en": "l'aventurier/l'aventurière",
+   "de": "der/die Abenteurer/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u2-1-002",
+   "en": "français/française",
+   "de": "französisch",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u2-1-003",
+   "en": "en",
+   "de": "im Jahr (+ Jahreszahl)",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u2-1-004",
+   "en": "l'année",
+   "de": "das Jahr",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-1-005",
+   "en": "à … ans",
+   "de": "mit … Jahren",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-1-006",
+   "en": "voyager",
+   "de": "reisen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-1-007",
+   "en": "le pays",
+   "de": "das Land",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-1-008",
+   "en": "surtout",
+   "de": "vor allem",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u2-1-009",
+   "en": "la tête",
+   "de": "der Kopf",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-1-010",
+   "en": "le monde",
+   "de": "die Welt",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-1-011",
+   "en": "le roman",
+   "de": "der Roman",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-1-012",
+   "en": "le héros / l'héroïne",
+   "de": "der/die Held/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u2-1-013",
+   "en": "l'artiste",
+   "de": "der/die Künstler/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u2-1-014",
+   "en": "seulement",
+   "de": "nur (noch), erst",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u2-1-015",
+   "en": "gagner (qc)",
+   "de": "(etw.) gewinnen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-1-016",
+   "en": "le prix",
+   "de": "der Preis",
+   "pos": "Nomen, m. · Plural: les prix"
+  },
+  {
+   "id": "y8u2-1-017",
+   "en": "la mécanique",
+   "de": "die Mechanik",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-1-018",
+   "en": "la passion",
+   "de": "die Leidenschaft",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-1-019",
+   "en": "imiter qn/qc",
+   "de": "jdn nachahmen, etw. nachmachen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-1-020",
+   "en": "inventer qc",
+   "de": "etw. erfinden",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-1-021",
+   "en": "la saison",
+   "de": "die Jahreszeit, (auch:) die Staffel",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-1-022",
+   "en": "la dent",
+   "de": "der Zahn",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-1-023",
+   "en": "le centimètre",
+   "de": "der Zentimeter",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-1-024",
+   "en": "le trou",
+   "de": "das Loch",
+   "pos": "Nomen, m."
+  }
+ ],
+ "y8u2-2": [
+  {
+   "id": "y8u2-2-001",
+   "en": "au début (de qc)",
+   "de": "am Anfang (von etw.), zuerst",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-2-002",
+   "en": "et puis",
+   "de": "außerdem",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-2-003",
+   "en": "avant",
+   "de": "vor, davor",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u2-2-004",
+   "en": "tout à coup",
+   "de": "plötzlich",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-2-005",
+   "en": "finalement",
+   "de": "letztendlich, schließlich",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u2-2-006",
+   "en": "tout le temps",
+   "de": "die ganze Zeit, ständig",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-2-007",
+   "en": "faire un tour",
+   "de": "spazieren gehen, eine Runde drehen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-2-008",
+   "en": "monter",
+   "de": "steigen, hinaufsteigen, ansteigen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-2-009",
+   "en": "tomber",
+   "de": "fallen, hinfallen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-2-010",
+   "en": "avoir peur",
+   "de": "Angst haben, Angst bekommen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-2-011",
+   "en": "avoir mal",
+   "de": "Schmerzen haben",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-2-012",
+   "en": "c'était",
+   "de": "das war, es war",
+   "pos": "Ausruf"
+  },
+  {
+   "id": "y8u2-2-013",
+   "en": "l'aviron",
+   "de": "das Rudern",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-2-014",
+   "en": "la course-poursuite",
+   "de": "die Verfolgungsjagd",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-2-015",
+   "en": "Aïe !",
+   "de": "Aua!",
+   "pos": "Ausruf"
+  }
+ ],
+ "y8u2-3": [
+  {
+   "id": "y8u2-3-001",
+   "en": "la nuit",
+   "de": "die Nacht, nachts",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-3-002",
+   "en": "hier",
+   "de": "gestern",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u2-3-003",
+   "en": "après",
+   "de": "nach",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u2-3-004",
+   "en": "la marée haute",
+   "de": "die Flut, das Hochwasser",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-3-005",
+   "en": "la marée basse",
+   "de": "die Ebbe, das Niedrigwasser",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-3-006",
+   "en": "la balise",
+   "de": "die Boje",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-3-007",
+   "en": "rencontrer qn",
+   "de": "jdm begegnen, jdn treffen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-3-008",
+   "en": "rigoler (bien)",
+   "de": "(viel) lachen, (echt) Spaß haben",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-3-009",
+   "en": "comprendre qn/qc",
+   "de": "jdn/etw. verstehen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-3-010",
+   "en": "au milieu (de qc)",
+   "de": "in der Mitte (von etw.), mitten in",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-3-011",
+   "en": "la pause",
+   "de": "die Pause",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-3-012",
+   "en": "ramasser qc",
+   "de": "etw. sammeln",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-3-013",
+   "en": "le coquillage",
+   "de": "die Muschel",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-3-014",
+   "en": "le bus",
+   "de": "der Bus",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-3-015",
+   "en": "crier",
+   "de": "schreien",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-3-016",
+   "en": "retourner",
+   "de": "zurückkehren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-3-017",
+   "en": "la route",
+   "de": "die Landstraße, die Fernverkehrsstraße",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-3-018",
+   "en": "la surprise",
+   "de": "die Überraschung",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-3-019",
+   "en": "retrouver qn",
+   "de": "jdn treffen, (hier:) jdn wiederfinden",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-3-020",
+   "en": "tout de suite",
+   "de": "sofort",
+   "pos": "Adverb"
+  }
+ ],
+ "y8u2-m2": [
+  {
+   "id": "y8u2-m2-001",
+   "en": "le record",
+   "de": "der Rekord",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-m2-002",
+   "en": "haut/haute",
+   "de": "hoch",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u2-m2-003",
+   "en": "l'Europe",
+   "de": "Europa",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-m2-004",
+   "en": "l'ouest",
+   "de": "der Westen",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-m2-005",
+   "en": "les Alpes",
+   "de": "die Alpen",
+   "pos": "Nomen, f. pl."
+  },
+  {
+   "id": "y8u2-m2-006",
+   "en": "court/courte",
+   "de": "kurz",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u2-m2-007",
+   "en": "long/longue",
+   "de": "lang",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u2-m2-008",
+   "en": "le village",
+   "de": "das Dorf",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-m2-009",
+   "en": "rapide",
+   "de": "schnell",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u2-m2-010",
+   "en": "rouler",
+   "de": "fahren, rollen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-m2-011",
+   "en": "le kilomètre",
+   "de": "der Kilometer",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-m2-012",
+   "en": "moins … que",
+   "de": "weniger … als, nicht so … wie",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-m2-013",
+   "en": "plus … que",
+   "de": "mehr … als",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-m2-014",
+   "en": "aussi … que",
+   "de": "(genau) so … wie",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-m2-015",
+   "en": "meilleur/meilleure … que",
+   "de": "besser",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u2-m2-016",
+   "en": "l'or",
+   "de": "das Gold",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-m2-017",
+   "en": "l'argent",
+   "de": "das Silber",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-m2-018",
+   "en": "la femme",
+   "de": "die Frau, die Ehefrau",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u2-m2-019",
+   "en": "l'homme",
+   "de": "der Mann",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u2-m2-020",
+   "en": "puissant/puissante",
+   "de": "mächtig",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u2-m2-021",
+   "en": "le/la chef",
+   "de": "der/die Chef/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u2-m2-022",
+   "en": "le/la chef de cuisine",
+   "de": "der Chefkoch / die Chefköchin",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u2-m2-023",
+   "en": "devenir",
+   "de": "werden",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u2-m2-024",
+   "en": "le meilleur / la meilleure",
+   "de": "der/die/das beste",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u2-m2-025",
+   "en": "impressionnant/impressionnante",
+   "de": "beeindruckend",
+   "pos": "Adjektiv"
+  }
+ ],
+ "y8u3-a": [
+  {
+   "id": "y8u3-a-001",
+   "en": "le moment",
+   "de": "der Moment, der Augenblick",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-a-002",
+   "en": "compter (pour qn)",
+   "de": "(jdm etw.) bedeuten, (für jdn etw.) zählen",
+   "pos": "Ausdruck"
+  }
+ ],
+ "y8u3-voc": [
+  {
+   "id": "y8u3-voc-001",
+   "en": "le conflit",
+   "de": "der Konflikt",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-voc-002",
+   "en": "discuter (de qc)",
+   "de": "(über etw.) reden, (über etw.) diskutieren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-voc-003",
+   "en": "C'est quoi, cette histoire ?",
+   "de": "Was soll das?",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-voc-004",
+   "en": "être en colère",
+   "de": "sauer sein, wütend sein",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-voc-005",
+   "en": "Et alors ?",
+   "de": "Na und?",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-voc-006",
+   "en": "Tu ne comprends rien.",
+   "de": "Du verstehst (gar) nichts.",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-voc-007",
+   "en": "exagérer",
+   "de": "übertreiben",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-voc-008",
+   "en": "N'importe quoi !",
+   "de": "So ein Quatsch!",
+   "pos": "Ausruf"
+  },
+  {
+   "id": "y8u3-voc-009",
+   "en": "Tu m'énerves !",
+   "de": "Du nervst (mich)!",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-voc-010",
+   "en": "avoir raison",
+   "de": "recht haben",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-voc-011",
+   "en": "grave",
+   "de": "schlimm",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u3-voc-012",
+   "en": "Qu'est-ce que tu en penses ?",
+   "de": "Was hältst du davon?",
+   "pos": "Ausdruck"
+  }
+ ],
+ "y8u3-1": [
+  {
+   "id": "y8u3-1-001",
+   "en": "fier/fière (de qn/qc)",
+   "de": "stolz (auf jdn/etw.)",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u3-1-002",
+   "en": "différent/différente",
+   "de": "verschieden, unterschiedlich",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u3-1-003",
+   "en": "ça explose",
+   "de": "es eskaliert, es kracht",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-1-004",
+   "en": "le souvenir",
+   "de": "die Erinnerung, das Souvenir",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-1-005",
+   "en": "partager qc",
+   "de": "etw. teilen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-006",
+   "en": "rapprocher qn/qc",
+   "de": "(hier:) jdn/etw. einander näherbringen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-007",
+   "en": "accompagner qn",
+   "de": "jdn begleiten",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-008",
+   "en": "aider (qn)",
+   "de": "(jdm) helfen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-009",
+   "en": "énerver qn",
+   "de": "jdn nerven, jdn ärgern",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-010",
+   "en": "parler de qc",
+   "de": "über etw. sprechen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-1-011",
+   "en": "c'est normal",
+   "de": "das ist normal",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-1-012",
+   "en": "faire la cuisine",
+   "de": "kochen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-1-013",
+   "en": "le travail",
+   "de": "die Arbeit",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-1-014",
+   "en": "filmer qn/qc",
+   "de": "jdn/etw. filmen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-015",
+   "en": "La Réunion",
+   "de": "La Réunion",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-1-016",
+   "en": "la chose",
+   "de": "die Sache, das Ding",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-1-017",
+   "en": "du coup",
+   "de": "daraufhin, deshalb, daher",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u3-1-018",
+   "en": "si",
+   "de": "doch",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u3-1-019",
+   "en": "par",
+   "de": "pro",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u3-1-020",
+   "en": "le vide-grenier",
+   "de": "der Flohmarkt, der Trödelmarkt",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-1-021",
+   "en": "trier qc",
+   "de": "etw. aussortieren, etw. sortieren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-022",
+   "en": "vendre qc (à qn)",
+   "de": "(jdm) etw. verkaufen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-1-023",
+   "en": "échanger qc (contre qc)",
+   "de": "etw. austauschen, etw. (gegen etw.) tauschen",
+   "pos": "Verb"
+  }
+ ],
+ "y8u3-2": [
+  {
+   "id": "y8u3-2-001",
+   "en": "la carrière",
+   "de": "die Karriere",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-2-002",
+   "en": "le succès",
+   "de": "der Erfolg",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-2-003",
+   "en": "jeune",
+   "de": "jung",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u3-2-004",
+   "en": "d'ailleurs",
+   "de": "übrigens",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u3-2-005",
+   "en": "appeler qn",
+   "de": "jdn nennen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-2-006",
+   "en": "la mélodie",
+   "de": "die Melodie",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-2-007",
+   "en": "que",
+   "de": "den/die/das",
+   "pos": "Pronomen"
+  },
+  {
+   "id": "y8u3-2-008",
+   "en": "créatif/créative",
+   "de": "kreativ",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u3-2-009",
+   "en": "le message",
+   "de": "(hier:) die Botschaft, die Aussage",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-2-010",
+   "en": "le champion / la championne",
+   "de": "der Champion, der/die Meister/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u3-2-011",
+   "en": "l'entraîneur / l'entraîneuse",
+   "de": "der/die Trainer/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u3-2-012",
+   "en": "sportif/sportive",
+   "de": "sportlich",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u3-2-013",
+   "en": "le ski",
+   "de": "der Ski, das Skifahren",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-2-014",
+   "en": "le ski de bosses",
+   "de": "das Buckelpistenfahren",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-2-015",
+   "en": "l'équipe",
+   "de": "die Mannschaft, das Team",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-2-016",
+   "en": "remarquer qn/qc",
+   "de": "jdn/etw. bemerken",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-2-017",
+   "en": "le talent",
+   "de": "das Talent",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-2-018",
+   "en": "compter sur qn",
+   "de": "auf jdn zählen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-2-019",
+   "en": "la médaille",
+   "de": "die Medaille",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-2-020",
+   "en": "courageux/courageuse",
+   "de": "mutig",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u3-2-021",
+   "en": "heureux/heureuse",
+   "de": "glücklich",
+   "pos": "Adjektiv"
+  }
+ ],
+ "y8u3-3": [
+  {
+   "id": "y8u3-3-001",
+   "en": "ce/cet/cette/ces",
+   "de": "dieser/diese/dieses",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u3-3-002",
+   "en": "le fer à repasser",
+   "de": "das Bügeleisen",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-3-003",
+   "en": "ne ... rien",
+   "de": "nichts",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u3-3-004",
+   "en": "ne … jamais",
+   "de": "nie",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u3-3-005",
+   "en": "l'appli (fam.) / l'application",
+   "de": "die App",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-3-006",
+   "en": "l'échange",
+   "de": "der Tausch, (auch:) der Austausch",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-3-007",
+   "en": "Quoi ?",
+   "de": "Was?",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u3-3-008",
+   "en": "mettre qc",
+   "de": "etw. stellen, etw. setzen, etw. legen, (auch:) etw. anziehen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-3-009",
+   "en": "en ligne",
+   "de": "online",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-3-010",
+   "en": "utiliser qc",
+   "de": "etw. benutzen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-3-011",
+   "en": "prêter qc (à qn)",
+   "de": "(jdm) etw. (ver-)leihen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-3-012",
+   "en": "le gaspillage",
+   "de": "die Verschwendung",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-3-013",
+   "en": "tu sais",
+   "de": "du weißt, weißt du",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-3-014",
+   "en": "écolo (fam.) / écologique",
+   "de": "umweltbewusst, ökologisch, Öko-",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u3-3-015",
+   "en": "emprunter qc",
+   "de": "etw. (aus-)leihen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-3-016",
+   "en": "coûter",
+   "de": "kosten",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-3-017",
+   "en": "Ce n'est pas pareil !",
+   "de": "Das ist nicht das Gleiche!",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-3-018",
+   "en": "commander qc",
+   "de": "etw. bestellen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-3-019",
+   "en": "la poubelle",
+   "de": "der Mülleimer",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-3-020",
+   "en": "mettre qc à la poubelle",
+   "de": "etw. in den Müll werfen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-3-021",
+   "en": "l'emballage",
+   "de": "die Verpackung",
+   "pos": "Nomen, m."
+  }
+ ],
+ "y8u3-m3": [
+  {
+   "id": "y8u3-m3-001",
+   "en": "la finale",
+   "de": "das Finale",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-m3-002",
+   "en": "le match",
+   "de": "das Spiel",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-m3-003",
+   "en": "le/la Croate",
+   "de": "der Kroate / die Kroatin",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u3-m3-004",
+   "en": "fort/forte",
+   "de": "stark",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u3-m3-005",
+   "en": "le but",
+   "de": "das Ziel, (hier:) das Tor",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-m3-006",
+   "en": "tirer",
+   "de": "ziehen, (hier:) schießen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-m3-007",
+   "en": "défendre (qn/qc)",
+   "de": "(jdn/etw.) verteidigen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-m3-008",
+   "en": "marquer un but",
+   "de": "ein Tor schießen, treffen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-m3-009",
+   "en": "contre",
+   "de": "gegen, dagegen",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u3-m3-010",
+   "en": "mener",
+   "de": "führen, in Führung liegen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-m3-011",
+   "en": "(1) à (0)",
+   "de": "(1) zu (0)",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-m3-012",
+   "en": "l'arbitre",
+   "de": "der/die Schiedsrichter/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u3-m3-013",
+   "en": "le carton (jaune/rouge)",
+   "de": "die (gelbe/rote) Karte",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-m3-014",
+   "en": "le score",
+   "de": "der Spielstand",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-m3-015",
+   "en": "le score est de … à …",
+   "de": "es steht … zu …",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-m3-016",
+   "en": "partout",
+   "de": "(hier:) unentschieden",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u3-m3-017",
+   "en": "attaquer (qn)",
+   "de": "(jdn) angreifen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-m3-018",
+   "en": "la faute",
+   "de": "der Fehler, (hier:) das Foul",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-m3-019",
+   "en": "parler à qn",
+   "de": "mit jdm sprechen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u3-m3-020",
+   "en": "le penalty",
+   "de": "der Strafstoß, der Elfmeter",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-m3-021",
+   "en": "la mi-temps",
+   "de": "die Halbzeit",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u3-m3-022",
+   "en": "le ballon",
+   "de": "der Ball",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u3-m3-023",
+   "en": "passer le ballon à qn",
+   "de": "jdm den Ball zuspielen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-m3-024",
+   "en": "le gardien / la gardienne (de but)",
+   "de": "der/die Torwart/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u3-m3-025",
+   "en": "faire attention",
+   "de": "aufpassen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u3-m3-026",
+   "en": "il reste…",
+   "de": "(nur) noch…",
+   "pos": "Ausdruck"
+  }
+ ],
+ "y8u4-a": [
+  {
+   "id": "y8u4-a-001",
+   "en": "la planète",
+   "de": "der Planet",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-a-002",
+   "en": "le médiateur / la médiatrice",
+   "de": "der/die Vermittler/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u4-a-003",
+   "en": "l'intello",
+   "de": "der/die Streber/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u4-a-004",
+   "en": "la brute",
+   "de": "der/die Unruhestifter/in",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-a-005",
+   "en": "le bavard / la bavarde",
+   "de": "die Quasselstrippe",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u4-a-006",
+   "en": "le geek",
+   "de": "der Nerd, (auch:) der Computernerd",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-a-007",
+   "en": "le clown",
+   "de": "der/die Clown/in",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-a-008",
+   "en": "les inséparables",
+   "de": "die Unzertrennlichen",
+   "pos": "Nomen, m./f. pl."
+  },
+  {
+   "id": "y8u4-a-009",
+   "en": "le chouchou / la chouchoute",
+   "de": "der Liebling",
+   "pos": "Nomen, m./f."
+  }
+ ],
+ "y8u4-voc": [
+  {
+   "id": "y8u4-voc-001",
+   "en": "seul/seule",
+   "de": "allein",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-voc-002",
+   "en": "poser une question (à qn)",
+   "de": "(jdm) eine Frage stellen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-voc-003",
+   "en": "l'excuse",
+   "de": "die Entschuldigung, (auch:) die Ausrede",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-voc-004",
+   "en": "la pression",
+   "de": "der Druck",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-voc-005",
+   "en": "mettre la pression à qn",
+   "de": "jdn unter Druck setzen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-voc-006",
+   "en": "le temps",
+   "de": "die Zeit",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-voc-007",
+   "en": "dernier/dernière",
+   "de": "letzter/letzte/letztes",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-voc-008",
+   "en": "réviser (qc)",
+   "de": "(etw.) lernen, etw. wiederholen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-voc-009",
+   "en": "participer en cours",
+   "de": "im Unterricht mitarbeiten",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-voc-010",
+   "en": "rendre qc (à qn)",
+   "de": "(jdm) etw. zurückgeben",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-voc-011",
+   "en": "mauvais/mauvaise",
+   "de": "schlecht",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-voc-012",
+   "en": "la note",
+   "de": "die Note",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-voc-013",
+   "en": "la moyenne",
+   "de": "der Durchschnitt",
+   "pos": "Nomen, f."
+  }
+ ],
+ "y8u4-1": [
+  {
+   "id": "y8u4-1-001",
+   "en": "écrire qc (à qn)",
+   "de": "(jdm) etw. schreiben",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-1-002",
+   "en": "laisser qn tranquille",
+   "de": "jdn in Ruhe lassen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-1-003",
+   "en": "sérieux/sérieuse",
+   "de": "ernst, ernsthaft",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-1-004",
+   "en": "débrouillard/débrouillarde",
+   "de": "geschickt, pfiffig",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-1-005",
+   "en": "populaire",
+   "de": "beliebt",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u4-1-006",
+   "en": "malade",
+   "de": "krank",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u4-1-007",
+   "en": "le voisin / la voisine",
+   "de": "der/die (Sitz-)Nachbar/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u4-1-008",
+   "en": "le sac",
+   "de": "die Tasche, (auch:) die Schultasche",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-1-009",
+   "en": "le bulletin",
+   "de": "das Zeugnis",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-1-010",
+   "en": "le conseil",
+   "de": "der Rat, Ratschlag",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-1-011",
+   "en": "le résultat",
+   "de": "das Ergebnis, das Resultat",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-1-012",
+   "en": "le test",
+   "de": "der Test",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-1-013",
+   "en": "le genre (de qc)",
+   "de": "die Art",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-1-014",
+   "en": "le réveil",
+   "de": "der Wecker",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-1-015",
+   "en": "sonner",
+   "de": "klingeln",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-1-016",
+   "en": "plus",
+   "de": "mehr",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u4-1-017",
+   "en": "sans",
+   "de": "ohne etw. zu tun",
+   "pos": "Präposition"
+  }
+ ],
+ "y8u4-2": [
+  {
+   "id": "y8u4-2-001",
+   "en": "stresser qn",
+   "de": "jdn stressen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-2-002",
+   "en": "dire qc (à qn)",
+   "de": "(jdm) etw. sagen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-2-003",
+   "en": "que",
+   "de": "dass",
+   "pos": "Konjunktion"
+  },
+  {
+   "id": "y8u4-2-004",
+   "en": "devoir",
+   "de": "etw. tun müssen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-2-005",
+   "en": "au moins",
+   "de": "mindestens, wenigstens",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u4-2-006",
+   "en": "à cause de",
+   "de": "wegen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-007",
+   "en": "l'impression",
+   "de": "der Eindruck",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-2-008",
+   "en": "à la place de (qn/qc)",
+   "de": "anstelle von (jdm/etw.), statt",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-009",
+   "en": "passer du temps (avec qn)",
+   "de": "(mit jdm) Zeit verbringen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-010",
+   "en": "le contraire",
+   "de": "das Gegenteil",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-2-011",
+   "en": "demander (qc à qn)",
+   "de": "(jdn nach etw.) fragen, jdn um etw. bitten",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-2-012",
+   "en": "demander si",
+   "de": "fragen, ob",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-013",
+   "en": "avoir besoin de qn/qc",
+   "de": "jdn/etw. brauchen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-014",
+   "en": "l'aide",
+   "de": "die Hilfe",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-2-015",
+   "en": "oh là là",
+   "de": "oje",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-016",
+   "en": "vouloir savoir si",
+   "de": "wissen wollen, ob",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-017",
+   "en": "Je te jure !",
+   "de": "(Ganz) Ehrlich!, Ich schwör's!",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-018",
+   "en": "le reste",
+   "de": "der Rest",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-2-019",
+   "en": "faire confiance à qn",
+   "de": "jdm vertrauen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-2-020",
+   "en": "à mon avis",
+   "de": "meiner Meinung nach",
+   "pos": "Ausdruck"
+  }
+ ],
+ "y8u4-3": [
+  {
+   "id": "y8u4-3-001",
+   "en": "le système",
+   "de": "das System",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-3-002",
+   "en": "sur",
+   "de": "(hier:) von",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u4-3-003",
+   "en": "le stress",
+   "de": "der Stress",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-3-004",
+   "en": "la lettre",
+   "de": "der Buchstabe",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-3-005",
+   "en": "comme",
+   "de": "als",
+   "pos": "Konjunktion"
+  },
+  {
+   "id": "y8u4-3-006",
+   "en": "calculer qc",
+   "de": "etw. berechnen, etw. ausrechnen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-3-007",
+   "en": "précis/précise",
+   "de": "genau, exakt, klar",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-3-008",
+   "en": "exister",
+   "de": "existieren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-3-009",
+   "en": "le/la même",
+   "de": "der-/die-/dasselbe, der/die/das Gleiche",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u4-3-010",
+   "en": "juste",
+   "de": "gerecht",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u4-3-011",
+   "en": "autre",
+   "de": "anderer/andere/anderes",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u4-3-012",
+   "en": "penser",
+   "de": "denken",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-3-013",
+   "en": "motivant/motivante",
+   "de": "motivierend",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-3-014",
+   "en": "les gens",
+   "de": "die Leute",
+   "pos": "Nomen, m. pl."
+  },
+  {
+   "id": "y8u4-3-015",
+   "en": "dur/dure",
+   "de": "hart, schwer",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-3-016",
+   "en": "ça veut dire",
+   "de": "das heißt",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-3-017",
+   "en": "la catastrophe",
+   "de": "die Katastrophe",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-3-018",
+   "en": "par contre",
+   "de": "jedoch, allerdings",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-3-019",
+   "en": "entendre qn/qc",
+   "de": "jdn/etw. hören",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-3-020",
+   "en": "avoir la moyenne",
+   "de": "bestehen",
+   "pos": "Ausdruck"
+  }
+ ],
+ "y8u4-m4": [
+  {
+   "id": "y8u4-m4-001",
+   "en": "le handball",
+   "de": "Handball, das Handballspielen",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-m4-002",
+   "en": "la batterie",
+   "de": "das Schlagzeug",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u4-m4-003",
+   "en": "le repas",
+   "de": "das Essen, die Mahlzeit",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-m4-004",
+   "en": "presque",
+   "de": "fast, beinahe",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u4-m4-005",
+   "en": "sauf",
+   "de": "außer, abgesehen von",
+   "pos": "Präposition"
+  },
+  {
+   "id": "y8u4-m4-006",
+   "en": "végan/végane",
+   "de": "vegan",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u4-m4-007",
+   "en": "les céréales",
+   "de": "das Getreide, (hier:) das Müsli, die Cornflakes",
+   "pos": "Nomen, f. pl."
+  },
+  {
+   "id": "y8u4-m4-008",
+   "en": "le petit-déjeuner",
+   "de": "das Frühstück",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-m4-009",
+   "en": "porter qc",
+   "de": "etw. tragen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u4-m4-010",
+   "en": "les vêtements",
+   "de": "die Kleidung",
+   "pos": "Nomen, m. pl."
+  },
+  {
+   "id": "y8u4-m4-011",
+   "en": "les sneakers",
+   "de": "die Sneakers",
+   "pos": "Nomen, m. pl."
+  },
+  {
+   "id": "y8u4-m4-012",
+   "en": "les lunettes",
+   "de": "die Brille",
+   "pos": "Nomen, f. pl."
+  },
+  {
+   "id": "y8u4-m4-013",
+   "en": "le mois",
+   "de": "der Monat",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-m4-014",
+   "en": "l'appareil dentaire",
+   "de": "die Zahnspange",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-m4-015",
+   "en": "le caractère",
+   "de": "der Charakter",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-m4-016",
+   "en": "plutôt",
+   "de": "eher, lieber",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u4-m4-017",
+   "en": "timide",
+   "de": "schüchtern",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u4-m4-018",
+   "en": "l'avenir",
+   "de": "die Zukunft",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u4-m4-019",
+   "en": "plus tard",
+   "de": "später",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u4-m4-020",
+   "en": "le gamer / la gameuse",
+   "de": "der/die Gamer/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u4-m4-021",
+   "en": "gagner de l'argent",
+   "de": "Geld verdienen",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u4-m4-022",
+   "en": "la blague",
+   "de": "der Witz, der Scherz",
+   "pos": "Nomen, f."
+  }
+ ],
+ "y8u5-a": [
+  {
+   "id": "y8u5-a-001",
+   "en": "liker qn/qc",
+   "de": "jdn/etw. liken",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-a-002",
+   "en": "le youtubeur / la youtubeuse",
+   "de": "der/die Youtuber/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u5-a-003",
+   "en": "l'acteur / l'actrice",
+   "de": "der/die Schauspieler/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u5-a-004",
+   "en": "engagé/engagée",
+   "de": "engagiert",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-a-005",
+   "en": "l'astronaute",
+   "de": "der/die Astronaut/in",
+   "pos": "Nomen, m./f."
+  }
+ ],
+ "y8u5-voc": [
+  {
+   "id": "y8u5-voc-001",
+   "en": "l'activité",
+   "de": "die Aktivität",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-voc-002",
+   "en": "télécharger qc",
+   "de": "etw. herunterladen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-voc-003",
+   "en": "cliquer sur qc",
+   "de": "auf etw. klicken",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-voc-004",
+   "en": "le lien",
+   "de": "der Link",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-voc-005",
+   "en": "laisser qc",
+   "de": "etw. lassen, (hier:) etw. hinterlassen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-voc-006",
+   "en": "poster qc",
+   "de": "etw. posten",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-voc-007",
+   "en": "le tuto (fam.) / le tutoriel",
+   "de": "das Erklärvideo, das Tutorial",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-voc-008",
+   "en": "enregistrer qc",
+   "de": "etw. aufnehmen, etw. speichern",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-voc-009",
+   "en": "les réseaux sociaux",
+   "de": "die sozialen Netzwerke",
+   "pos": "Nomen, m. pl."
+  },
+  {
+   "id": "y8u5-voc-010",
+   "en": "être accro à qc",
+   "de": "nach etw. süchtig sein, von etw. abhängig sein",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u5-voc-011",
+   "en": "la victime",
+   "de": "das Opfer",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-voc-012",
+   "en": "le cyberharcèlement",
+   "de": "das Cybermobbing",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-voc-013",
+   "en": "créer qc",
+   "de": "etw. erschaffen, etw. gründen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-voc-014",
+   "en": "avoir … vues",
+   "de": "… Aufrufe/Klicks haben",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u5-voc-015",
+   "en": "le million",
+   "de": "die Million",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-voc-016",
+   "en": "l'abonné/l'abonnée",
+   "de": "der/die Abonnent/in",
+   "pos": "Nomen, m./f."
+  }
+ ],
+ "y8u5-1": [
+  {
+   "id": "y8u5-1-001",
+   "en": "intelligent/intelligente",
+   "de": "intelligent",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-002",
+   "en": "normal (m.) / normale (f.) / normaux (m. pl.) / normales (f. pl.)",
+   "de": "normal",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-003",
+   "en": "la culture",
+   "de": "die Kultur",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-1-004",
+   "en": "le cliché",
+   "de": "das Klischee",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-1-005",
+   "en": "chinois/chinoise",
+   "de": "chinesisch",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-006",
+   "en": "génial (m.) / géniale (f.) / géniaux (m. pl.) / géniales (f. pl.)",
+   "de": "toll, genial",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-007",
+   "en": "voir qn/qc",
+   "de": "jdn/etw. sehen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-1-008",
+   "en": "être d'origine (f.) (allemande/française)",
+   "de": "(deutscher/französischer) Herkunft sein",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u5-1-009",
+   "en": "asiatique",
+   "de": "asiatisch",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u5-1-010",
+   "en": "l'Asie",
+   "de": "Asien",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-1-011",
+   "en": "le thème",
+   "de": "das Thema",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-1-012",
+   "en": "critiquer (qn/qc)",
+   "de": "(jdn/etw.) kritisieren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-1-013",
+   "en": "national (m.) / nationale (f.) / nationaux (m. pl.) / nationales (f. pl.)",
+   "de": "national, National-",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-014",
+   "en": "l'humour",
+   "de": "der Humor",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-1-015",
+   "en": "avant",
+   "de": "früher, vorher",
+   "pos": "Adverb"
+  },
+  {
+   "id": "y8u5-1-016",
+   "en": "faire des études",
+   "de": "studieren",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u5-1-017",
+   "en": "l'ingénieur / l'ingénieure",
+   "de": "der/die Ingenieur/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u5-1-018",
+   "en": "original (m.) / originale (f.) / originaux (m. pl.) / originales (f. pl.)",
+   "de": "originell",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-019",
+   "en": "adulte",
+   "de": "erwachsen",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u5-1-020",
+   "en": "polonais/polonaise",
+   "de": "polnisch",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-021",
+   "en": "séparé/séparée",
+   "de": "getrennt",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-1-022",
+   "en": "la beauté",
+   "de": "die Schönheit",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-1-023",
+   "en": "le policier / la policière",
+   "de": "der/die Polizist/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u5-1-024",
+   "en": "l'émission",
+   "de": "die Sendung",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-1-025",
+   "en": "l'avis",
+   "de": "die Meinung",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-1-026",
+   "en": "autre chose",
+   "de": "etwas anderes",
+   "pos": "Ausdruck"
+  }
+ ],
+ "y8u5-2": [
+  {
+   "id": "y8u5-2-001",
+   "en": "finir qc",
+   "de": "etw. beenden, enden",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-002",
+   "en": "grandir",
+   "de": "aufwachsen, wachsen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-003",
+   "en": "réussir (qc)",
+   "de": "es/etw. schaffen, gelingen, etw. bestehen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-004",
+   "en": "choisir qn/qc",
+   "de": "jdn/etw. aussuchen, jdn/etw. auswählen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-005",
+   "en": "quitter qn/qc",
+   "de": "jdn/etw. verlassen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-006",
+   "en": "participer à qc",
+   "de": "an etw. teilnehmen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-007",
+   "en": "baisser les bras",
+   "de": "aufgeben",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u5-2-008",
+   "en": "encourager qn",
+   "de": "jdn ermutigen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-009",
+   "en": "perdre (qn/qc)",
+   "de": "(jdn/etw.) verlieren",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-2-010",
+   "en": "les médias",
+   "de": "die Medien",
+   "pos": "Nomen, m. pl."
+  },
+  {
+   "id": "y8u5-2-011",
+   "en": "l'album",
+   "de": "das Album",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-2-012",
+   "en": "le concert",
+   "de": "das Konzert",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-2-013",
+   "en": "les hauts et les bas",
+   "de": "die Höhen und Tiefen, das Auf und Ab",
+   "pos": "Ausdruck, m. pl."
+  },
+  {
+   "id": "y8u5-2-014",
+   "en": "marocain/marocaine",
+   "de": "marokkanisch",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-2-015",
+   "en": "tout le / toute la, tous les / toutes les",
+   "de": "ganzer/ganze/ganzes, alle",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-2-016",
+   "en": "tomber amoureux/amoureuse (de qn)",
+   "de": "sich (in jdn) verlieben",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u5-2-017",
+   "en": "difficile",
+   "de": "schwer, schwierig",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u5-2-018",
+   "en": "le jury",
+   "de": "die Jury",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-2-019",
+   "en": "la perruque",
+   "de": "die Perücke",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-2-020",
+   "en": "le bac (fam.) / le baccalauréat",
+   "de": "das Abi, das Abitur",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-2-021",
+   "en": "homosexuel/homosexuelle",
+   "de": "homosexuell",
+   "pos": "Adjektiv"
+  }
+ ],
+ "y8u5-m5": [
+  {
+   "id": "y8u5-m5-001",
+   "en": "le blog",
+   "de": "der Blog",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-002",
+   "en": "l'avion",
+   "de": "das Flugzeug",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-003",
+   "en": "durer",
+   "de": "dauern, andauern",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-m5-004",
+   "en": "préparer qc",
+   "de": "(hier:) etw. zubereiten",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-m5-005",
+   "en": "la personne",
+   "de": "die Person",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-m5-006",
+   "en": "le bonbon",
+   "de": "das Bonbon",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-007",
+   "en": "le piment",
+   "de": "die Chili(schote)",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-008",
+   "en": "le Réunionnais / la Réunionnaise",
+   "de": "der/die Reunionaiser/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u5-m5-009",
+   "en": "le Français / la Française",
+   "de": "der Franzose / die Französin",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u5-m5-010",
+   "en": "le continent",
+   "de": "der Kontinent",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-011",
+   "en": "créole",
+   "de": "kreolisch",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u5-m5-012",
+   "en": "ça sent",
+   "de": "es riecht (nach)",
+   "pos": "Ausdruck"
+  },
+  {
+   "id": "y8u5-m5-013",
+   "en": "nager",
+   "de": "schwimmen",
+   "pos": "Verb"
+  },
+  {
+   "id": "y8u5-m5-014",
+   "en": "beau/bel (m.) / belle (f.) / beaux (m. pl.) / belles (f. pl.)",
+   "de": "schön",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-m5-015",
+   "en": "la cascade",
+   "de": "der Wasserfall",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-m5-016",
+   "en": "la forêt",
+   "de": "der Wald",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-m5-017",
+   "en": "vieux/vieil (m.) / vieille (f.) / vieux (m. pl.) / vieilles (f. pl.)",
+   "de": "alt",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-m5-018",
+   "en": "nouveau/nouvel (m.) / nouvelle (f.) / nouveaux (m. pl.) / nouvelles (f. pl.)",
+   "de": "neu",
+   "pos": "Adjektiv"
+  },
+  {
+   "id": "y8u5-m5-019",
+   "en": "le paysage",
+   "de": "die Landschaft",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-020",
+   "en": "la course",
+   "de": "der Lauf, das Rennen",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-m5-021",
+   "en": "fou/folle",
+   "de": "verrückt, wahnsinnig",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u5-m5-022",
+   "en": "la région",
+   "de": "die Gegend, die Region",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-m5-023",
+   "en": "la capitale",
+   "de": "die Hauptstadt",
+   "pos": "Nomen, f."
+  },
+  {
+   "id": "y8u5-m5-024",
+   "en": "l'habitant / l'habitante",
+   "de": "der/die Bewohner/in, der/die Einwohner/in",
+   "pos": "Nomen, m./f."
+  },
+  {
+   "id": "y8u5-m5-025",
+   "en": "l'été",
+   "de": "der Sommer",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-026",
+   "en": "le printemps",
+   "de": "der Frühling",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-027",
+   "en": "l'automne",
+   "de": "der Herbst",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-028",
+   "en": "l'hiver",
+   "de": "der Winter",
+   "pos": "Nomen, m."
+  },
+  {
+   "id": "y8u5-m5-029",
+   "en": "actif/active",
+   "de": "aktiv",
+   "pos": "Adjektiv, m./f."
+  },
+  {
+   "id": "y8u5-m5-030",
+   "en": "le centre",
+   "de": "das Zentrum",
+   "pos": "Nomen, m."
+  }
+ ]
+};
+</script>
+
+<script>
+/* =========================================================================
+   SPEICHER  –  localStorage mit Rückfallebene im Arbeitsspeicher
+   ========================================================================= */
+const Store = (function(){
+  let persistent = true, mem = {};
+  try{
+    localStorage.setItem("fr8:test","1");
+    localStorage.removeItem("fr8:test");
+  }catch(e){ persistent = false; }
+  return {
+    persistent,
+    get(k){
+      try{
+        if(persistent) return localStorage.getItem(k);
+        return (k in mem) ? mem[k] : null;
+      }catch(e){ return (k in mem) ? mem[k] : null; }
+    },
+    set(k,v){
+      try{ persistent ? localStorage.setItem(k,v) : (mem[k]=v); }
+      catch(e){ mem[k]=v; }
+    }
+  };
+})();
+
+const KEY = "fr8:progress";
+const INTERVALS = [0,0,1,2,4,8];      // Fach 1..5 -> Tage bis zur Wiedervorlage
+const DAY = 86400000;
+
+let progress = (function(){
+  try{ return JSON.parse(Store.get(KEY)) || {}; }catch(e){ return {}; }
+})();
+
+function save(){ Store.set(KEY, JSON.stringify(progress)); }
+
+function rec(dir, vid){
+  if(!progress[dir]) progress[dir] = {};
+  if(!progress[dir][vid]) progress[dir][vid] = {box:1, due:0};
+  return progress[dir][vid];
+}
+function isDue(r){ return Date.now() >= r.due; }
+
+function boxCounts(list, dir){
+  const c=[0,0,0,0,0];
+  for(const v of list) c[rec(dir,v.id).box-1]++;
+  return c;
+}
+function dueCount(list, dir){
+  return list.filter(v => isDue(rec(dir,v.id))).length;
+}
+
+/* Liefert die Vokabeln zu einer Auswahl. Neben den einzelnen Parts gibt es
+   zwei Sammel-IDs: "<unit>-all" fuer eine ganze Unit und "<jahrgang>-all"
+   fuer das ganze Buch. Der Lernstand haengt an der Vokabel, nicht an der
+   Auswahl - wer eine Unit am Stueck lernt, sieht denselben Fortschritt
+   auch in den einzelnen Parts. */
+function setOf(id){
+  if(SETS[id]) return SETS[id];
+  var m = /^(.+)-all$/.exec(id);
+  if(!m) return [];
+  var key = m[1];
+  var parts = TOPICS.filter(function(t){ return t.unit === key; });
+  if(!parts.length){
+    var yr = YEARS.filter(function(y){ return y.id === key; })[0];
+    if(yr) parts = TOPICS.filter(function(t){
+      return yr.units.some(function(u){ return u.id === t.unit; }); });
+  }
+  return parts.reduce(function(a,t){ return a.concat(SETS[t.id]); }, []);
+}
+function topicName(id){
+  var t = TOPICS.filter(function(x){ return x.id === id; })[0];
+  if(t) return t.unitName + " \u00b7 " + t.name;
+  var m = /^(.+)-all$/.exec(id);
+  if(m){
+    var u = TOPICS.filter(function(x){ return x.unit === m[1]; })[0];
+    if(u) return u.unitName + " \u2013 alle Teile";
+    var y = YEARS.filter(function(x){ return x.id === m[1]; })[0];
+    if(y) return y.label + (y.book ? " (" + y.book + ")" : "") + " \u2013 alle Unités";
+  }
+  return id;
+}
+
+
+/* =========================================================================
+   AUSSPRACHE  –  Web Speech API des Browsers, keine externe Anbindung
+   Nutzt die auf dem Gerät installierten Stimmen. Kein Konto, kein Schlüssel,
+   kein Datenversand. Verfügbarkeit und Qualität hängen vom Endgerät ab.
+   ========================================================================= */
+const Speech = (function(){
+  var synth = window.speechSynthesis;
+  if(!synth) return {available:false, say:function(){}, status:function(){ return "nicht unterstützt"; }};
+
+  var voice = null;
+  var last = "noch nichts abgespielt";
+
+  function pick(){
+    var vs = [];
+    try{ vs = synth.getVoices() || []; }catch(e){ return; }
+    vs = vs.filter(function(v){ return /^fr/i.test(v.lang); });
+    if(!vs.length) return;                        // auf iOS anfangs leer
+    voice = vs.filter(function(v){ return /fr[-_]FR/i.test(v.lang); })[0]
+         || vs[0];
+  }
+  pick();
+  if(synth.addEventListener) synth.addEventListener("voiceschanged", pick);
+
+  return {
+    available:true,
+
+    /* Zaehlt die geladenen Stimmen und meldet, was zuletzt passiert ist. */
+    status:function(){
+      var n = 0;
+      try{ n = (synth.getVoices() || []).length; }catch(e){}
+      return n + " Stimmen geladen \u00b7 " + (voice ? "gewählt: " + voice.name + " (" + voice.lang + ")"
+                                                     : "keine französische Stimme gefunden")
+           + " \u00b7 zuletzt: " + last;
+    },
+
+    say:function(text, btn){
+      try{
+        // Laeuft schon etwas? Dann nur abbrechen und beenden. Niemals
+        // cancel() unmittelbar vor speak() aufrufen - iOS verschluckt sonst
+        // beides und bleibt stumm.
+        if(synth.speaking || synth.pending){
+          synth.cancel();
+          last = "abgebrochen";
+          if(btn) btn.classList.remove("on");
+          return;
+        }
+
+        // Stimmenliste im Moment des Antippens auffrischen; auf iOS ist sie
+        // beim Laden der Seite noch leer.
+        if(!voice) pick();
+
+        var u = new SpeechSynthesisUtterance(String(text));
+        u.lang = "fr-FR";
+        if(voice){ try{ u.voice = voice; u.lang = voice.lang || "fr-FR"; }catch(e){} }
+        u.rate = 0.9;
+
+        last = "gestartet";
+        u.onstart = function(){ last = "spricht"; };
+        u.onend   = function(){ last = "fertig"; if(btn) btn.classList.remove("on"); };
+        u.onerror = function(ev){
+          last = "Fehler: " + ((ev && ev.error) ? ev.error : "unbekannt");
+          if(btn) btn.classList.remove("on");
+        };
+
+        if(btn) btn.classList.add("on");
+        synth.speak(u);                  // direkt aus der Nutzeraktion heraus
+        if(synth.paused){ try{ synth.resume(); }catch(e){} }
+      }catch(e){
+        last = "Ausnahme: " + e.message;
+        if(btn) btn.classList.remove("on");
+      }
+    }
+  };
+})();
+
+const SPK = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+  <path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 5.5a9 9 0 0 1 0 13"></path></svg>`;
+
+function speakBtn(text){
+  if(!Speech.available) return "";
+  return `<button class="speak" data-say="${esc(text)}" title="Aussprache anhören"
+    aria-label="Aussprache von ${esc(text)} anhören">${SPK}</button>`;
+}
+
+/* =========================================================================
+   HILFSFUNKTIONEN
+   ========================================================================= */
+const shuffle = a => a.map(x=>[Math.random(),x]).sort((p,q)=>p[0]-q[0]).map(p=>p[1]);
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function normalise(s){
+  return s.toLowerCase().trim()
+    .replace(/[.,;:!?¡¿'"’«»…]/g,"")
+    .replace(/\s+/g," ").trim();
+}
+function distance(a,b){
+  const m=a.length,n=b.length,d=Array.from({length:m+1},(_,i)=>[i,...Array(n).fill(0)]);
+  for(let j=0;j<=n;j++) d[0][j]=j;
+  for(let i=1;i<=m;i++) for(let j=1;j<=n;j++)
+    d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));
+  return d[m][n];
+}
+function checkTyped(input, target){
+  const a=normalise(input), b=normalise(target);
+  if(!a) return "no";
+  if(a===b) return "ok";
+  // Mehrere zulässige Übersetzungen, durch Komma getrennt
+  if(b.split(",").map(s=>s.trim()).includes(a)) return "ok";
+  const tol = b.length > 6 ? 2 : 1;
+  return distance(a,b) <= tol ? "near" : "no";
+}
+function markExample(sentence, word, gap, at){
+  if(gap && sentence.indexOf(gap) >= 0){
+    const i = sentence.substr(at, gap.length) === gap ? at : sentence.indexOf(gap);
+    return esc(sentence.slice(0, i)) + "<b>" + esc(gap) + "</b>" + esc(sentence.slice(i + gap.length));
+  }
+  const stem = word.replace(/^to\s+/i,"").split(/[\s/]/)[0].slice(0, Math.max(4, word.length-3));
+  const re = new RegExp("("+stem.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\w*)","i");
+  return esc(sentence).replace(re,"<b>$1</b>");
+}
+
+/* =========================================================================
+   ZUSTAND
+   ========================================================================= */
+const S = {
+  view:"home",
+  yearId:null,
+  topicId:null,
+  dir:"en2de",          // en2de | de2en
+  mode:"card",          // card | mc | type
+  onlyDue:true,
+  queue:[], i:0, revealed:false, answered:null, landed:null,
+  seen:0
+};
+const view = document.getElementById("view");
+const dirLabel = () => S.dir==="en2de" ? "FR → DE" : "DE → FR";
+const askSide  = v => S.dir==="en2de" ? v.en : v.de;
+const ansSide  = v => S.dir==="en2de" ? v.de : v.en;
+
+/* =========================================================================
+   STARTSEITE
+   ========================================================================= */
+function railFor(list){
+  const total = list.length;
+  const c = boxCounts(list, S.dir);
+  const known = c[2]+c[3]+c[4];
+  const filled = total ? Math.round(known/total*5) : 0;
+  return `<span class="minirail">${[0,1,2,3,4].map(k=>`<i class="${k<filled?"f":""}"></i>`).join("")}</span>`;
+}
+function countLabel(list){
+  const total = list.length;
+  if(!total) return "leer";
+  const due = dueCount(list, S.dir);
+  return (due ? `<span class="t-due">${due} f\u00e4llig</span> \u00b7 ` : "") + total + " Vok.";
+}
+function topicRow(id, label, list, cls){
+  return `<button class="topic ${cls||""}" data-topic="${id}">
+    <span class="t-row">
+      <span class="t-name">${esc(label)}</span>
+      <span class="t-count">${countLabel(list)}</span>
+    </span>
+    ${railFor(list)}
+  </button>`;
+}
+
+/* Startseite: nur die Jahrgaenge mit ihrem Lehrwerk. */
+function renderHome(){
+  let h = "";
+  for(const y of YEARS){
+    const list = setOf(y.id + "-all");
+    h += `<section class="yeargroup">
+      <div class="yearhead"><span class="tag">${esc(y.label)}</span>
+      ${y.book ? `<span class="name">${esc(y.book)}</span>` : ""}</div>
+      <button class="topic home-year" data-year="${y.id}">
+        <span class="t-row">
+          <span class="t-name">${esc(y.label)}</span>
+          <span class="t-count">${y.units.length} Kapitel \u00b7 ${list.length} Vok.</span>
+        </span>
+        ${railFor(list)}
+      </button>
+    </section>`;
+  }
+  h += `<div class="emptyhint">W\u00e4hle eine Klasse. Der Fortschritt wird pro
+        Abfragerichtung (${dirLabel()}) getrennt gespeichert und bleibt auf diesem Ger\u00e4t.</div>`;
+  const grand = TOPICS.reduce((n,t) => n + (SETS[t.id] ? SETS[t.id].length : 0), 0);
+  h += `<button class="topic home-all" id="allBtn">
+    <span class="t-row">
+      <span class="t-name">Alle Vokabeln ansehen</span>
+      <span class="t-count">${grand} Eintr\u00e4ge</span>
+    </span>
+  </button>`;
+  h += `<button class="topic home-help" id="helpBtn">
+    <span class="t-row">
+      <span class="t-name">Anleitung</span>
+      <span class="t-count">So funktioniert die Seite</span>
+    </span>
+  </button>`;
+
+  view.innerHTML = h;
+  view.querySelectorAll("[data-year]").forEach(b =>
+    b.addEventListener("click", () => { S.yearId = b.dataset.year; S.view = "year"; render(); }));
+  const ab = document.getElementById("allBtn");
+  if(ab) ab.onclick = () => { S.view = "list"; render(); };
+  const hb = document.getElementById("helpBtn");
+  if(hb) hb.onclick = () => { S.view = "help"; render(); };
+  updateFoot();
+}
+
+/* Jahrgangsseite: pro Unit ein Abschnitt, darin die Parts als Zeilen,
+   dazu je eine Zeile fuer die ganze Unit und eine fuer das ganze Buch. */
+function renderYear(){
+  const y = YEARS.filter(x => x.id === S.yearId)[0] || YEARS[0];
+  let h = `<div class="sessionbar">
+      <button class="linkbtn" id="yback">\u2190 Jahrg\u00e4nge</button>
+      <div class="switches"><button class="switch" id="ydir">${dirLabel()}</button></div>
+    </div>`;
+
+  h += topicRow(y.id + "-all", "Alle Vokabeln des Buches", setOf(y.id + "-all"), "uall");
+
+  for(const u of y.units){
+    const parts = TOPICS.filter(t => t.unit === u.id);
+    if(!parts.length) continue;
+    h += `<details class="yeargroup ${u.id}">
+      <summary class="yearhead"><span class="tag">${esc(u.name.split(" \u2013 ")[0])}</span>
+      <span class="name">${esc(u.name.split(" \u2013 ").slice(1).join(" \u2013 ")
+        || setOf(u.id + "-all").length + " Vokabeln \u00b7 " + parts.length + (parts.length === 1 ? " Teil" : " Teile"))}</span></summary>`;
+    h += topicRow(u.id + "-all", "Alle Teile", setOf(u.id + "-all"), u.id);
+    for(const t of parts) h += topicRow(t.id, t.name, SETS[t.id], u.id);
+    h += `</details>`;
+  }
+
+  view.innerHTML = h;
+  document.getElementById("yback").onclick = () => { S.view = "home"; render(); };
+  document.getElementById("ydir").onclick = () => {
+    S.dir = S.dir === "en2de" ? "de2en" : "en2de"; render();
+  };
+  view.querySelectorAll("[data-topic]").forEach(b =>
+    b.addEventListener("click", () => startSession(b.dataset.topic)));
+  updateFoot();
+}
+
+/* =========================================================================
+   SITZUNG
+   ========================================================================= */
+function buildQueue(){
+  let all = setOf(S.topicId);
+  if(S.mode === "cloze") all = all.filter(hasCloze);
+  if(!all.length){ S.queue = []; S.i = 0; return; }
+  const pool = S.onlyDue ? all.filter(v=>isDue(rec(S.dir,v.id))) : all;
+  S.queue = shuffle(pool.length ? pool : all);
+  S.i = 0; S.revealed = false; S.answered = null;
+}
+function startSession(topicId){
+  S.topicId = topicId; S.view = "session"; S.seen = 0;
+  buildQueue(); render();
+}
+function current(){ return S.queue[S.i]; }
+
+/* Unit-Klasse der laufenden Sitzung: nur wenn die Auswahl zu genau einer
+   Unit gehoert. Beim ganzen Buch gibt es keine eindeutige Farbe. */
+function sessionUnit(){
+  const t = TOPICS.filter(x => x.id === S.topicId)[0];
+  if(t) return t.unit;
+  const m = /^(u\d+)-all$/.exec(S.topicId || "");
+  return m ? m[1] : "";
+}
+
+function renderSession(){
+  if(!S.queue.length){
+    view.innerHTML = `<div class="done"><h2>Keine Karten</h2>
+      <p>In dieser Auswahl gibt es für den Lückensatz-Modus noch keine Beispielsätze.
+         Nutze so lange „Tippen“.</p>
+      <div class="controls"><button class="primary" id="home">Zurück zur Übersicht</button></div></div>`;
+    document.getElementById("home").onclick = () => { S.view="year"; S.mode="card"; render(); };
+    return;
+  }
+  if(S.i >= S.queue.length){ renderDone(); return; }
+  const v = current();
+  const r = rec(S.dir, v.id);
+  const setNow = setOf(S.topicId);
+
+  const rail = [1,2,3,4,5].map(n=>{
+    const cls = (n===r.box?"here":"") + (S.landed===n?" land":"");
+    return `<div class="slot ${cls}"><div class="n">FACH ${n}</div>
+      <div class="c">${boxCounts(setNow,S.dir)[n-1]}</div>
+      <div class="iv">${n===1?"sofort":INTERVALS[n]+" d"}</div></div>`;
+  }).join("");
+
+  let body = `<div class="eyebrow ${sessionUnit()}">
+      <span>${esc(topicName(S.topicId))}</span>
+      <span>${S.i+1} / ${S.queue.length}</span>
+    </div>`;
+
+  if(S.mode === "card"){
+    body += promptBlock(v);
+    if(S.revealed){
+      body += answerBlock(v);
+    }
+    body += `<div class="spacer"></div>`;
+  }
+
+  if(S.mode === "mc"){
+    if(!S.options) S.options = shuffle([v, ...buildDistractors(v)]);
+    body += promptBlock(v) + `<div class="opts">`;
+    for(const o of S.options){
+      let cls = "";
+      if(S.answered){
+        if(o.id===v.id) cls = "right";
+        else if(o.id===S.answered) cls = "wrong";
+      }
+      body += `<button class="opt ${cls}" data-opt="${o.id}" ${S.answered?"disabled":""}>
+        ${esc(ansSide(o))}</button>`;
+    }
+    body += `</div>`;
+    if(S.answered) body += answerBlock(v, true);
+    body += `<div class="spacer"></div>`;
+  }
+
+  if(S.mode === "type"){
+    body += promptBlock(v) + `
+      <div class="typebox">
+        <input id="typeIn" placeholder="${S.dir==="en2de"?"Deutsche Bedeutung":"mot français"}"
+               autocomplete="off" autocapitalize="off" spellcheck="false" ${S.answered?"disabled":""}>
+        <div class="verdict" id="verdict"></div>
+      </div>`;
+    if(S.answered) body += answerBlock(v, true);
+    body += `<div class="spacer"></div>`;
+  }
+
+  if(S.mode === "cloze"){
+    const cp = clozeParts(v);
+    body += '<div class="cloze">' + esc(cp.before)
+          + (S.answered ? '<b>' + esc(cp.word) + '</b>'
+                        : '<span class="gap">?</span>')
+          + esc(cp.after) + '</div>'
+          + '<div class="clue">gesucht: <span>' + esc(v.de) + '</span>'
+          + (v.pos ? ' \u00b7 ' + esc(v.pos) : "") + '</div>'
+          + '<div class="typebox">'
+          + '<input id="typeIn" placeholder="französisches Wort" autocomplete="off" '
+          + 'autocapitalize="off" spellcheck="false" ' + (S.answered ? "disabled" : "") + '>'
+          + '<div class="verdict" id="verdict"></div></div>';
+    if(S.answered) body += answerBlock(v, true);
+    body += '<div class="spacer"></div>';
+  }
+
+  const controls = S.revealed || S.answered
+    ? `<button class="rate again" data-rate="0">Nochmal<span>1</span></button>
+       <button class="rate hard"  data-rate="1">Unsicher<span>2</span></button>
+       <button class="rate good"  data-rate="2">Gewusst<span>3</span></button>`
+    : (S.mode==="card"
+        ? `<button class="primary" id="flip">Umdrehen <span style="opacity:.6">(Leertaste)</span></button>`
+        : ((S.mode==="type" || S.mode==="cloze")
+            ? `<button class="primary" id="submit">Prüfen (Enter)</button>` : ""));
+
+  view.innerHTML = `
+    <div class="sessionbar">
+      <button class="linkbtn" id="back">← Übersicht</button>
+      <div class="switches">
+        <button class="switch" data-mode="card" aria-pressed="${S.mode==="card"}">Karteikarte</button>
+        <button class="switch" data-mode="mc"   aria-pressed="${S.mode==="mc"}">Auswahl</button>
+        <button class="switch" data-mode="type" aria-pressed="${S.mode==="type"}">Tippen</button>
+        <button class="switch" data-mode="cloze" aria-pressed="${S.mode==="cloze"}">Lückensatz</button>
+        ${S.mode==="cloze" ? "" : `<button class="switch" id="dirBtn">${dirLabel()}</button>`}
+      </div>
+    </div>
+    <div class="rail ${sessionUnit()}">${rail}</div>
+    <div class="stage ${sessionUnit()}"><div class="vcard deal">${body}</div></div>
+    <div class="controls">${controls}</div>`;
+
+  bindSession();
+  const inp = document.getElementById("typeIn");
+  if(inp && !S.answered) inp.focus({preventScroll:true});
+  updateFoot();
+}
+
+/* Zerlegt den Beispielsatz in Teil vor der Vokabel, Vokabel, Teil danach.
+   Versucht zuerst die ganze Wendung, dann das erste Wort mit Endungen.
+   Gibt null zurueck, wenn die Vokabel im Satz nicht auffindbar ist. */
+function clozeParts(v){
+  var ex = v.example_en;
+  if(!ex) return null;
+  var core = String(v.en).replace(/\([^)]*\)/g, " ").split("/")[0];
+  core = core.replace(/^\s*to\s+/i, "").replace(/\.{2,}|…/g, " ").replace(/\s+/g, " ").trim().replace(/[.!?]$/, "");
+  if(!core) return null;
+  var esc0 = function(x){ return x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); };
+
+  var words = core.split(" ");
+  var tries = [words.map(esc0).join("\\s+") + "\\b"];
+  if(words.length > 1){
+    tries.push(words.map(esc0).join("\\s+") + "\\w*");           // ganze Wendung
+    tries.push(esc0(words[words.length - 1]) + "\\w*");          // letztes Wort
+  }
+  var first = words[0];
+  tries.push(esc0(first.slice(0, Math.max(4, first.length - 3))) + "\\w*");
+
+  for(var i = 0; i < tries.length; i++){
+    var m = ex.match(new RegExp("\\b(" + tries[i] + ")", "i"));
+    if(m && m.index !== undefined && m[1].length > 2){
+      return {before: ex.slice(0, m.index), word: m[1],
+              after: ex.slice(m.index + m[1].length), core: core};
+    }
+  }
+  return null;
+}
+
+function hasCloze(v){ return clozeParts(v) !== null; }
+
+function promptBlock(v){
+  const englishAsked = S.dir === "en2de";
+  const phon = englishAsked && (v.ipa || Speech.available)
+    ? `<div class="phon">
+         ${v.ipa ? `<span class="ipa">/${esc(v.ipa.replace(/^\/|\/$/g, ""))}/</span>` : ""}
+         ${speakBtn(v.en)}
+       </div>`
+    : "";
+  const sense = (v.sense_en && S.dir === "en2de")
+    ? `<div class="sense">${esc(v.sense_en)}</div>` : "";
+  return `<h2 class="prompt">${esc(askSide(v))}</h2>
+    <div class="pos">${esc(v.pos)}</div>${phon}${sense}`;
+}
+
+/* Distraktoren: erst die gepflegten Verwechslungskandidaten, dann Zufall
+   aus demselben Thema. Freie Paare bekommen eine synthetische ID. */
+function buildDistractors(v){
+  const out = [];
+  const set = setOf(S.topicId);
+  let n = 0;
+  for(const h of (v.distractor_hint || [])){
+    if(typeof h === "string"){
+      const found = set.find(x => x.id === h);
+      if(found && found.id !== v.id) out.push(found);
+    }else if(h && h.en && h.de){
+      out.push({id:"hint-"+v.id+"-"+(n++), en:h.en, de:h.de, pos:v.pos, hint:true});
+    }
+  }
+  const used = new Set([v.id, ...out.map(o=>o.id)]);
+  const rest = shuffle(set.filter(x => !used.has(x.id) && x.en !== v.en));
+  return [...out, ...rest].slice(0,3);
+}
+
+function answerBlock(v, compact){
+  const englishIsAnswer = S.dir === "de2en";
+  const phon = englishIsAnswer && (v.ipa || Speech.available)
+    ? `<div class="phon">
+         ${v.ipa ? `<span class="ipa">/${esc(v.ipa.replace(/^\/|\/$/g, ""))}/</span>` : ""}
+         ${speakBtn(v.en)}
+       </div>`
+    : "";
+  return `<div class="answer">
+    ${compact ? "" : `<div class="de">${esc(ansSide(v))}</div>`}
+    ${phon}
+    ${v.collocations ? `<div class="coll">${esc(v.collocations)}</div>` : ""}
+    ${v.example_en ? `<div class="ex">${markExample(v.example_en, v.en, v.luecke, v.luecke_bei)}
+      ${speakBtn(v.example_en)}</div>` : ""}
+  </div>`;
+}
+
+function bindSession(){
+  document.getElementById("back").onclick = () => { S.view="year"; S.options=null; render(); };
+  const dirB = document.getElementById("dirBtn");
+  if(dirB) dirB.onclick = () => {
+    S.dir = S.dir==="en2de" ? "de2en" : "en2de";
+    S.options=null; buildQueue(); render();
+  };
+  view.querySelectorAll("[data-mode]").forEach(b => b.onclick = () => {
+    const was = S.mode;
+    S.mode = b.dataset.mode; S.revealed=false; S.answered=null; S.options=null;
+    if(was === "cloze" || S.mode === "cloze") buildQueue();
+    render();
+  });
+  const flip = document.getElementById("flip");
+  if(flip) flip.onclick = () => { S.revealed = true; render(); };
+
+  view.querySelectorAll("[data-opt]").forEach(b => b.onclick = () => {
+    S.answered = b.dataset.opt;
+    render();
+  });
+
+  const sub = document.getElementById("submit");
+  if(sub) sub.onclick = submitTyped;
+
+  view.querySelectorAll("[data-rate]").forEach(b =>
+    b.onclick = () => rate(Number(b.dataset.rate)));
+
+  view.querySelectorAll("[data-say]").forEach(b => b.onclick = ev => {
+    ev.stopPropagation();
+    Speech.say(b.dataset.say, b);
+  });
+}
+
+function submitTyped(){
+  const inp = document.getElementById("typeIn");
+  if(!inp) return;
+  const v = current();
+  let res;
+  if(S.mode === "cloze"){
+    const cp = clozeParts(v);
+    res = checkTyped(inp.value, cp.word);
+    if(res !== "ok") {
+      const alt = checkTyped(inp.value, cp.core);
+      if(alt === "ok" || (alt === "near" && res === "no")) res = alt;
+    }
+  }else{
+    res = checkTyped(inp.value, ansSide(v));
+  }
+  S.answered = res;
+  window.LearningFeedback?.signal(res === "ok" ? "ok" : res === "near" ? "near" : "no");
+  render();
+  const el = document.getElementById("verdict");
+  if(el){
+    el.className = "verdict " + res;
+    const sol = S.mode === "cloze" ? clozeParts(v).word : ansSide(v);
+    el.innerHTML = res==="ok"   ? "Richtig."
+                 : res==="near" ? `Fast – Schreibweise prüfen.<span class="sol">${esc(sol)}</span>`
+                 :                `Noch nicht.<span class="sol">${esc(sol)}</span>`;
+  }
+}
+
+function rate(quality){
+  window.LearningFeedback?.signal(quality === 0 ? "no" : quality === 1 ? "near" : "ok");
+  const v = current();
+  const r = rec(S.dir, v.id);
+  if(quality === 0)       r.box = 1;
+  else if(quality === 1)  r.box = Math.max(1, r.box - 1);
+  else                    r.box = Math.min(5, r.box + 1);
+  r.due = Date.now() + INTERVALS[r.box] * DAY;
+  save();
+  S.landed = r.box;
+  S.seen++;
+  S.i++; S.revealed=false; S.answered=null; S.options=null;
+  render();
+  setTimeout(()=>{ S.landed=null; }, 500);
+}
+
+function renderDone(){
+  const setNow = setOf(S.topicId);
+  const c = boxCounts(setNow, S.dir);
+  const total = setNow.length;
+  view.innerHTML = `<div class="done">
+    <h2>Durchgang beendet</h2>
+    <p>${S.seen} Karten bearbeitet · ${c[4]} von ${total} in Fach 5</p>
+    <div class="controls">
+      <button class="primary" id="again">Weiter üben</button>
+      <button id="home">Übersicht</button>
+    </div></div>`;
+  document.getElementById("again").onclick = () => {
+    S.onlyDue = false; buildQueue(); S.seen = 0; render();
+  };
+  document.getElementById("home").onclick = () => { S.view="year"; render(); };
+  updateFoot();
+}
+
+/* =========================================================================
+   ANLEITUNG
+   Reine Anzeige. Text bewusst kurz gehalten: Schuelerinnen und Schueler
+   lesen das einmal, danach nie wieder.
+   ========================================================================= */
+function renderHelp(){
+  var d = [];
+
+  d.push('<h2>Wofür ist diese Seite?</h2>');
+  d.push('<p class="lead">Zum Lernen des Französisch-Vokabulars aus deinem Schulbuch <i>À plus !</i>. Alle Wörter sind nach Unité und Teil sortiert. Du kannst sie auf vier verschiedene Arten üben, und die Seite merkt sich, was du schon kannst.</p>');
+  d.push('<p>Es gibt keine Anmeldung und kein Passwort. Öffne einfach den Link.</p>');
+
+  d.push('<h2>Loslegen</h2>');
+  d.push('<ul>');
+  d.push('<li>Auf der Startseite deine Klasse wählen. Dann eine Unité oder einen Teil antippen.</li>');
+  d.push('<li>Wähle den Lernumfang: <b>Alles üben</b>, eine kurze Runde mit höchstens zehn Wörtern oder nur fällige Vokabeln. Danach startet die Übung.</li>');
+  d.push('<li>Bewerte ehrlich: <b>Nochmal</b>, <b>Unsicher</b> oder <b>Gewusst</b>.</li>');
+  d.push('<li>Die nächste Karte kommt automatisch.</li>');
+  d.push('</ul>');
+  d.push('<p>Zurück zur Übersicht kommst du jederzeit oben links.</p>');
+
+  d.push('<h2>Die fünf Fächer</h2>');
+  d.push('<p>Jede Vokabel steckt in einem von fünf Fächern. Die Fachübersicht ist während der Übung standardmäßig geöffnet. Du kannst sie bei Bedarf zuklappen.</p>');
+  d.push('<p>Eine neue Vokabel startet in Fach 1. Antwortest du richtig, rückt sie ein Fach weiter. Antwortest du falsch, fällt sie zurück in Fach 1. Je weiter oben eine Vokabel steht, desto seltener siehst du sie wieder:</p>');
+  d.push('<table><thead><tr><th>Fach</th><th>Du siehst die Vokabel wieder</th></tr></thead><tbody>'
+       + '<tr><td>1</td><td>sofort; einmal zusätzlich im selben Durchgang</td></tr>'
+       + '<tr><td>2</td><td>nach 1 Tag</td></tr>'
+       + '<tr><td>3</td><td>nach 2 Tagen</td></tr>'
+       + '<tr><td>4</td><td>nach 4 Tagen</td></tr>'
+       + '<tr><td>5</td><td>nach 8 Tagen</td></tr>'
+       + '</tbody></table>');
+  d.push('<p>Die Abstände bestimmen, wann eine Vokabel wieder fällig ist. Bei <b>Alles üben</b> werden auch noch nicht fällige Wörter abgefragt. Übe lieber <b>jeden Tag zehn Minuten</b> üben als einmal pro Woche eine Stunde.</p>');
+  d.push('<p>Die Zahl in jedem Fach zeigt, wie viele Vokabeln der gewählten Auswahl gerade dort liegen. Ziel ist, alles nach Fach 5 zu bekommen.</p>');
+
+  d.push('<h2>Die vier Übungsarten</h2>');
+  d.push('<p>Oben rechts kannst du umschalten. Alle vier greifen auf dieselben Vokabeln und dasselbe Fächersystem zu.</p>');
+  d.push('<h3>Karteikarte</h3>');
+  d.push('<p>Wort ansehen, überlegen, umdrehen, selbst bewerten. Am schnellsten, aber du musst ehrlich zu dir sein.</p>');
+  d.push('<h3>Auswahl</h3>');
+  d.push('<p>Vier Antworten, eine ist richtig. Gut zum Aufwärmen. Achtung: Wiedererkennen ist leichter als Wissen.</p>');
+  d.push('<h3>Tippen</h3>');
+  d.push('<p>Du schreibst die Übersetzung. Kleine Abweichungen können als „Fast" erscheinen. Sie zählen nicht als vollständig richtig; deine Eingabe und die Lösung helfen dir beim Vergleichen.</p>');
+  d.push('<h3>Lückensatz</h3>');
+  d.push('<p>Ein französischer Beispielsatz mit einer Lücke, darunter die deutsche Bedeutung. Du schreibst das fehlende französische Wort – so, wie es im Satz stehen muss, also auch gebeugt. Lückensätze gibt es bisher für Klasse 7; in den anderen Klassen fehlt diese Übungsart noch. Hier lernst du nicht nur die Vokabel, sondern auch, wie sie im Satz benutzt wird — genau das brauchst du beim Schreiben.</p>');
+
+  d.push('<h2>Abfragerichtung</h2>');
+  d.push('<p>Standardmäßig übst du <b>DE → FR</b>: Du siehst Deutsch und antwortest auf Französisch. Mit dem Richtungsknopf schaltest du um. <b>FR → DE</b> heißt: Du siehst Französisch und sagst die deutsche Bedeutung. <b>DE → FR</b> ist die schwerere und für Klassenarbeiten wichtigere Richtung.</p><p>Nomen lernst du mit Artikel: <b>la maison</b>, nicht nur <i>maison</i>. Fehlt beim Tippen der Artikel oder ein Akzent, zählt die Antwort als „Fast“. Statt <b>œ</b> darfst du <b>oe</b> tippen.</p>');
+  d.push('<p>Beide Richtungen haben getrennte Fächer. Eine Vokabel kann in der einen Richtung in Fach 5 stehen und in der anderen in Fach 1.</p>');
+
+  d.push('<h2>Aussprache</h2>');
+  d.push('<p>Neben dem französischen Wort steht ein Lautsprecher-Symbol. Antippen liest das Wort vor. Am Beispielsatz gibt es ein zweites, kleineres Symbol für den ganzen Satz. Am Computer geht es auch mit der Taste <span class="kbd">S</span>.</p>');
+  d.push('<p>Die Stimme kommt von deinem Gerät und klingt je nach Handy unterschiedlich gut.</p>');
+  d.push('<p><button class="switch" id="sptest">Aussprache testen</button> '
+       + '<span id="spout" style="font-family:var(--mono);font-size:11.5px;color:var(--ink-soft)"></span></p>');
+  d.push('<p class="lead" style="font-size:13.5px">Hörst du nichts, prüfe Lautstärke, Audioausgabe und die Spracheinstellungen deines Geräts. Bleibt es still, gib die Zeile neben dem Knopf an deine Lehrkraft weiter.</p>');
+
+  d.push('<h2>Tastatur am Computer</h2>');
+  d.push('<table><tbody>'
+       + '<tr><td><span class="kbd">Leertaste</span></td><td>Karte umdrehen</td></tr>'
+       + '<tr><td><span class="kbd">1</span> <span class="kbd">2</span> <span class="kbd">3</span></td><td>Nochmal / Unsicher / Gewusst</td></tr>'
+       + '<tr><td><span class="kbd">Enter</span></td><td>Eingabe prüfen</td></tr>'
+       + '<tr><td><span class="kbd">S</span></td><td>Aussprache abspielen</td></tr>'
+       + '</tbody></table>');
+
+  d.push('<h2>Dein Lernstand</h2>');
+  d.push('<div class="warnbox"><b>Wichtig:</b> Dein Fortschritt wird nur in dem Browser gespeichert, in dem du übst. Er wandert nicht zwischen Handy und Computer, und er verschwindet, wenn du die Browserdaten löschst.</div>');
+  d.push('<p>Ganz unten auf der Seite gibt es <b>Fortschritt sichern</b>. Damit lädst du eine kleine Datei herunter, die deinen Lernstand enthält. Mit <b>Fortschritt laden</b> spielst du sie wieder ein — zum Beispiel auf einem anderen Gerät oder nachdem du den Cache geleert hast. Die Sicherung enthält deinen Lernstand, aber keine gespeicherte Übungsrunde und keine Ton- oder Anzeigeeinstellungen.</p>');
+  d.push('<p>Wenn du auf Nummer sicher gehen willst: einmal im Monat sichern und die Datei sich selbst per Mail schicken.</p>');
+
+  d.push('<h2>Alle Vokabeln nachschlagen</h2>');
+  d.push('<p>Auf der Jahrgangsübersicht findest du <b>Vokabeln nachschlagen</b>. Dort findest du:</p>');
+  d.push('<ul>');
+  d.push('<li>ein <b>Suchfeld</b> — es durchsucht Französisch, Deutsch und die Beispielsätze;</li>');
+  d.push('<li>einen Schalter für <b>Beispielsätze</b>;</li>');
+  d.push('<li><b>Drucken</b> — druckt die aufgeklappten Abschnitte und berücksichtigt den Suchfilter. Zugeklappte Abschnitte werden vollständig ausgelassen und erzeugen keine zusätzlichen leeren Seiten. Im Druckdialog kannst du auch als PDF speichern.</li>');
+  d.push('</ul>');
+
+  d.push('<div class="teacher">');
+  d.push('<h2>Für Kolleginnen und Kollegen</h2>');
+  d.push('<p>Die Website benötigt kein Lernkonto. Der Lernstand wird lokal im Browser gespeichert; es gibt keine automatische Synchronisierung zwischen Geräten.</p>');
+  d.push('<p>Mit <b>CSV</b> öffnest du die Exportauswahl. Du kannst alle Vokabeln dieses Jahrgangs oder nur ausgewählte Wörter exportieren. Die Datei enthält genau drei Spalten: <b>Unité, Französisch, Deutsch</b>. Für eine Auswahl markierst du einzelne Wörter oder übernimmst die sichtbaren Suchergebnisse. Der Export aller Wörter bleibt vom Suchfilter unabhängig.</p>');
+  d.push('<p>Stichwörter und Übersetzungen folgen der Vokabelliste des eingeführten Lehrwerks <i>À plus !</i> (Cornelsen). Die Beispielsätze sind eigens für diesen Trainer geschrieben und stammen nicht aus dem Lehrwerk.</p>');
+  d.push('</div>');
+
+  view.innerHTML =
+      '<div class="sessionbar">'
+    +   '<button class="linkbtn" id="hback">\u2190 Startseite</button>'
+    +   '<div class="switches"><button class="switch" id="hprint">Drucken</button></div>'
+    + '</div>'
+    + '<div class="doc">' + d.join("") + '</div>';
+
+  document.getElementById("hback").onclick = function(){ S.view = "home"; render(); };
+  document.getElementById("hprint").onclick = function(){ try{ window.print(); }catch(e){} };
+
+  var st = document.getElementById("sptest"), out = document.getElementById("spout");
+  if(st && out){
+    st.onclick = function(){
+      Speech.say("Bonjour ! Ceci est un test de la prononciation.");
+      out.textContent = Speech.status();
+      setTimeout(function(){ out.textContent = Speech.status(); }, 1200);
+    };
+    out.textContent = Speech.status();
+  }
+  updateFoot();
+}
+
+/* =========================================================================
+   LISTENANSICHT
+   Reine Anzeige: liest die Vokabeln, schreibt nichts und ruehrt den
+   Lernstand nicht an. Themen sind eingeklappt; die Suche oeffnet sie.
+   ========================================================================= */
+var LIST_PREFS = {ex:false, ipa:true};   // Beispielsaetze aus, Lautschrift an
+
+function renderList(){
+  var grand = 0, h = "";
+
+  for(var i = 0; i < TOPICS.length; i++){
+    var t = TOPICS[i];
+    var entries = SETS[t.id];
+    if(!entries || !entries.length) continue;
+    grand += entries.length;
+
+    h += '<details class="lsec ' + t.unit + '" data-sec="' + t.id + '"><summary>'
+       + '<span><span class="lyear ' + esc(t.unit) + '" style="background:var(--unit)">' + esc(t.unitName.split(" \u2013 ")[0]) + '</span>'
+       + esc(t.unitName.split(" \u2013 ").slice(1).join(" \u2013 ")) + ' \u00b7 ' + esc(t.name) + '</span>'
+       + '<span class="lnum">' + entries.length + '</span></summary><div class="lbody">';
+
+    for(var j = 0; j < entries.length; j++){
+      var e = entries[j];
+      var hay = (e.en + " " + e.de + " " + (e.pos||"") + " "
+               + (e.collocations||"") + " " + (e.example_en||"")).toLowerCase();
+      h += '<div class="vrow" data-s="' + esc(hay) + '">'
+         + '<div><span class="ven">' + esc(e.en) + '</span>'
+         + (e.pos ? '<span class="vpos">' + esc(e.pos) + '</span>' : "")
+         + (e.ipa ? '<span class="vipa">/' + esc(e.ipa.replace(/^\/|\/$/g, "")) + '/</span>' : "")
+         + '</div>'
+         + '<div class="vde">' + esc(e.de)
+         + (e.sense_en ? '<span class="vsense">' + esc(e.sense_en) + '</span>' : "")
+         + '</div>'
+         + (e.example_en ? '<div class="vex">' + esc(e.example_en) + '</div>' : "")
+         + '</div>';
+    }
+    h += "</div></details>";
+  }
+
+  view.innerHTML =
+      '<div class="sessionbar">'
+    +   '<button class="linkbtn" id="lback">\u2190 Themen\u00fcbersicht</button>'
+    +   '<div class="switches">'
+    +     '<button class="switch" id="lex" aria-pressed="' + LIST_PREFS.ex + '">Beispiels\u00e4tze</button>'
+    +     '<button class="switch" id="lipa" aria-pressed="' + LIST_PREFS.ipa + '">Lautschrift</button>'
+    +     '<button class="switch" id="lopen">Alle aufklappen</button>'
+    +     '<button class="switch" id="lprint">Drucken</button>'
+    +     '<button class="switch" id="lcsv">CSV</button>'
+    +   '</div>'
+    + '</div>'
+    + '<div class="listctl">'
+    +   '<input type="search" id="lq" placeholder="Suchen \u2013 französisch, deutsch oder im Beispielsatz" '
+    +     'autocomplete="off" autocapitalize="off" spellcheck="false">'
+    + '</div>'
+    + '<div class="listcount" id="lcount">' + grand + ' Vokabeln in '
+    +   Object.keys(SETS).length + ' Themen \u00b7 Thema antippen zum \u00d6ffnen</div>'
+    + '<div class="vlist" id="vlist">' + h + '</div>'
+    + '<div class="noresult" id="lnone" hidden>Kein Treffer.</div>';
+
+  var box = document.getElementById("vlist");
+  applyListPrefs(box);
+
+  document.getElementById("lback").onclick = function(){ S.view = "home"; render(); };
+  document.getElementById("lex").onclick = function(){
+    LIST_PREFS.ex = !LIST_PREFS.ex;
+    this.setAttribute("aria-pressed", LIST_PREFS.ex);
+    applyListPrefs(box);
+  };
+  document.getElementById("lipa").onclick = function(){
+    LIST_PREFS.ipa = !LIST_PREFS.ipa;
+    this.setAttribute("aria-pressed", LIST_PREFS.ipa);
+    applyListPrefs(box);
+  };
+  document.getElementById("lopen").onclick = function(){
+    var secs = box.querySelectorAll("details.lsec");
+    var anyClosed = false;
+    for(var i = 0; i < secs.length; i++){ if(!secs[i].open) anyClosed = true; }
+    for(var k = 0; k < secs.length; k++){ secs[k].open = anyClosed; }
+    this.textContent = anyClosed ? "Alle zuklappen" : "Alle aufklappen";
+  };
+  document.getElementById("lprint").onclick = function(){
+    try{ window.print(); }catch(e){}
+  };
+  document.getElementById("lcsv").onclick = function(){ exportCsv(box); };
+
+  var q = document.getElementById("lq");
+  q.oninput = function(){ filterList(box, q.value); };
+
+  updateFoot();
+}
+
+/* Exportiert die gerade sichtbaren Zeilen als Tabelle (Tab-getrennt,
+   mit BOM, damit Excel die Umlaute richtig liest). */
+function exportCsv(box){
+  var cols = ["Thema","fr","de","pos","ipa","collocations","beispiel"];
+  var rows = [cols.join("\t")];
+  var n = 0;
+
+  for(var i = 0; i < TOPICS.length; i++){
+    var t = TOPICS[i];
+    var entries = SETS[t.id];
+    if(!entries) continue;
+    var sec = box.querySelector('details[data-sec="' + t.id + '"]');
+    if(!sec || sec.className.indexOf("off") !== -1) continue;
+    var domRows = sec.querySelectorAll(".vrow");
+
+    for(var j = 0; j < entries.length; j++){
+      if(domRows[j] && domRows[j].className.indexOf("off") !== -1) continue;
+      var e = entries[j];
+      var cell = function(x){ return String(x == null ? "" : x).replace(/[\t\r\n]+/g, " "); };
+      rows.push([t.unitName + " / " + t.name, e.en, e.de, e.pos || "", e.ipa || "",
+                 e.collocations || "", e.example_en || ""].map(cell).join("\t"));
+      n++;
+    }
+  }
+
+  if(!n){ alert("Nichts zu exportieren \u2013 die Suche liefert keine Treffer."); return; }
+  try{
+    var blob = new Blob(["\ufeff" + rows.join("\n")], {type:"text/csv;charset=utf-8"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "vokabeln.csv";
+    a.click();
+    URL.revokeObjectURL(a.href);
+  }catch(err){ alert("Der Export hat nicht funktioniert: " + err.message); }
+}
+
+function applyListPrefs(box){
+  box.className = "vlist" + (LIST_PREFS.ex ? "" : " hide-ex")
+                          + (LIST_PREFS.ipa ? "" : " hide-ipa");
+}
+
+function filterList(box, raw){
+  var term = String(raw || "").toLowerCase().trim();
+  var secs = box.querySelectorAll("details.lsec");
+  var hits = 0;
+
+  for(var i = 0; i < secs.length; i++){
+    var sec = secs[i];
+    var rows = sec.querySelectorAll(".vrow");
+    var shown = 0;
+    for(var j = 0; j < rows.length; j++){
+      var match = !term || rows[j].getAttribute("data-s").indexOf(term) !== -1;
+      rows[j].className = "vrow" + (match ? "" : " off");
+      if(match) shown++;
+    }
+    hits += shown;
+    sec.className = "lsec" + (shown ? "" : " off");
+    if(term) sec.open = shown > 0;
+  }
+
+  document.getElementById("lnone").hidden = !(term && hits === 0);
+  document.getElementById("lcount").textContent = term
+    ? hits + " Treffer f\u00fcr \u201e" + raw.trim() + "\u201c"
+    : box.querySelectorAll(".vrow").length + " Vokabeln in "
+      + Object.keys(SETS).length + " Themen \u00b7 Thema antippen zum \u00d6ffnen";
+}
+
+/* =========================================================================
+   TASTATUR
+   ========================================================================= */
+document.addEventListener("keydown", e => {
+  if(S.view !== "session") return;
+  const typing = document.activeElement && document.activeElement.id === "typeIn";
+  if(typing && e.key === "Enter"){ e.preventDefault(); submitTyped(); return; }
+  if(typing && !S.answered) return;
+  if((e.key === "s" || e.key === "S") && current()){
+    e.preventDefault(); Speech.say(current().en); return;
+  }
+  if(e.key === " " && S.mode === "card" && !S.revealed){
+    e.preventDefault(); S.revealed = true; render(); return;
+  }
+  if((S.revealed || S.answered) && ["1","2","3"].includes(e.key)){
+    e.preventDefault(); rate(Number(e.key) - 1);
+  }
+});
+
+/* =========================================================================
+   EXPORT / IMPORT
+   ========================================================================= */
+document.getElementById("exportBtn").onclick = () => {
+  const blob = new Blob([JSON.stringify(progress,null,1)],{type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "vokabelfortschritt.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+};
+document.getElementById("importBtn").onclick = () => document.getElementById("importFile").click();
+document.getElementById("importFile").onchange = ev => {
+  const f = ev.target.files[0]; if(!f) return;
+  const fr = new FileReader();
+  fr.onload = () => {
+    try{ progress = JSON.parse(fr.result); save(); render(); }
+    catch(e){ alert("Die Datei konnte nicht gelesen werden."); }
+  };
+  fr.readAsText(f);
+};
+
+function updateFoot(){
+  let done = 0, all = 0;
+  for(const t of TOPICS){
+    if(!SETS[t.id]) continue;
+    all += SETS[t.id].length;
+    done += boxCounts(SETS[t.id], S.dir).slice(2).reduce((a,b)=>a+b,0);
+  }
+  document.getElementById("footstat").textContent =
+    `${done}/${all} SICHER · ${dirLabel()}`;
+}
+
+/* =========================================================================
+   START
+   ========================================================================= */
+function render(){
+  if(S.view === "home") return renderHome();
+  if(S.view === "year") return renderYear();
+  if(S.view === "list") return renderList();
+  if(S.view === "help") return renderHelp();
+  return renderSession();
+}
+
+function showWarn(html){ document.getElementById("warn").innerHTML = html; }
+
+if(!Store.persistent){
+  showWarn(`<div class="warn"><b>Vorschau-Modus:</b> Dieser Browserkontext erlaubt keinen
+     dauerhaften Speicher. Der Fortschritt gilt nur fuer diese Sitzung. Lade die Datei
+     herunter und oeffne sie per Doppelklick \u2013 dort bleibt der Lernstand erhalten.</div>`);
+}
+
+try{
+  render();
+}catch(err){
+  showWarn('<div class="warn"><b>Beim Aufbau der Seite ist ein Fehler aufgetreten.</b><br>'
+    + '<span style="font-family:var(--mono);font-size:11px">' + err.message + '</span></div>');
+}
+</script>
+
+<script src="../assets/qr.js?v=20260921-anleitung"></script>
+<script src="../assets/learning.js?v=20260924-grat"></script>
+
+<link rel="stylesheet" href="../assets/feedback.css?v=20260921-anleitung">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/feedback-nacht.css?v=20260924-grat">
+<script src="../assets/feedback.js?v=20260921-zustand"></script>
+
+<link rel="stylesheet" href="design/preview.css?v=20260917-teacher-prompt">
+<link rel="stylesheet" media="screen" data-nacht href="design/preview-nacht.css?v=20260924-grat">
+
+<link rel="stylesheet" href="../assets/ascent.css?v=20260924-grat">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/ascent-nacht.css?v=20260924-grat">
+<link rel="stylesheet" media="screen" data-nacht href="../assets/nacht-marke.css?v=20260924-grat">
+<script src="../assets/ascent.js?v=20260924-grat"></script>

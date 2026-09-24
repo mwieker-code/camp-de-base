@@ -1,0 +1,3291 @@
+{
+ "band": 2,
+ "jahrgang": 8,
+ "einheiten": [
+  {
+   "id": "u1",
+   "name": "Unité 1",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "1/A",
+       "fr": "le château",
+       "de": "das Schloss",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les châteaux"
+      },
+      {
+       "fund": "1/A",
+       "fr": "l'éléphant",
+       "de": "der Elefant",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/A",
+       "fr": "la machine",
+       "de": "die Maschine",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/A",
+       "fr": "l'île",
+       "de": "die Insel",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/A",
+       "fr": "le centre-ville",
+       "de": "das Stadtzentrum",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/A",
+       "fr": "le skatepark",
+       "de": "der Skatepark",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "1/Voc",
+       "fr": "le bâtiment",
+       "de": "das Gebäude",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "la maison",
+       "de": "das Haus",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le monument",
+       "de": "das Bauwerk, das Denkmal",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "l'œuvre d'art",
+       "de": "das Kunstwerk",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le port",
+       "de": "der Hafen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le pont",
+       "de": "die Brücke",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le fleuve",
+       "de": "der Fluss",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "la place",
+       "de": "der Platz",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "la rue piétonne",
+       "de": "die Fußgängerzone",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le tram",
+       "de": "die Straßenbahn",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "l'arrêt",
+       "de": "die Haltestelle, der Halt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le carrefour",
+       "de": "die Kreuzung",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "présenter qn/qc",
+       "de": "jdn/etw. vorstellen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "qui",
+       "de": "der/die/das",
+       "pos": "Pronomen"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "il/elle se trouve",
+       "de": "er/sie/es befindet sich, er/sie/es liegt",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "traverser qc",
+       "de": "etw. durchqueren, etw. überqueren",
+       "pos": "Verb"
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "1/1",
+       "fr": "célèbre",
+       "de": "berühmt",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "l'auteur / l'auteure",
+       "de": "der/die Autor/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le voyage",
+       "de": "die Reise",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "extraordinaire",
+       "de": "außergewöhnlich",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "où",
+       "de": "wo",
+       "pos": "Pronomen"
+      },
+      {
+       "fund": "1/1",
+       "fr": "la spécialité",
+       "de": "die Spezialität",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le parcours",
+       "de": "der Rundgang, die Strecke",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le/la jeune",
+       "de": "der/die Jugendliche",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "sortir",
+       "de": "ausgehen, hinausgehen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/1",
+       "fr": "chiller",
+       "de": "chillen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/1",
+       "fr": "l'arbre",
+       "de": "der Baum",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le ping-pong",
+       "de": "Tischtennis",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "ils/elles se trouvent",
+       "de": "sie befinden sich, sie liegen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/1",
+       "fr": "(être) né/née",
+       "de": "geboren (sein)",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/1",
+       "fr": "partir",
+       "de": "losgehen, wegfahren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/1",
+       "fr": "partir en week-end",
+       "de": "am Wochenende wegfahren",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/1",
+       "fr": "le vélo",
+       "de": "das Fahrrad",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "à vélo",
+       "de": "mit dem Fahrrad",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/1",
+       "fr": "le bateau",
+       "de": "das Schiff, das Boot",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les bateaux"
+      },
+      {
+       "fund": "1/1",
+       "fr": "moderne",
+       "de": "modern",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "la chaîne",
+       "de": "der Kanal",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "sur",
+       "de": "(hier:) über",
+       "pos": "Präposition"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "1/2",
+       "fr": "prendre (à gauche / à droite)",
+       "de": "(links/rechts) abbiegen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/2",
+       "fr": "continuer",
+       "de": "(hier:) weitergehen, weiterlaufen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/2",
+       "fr": "tout droit",
+       "de": "geradeaus",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "1/2",
+       "fr": "jusqu'à",
+       "de": "bis",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "1/2",
+       "fr": "deuxième",
+       "de": "zweiter/zweite/zweites",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "en face",
+       "de": "gegenüber",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "1/2",
+       "fr": "venir",
+       "de": "kommen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/2",
+       "fr": "important/importante",
+       "de": "wichtig",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "1/2",
+       "fr": "beaucoup de monde",
+       "de": "viele Leute",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/2",
+       "fr": "quel/quelle/quels/quelles",
+       "de": "welcher/welche/welches, was für ein/eine",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "1/2",
+       "fr": "le nom",
+       "de": "der Name, der Nachname",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/2",
+       "fr": "le trampoline",
+       "de": "das Trampolin",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la longueur",
+       "de": "die Länge",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la hauteur",
+       "de": "die Höhe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "le mètre",
+       "de": "der Meter",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la couleur",
+       "de": "die Farbe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "À vous, maintenant !",
+       "de": "Jetzt seid ihr dran!",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/2",
+       "fr": "C’est ça.",
+       "de": "Genau., Das stimmt.",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/2",
+       "fr": "vrai/vraie",
+       "de": "wahr, richtig, echt",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "1/2",
+       "fr": "le/la touriste",
+       "de": "der/die Tourist/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "marcher",
+       "de": "laufen, gehen, (auch:) funktionieren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/2",
+       "fr": "non ?",
+       "de": "nicht wahr?, oder?",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "1/2",
+       "fr": "la fin",
+       "de": "das Ende",
+       "pos": "Nomen, f."
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "1/3",
+       "fr": "le départ",
+       "de": "die Abfahrt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "pour",
+       "de": "(hier:) nach",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "1/3",
+       "fr": "content/contente",
+       "de": "zufrieden, froh",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "1/3",
+       "fr": "le train",
+       "de": "der Zug",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "quand",
+       "de": "wenn, immer wenn, (auch:) als",
+       "pos": "Konjunktion"
+      },
+      {
+       "fund": "1/3",
+       "fr": "attendre (qn/qc)",
+       "de": "(auf jdn/etw.) warten",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/3",
+       "fr": "le billet",
+       "de": "das Ticket, der Schein, (hier:) der Fahrschein",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "la valise",
+       "de": "der Koffer",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "l'annonce",
+       "de": "die Anzeige, (hier:) die Ansage",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "la voie",
+       "de": "das Gleis",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "répéter qc",
+       "de": "etw. wiederholen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/3",
+       "fr": "Allez !",
+       "de": "Los!, Kommt schon!",
+       "pos": "Ausruf"
+      },
+      {
+       "fund": "1/3",
+       "fr": "On y va !",
+       "de": "Los geht's!, Wir gehen dahin!",
+       "pos": "Ausruf"
+      },
+      {
+       "fund": "1/3",
+       "fr": "la minute",
+       "de": "die Minute",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "arriver",
+       "de": "(hier:) kommen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/3",
+       "fr": "il faut",
+       "de": "man muss / wir müssen etw. tun",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/3",
+       "fr": "il ne faut pas",
+       "de": "man darf/sollte etw. nicht tun, wir dürfen/sollten etw. nicht tun",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "1/3",
+       "fr": "rater qn/qc",
+       "de": "jdn/etw. verpassen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/3",
+       "fr": "le message",
+       "de": "die Nachricht",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "le quai",
+       "de": "der Bahnsteig",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "répondre (à qn/qc)",
+       "de": "(jdm) antworten, etw. beantworten",
+       "pos": "Verb"
+      },
+      {
+       "fund": "1/3",
+       "fr": "Zut !",
+       "de": "Mist!",
+       "pos": "Ausruf"
+      },
+      {
+       "fund": "1/3",
+       "fr": "la batterie",
+       "de": "der Akku",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "descendre",
+       "de": "aussteigen, (auch:) hinuntergehen",
+       "pos": "Verb"
+      }
+     ]
+    },
+    {
+     "id": "m1",
+     "name": "Module 1",
+     "woerter": [
+      {
+       "fund": "M1",
+       "fr": "corriger qc",
+       "de": "etw. korrigieren, etw. berichtigen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M1",
+       "fr": "lire (qc)",
+       "de": "(etw.) lesen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M1",
+       "fr": "Est-ce que je peux ouvrir la fenêtre ?",
+       "de": "Kann ich das Fenster öffnen?",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M1",
+       "fr": "la tablette",
+       "de": "das Tablet",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M1",
+       "fr": "les écouteurs",
+       "de": "die Kopfhörer",
+       "pos": "Nomen, m. pl."
+      },
+      {
+       "fund": "M1",
+       "fr": "l'exercice",
+       "de": "die Übung",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M1",
+       "fr": "le numéro",
+       "de": "die Nummer",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M1",
+       "fr": "en groupe",
+       "de": "in der Gruppe",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M1",
+       "fr": "la page",
+       "de": "die Seite",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M1",
+       "fr": "Ça y est !",
+       "de": "so, es ist soweit",
+       "pos": "Ausruf"
+      },
+      {
+       "fund": "M1",
+       "fr": "Vous avez fini ?",
+       "de": "Seid ihr fertig?",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M1",
+       "fr": "c'est à …",
+       "de": "… ist dran",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M1",
+       "fr": "apprendre qc",
+       "de": "etw. lernen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M1",
+       "fr": "le vocabulaire",
+       "de": "das Vokabular, der Wortschatz",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M1",
+       "fr": "l'unité",
+       "de": "die Lektion",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M1",
+       "fr": "le contrôle",
+       "de": "die Kontrolle, (hier:) die Leistungskontrolle",
+       "pos": "Nomen, m."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "name": "Unité 2",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "2/A",
+       "fr": "l'aventure",
+       "de": "das Abenteuer",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/A",
+       "fr": "le tour",
+       "de": "die Tour, die Reise, die Rundfahrt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/A",
+       "fr": "le bunker",
+       "de": "der Bunker",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/A",
+       "fr": "le sous-marin",
+       "de": "das U-Boot",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/A",
+       "fr": "le passage",
+       "de": "die Passage, der Durchgang",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "2/Voc",
+       "fr": "tôt",
+       "de": "früh",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "tard",
+       "de": "spät",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "en ville",
+       "de": "in die Stadt, in der Stadt",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "l'excursion",
+       "de": "der Ausflug",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "danser",
+       "de": "tanzen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "chanter",
+       "de": "singen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "faire la fête",
+       "de": "feiern",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "composer qc",
+       "de": "etw. komponieren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "la chanson",
+       "de": "das Lied",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "plein de",
+       "de": "viel, viele",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "jouer au/à la/à l'/aux",
+       "de": "etw. spielen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "jouer du/de la/de l'/des",
+       "de": "etw. spielen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "les boules",
+       "de": "Boule, das Boulespiel",
+       "pos": "Nomen, f. pl."
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "2/1",
+       "fr": "l'aventurier/l'aventurière",
+       "de": "der/die Abenteurer/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "français/française",
+       "de": "französisch",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "2/1",
+       "fr": "en",
+       "de": "im Jahr (+ Jahreszahl)",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "2/1",
+       "fr": "l'année",
+       "de": "das Jahr",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "à … ans",
+       "de": "mit … Jahren",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/1",
+       "fr": "voyager",
+       "de": "reisen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/1",
+       "fr": "le pays",
+       "de": "das Land",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/1",
+       "fr": "surtout",
+       "de": "vor allem",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "2/1",
+       "fr": "la tête",
+       "de": "der Kopf",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "le monde",
+       "de": "die Welt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/1",
+       "fr": "le roman",
+       "de": "der Roman",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/1",
+       "fr": "le héros / l'héroïne",
+       "de": "der/die Held/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "l'artiste",
+       "de": "der/die Künstler/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "seulement",
+       "de": "nur (noch), erst",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "2/1",
+       "fr": "gagner (qc)",
+       "de": "(etw.) gewinnen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/1",
+       "fr": "le prix",
+       "de": "der Preis",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les prix"
+      },
+      {
+       "fund": "2/1",
+       "fr": "la mécanique",
+       "de": "die Mechanik",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "la passion",
+       "de": "die Leidenschaft",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "imiter qn/qc",
+       "de": "jdn nachahmen, etw. nachmachen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/1",
+       "fr": "inventer qc",
+       "de": "etw. erfinden",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/1",
+       "fr": "la saison",
+       "de": "die Jahreszeit, (auch:) die Staffel",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "la dent",
+       "de": "der Zahn",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "le centimètre",
+       "de": "der Zentimeter",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/1",
+       "fr": "le trou",
+       "de": "das Loch",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "2/2",
+       "fr": "au début (de qc)",
+       "de": "am Anfang (von etw.), zuerst",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/2",
+       "fr": "et puis",
+       "de": "außerdem",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/2",
+       "fr": "avant",
+       "de": "vor, davor",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "2/2",
+       "fr": "tout à coup",
+       "de": "plötzlich",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/2",
+       "fr": "finalement",
+       "de": "letztendlich, schließlich",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "2/2",
+       "fr": "tout le temps",
+       "de": "die ganze Zeit, ständig",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/2",
+       "fr": "faire un tour",
+       "de": "spazieren gehen, eine Runde drehen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/2",
+       "fr": "monter",
+       "de": "steigen, hinaufsteigen, ansteigen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/2",
+       "fr": "tomber",
+       "de": "fallen, hinfallen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/2",
+       "fr": "avoir peur",
+       "de": "Angst haben, Angst bekommen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/2",
+       "fr": "avoir mal",
+       "de": "Schmerzen haben",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/2",
+       "fr": "c'était",
+       "de": "das war, es war",
+       "pos": "Ausruf"
+      },
+      {
+       "fund": "2/2",
+       "fr": "l'aviron",
+       "de": "das Rudern",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/2",
+       "fr": "la course-poursuite",
+       "de": "die Verfolgungsjagd",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/2",
+       "fr": "Aïe !",
+       "de": "Aua!",
+       "pos": "Ausruf"
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "2/3",
+       "fr": "la nuit",
+       "de": "die Nacht, nachts",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "hier",
+       "de": "gestern",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "après",
+       "de": "nach",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "2/3",
+       "fr": "la marée haute",
+       "de": "die Flut, das Hochwasser",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "la marée basse",
+       "de": "die Ebbe, das Niedrigwasser",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "la balise",
+       "de": "die Boje",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "rencontrer qn",
+       "de": "jdm begegnen, jdn treffen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "rigoler (bien)",
+       "de": "(viel) lachen, (echt) Spaß haben",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "comprendre qn/qc",
+       "de": "jdn/etw. verstehen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "au milieu (de qc)",
+       "de": "in der Mitte (von etw.), mitten in",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "2/3",
+       "fr": "la pause",
+       "de": "die Pause",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "ramasser qc",
+       "de": "etw. sammeln",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "le coquillage",
+       "de": "die Muschel",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/3",
+       "fr": "le bus",
+       "de": "der Bus",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/3",
+       "fr": "crier",
+       "de": "schreien",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "retourner",
+       "de": "zurückkehren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "la route",
+       "de": "die Landstraße, die Fernverkehrsstraße",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "la surprise",
+       "de": "die Überraschung",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "retrouver qn",
+       "de": "jdn treffen, (hier:) jdn wiederfinden",
+       "pos": "Verb"
+      },
+      {
+       "fund": "2/3",
+       "fr": "tout de suite",
+       "de": "sofort",
+       "pos": "Adverb"
+      }
+     ]
+    },
+    {
+     "id": "m2",
+     "name": "Module 2",
+     "woerter": [
+      {
+       "fund": "M2",
+       "fr": "le record",
+       "de": "der Rekord",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "haut/haute",
+       "de": "hoch",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M2",
+       "fr": "l'Europe",
+       "de": "Europa",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M2",
+       "fr": "l'ouest",
+       "de": "der Westen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "les Alpes",
+       "de": "die Alpen",
+       "pos": "Nomen, f. pl."
+      },
+      {
+       "fund": "M2",
+       "fr": "court/courte",
+       "de": "kurz",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M2",
+       "fr": "long/longue",
+       "de": "lang",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M2",
+       "fr": "le village",
+       "de": "das Dorf",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "rapide",
+       "de": "schnell",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M2",
+       "fr": "rouler",
+       "de": "fahren, rollen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M2",
+       "fr": "le kilomètre",
+       "de": "der Kilometer",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "moins … que",
+       "de": "weniger … als, nicht so … wie",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M2",
+       "fr": "plus … que",
+       "de": "mehr … als",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M2",
+       "fr": "aussi … que",
+       "de": "(genau) so … wie",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M2",
+       "fr": "meilleur/meilleure … que",
+       "de": "besser",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M2",
+       "fr": "l'or",
+       "de": "das Gold",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "l'argent",
+       "de": "das Silber",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "la femme",
+       "de": "die Frau, die Ehefrau",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M2",
+       "fr": "l'homme",
+       "de": "der Mann",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "puissant/puissante",
+       "de": "mächtig",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M2",
+       "fr": "le/la chef",
+       "de": "der/die Chef/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M2",
+       "fr": "le/la chef de cuisine",
+       "de": "der Chefkoch / die Chefköchin",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M2",
+       "fr": "devenir",
+       "de": "werden",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M2",
+       "fr": "le meilleur / la meilleure",
+       "de": "der/die/das beste",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M2",
+       "fr": "impressionnant/impressionnante",
+       "de": "beeindruckend",
+       "pos": "Adjektiv"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "name": "Unité 3",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "3/A",
+       "fr": "le moment",
+       "de": "der Moment, der Augenblick",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/A",
+       "fr": "compter (pour qn)",
+       "de": "(jdm etw.) bedeuten, (für jdn etw.) zählen",
+       "pos": "Ausdruck"
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "3/Voc",
+       "fr": "le conflit",
+       "de": "der Konflikt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "discuter (de qc)",
+       "de": "(über etw.) reden, (über etw.) diskutieren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "C'est quoi, cette histoire ?",
+       "de": "Was soll das?",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "être en colère",
+       "de": "sauer sein, wütend sein",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "Et alors ?",
+       "de": "Na und?",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "Tu ne comprends rien.",
+       "de": "Du verstehst (gar) nichts.",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "exagérer",
+       "de": "übertreiben",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "N'importe quoi !",
+       "de": "So ein Quatsch!",
+       "pos": "Ausruf"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "Tu m'énerves !",
+       "de": "Du nervst (mich)!",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "avoir raison",
+       "de": "recht haben",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "grave",
+       "de": "schlimm",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "Qu'est-ce que tu en penses ?",
+       "de": "Was hältst du davon?",
+       "pos": "Ausdruck"
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "3/1",
+       "fr": "fier/fière (de qn/qc)",
+       "de": "stolz (auf jdn/etw.)",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "3/1",
+       "fr": "différent/différente",
+       "de": "verschieden, unterschiedlich",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "3/1",
+       "fr": "ça explose",
+       "de": "es eskaliert, es kracht",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/1",
+       "fr": "le souvenir",
+       "de": "die Erinnerung, das Souvenir",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/1",
+       "fr": "partager qc",
+       "de": "etw. teilen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "rapprocher qn/qc",
+       "de": "(hier:) jdn/etw. einander näherbringen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "accompagner qn",
+       "de": "jdn begleiten",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "aider (qn)",
+       "de": "(jdm) helfen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "énerver qn",
+       "de": "jdn nerven, jdn ärgern",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "parler de qc",
+       "de": "über etw. sprechen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/1",
+       "fr": "c'est normal",
+       "de": "das ist normal",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/1",
+       "fr": "faire la cuisine",
+       "de": "kochen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/1",
+       "fr": "le travail",
+       "de": "die Arbeit",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/1",
+       "fr": "filmer qn/qc",
+       "de": "jdn/etw. filmen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "La Réunion",
+       "de": "La Réunion",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/1",
+       "fr": "la chose",
+       "de": "die Sache, das Ding",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/1",
+       "fr": "du coup",
+       "de": "daraufhin, deshalb, daher",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "si",
+       "de": "doch",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "par",
+       "de": "pro",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "3/1",
+       "fr": "le vide-grenier",
+       "de": "der Flohmarkt, der Trödelmarkt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/1",
+       "fr": "trier qc",
+       "de": "etw. aussortieren, etw. sortieren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "vendre qc (à qn)",
+       "de": "(jdm) etw. verkaufen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/1",
+       "fr": "échanger qc (contre qc)",
+       "de": "etw. austauschen, etw. (gegen etw.) tauschen",
+       "pos": "Verb"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "3/2",
+       "fr": "la carrière",
+       "de": "die Karriere",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le succès",
+       "de": "der Erfolg",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "jeune",
+       "de": "jung",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "3/2",
+       "fr": "d'ailleurs",
+       "de": "übrigens",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "3/2",
+       "fr": "appeler qn",
+       "de": "jdn nennen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/2",
+       "fr": "la mélodie",
+       "de": "die Melodie",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/2",
+       "fr": "que",
+       "de": "den/die/das",
+       "pos": "Pronomen"
+      },
+      {
+       "fund": "3/2",
+       "fr": "créatif/créative",
+       "de": "kreativ",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "3/2",
+       "fr": "le message",
+       "de": "(hier:) die Botschaft, die Aussage",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le champion / la championne",
+       "de": "der Champion, der/die Meister/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "3/2",
+       "fr": "l'entraîneur / l'entraîneuse",
+       "de": "der/die Trainer/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "3/2",
+       "fr": "sportif/sportive",
+       "de": "sportlich",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "3/2",
+       "fr": "le ski",
+       "de": "der Ski, das Skifahren",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le ski de bosses",
+       "de": "das Buckelpistenfahren",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "l'équipe",
+       "de": "die Mannschaft, das Team",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/2",
+       "fr": "remarquer qn/qc",
+       "de": "jdn/etw. bemerken",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/2",
+       "fr": "le talent",
+       "de": "das Talent",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "compter sur qn",
+       "de": "auf jdn zählen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/2",
+       "fr": "la médaille",
+       "de": "die Medaille",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/2",
+       "fr": "courageux/courageuse",
+       "de": "mutig",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "3/2",
+       "fr": "heureux/heureuse",
+       "de": "glücklich",
+       "pos": "Adjektiv"
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "3/3",
+       "fr": "ce/cet/cette/ces",
+       "de": "dieser/diese/dieses",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "3/3",
+       "fr": "le fer à repasser",
+       "de": "das Bügeleisen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/3",
+       "fr": "ne ... rien",
+       "de": "nichts",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "ne … jamais",
+       "de": "nie",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "l'appli (fam.) / l'application",
+       "de": "die App",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/3",
+       "fr": "l'échange",
+       "de": "der Tausch, (auch:) der Austausch",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/3",
+       "fr": "Quoi ?",
+       "de": "Was?",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "mettre qc",
+       "de": "etw. stellen, etw. setzen, etw. legen, (auch:) etw. anziehen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "en ligne",
+       "de": "online",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/3",
+       "fr": "utiliser qc",
+       "de": "etw. benutzen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "prêter qc (à qn)",
+       "de": "(jdm) etw. (ver-)leihen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "le gaspillage",
+       "de": "die Verschwendung",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/3",
+       "fr": "tu sais",
+       "de": "du weißt, weißt du",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/3",
+       "fr": "écolo (fam.) / écologique",
+       "de": "umweltbewusst, ökologisch, Öko-",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "3/3",
+       "fr": "emprunter qc",
+       "de": "etw. (aus-)leihen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "coûter",
+       "de": "kosten",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "Ce n'est pas pareil !",
+       "de": "Das ist nicht das Gleiche!",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/3",
+       "fr": "commander qc",
+       "de": "etw. bestellen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "la poubelle",
+       "de": "der Mülleimer",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/3",
+       "fr": "mettre qc à la poubelle",
+       "de": "etw. in den Müll werfen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "3/3",
+       "fr": "l'emballage",
+       "de": "die Verpackung",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "m3",
+     "name": "Module 3",
+     "woerter": [
+      {
+       "fund": "M3",
+       "fr": "la finale",
+       "de": "das Finale",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M3",
+       "fr": "le match",
+       "de": "das Spiel",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M3",
+       "fr": "le/la Croate",
+       "de": "der Kroate / die Kroatin",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M3",
+       "fr": "fort/forte",
+       "de": "stark",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M3",
+       "fr": "le but",
+       "de": "das Ziel, (hier:) das Tor",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M3",
+       "fr": "tirer",
+       "de": "ziehen, (hier:) schießen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M3",
+       "fr": "défendre (qn/qc)",
+       "de": "(jdn/etw.) verteidigen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M3",
+       "fr": "marquer un but",
+       "de": "ein Tor schießen, treffen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M3",
+       "fr": "contre",
+       "de": "gegen, dagegen",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "M3",
+       "fr": "mener",
+       "de": "führen, in Führung liegen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M3",
+       "fr": "(1) à (0)",
+       "de": "(1) zu (0)",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M3",
+       "fr": "l'arbitre",
+       "de": "der/die Schiedsrichter/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M3",
+       "fr": "le carton (jaune/rouge)",
+       "de": "die (gelbe/rote) Karte",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M3",
+       "fr": "le score",
+       "de": "der Spielstand",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M3",
+       "fr": "le score est de … à …",
+       "de": "es steht … zu …",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M3",
+       "fr": "partout",
+       "de": "(hier:) unentschieden",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "M3",
+       "fr": "attaquer (qn)",
+       "de": "(jdn) angreifen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M3",
+       "fr": "la faute",
+       "de": "der Fehler, (hier:) das Foul",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M3",
+       "fr": "parler à qn",
+       "de": "mit jdm sprechen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M3",
+       "fr": "le penalty",
+       "de": "der Strafstoß, der Elfmeter",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M3",
+       "fr": "la mi-temps",
+       "de": "die Halbzeit",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M3",
+       "fr": "le ballon",
+       "de": "der Ball",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M3",
+       "fr": "passer le ballon à qn",
+       "de": "jdm den Ball zuspielen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M3",
+       "fr": "le gardien / la gardienne (de but)",
+       "de": "der/die Torwart/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M3",
+       "fr": "faire attention",
+       "de": "aufpassen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M3",
+       "fr": "il reste…",
+       "de": "(nur) noch…",
+       "pos": "Ausdruck"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "name": "Unité 4",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "4/A",
+       "fr": "la planète",
+       "de": "der Planet",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/A",
+       "fr": "le médiateur / la médiatrice",
+       "de": "der/die Vermittler/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "4/A",
+       "fr": "l'intello",
+       "de": "der/die Streber/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "4/A",
+       "fr": "la brute",
+       "de": "der/die Unruhestifter/in",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/A",
+       "fr": "le bavard / la bavarde",
+       "de": "die Quasselstrippe",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "4/A",
+       "fr": "le geek",
+       "de": "der Nerd, (auch:) der Computernerd",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/A",
+       "fr": "le clown",
+       "de": "der/die Clown/in",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/A",
+       "fr": "les inséparables",
+       "de": "die Unzertrennlichen",
+       "pos": "Nomen, m./f. pl."
+      },
+      {
+       "fund": "4/A",
+       "fr": "le chouchou / la chouchoute",
+       "de": "der Liebling",
+       "pos": "Nomen, m./f."
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "4/Voc",
+       "fr": "seul/seule",
+       "de": "allein",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "poser une question (à qn)",
+       "de": "(jdm) eine Frage stellen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "l'excuse",
+       "de": "die Entschuldigung, (auch:) die Ausrede",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la pression",
+       "de": "der Druck",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "mettre la pression à qn",
+       "de": "jdn unter Druck setzen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "le temps",
+       "de": "die Zeit",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "dernier/dernière",
+       "de": "letzter/letzte/letztes",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "réviser (qc)",
+       "de": "(etw.) lernen, etw. wiederholen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "participer en cours",
+       "de": "im Unterricht mitarbeiten",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "rendre qc (à qn)",
+       "de": "(jdm) etw. zurückgeben",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "mauvais/mauvaise",
+       "de": "schlecht",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la note",
+       "de": "die Note",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la moyenne",
+       "de": "der Durchschnitt",
+       "pos": "Nomen, f."
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "4/1",
+       "fr": "écrire qc (à qn)",
+       "de": "(jdm) etw. schreiben",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/1",
+       "fr": "laisser qn tranquille",
+       "de": "jdn in Ruhe lassen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/1",
+       "fr": "sérieux/sérieuse",
+       "de": "ernst, ernsthaft",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/1",
+       "fr": "débrouillard/débrouillarde",
+       "de": "geschickt, pfiffig",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/1",
+       "fr": "populaire",
+       "de": "beliebt",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "4/1",
+       "fr": "malade",
+       "de": "krank",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le voisin / la voisine",
+       "de": "der/die (Sitz-)Nachbar/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le sac",
+       "de": "die Tasche, (auch:) die Schultasche",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le bulletin",
+       "de": "das Zeugnis",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le conseil",
+       "de": "der Rat, Ratschlag",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le résultat",
+       "de": "das Ergebnis, das Resultat",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le test",
+       "de": "der Test",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le genre (de qc)",
+       "de": "die Art",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le réveil",
+       "de": "der Wecker",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "sonner",
+       "de": "klingeln",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/1",
+       "fr": "plus",
+       "de": "mehr",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "4/1",
+       "fr": "sans",
+       "de": "ohne etw. zu tun",
+       "pos": "Präposition"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "4/2",
+       "fr": "stresser qn",
+       "de": "jdn stressen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/2",
+       "fr": "dire qc (à qn)",
+       "de": "(jdm) etw. sagen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/2",
+       "fr": "que",
+       "de": "dass",
+       "pos": "Konjunktion"
+      },
+      {
+       "fund": "4/2",
+       "fr": "devoir",
+       "de": "etw. tun müssen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/2",
+       "fr": "au moins",
+       "de": "mindestens, wenigstens",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "4/2",
+       "fr": "à cause de",
+       "de": "wegen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "l'impression",
+       "de": "der Eindruck",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/2",
+       "fr": "à la place de (qn/qc)",
+       "de": "anstelle von (jdm/etw.), statt",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "passer du temps (avec qn)",
+       "de": "(mit jdm) Zeit verbringen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "le contraire",
+       "de": "das Gegenteil",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/2",
+       "fr": "demander (qc à qn)",
+       "de": "(jdn nach etw.) fragen, jdn um etw. bitten",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/2",
+       "fr": "demander si",
+       "de": "fragen, ob",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "avoir besoin de qn/qc",
+       "de": "jdn/etw. brauchen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "l'aide",
+       "de": "die Hilfe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/2",
+       "fr": "oh là là",
+       "de": "oje",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "vouloir savoir si",
+       "de": "wissen wollen, ob",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "Je te jure !",
+       "de": "(Ganz) Ehrlich!, Ich schwör's!",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "le reste",
+       "de": "der Rest",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/2",
+       "fr": "faire confiance à qn",
+       "de": "jdm vertrauen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/2",
+       "fr": "à mon avis",
+       "de": "meiner Meinung nach",
+       "pos": "Ausdruck"
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "4/3",
+       "fr": "le système",
+       "de": "das System",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/3",
+       "fr": "sur",
+       "de": "(hier:) von",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "4/3",
+       "fr": "le stress",
+       "de": "der Stress",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/3",
+       "fr": "la lettre",
+       "de": "der Buchstabe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/3",
+       "fr": "comme",
+       "de": "als",
+       "pos": "Konjunktion"
+      },
+      {
+       "fund": "4/3",
+       "fr": "calculer qc",
+       "de": "etw. berechnen, etw. ausrechnen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/3",
+       "fr": "précis/précise",
+       "de": "genau, exakt, klar",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/3",
+       "fr": "exister",
+       "de": "existieren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/3",
+       "fr": "le/la même",
+       "de": "der-/die-/dasselbe, der/die/das Gleiche",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "4/3",
+       "fr": "juste",
+       "de": "gerecht",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "4/3",
+       "fr": "autre",
+       "de": "anderer/andere/anderes",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "4/3",
+       "fr": "penser",
+       "de": "denken",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/3",
+       "fr": "motivant/motivante",
+       "de": "motivierend",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/3",
+       "fr": "les gens",
+       "de": "die Leute",
+       "pos": "Nomen, m. pl."
+      },
+      {
+       "fund": "4/3",
+       "fr": "dur/dure",
+       "de": "hart, schwer",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "4/3",
+       "fr": "ça veut dire",
+       "de": "das heißt",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/3",
+       "fr": "la catastrophe",
+       "de": "die Katastrophe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/3",
+       "fr": "par contre",
+       "de": "jedoch, allerdings",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "4/3",
+       "fr": "entendre qn/qc",
+       "de": "jdn/etw. hören",
+       "pos": "Verb"
+      },
+      {
+       "fund": "4/3",
+       "fr": "avoir la moyenne",
+       "de": "bestehen",
+       "pos": "Ausdruck"
+      }
+     ]
+    },
+    {
+     "id": "m4",
+     "name": "Module 4",
+     "woerter": [
+      {
+       "fund": "M4",
+       "fr": "le handball",
+       "de": "Handball, das Handballspielen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "la batterie",
+       "de": "das Schlagzeug",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M4",
+       "fr": "le repas",
+       "de": "das Essen, die Mahlzeit",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "presque",
+       "de": "fast, beinahe",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "M4",
+       "fr": "sauf",
+       "de": "außer, abgesehen von",
+       "pos": "Präposition"
+      },
+      {
+       "fund": "M4",
+       "fr": "végan/végane",
+       "de": "vegan",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M4",
+       "fr": "les céréales",
+       "de": "das Getreide, (hier:) das Müsli, die Cornflakes",
+       "pos": "Nomen, f. pl."
+      },
+      {
+       "fund": "M4",
+       "fr": "le petit-déjeuner",
+       "de": "das Frühstück",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "porter qc",
+       "de": "etw. tragen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M4",
+       "fr": "les vêtements",
+       "de": "die Kleidung",
+       "pos": "Nomen, m. pl."
+      },
+      {
+       "fund": "M4",
+       "fr": "les sneakers",
+       "de": "die Sneakers",
+       "pos": "Nomen, m. pl."
+      },
+      {
+       "fund": "M4",
+       "fr": "les lunettes",
+       "de": "die Brille",
+       "pos": "Nomen, f. pl."
+      },
+      {
+       "fund": "M4",
+       "fr": "le mois",
+       "de": "der Monat",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "l'appareil dentaire",
+       "de": "die Zahnspange",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le caractère",
+       "de": "der Charakter",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "plutôt",
+       "de": "eher, lieber",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "M4",
+       "fr": "timide",
+       "de": "schüchtern",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "M4",
+       "fr": "l'avenir",
+       "de": "die Zukunft",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "plus tard",
+       "de": "später",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "M4",
+       "fr": "le gamer / la gameuse",
+       "de": "der/die Gamer/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M4",
+       "fr": "gagner de l'argent",
+       "de": "Geld verdienen",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M4",
+       "fr": "la blague",
+       "de": "der Witz, der Scherz",
+       "pos": "Nomen, f."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "name": "Unité 5",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "5/A",
+       "fr": "liker qn/qc",
+       "de": "jdn/etw. liken",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/A",
+       "fr": "le youtubeur / la youtubeuse",
+       "de": "der/die Youtuber/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "5/A",
+       "fr": "l'acteur / l'actrice",
+       "de": "der/die Schauspieler/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "5/A",
+       "fr": "engagé/engagée",
+       "de": "engagiert",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/A",
+       "fr": "l'astronaute",
+       "de": "der/die Astronaut/in",
+       "pos": "Nomen, m./f."
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "5/Voc",
+       "fr": "l'activité",
+       "de": "die Aktivität",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "télécharger qc",
+       "de": "etw. herunterladen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "cliquer sur qc",
+       "de": "auf etw. klicken",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le lien",
+       "de": "der Link",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "laisser qc",
+       "de": "etw. lassen, (hier:) etw. hinterlassen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "poster qc",
+       "de": "etw. posten",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le tuto (fam.) / le tutoriel",
+       "de": "das Erklärvideo, das Tutorial",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "enregistrer qc",
+       "de": "etw. aufnehmen, etw. speichern",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "les réseaux sociaux",
+       "de": "die sozialen Netzwerke",
+       "pos": "Nomen, m. pl."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "être accro à qc",
+       "de": "nach etw. süchtig sein, von etw. abhängig sein",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "la victime",
+       "de": "das Opfer",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le cyberharcèlement",
+       "de": "das Cybermobbing",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "créer qc",
+       "de": "etw. erschaffen, etw. gründen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "avoir … vues",
+       "de": "… Aufrufe/Klicks haben",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le million",
+       "de": "die Million",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "l'abonné/l'abonnée",
+       "de": "der/die Abonnent/in",
+       "pos": "Nomen, m./f."
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "5/1",
+       "fr": "intelligent/intelligente",
+       "de": "intelligent",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "normal (m.) / normale (f.) / normaux (m. pl.) / normales (f. pl.)",
+       "de": "normal",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "la culture",
+       "de": "die Kultur",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "le cliché",
+       "de": "das Klischee",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "chinois/chinoise",
+       "de": "chinesisch",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "génial (m.) / géniale (f.) / géniaux (m. pl.) / géniales (f. pl.)",
+       "de": "toll, genial",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "voir qn/qc",
+       "de": "jdn/etw. sehen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/1",
+       "fr": "être d'origine (f.) (allemande/française)",
+       "de": "(deutscher/französischer) Herkunft sein",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "5/1",
+       "fr": "asiatique",
+       "de": "asiatisch",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'Asie",
+       "de": "Asien",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "le thème",
+       "de": "das Thema",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "critiquer (qn/qc)",
+       "de": "(jdn/etw.) kritisieren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/1",
+       "fr": "national (m.) / nationale (f.) / nationaux (m. pl.) / nationales (f. pl.)",
+       "de": "national, National-",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'humour",
+       "de": "der Humor",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "avant",
+       "de": "früher, vorher",
+       "pos": "Adverb"
+      },
+      {
+       "fund": "5/1",
+       "fr": "faire des études",
+       "de": "studieren",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'ingénieur / l'ingénieure",
+       "de": "der/die Ingenieur/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "original (m.) / originale (f.) / originaux (m. pl.) / originales (f. pl.)",
+       "de": "originell",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "adulte",
+       "de": "erwachsen",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "polonais/polonaise",
+       "de": "polnisch",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "séparé/séparée",
+       "de": "getrennt",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/1",
+       "fr": "la beauté",
+       "de": "die Schönheit",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "le policier / la policière",
+       "de": "der/die Polizist/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'émission",
+       "de": "die Sendung",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'avis",
+       "de": "die Meinung",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "autre chose",
+       "de": "etwas anderes",
+       "pos": "Ausdruck"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "5/2",
+       "fr": "finir qc",
+       "de": "etw. beenden, enden",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "grandir",
+       "de": "aufwachsen, wachsen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "réussir (qc)",
+       "de": "es/etw. schaffen, gelingen, etw. bestehen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "choisir qn/qc",
+       "de": "jdn/etw. aussuchen, jdn/etw. auswählen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "quitter qn/qc",
+       "de": "jdn/etw. verlassen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "participer à qc",
+       "de": "an etw. teilnehmen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "baisser les bras",
+       "de": "aufgeben",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "5/2",
+       "fr": "encourager qn",
+       "de": "jdn ermutigen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "perdre (qn/qc)",
+       "de": "(jdn/etw.) verlieren",
+       "pos": "Verb"
+      },
+      {
+       "fund": "5/2",
+       "fr": "les médias",
+       "de": "die Medien",
+       "pos": "Nomen, m. pl."
+      },
+      {
+       "fund": "5/2",
+       "fr": "l'album",
+       "de": "das Album",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "le concert",
+       "de": "das Konzert",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "les hauts et les bas",
+       "de": "die Höhen und Tiefen, das Auf und Ab",
+       "pos": "Ausdruck, m. pl."
+      },
+      {
+       "fund": "5/2",
+       "fr": "marocain/marocaine",
+       "de": "marokkanisch",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/2",
+       "fr": "tout le / toute la, tous les / toutes les",
+       "de": "ganzer/ganze/ganzes, alle",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "5/2",
+       "fr": "tomber amoureux/amoureuse (de qn)",
+       "de": "sich (in jdn) verlieben",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "5/2",
+       "fr": "difficile",
+       "de": "schwer, schwierig",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "5/2",
+       "fr": "le jury",
+       "de": "die Jury",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "la perruque",
+       "de": "die Perücke",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/2",
+       "fr": "le bac (fam.) / le baccalauréat",
+       "de": "das Abi, das Abitur",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "homosexuel/homosexuelle",
+       "de": "homosexuell",
+       "pos": "Adjektiv"
+      }
+     ]
+    },
+    {
+     "id": "m5",
+     "name": "Module 5",
+     "woerter": [
+      {
+       "fund": "M5",
+       "fr": "le blog",
+       "de": "der Blog",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "l'avion",
+       "de": "das Flugzeug",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "durer",
+       "de": "dauern, andauern",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M5",
+       "fr": "préparer qc",
+       "de": "(hier:) etw. zubereiten",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M5",
+       "fr": "la personne",
+       "de": "die Person",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "le bonbon",
+       "de": "das Bonbon",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "le piment",
+       "de": "die Chili(schote)",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "le Réunionnais / la Réunionnaise",
+       "de": "der/die Reunionaiser/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M5",
+       "fr": "le Français / la Française",
+       "de": "der Franzose / die Französin",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M5",
+       "fr": "le continent",
+       "de": "der Kontinent",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "créole",
+       "de": "kreolisch",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "M5",
+       "fr": "ça sent",
+       "de": "es riecht (nach)",
+       "pos": "Ausdruck"
+      },
+      {
+       "fund": "M5",
+       "fr": "nager",
+       "de": "schwimmen",
+       "pos": "Verb"
+      },
+      {
+       "fund": "M5",
+       "fr": "beau/bel (m.) / belle (f.) / beaux (m. pl.) / belles (f. pl.)",
+       "de": "schön",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M5",
+       "fr": "la cascade",
+       "de": "der Wasserfall",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "la forêt",
+       "de": "der Wald",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "vieux/vieil (m.) / vieille (f.) / vieux (m. pl.) / vieilles (f. pl.)",
+       "de": "alt",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M5",
+       "fr": "nouveau/nouvel (m.) / nouvelle (f.) / nouveaux (m. pl.) / nouvelles (f. pl.)",
+       "de": "neu",
+       "pos": "Adjektiv"
+      },
+      {
+       "fund": "M5",
+       "fr": "le paysage",
+       "de": "die Landschaft",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "la course",
+       "de": "der Lauf, das Rennen",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "fou/folle",
+       "de": "verrückt, wahnsinnig",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "M5",
+       "fr": "la région",
+       "de": "die Gegend, die Region",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "la capitale",
+       "de": "die Hauptstadt",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "l'habitant / l'habitante",
+       "de": "der/die Bewohner/in, der/die Einwohner/in",
+       "pos": "Nomen, m./f."
+      },
+      {
+       "fund": "M5",
+       "fr": "l'été",
+       "de": "der Sommer",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "le printemps",
+       "de": "der Frühling",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "l'automne",
+       "de": "der Herbst",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "l'hiver",
+       "de": "der Winter",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "actif/active",
+       "de": "aktiv",
+       "pos": "Adjektiv, m./f."
+      },
+      {
+       "fund": "M5",
+       "fr": "le centre",
+       "de": "das Zentrum",
+       "pos": "Nomen, m."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

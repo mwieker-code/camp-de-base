@@ -1,0 +1,4205 @@
+{
+ "band": 1,
+ "jahrgang": 7,
+ "einheiten": [
+  {
+   "id": "u0",
+   "name": "Einstieg",
+   "teile": [
+    {
+     "id": "c",
+     "name": "Einstieg",
+     "woerter": [
+      {
+       "fund": "C",
+       "fr": "C'est parti !",
+       "de": "Los geht's!"
+      },
+      {
+       "fund": "C",
+       "fr": "Salut !",
+       "de": "Hallo! (auch:) Tschüss!"
+      },
+      {
+       "fund": "C",
+       "fr": "Tu t'appelles comment ?",
+       "de": "Wie heißt du ?"
+      },
+      {
+       "fund": "C",
+       "fr": "je m'appelle",
+       "de": "ich heiße (+ Name)"
+      },
+      {
+       "fund": "C",
+       "fr": "Et toi ?",
+       "de": "Und du?"
+      },
+      {
+       "fund": "C",
+       "fr": "et",
+       "de": "und"
+      },
+      {
+       "fund": "C",
+       "fr": "toi",
+       "de": "du"
+      },
+      {
+       "fund": "C",
+       "fr": "À plus !",
+       "de": "Bis später!"
+      },
+      {
+       "fund": "C",
+       "fr": "Ça va ?",
+       "de": "Wie geht's? / Geht's (dir) gut?"
+      },
+      {
+       "fund": "C",
+       "fr": "bof",
+       "de": "Na ja. / Es geht so."
+      },
+      {
+       "fund": "C",
+       "fr": "Et toi ?",
+       "de": "(hier:) Und dir?"
+      },
+      {
+       "fund": "C",
+       "fr": "Ça va.",
+       "de": "Es geht mir gut."
+      },
+      {
+       "fund": "C",
+       "fr": "super",
+       "de": "super, toll"
+      },
+      {
+       "fund": "C",
+       "fr": "ah",
+       "de": "ah, ach"
+      },
+      {
+       "fund": "C",
+       "fr": "Ça sonne !",
+       "de": "Es klingelt!"
+      },
+      {
+       "fund": "C",
+       "fr": "À demain !",
+       "de": "Bis morgen!"
+      },
+      {
+       "fund": "C",
+       "fr": "Bonjour !",
+       "de": "Guten Tag!, Guten Morgen!"
+      },
+      {
+       "fund": "C",
+       "fr": "la classe",
+       "de": "die Klasse",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "C",
+       "fr": "Madame/Mme",
+       "de": "Frau"
+      },
+      {
+       "fund": "C",
+       "fr": "Monsieur/M.",
+       "de": "Herr"
+      },
+      {
+       "fund": "C",
+       "fr": "Au revoir !",
+       "de": "Auf Wiedersehen!"
+      },
+      {
+       "fund": "C",
+       "fr": "Tu as quel âge ?",
+       "de": "Wie alt bist du?"
+      },
+      {
+       "fund": "C",
+       "fr": "j'ai … ans",
+       "de": "ich bin … Jahre alt"
+      },
+      {
+       "fund": "C",
+       "fr": "zéro",
+       "de": "null"
+      },
+      {
+       "fund": "C",
+       "fr": "un",
+       "de": "eins"
+      },
+      {
+       "fund": "C",
+       "fr": "deux",
+       "de": "zwei"
+      },
+      {
+       "fund": "C",
+       "fr": "trois",
+       "de": "drei"
+      },
+      {
+       "fund": "C",
+       "fr": "quatre",
+       "de": "vier"
+      },
+      {
+       "fund": "C",
+       "fr": "cinq",
+       "de": "fünf"
+      },
+      {
+       "fund": "C",
+       "fr": "six",
+       "de": "sechs"
+      },
+      {
+       "fund": "C",
+       "fr": "sept",
+       "de": "sieben"
+      },
+      {
+       "fund": "C",
+       "fr": "huit",
+       "de": "acht"
+      },
+      {
+       "fund": "C",
+       "fr": "neuf",
+       "de": "neun"
+      },
+      {
+       "fund": "C",
+       "fr": "dix",
+       "de": "zehn"
+      },
+      {
+       "fund": "C",
+       "fr": "onze",
+       "de": "elf"
+      },
+      {
+       "fund": "C",
+       "fr": "douze",
+       "de": "zwölf"
+      },
+      {
+       "fund": "C",
+       "fr": "treize",
+       "de": "dreizehn"
+      },
+      {
+       "fund": "C",
+       "fr": "quatorze",
+       "de": "vierzehn"
+      },
+      {
+       "fund": "C",
+       "fr": "quinze",
+       "de": "fünfzehn"
+      },
+      {
+       "fund": "C",
+       "fr": "seize",
+       "de": "sechzehn"
+      },
+      {
+       "fund": "C",
+       "fr": "dix-sept",
+       "de": "siebzehn"
+      },
+      {
+       "fund": "C",
+       "fr": "dix-huit",
+       "de": "achtzehn"
+      },
+      {
+       "fund": "C",
+       "fr": "dix-neuf",
+       "de": "neunzehn"
+      },
+      {
+       "fund": "C",
+       "fr": "vingt",
+       "de": "zwanzig"
+      },
+      {
+       "fund": "C",
+       "fr": "Tu habites où ?",
+       "de": "Wo wohnst du?"
+      },
+      {
+       "fund": "C",
+       "fr": "j'habite",
+       "de": "ich wohne"
+      },
+      {
+       "fund": "C",
+       "fr": "en",
+       "de": "in"
+      },
+      {
+       "fund": "C",
+       "fr": "à",
+       "de": "in"
+      },
+      {
+       "fund": "C",
+       "fr": "l'Allemagne",
+       "de": "Deutschland",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "C",
+       "fr": "la France",
+       "de": "Frankreich",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "C",
+       "fr": "Paris",
+       "de": "Paris"
+      },
+      {
+       "fund": "C",
+       "fr": "moi",
+       "de": "ich"
+      },
+      {
+       "fund": "C",
+       "fr": "j'aime",
+       "de": "ich mag"
+      },
+      {
+       "fund": "C",
+       "fr": "je n'aime pas",
+       "de": "ich mag … nicht, ich mag keinen/keine"
+      },
+      {
+       "fund": "C",
+       "fr": "mais",
+       "de": "aber"
+      },
+      {
+       "fund": "C",
+       "fr": "les jeux vidéo",
+       "de": "die Videospiele",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "le shopping",
+       "de": "das Einkaufen, das Shoppen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "le sport",
+       "de": "der Sport",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "la musique",
+       "de": "die Musik",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "C",
+       "fr": "la nature",
+       "de": "die Natur",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "C",
+       "fr": "le chocolat",
+       "de": "die Schokolade",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "les spaghettis",
+       "de": "die Spaghetti",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "la pizza",
+       "de": "die Pizza",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "C",
+       "fr": "les tomates",
+       "de": "die Tomaten",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "la salade",
+       "de": "der Salat",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "C",
+       "fr": "le jaune",
+       "de": "Gelb",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "le rouge",
+       "de": "Rot",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "le bleu",
+       "de": "Blau",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "le vert",
+       "de": "Grün",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "le noir",
+       "de": "Schwarz",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "C",
+       "fr": "les chats",
+       "de": "die Katzen",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "les chiens",
+       "de": "die Hunde",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "les rats",
+       "de": "die Ratten",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "les poissons",
+       "de": "die Fische",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "les tortues",
+       "de": "die Schildkröten",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "C",
+       "fr": "Tu aimes… ?",
+       "de": "Magst du…?"
+      },
+      {
+       "fund": "C",
+       "fr": "oui",
+       "de": "ja"
+      },
+      {
+       "fund": "C",
+       "fr": "non",
+       "de": "nein"
+      },
+      {
+       "fund": "C",
+       "fr": "ou",
+       "de": "oder"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u1",
+   "name": "Unité 1",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "1/A",
+       "fr": "Bienvenue !",
+       "de": "Willkommen!"
+      },
+      {
+       "fund": "1/A",
+       "fr": "la Tour Eiffel",
+       "de": "der Eiffelturm",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/A",
+       "fr": "le Louvre",
+       "de": "der Louvre",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/A",
+       "fr": "la Villette",
+       "de": "la Villette",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/A",
+       "fr": "le Sacré-Cœur",
+       "de": "das Sacré-Cœur",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "1/Voc",
+       "fr": "la ville",
+       "de": "die Stadt",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le cinéma",
+       "de": "das Kino",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le parc",
+       "de": "der Park",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le théâtre",
+       "de": "das Theater",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le café",
+       "de": "(hier:) das Café, (auch:) der Kaffee",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le restaurant",
+       "de": "das Restaurant",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "l'hôtel",
+       "de": "das Hotel",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le musée",
+       "de": "das Museum",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le métro",
+       "de": "die U-Bahn, die Metro",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "la tour",
+       "de": "der Turm",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le supermarché",
+       "de": "der Supermarkt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le collège",
+       "de": "die Schule",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "le stade",
+       "de": "das Stadion",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "pardon",
+       "de": "Verzeihung, Entschuldigung"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "Où est … ?",
+       "de": "Wo ist … ?"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "Où… ?",
+       "de": "Wo … ?, Wohin … ?"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "c'est",
+       "de": "das ist"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "là",
+       "de": "da, hier"
+      },
+      {
+       "fund": "1/Voc",
+       "fr": "merci",
+       "de": "danke"
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "1/1",
+       "fr": "ce sont",
+       "de": "das sind"
+      },
+      {
+       "fund": "1/1",
+       "fr": "C'est qui ?",
+       "de": "Wer ist das?"
+      },
+      {
+       "fund": "1/1",
+       "fr": "moi, c'est",
+       "de": "ich heiße (+ Name)"
+      },
+      {
+       "fund": "1/1",
+       "fr": "Comment… ?",
+       "de": "Wie … ?"
+      },
+      {
+       "fund": "1/1",
+       "fr": "voilà",
+       "de": "hier ist, hier sind"
+      },
+      {
+       "fund": "1/1",
+       "fr": "la fille",
+       "de": "das Mädchen",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le garçon",
+       "de": "der Junge",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "l'ami/l'amie",
+       "de": "der/die Freund/in"
+      },
+      {
+       "fund": "1/1",
+       "fr": "de",
+       "de": "von"
+      },
+      {
+       "fund": "1/1",
+       "fr": "mon ami / mon amie",
+       "de": "mein/e Freund/in"
+      },
+      {
+       "fund": "1/1",
+       "fr": "il/elle s'appelle",
+       "de": "er/sie heißt"
+      },
+      {
+       "fund": "1/1",
+       "fr": "le/la/l'",
+       "de": "bestimmte Artikel im Singular"
+      },
+      {
+       "fund": "1/1",
+       "fr": "les",
+       "de": "bestimmter Artikel im Plural"
+      },
+      {
+       "fund": "1/1",
+       "fr": "le jeu vidéo",
+       "de": "das Videospiel",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "la tomate",
+       "de": "die Tomate",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le rat",
+       "de": "die Ratte",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le chat",
+       "de": "die Katze, der Kater",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le chien",
+       "de": "der Hund",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "le poisson",
+       "de": "der Fisch",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/1",
+       "fr": "la tortue",
+       "de": "die Schildkröte",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/1",
+       "fr": "avec",
+       "de": "mit"
+      },
+      {
+       "fund": "1/1",
+       "fr": "d'accord",
+       "de": "einverstanden, okay"
+      },
+      {
+       "fund": "1/1",
+       "fr": "Je ne sais pas.",
+       "de": "Ich weiß es nicht."
+      },
+      {
+       "fund": "1/1",
+       "fr": "ici",
+       "de": "hier"
+      },
+      {
+       "fund": "1/1",
+       "fr": "depuis",
+       "de": "seit, seitdem"
+      },
+      {
+       "fund": "1/1",
+       "fr": "samedi",
+       "de": "Samstag, am Samstag"
+      },
+      {
+       "fund": "1/1",
+       "fr": "cool",
+       "de": "cool"
+      },
+      {
+       "fund": "1/1",
+       "fr": "alors",
+       "de": "also"
+      },
+      {
+       "fund": "1/1",
+       "fr": "dans",
+       "de": "in"
+      },
+      {
+       "fund": "1/1",
+       "fr": "le quartier",
+       "de": "das Viertel",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "1/2",
+       "fr": "coucou",
+       "de": "hi"
+      },
+      {
+       "fund": "1/2",
+       "fr": "c'est nous",
+       "de": "das sind wir / wir sind's"
+      },
+      {
+       "fund": "1/2",
+       "fr": "c'est moi",
+       "de": "das bin ich / ich bin's"
+      },
+      {
+       "fund": "1/2",
+       "fr": "être",
+       "de": "sein"
+      },
+      {
+       "fund": "1/2",
+       "fr": "de",
+       "de": "(hier:) aus"
+      },
+      {
+       "fund": "1/2",
+       "fr": "la rue",
+       "de": "die Straße",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la Tunisie",
+       "de": "Tunesien",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "sympa (fam.) / sympathique",
+       "de": "nett, sympathisch"
+      },
+      {
+       "fund": "1/2",
+       "fr": "dans la même classe",
+       "de": "in derselben Klasse"
+      },
+      {
+       "fund": "1/2",
+       "fr": "aussi",
+       "de": "auch"
+      },
+      {
+       "fund": "1/2",
+       "fr": "ensemble",
+       "de": "zusammen"
+      },
+      {
+       "fund": "1/2",
+       "fr": "le club",
+       "de": "die AG, der Verein, der Klub",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/2",
+       "fr": "le drone",
+       "de": "die Drohne",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/2",
+       "fr": "le club de drones",
+       "de": "die Drohnen-AG",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la sixième",
+       "de": "die sechste Klasse",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la cinquième",
+       "de": "die siebte Klasse",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "le basket",
+       "de": "Basketball, das Basketballspielen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la série",
+       "de": "die Serie",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "la danse",
+       "de": "der Tanz, das Tanzen",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/2",
+       "fr": "souvent",
+       "de": "oft"
+      },
+      {
+       "fund": "1/2",
+       "fr": "en retard",
+       "de": "zu spät, mit Verspätung"
+      },
+      {
+       "fund": "1/2",
+       "fr": "c'est un peu compliqué",
+       "de": "es/das ist etwas kompliziert"
+      },
+      {
+       "fund": "1/2",
+       "fr": "Tu es d'où ?",
+       "de": "Woher kommst du?"
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "1/3",
+       "fr": "Qu'est-ce qu'il y a … ?",
+       "de": "Was gibt es … ?"
+      },
+      {
+       "fund": "1/3",
+       "fr": "il y a",
+       "de": "es gibt"
+      },
+      {
+       "fund": "1/3",
+       "fr": "la question",
+       "de": "die Frage",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "la réponse",
+       "de": "die Antwort",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "la cathédrale",
+       "de": "die Kathedrale, der Dom",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "un/une",
+       "de": "ein/eine"
+      },
+      {
+       "fund": "1/3",
+       "fr": "des",
+       "de": "unbestimmter Artikel im Plural; wird nicht übersetzt"
+      },
+      {
+       "fund": "1/3",
+       "fr": "comme",
+       "de": "wie, (hier:) wie z. B."
+      },
+      {
+       "fund": "1/3",
+       "fr": "la gare",
+       "de": "der Bahnhof",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "par exemple / p. ex.",
+       "de": "zum Beispiel / z. B."
+      },
+      {
+       "fund": "1/3",
+       "fr": "pour",
+       "de": "für, dafür"
+      },
+      {
+       "fund": "1/3",
+       "fr": "le/la fan",
+       "de": "der Fan"
+      },
+      {
+       "fund": "1/3",
+       "fr": "la science",
+       "de": "die Wissenschaft",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "le/la fan de sciences",
+       "de": "der Wissenschaftsfan"
+      },
+      {
+       "fund": "1/3",
+       "fr": "le magasin",
+       "de": "das Geschäft, der Laden",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "le centre commercial",
+       "de": "das Einkaufszentrum",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les centres commerciaux"
+      },
+      {
+       "fund": "1/3",
+       "fr": "la boulangerie",
+       "de": "die Bäckerei",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "en plus",
+       "de": "außerdem"
+      },
+      {
+       "fund": "1/3",
+       "fr": "entre",
+       "de": "zwischen"
+      },
+      {
+       "fund": "1/3",
+       "fr": "Notre-Dame de Paris",
+       "de": "Notre-Dame"
+      },
+      {
+       "fund": "1/3",
+       "fr": "la Tour Montparnasse",
+       "de": "der Tour Montparnasse",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "1/3",
+       "fr": "le Stade de France",
+       "de": "das Stade de France",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "Bercy",
+       "de": "Bercy"
+      },
+      {
+       "fund": "1/3",
+       "fr": "le Musée des Arts forains",
+       "de": "das Musée des Arts forains",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "Bastille",
+       "de": "Bastille"
+      },
+      {
+       "fund": "1/3",
+       "fr": "le Bois de Vincennes",
+       "de": "der Bois de Vincennes",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "1/3",
+       "fr": "la Coulée verte",
+       "de": "die Coulée verte",
+       "pos": "Nomen, f."
+      }
+     ]
+    },
+    {
+     "id": "m1",
+     "name": "Module 1",
+     "woerter": [
+      {
+       "fund": "M1",
+       "fr": "en cours",
+       "de": "im Unterricht"
+      },
+      {
+       "fund": "M1",
+       "fr": "le français",
+       "de": "Französisch, die französische Sprache",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M1",
+       "fr": "Qu'est-ce que c'est ?",
+       "de": "Was ist das?"
+      },
+      {
+       "fund": "M1",
+       "fr": "l'alphabet",
+       "de": "das Alphabet",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M1",
+       "fr": "C'est terminé !",
+       "de": "(hier:) Das war's!"
+      },
+      {
+       "fund": "M1",
+       "fr": "Comment on dit … ?",
+       "de": "Wie sagt man …?"
+      },
+      {
+       "fund": "M1",
+       "fr": "On dit …",
+       "de": "Man sagt …"
+      },
+      {
+       "fund": "M1",
+       "fr": "Comment on écrit … ?",
+       "de": "Wie schreibt man … ?"
+      },
+      {
+       "fund": "M1",
+       "fr": "On écrit …",
+       "de": "Man schreibt …"
+      },
+      {
+       "fund": "M1",
+       "fr": "en français/allemand",
+       "de": "auf Französisch/Deutsch"
+      },
+      {
+       "fund": "M1",
+       "fr": "l'allemand",
+       "de": "Deutsch, die deutsche Sprache",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M1",
+       "fr": "le cahier",
+       "de": "das Heft",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M1",
+       "fr": "le stylo",
+       "de": "der Stift, der Kugelschreiber",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M1",
+       "fr": "la feuille",
+       "de": "das Blatt",
+       "pos": "Nomen, f."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u2",
+   "name": "Unité 2",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "2/A",
+       "fr": "mon/ma/mes",
+       "de": "mein/e"
+      },
+      {
+       "fund": "2/A",
+       "fr": "la famille",
+       "de": "die Familie",
+       "pos": "Nomen, f."
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "2/Voc",
+       "fr": "les parents",
+       "de": "die Eltern",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le père",
+       "de": "der Vater",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "la mère",
+       "de": "die Mutter",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "les grands-parents",
+       "de": "die Großeltern",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le grand-père",
+       "de": "der Großvater",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "la grand-mère",
+       "de": "die Großmutter",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "les frères et sœurs",
+       "de": "die Geschwister",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le frère",
+       "de": "der Bruder",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "la sœur",
+       "de": "die Schwester",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le demi-frère",
+       "de": "der Halbbruder",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "la demi-sœur",
+       "de": "die Halbschwester",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "l'oncle",
+       "de": "der Onkel",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "la tante",
+       "de": "die Tante",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le cousin / la cousine",
+       "de": "der/die Cousin/e",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "l'enfant",
+       "de": "das Kind",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le fils",
+       "de": "der Sohn",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "la fille",
+       "de": "die Tochter",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le copain / la copine",
+       "de": "der/die Freund/in, der Kumpel",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "l'animal",
+       "de": "das (Haus-)Tier",
+       "pos": "Nomen",
+       "hinweis": "Plural: les animaux"
+      },
+      {
+       "fund": "2/Voc",
+       "fr": "le lapin",
+       "de": "das Kaninchen",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "2/1",
+       "fr": "avoir",
+       "de": "haben"
+      },
+      {
+       "fund": "2/1",
+       "fr": "avoir … ans",
+       "de": "… Jahre alt sein"
+      },
+      {
+       "fund": "2/1",
+       "fr": "Je n'ai pas de frères et sœurs.",
+       "de": "Ich habe keine Geschwister."
+      },
+      {
+       "fund": "2/1",
+       "fr": "la moto",
+       "de": "das Motorrad",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "être fan de qn/qc",
+       "de": "Fan von jdm/etw. sein"
+      },
+      {
+       "fund": "2/1",
+       "fr": "comme moi",
+       "de": "wie ich"
+      },
+      {
+       "fund": "2/1",
+       "fr": "à la maison",
+       "de": "zu Hause, daheim"
+      },
+      {
+       "fund": "2/1",
+       "fr": "ils/elles s'appellent",
+       "de": "sie heißen"
+      },
+      {
+       "fund": "2/1",
+       "fr": "c'est vrai",
+       "de": "das stimmt, das ist wahr"
+      },
+      {
+       "fund": "2/1",
+       "fr": "c'est drôle",
+       "de": "das ist lustig"
+      },
+      {
+       "fund": "2/1",
+       "fr": "chez",
+       "de": "bei"
+      },
+      {
+       "fund": "2/1",
+       "fr": "moi aussi",
+       "de": "ich auch"
+      },
+      {
+       "fund": "2/1",
+       "fr": "je voudrais",
+       "de": "ich möchte gern"
+      },
+      {
+       "fund": "2/1",
+       "fr": "le beau-père",
+       "de": "der Stiefvater",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/1",
+       "fr": "la belle-mère",
+       "de": "die Stiefmutter",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/1",
+       "fr": "être contre (qn/qc)",
+       "de": "dagegen sein, gegen jdn/etw. sein"
+      },
+      {
+       "fund": "2/1",
+       "fr": "l'allergie",
+       "de": "die Allergie",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "2/1",
+       "fr": "c'est nul",
+       "de": "das ist doof"
+      },
+      {
+       "fund": "2/1",
+       "fr": "oui et non",
+       "de": "ja und nein, teils teils"
+      },
+      {
+       "fund": "2/1",
+       "fr": "Je n'ai pas d'animal.",
+       "de": "Ich habe kein Haustier."
+      },
+      {
+       "fund": "2/1",
+       "fr": "chou",
+       "de": "süß"
+      },
+      {
+       "fund": "2/1",
+       "fr": "encore",
+       "de": "noch, wieder"
+      },
+      {
+       "fund": "2/1",
+       "fr": "c'est dommage",
+       "de": "das ist schade"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "2/2",
+       "fr": "Qui… ?",
+       "de": "Wer … ?"
+      },
+      {
+       "fund": "2/2",
+       "fr": "ton/ta/tes",
+       "de": "dein/e"
+      },
+      {
+       "fund": "2/2",
+       "fr": "son/sa/ses",
+       "de": "sein/e, ihr/e"
+      },
+      {
+       "fund": "2/2",
+       "fr": "le week-end",
+       "de": "das Wochenende, am Wochenende",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/2",
+       "fr": "il/elle m'énerve",
+       "de": "er/sie nervt"
+      },
+      {
+       "fund": "2/2",
+       "fr": "l'arrière-grand-mère",
+       "de": "die Urgroßmutter",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "2/2",
+       "fr": "l'arrière-grand-père",
+       "de": "der Urgroßvater",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "2/2",
+       "fr": "il/elle habite",
+       "de": "er/sie wohnt"
+      },
+      {
+       "fund": "2/2",
+       "fr": "ils/elles habitent",
+       "de": "sie wohnen"
+      },
+      {
+       "fund": "2/2",
+       "fr": "près",
+       "de": "nahe, in der Nähe"
+      },
+      {
+       "fund": "2/2",
+       "fr": "près de",
+       "de": "bei, in der Nähe von"
+      },
+      {
+       "fund": "2/2",
+       "fr": "la pâtisserie",
+       "de": "die Konditorei, das Gebäck",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/2",
+       "fr": "Mes parents sont séparés.",
+       "de": "Meine Eltern sind getrennt."
+      },
+      {
+       "fund": "2/2",
+       "fr": "la Guadeloupe",
+       "de": "Guadeloupe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/2",
+       "fr": "parfois",
+       "de": "manchmal"
+      },
+      {
+       "fund": "2/2",
+       "fr": "un peu",
+       "de": "ein bisschen"
+      },
+      {
+       "fund": "2/2",
+       "fr": "quand même",
+       "de": "trotzdem, dennoch"
+      },
+      {
+       "fund": "2/2",
+       "fr": "la chambre",
+       "de": "das Zimmer, (auch:) das Schlafzimmer",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/2",
+       "fr": "un week-end sur deux",
+       "de": "jedes zweite Wochenende"
+      },
+      {
+       "fund": "2/2",
+       "fr": "le problème",
+       "de": "das Problem",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/2",
+       "fr": "C'est l'horreur !",
+       "de": "Das ist der Horror!"
+      },
+      {
+       "fund": "2/2",
+       "fr": "pour moi",
+       "de": "für mich"
+      },
+      {
+       "fund": "2/2",
+       "fr": "pendant",
+       "de": "während"
+      },
+      {
+       "fund": "2/2",
+       "fr": "les vacances",
+       "de": "die Ferien",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "2/2",
+       "fr": "la Bretagne",
+       "de": "die Bretagne",
+       "pos": "Nomen, f."
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "2/3",
+       "fr": "Qu'est-ce que tu fais ?",
+       "de": "Was machst du?"
+      },
+      {
+       "fund": "2/3",
+       "fr": "Qu'est-ce que … ?",
+       "de": "Was … ?"
+      },
+      {
+       "fund": "2/3",
+       "fr": "est-ce que",
+       "de": "Fragepartikel, wird nicht übersetzt"
+      },
+      {
+       "fund": "2/3",
+       "fr": "travailler",
+       "de": "arbeiten, lernen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "écouter (qn/qc)",
+       "de": "(jdm) zuhören, etw. (an-)hören"
+      },
+      {
+       "fund": "2/3",
+       "fr": "écouter de la musique",
+       "de": "Musik hören"
+      },
+      {
+       "fund": "2/3",
+       "fr": "regarder qn/qc",
+       "de": "jdn/etw. ansehen, jdn/etw. anschauen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "la vidéo",
+       "de": "das Video",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "raconter qc",
+       "de": "etw. erzählen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "dessiner qc",
+       "de": "etw. zeichnen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "le manga",
+       "de": "der/das Manga",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/3",
+       "fr": "rigoler",
+       "de": "lachen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "aimer qn/qc",
+       "de": "jdn/etw. mögen, jdn/etw. lieben"
+      },
+      {
+       "fund": "2/3",
+       "fr": "le foot(ball)",
+       "de": "Fußball, das Fußballspielen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "2/3",
+       "fr": "jouer",
+       "de": "spielen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "jouer à",
+       "de": "etw. spielen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "parler",
+       "de": "sprechen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "parler de tout et de rien",
+       "de": "über alles Mögliche sprechen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "chatter",
+       "de": "chatten"
+      },
+      {
+       "fund": "2/3",
+       "fr": "Internet",
+       "de": "das Internet"
+      },
+      {
+       "fund": "2/3",
+       "fr": "sur Internet",
+       "de": "im/ins Internet"
+      },
+      {
+       "fund": "2/3",
+       "fr": "l'école",
+       "de": "die Schule",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "toujours",
+       "de": "immer"
+      },
+      {
+       "fund": "2/3",
+       "fr": "la semaine",
+       "de": "die Woche",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "2/3",
+       "fr": "beaucoup",
+       "de": "sehr, viel"
+      },
+      {
+       "fund": "2/3",
+       "fr": "habiter",
+       "de": "wohnen"
+      },
+      {
+       "fund": "2/3",
+       "fr": "loin",
+       "de": "weit (weg)"
+      }
+     ]
+    },
+    {
+     "id": "m2",
+     "name": "Module 2",
+     "woerter": [
+      {
+       "fund": "M2",
+       "fr": "le/la prof (fam.) / le professeur / la professeure",
+       "de": "der/die Lehrer/in"
+      },
+      {
+       "fund": "M2",
+       "fr": "l'élève",
+       "de": "der/die Schüler/in",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M2",
+       "fr": "bien",
+       "de": "gut"
+      },
+      {
+       "fund": "M2",
+       "fr": "Répète ! / Répétez !",
+       "de": "Wiederhole! / Wiederholt!, Wiederholen Sie!"
+      },
+      {
+       "fund": "M2",
+       "fr": "Vous comprenez ?",
+       "de": "Versteht ihr? / Verstehen Sie?"
+      },
+      {
+       "fund": "M2",
+       "fr": "la phrase",
+       "de": "der Satz",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M2",
+       "fr": "plus fort",
+       "de": "lauter"
+      },
+      {
+       "fund": "M2",
+       "fr": "s'il te plaît",
+       "de": "bitte"
+      },
+      {
+       "fund": "M2",
+       "fr": "s'il vous plaît",
+       "de": "bitte"
+      },
+      {
+       "fund": "M2",
+       "fr": "encore une fois",
+       "de": "noch einmal"
+      },
+      {
+       "fund": "M2",
+       "fr": "bravo",
+       "de": "bravo"
+      },
+      {
+       "fund": "M2",
+       "fr": "continuer (qc)",
+       "de": "(etw.) weitermachen, (etw.) fortführen"
+      },
+      {
+       "fund": "M2",
+       "fr": "Je ne comprends pas.",
+       "de": "Ich verstehe nicht."
+      },
+      {
+       "fund": "M2",
+       "fr": "Vous pouvez répéter ?",
+       "de": "Könnt ihr wiederholen?, Können Sie wiederholen?"
+      },
+      {
+       "fund": "M2",
+       "fr": "Prends ! / Prenez !",
+       "de": "Nimm! / Nehmt!, Nehmen Sie!"
+      },
+      {
+       "fund": "M2",
+       "fr": "Lis ! / Lisez !",
+       "de": "Lies! / Lest!, Lesen Sie!"
+      },
+      {
+       "fund": "M2",
+       "fr": "le texte",
+       "de": "der Text",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "Réponds ! / Répondez !",
+       "de": "Antworte! / Antwortet!, Antworten Sie!"
+      },
+      {
+       "fund": "M2",
+       "fr": "chercher qn/qc",
+       "de": "jdn/etw. suchen"
+      },
+      {
+       "fund": "M2",
+       "fr": "le mot",
+       "de": "das Wort",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "trouver qn/qc",
+       "de": "jdn/etw. finden"
+      },
+      {
+       "fund": "M2",
+       "fr": "Écris ! / Écrivez !",
+       "de": "Schreib! / Schreibt!, Schreiben Sie!"
+      },
+      {
+       "fund": "M2",
+       "fr": "fermer qc",
+       "de": "etw. schließen, etw. zumachen"
+      },
+      {
+       "fund": "M2",
+       "fr": "le livre",
+       "de": "das Buch",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M2",
+       "fr": "maintenant",
+       "de": "jetzt"
+      },
+      {
+       "fund": "M2",
+       "fr": "les devoirs",
+       "de": "die Hausaufgaben",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "M2",
+       "fr": "la fenêtre",
+       "de": "das Fenster",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M2",
+       "fr": "la porte",
+       "de": "die Tür, das Tor",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M2",
+       "fr": "la table",
+       "de": "der Tisch",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M2",
+       "fr": "la chaise",
+       "de": "der Stuhl",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M2",
+       "fr": "le tableau",
+       "de": "die Tafel",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les tableaux"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u3",
+   "name": "Unité 3",
+   "teile": [
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "3/Voc",
+       "fr": "le bureau",
+       "de": "der Schreibtisch",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les bureaux"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "l'étagère",
+       "de": "das Regal",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "l'armoire",
+       "de": "der Schrank",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "le lit",
+       "de": "das Bett",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "le coin",
+       "de": "die Ecke",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "la photo",
+       "de": "das Foto, die Fotografie",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "le coin (photo)",
+       "de": "die (Foto-)Ecke",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "le mur",
+       "de": "die Mauer, die Wand",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "l'ordinateur",
+       "de": "der Computer",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "la plante",
+       "de": "die Pflanze",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "la guitare",
+       "de": "die Gitarre",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "la console",
+       "de": "die Konsole",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "l'enceinte",
+       "de": "die Lautsprecherbox",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "le poster",
+       "de": "das Poster",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "sur",
+       "de": "auf, an"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "sous",
+       "de": "unter"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "devant",
+       "de": "vor"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "derrière",
+       "de": "hinter"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "à gauche (de)",
+       "de": "links (von)"
+      },
+      {
+       "fund": "3/Voc",
+       "fr": "à droite (de)",
+       "de": "rechts (von)"
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "3/1",
+       "fr": "aujourd'hui",
+       "de": "heute"
+      },
+      {
+       "fund": "3/1",
+       "fr": "visiter qc",
+       "de": "etw. besichtigen"
+      },
+      {
+       "fund": "3/1",
+       "fr": "l'appartement",
+       "de": "die Wohnung",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/1",
+       "fr": "l'entrée",
+       "de": "der Eingang, die Diele",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/1",
+       "fr": "le couloir",
+       "de": "der Flur",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/1",
+       "fr": "la salle de bains",
+       "de": "das Badezimmer",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/1",
+       "fr": "les toilettes",
+       "de": "die Toilette",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "3/1",
+       "fr": "la cuisine",
+       "de": "die Küche",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/1",
+       "fr": "le salon",
+       "de": "das Wohnzimmer",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/1",
+       "fr": "chez moi",
+       "de": "bei mir (zu Hause)"
+      },
+      {
+       "fund": "3/1",
+       "fr": "bien sûr",
+       "de": "natürlich, selbstverständlich"
+      },
+      {
+       "fund": "3/1",
+       "fr": "le bazar",
+       "de": "das Durcheinander",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/1",
+       "fr": "l'endroit",
+       "de": "der Ort, die Stelle",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/1",
+       "fr": "l'endroit préféré",
+       "de": "der Lieblingsort",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/1",
+       "fr": "pour",
+       "de": "um etw. zu tun, zum …"
+      },
+      {
+       "fund": "3/1",
+       "fr": "rêver",
+       "de": "träumen"
+      },
+      {
+       "fund": "3/1",
+       "fr": "la vue",
+       "de": "die Aussicht",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/1",
+       "fr": "la télé (fam.) / la télévision",
+       "de": "der Fernseher",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/1",
+       "fr": "Chut !",
+       "de": "Pst!"
+      },
+      {
+       "fund": "3/1",
+       "fr": "ce n'est pas mon truc",
+       "de": "das ist nicht mein Ding"
+      },
+      {
+       "fund": "3/1",
+       "fr": "adorer qn/qc/(+ inf.)",
+       "de": "jdn/etw. sehr lieben (zu tun)"
+      },
+      {
+       "fund": "3/1",
+       "fr": "ça (fam.) / cela",
+       "de": "das"
+      },
+      {
+       "fund": "3/1",
+       "fr": "en face de qn/qc",
+       "de": "gegenüber von jdm/etw."
+      },
+      {
+       "fund": "3/1",
+       "fr": "à côté de",
+       "de": "neben"
+      },
+      {
+       "fund": "3/1",
+       "fr": "la douche",
+       "de": "die Dusche",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/1",
+       "fr": "très",
+       "de": "sehr"
+      },
+      {
+       "fund": "3/1",
+       "fr": "design",
+       "de": "stylish"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "3/2",
+       "fr": "le truc",
+       "de": "das Ding, die Sache",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "aimer",
+       "de": "es mögen, etw. zu tun"
+      },
+      {
+       "fund": "3/2",
+       "fr": "aimer bien qn/qc/(+ inf.)",
+       "de": "jdn/etw. gern (zu tun) mögen"
+      },
+      {
+       "fund": "3/2",
+       "fr": "détester qn/qc/(+ inf.)",
+       "de": "jdn/etw. (zu tun) hassen"
+      },
+      {
+       "fund": "3/2",
+       "fr": "le joueur / la joueuse",
+       "de": "der/die Spieler/in",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le joueur préféré / la joueuse préférée",
+       "de": "der/die Lieblingsspieler/in",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le chanteur / la chanteuse",
+       "de": "der/die Sänger/in",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le chanteur préféré / la chanteuse préférée",
+       "de": "der/die Lieblingssänger/in",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le groupe",
+       "de": "die Gruppe, (hier:) die Band",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le groupe préféré",
+       "de": "die Lieblingsband",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "faire qc",
+       "de": "etw. machen, etw. tun"
+      },
+      {
+       "fund": "3/2",
+       "fr": "faire du/de la/de l'/des",
+       "de": "etw. als Hobby ausüben"
+      },
+      {
+       "fund": "3/2",
+       "fr": "le piano",
+       "de": "das Klavier",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "la bédé / BD (bande dessinée)",
+       "de": "der Comic",
+       "pos": "Nomen, f.",
+       "hinweis": "Plural: les BD"
+      },
+      {
+       "fund": "3/2",
+       "fr": "les arts martiaux",
+       "de": "der Kampfsport",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "3/2",
+       "fr": "moi non",
+       "de": "ich nicht"
+      },
+      {
+       "fund": "3/2",
+       "fr": "moi non plus",
+       "de": "ich auch nicht"
+      },
+      {
+       "fund": "3/2",
+       "fr": "moi si",
+       "de": "doch, ich schon"
+      },
+      {
+       "fund": "3/2",
+       "fr": "l'escalade",
+       "de": "Klettern",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/2",
+       "fr": "parce que",
+       "de": "weil"
+      },
+      {
+       "fund": "3/2",
+       "fr": "l'activité",
+       "de": "die Freizeitaktivität",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/2",
+       "fr": "le rap",
+       "de": "der Rap",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le look",
+       "de": "der Look, das Outfit",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "3/2",
+       "fr": "le PSG (le Paris-Saint-Germain)",
+       "de": "PSG (Paris-Saint-Germain)",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "3/3",
+       "fr": "la vie",
+       "de": "das Leben",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/3",
+       "fr": "petit/petite",
+       "de": "klein"
+      },
+      {
+       "fund": "3/3",
+       "fr": "grand/grande",
+       "de": "groß"
+      },
+      {
+       "fund": "3/3",
+       "fr": "l'instrument",
+       "de": "das Instrument",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "3/3",
+       "fr": "la star",
+       "de": "der Star",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/3",
+       "fr": "préféré/préférée",
+       "de": "Lieblings-"
+      },
+      {
+       "fund": "3/3",
+       "fr": "joli/jolie",
+       "de": "hübsch"
+      },
+      {
+       "fund": "3/3",
+       "fr": "moche",
+       "de": "hässlich"
+      },
+      {
+       "fund": "3/3",
+       "fr": "bleu/bleue",
+       "de": "blau"
+      },
+      {
+       "fund": "3/3",
+       "fr": "noir/noire",
+       "de": "schwarz"
+      },
+      {
+       "fund": "3/3",
+       "fr": "blanc/blanche",
+       "de": "weiß"
+      },
+      {
+       "fund": "3/3",
+       "fr": "jaune",
+       "de": "gelb"
+      },
+      {
+       "fund": "3/3",
+       "fr": "rouge",
+       "de": "rot"
+      },
+      {
+       "fund": "3/3",
+       "fr": "vert/verte",
+       "de": "grün"
+      },
+      {
+       "fund": "3/3",
+       "fr": "ne … pas",
+       "de": "nicht"
+      },
+      {
+       "fund": "3/3",
+       "fr": "ne … plus",
+       "de": "nicht mehr"
+      },
+      {
+       "fund": "3/3",
+       "fr": "les affaires",
+       "de": "die Sachen",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "3/3",
+       "fr": "trop",
+       "de": "zu, zu sehr"
+      },
+      {
+       "fund": "3/3",
+       "fr": "vraiment",
+       "de": "wirklich"
+      },
+      {
+       "fund": "3/3",
+       "fr": "drôle",
+       "de": "lustig, spaßig"
+      },
+      {
+       "fund": "3/3",
+       "fr": "faire les devoirs",
+       "de": "Hausaufgaben machen"
+      },
+      {
+       "fund": "3/3",
+       "fr": "surfer (sur Internet)",
+       "de": "(im Internet) surfen"
+      },
+      {
+       "fund": "3/3",
+       "fr": "la pancarte",
+       "de": "das Schild",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "3/3",
+       "fr": "entrer",
+       "de": "hineingehen, etw. betreten, hereinkommen"
+      }
+     ]
+    },
+    {
+     "id": "m3",
+     "name": "Module 3",
+     "woerter": [
+      {
+       "fund": "M3",
+       "fr": "l'heure",
+       "de": "die Stunde, (auch:) die Uhr, die Uhrzeit",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M3",
+       "fr": "Il est quelle heure ?",
+       "de": "Wie viel Uhr ist es? / Wie spät ist es?"
+      },
+      {
+       "fund": "M3",
+       "fr": "et quart",
+       "de": "Viertel nach"
+      },
+      {
+       "fund": "M3",
+       "fr": "le quart",
+       "de": "das Viertel",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M3",
+       "fr": "et demi/demie",
+       "de": "halb"
+      },
+      {
+       "fund": "M3",
+       "fr": "moins",
+       "de": "weniger, minus"
+      },
+      {
+       "fund": "M3",
+       "fr": "moins le quart",
+       "de": "Viertel vor"
+      },
+      {
+       "fund": "M3",
+       "fr": "midi",
+       "de": "zwölf Uhr mittags, Mittag, mittags"
+      },
+      {
+       "fund": "M3",
+       "fr": "minuit",
+       "de": "Mitternacht"
+      },
+      {
+       "fund": "M3",
+       "fr": "Allô ?",
+       "de": "Hallo?"
+      },
+      {
+       "fund": "M3",
+       "fr": "passer (chez qn)",
+       "de": "(bei jdm) vorbeikommen, (bei jdm) vorbeigehen"
+      },
+      {
+       "fund": "M3",
+       "fr": "demain",
+       "de": "morgen"
+      },
+      {
+       "fund": "M3",
+       "fr": "À quelle heure ?",
+       "de": "Um wie viel Uhr?"
+      },
+      {
+       "fund": "M3",
+       "fr": "à … heure(s)",
+       "de": "um … Uhr"
+      },
+      {
+       "fund": "M3",
+       "fr": "on pourrait",
+       "de": "wir könnten, man könnte"
+      },
+      {
+       "fund": "M3",
+       "fr": "Ça marche !",
+       "de": "Geht klar!, Das klappt!, O.k.!"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u4",
+   "name": "Unité 4",
+   "teile": [
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "4/Voc",
+       "fr": "lundi",
+       "de": "Montag, am Montag"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "mardi",
+       "de": "Dienstag, am Dienstag"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "mercredi",
+       "de": "Mittwoch, am Mittwoch"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "jeudi",
+       "de": "Donnerstag, am Donnerstag"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "vendredi",
+       "de": "Freitag, am Freitag"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "dimanche",
+       "de": "Sonntag, am Sonntag"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "le matin",
+       "de": "der Morgen, der Vormittag, am Vormittag",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "l'après-midi",
+       "de": "der Nachmittag, am Nachmittag",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "l'emploi du temps",
+       "de": "der Stundenplan",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "l'histoire-géo",
+       "de": "Geschichte und Erdkunde",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "l'histoire",
+       "de": "die Geschichte",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la géographie",
+       "de": "(die) Geografie, (die) Erdkunde",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la récré (fam.) / la récréation",
+       "de": "die Pause",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "l'anglais",
+       "de": "Englisch",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "l'EPS (= l'Éducation physique et sportive)",
+       "de": "Sport",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "les maths (fam.) / les mathématiques",
+       "de": "Mathe/Mathematik",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "les SVT (= les sciences de la vie et de la Terre)",
+       "de": "Biologie",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la techno(logie)",
+       "de": "Technik",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "les sciences physiques",
+       "de": "Physik",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "le latin",
+       "de": "Latein",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "les arts plastiques",
+       "de": "Kunst",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "en",
+       "de": "in (+ Fach)"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la cantine",
+       "de": "die Kantine, der Speisesaal",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "la permanence",
+       "de": "beaufsichtigte Freiarbeit zum Lernen und Hausaufgaben machen",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "je ne peux pas",
+       "de": "ich kann nicht"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "Mais non !",
+       "de": "Aber nein!, Nicht doch!"
+      },
+      {
+       "fund": "4/Voc",
+       "fr": "compliqué/compliquée",
+       "de": "kompliziert"
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "4/1",
+       "fr": "la salle",
+       "de": "der (Unterrichts-)Raum",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/1",
+       "fr": "la salle des profs",
+       "de": "das Lehrerzimmer",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le bureau",
+       "de": "das Büro",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les bureaux"
+      },
+      {
+       "fund": "4/1",
+       "fr": "le CDI (= le Centre de Documentation et d'Information)",
+       "de": "die Schulbibliothek",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "l'info (fam.) / l'information",
+       "de": "die Info, die Information",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "le/la CPE (= le/la Conseiller/-ère principal/e d'Éducation)",
+       "de": "der/die Schulbetreuer/in"
+      },
+      {
+       "fund": "4/1",
+       "fr": "la mission",
+       "de": "die Mission",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le papier",
+       "de": "das Papier, (hier:) das Dokument",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "aller",
+       "de": "gehen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "le billet de retard",
+       "de": "Nachweis über das Zuspätkommen in der Schule",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "la solution",
+       "de": "die Lösung",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/1",
+       "fr": "le point faible",
+       "de": "der Schwachpunkt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "sévère",
+       "de": "streng"
+      },
+      {
+       "fund": "4/1",
+       "fr": "le principal / la principale",
+       "de": "der/die Schulleiter/in",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "organiser qc",
+       "de": "etw. organisieren"
+      },
+      {
+       "fund": "4/1",
+       "fr": "être pressé/pressée",
+       "de": "in Eile sein, es eilig haben"
+      },
+      {
+       "fund": "4/1",
+       "fr": "le/la documentaliste",
+       "de": "der/die Bibliothekar/in"
+      },
+      {
+       "fund": "4/1",
+       "fr": "ranger qc",
+       "de": "etw. aufräumen, etw. ein-/ausräumen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "préparer qc",
+       "de": "etw. vorbereiten"
+      },
+      {
+       "fund": "4/1",
+       "fr": "l'exposé",
+       "de": "der Vortrag",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "oublier qc",
+       "de": "etw. vergessen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "tout",
+       "de": "alles"
+      },
+      {
+       "fund": "4/1",
+       "fr": "le surveillant / la surveillante",
+       "de": "die Aufsichtsperson",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/1",
+       "fr": "surveiller qn/qc",
+       "de": "jdn/etw. überwachen, jdn/etw. beaufsichtigen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "Attention !",
+       "de": "Achtung!"
+      },
+      {
+       "fund": "4/1",
+       "fr": "téléphoner",
+       "de": "telefonieren, (jdn) anrufen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "manger qc",
+       "de": "etw. essen"
+      },
+      {
+       "fund": "4/1",
+       "fr": "même",
+       "de": "sogar"
+      },
+      {
+       "fund": "4/1",
+       "fr": "partout",
+       "de": "überall"
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "4/2",
+       "fr": "notre/nos",
+       "de": "unser/e"
+      },
+      {
+       "fund": "4/2",
+       "fr": "votre/vos",
+       "de": "euer/eure, Ihr/e"
+      },
+      {
+       "fund": "4/2",
+       "fr": "leur/leurs",
+       "de": "ihr/e"
+      },
+      {
+       "fund": "4/2",
+       "fr": "Pourquoi… ?",
+       "de": "Warum … ?"
+      },
+      {
+       "fund": "4/2",
+       "fr": "la carte",
+       "de": "die Karte",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/2",
+       "fr": "allemand/allemande",
+       "de": "deutsch"
+      },
+      {
+       "fund": "4/2",
+       "fr": "le/la corres (fam.) / le correspondant / la correspondante",
+       "de": "der/die Brieffreund/in, der/die Austauschpartner/in"
+      },
+      {
+       "fund": "4/2",
+       "fr": "déjà",
+       "de": "schon, bereits"
+      },
+      {
+       "fund": "4/2",
+       "fr": "la journée",
+       "de": "der Tag",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/2",
+       "fr": "ensuite",
+       "de": "dann"
+      },
+      {
+       "fund": "4/2",
+       "fr": "la matière",
+       "de": "das Schulfach",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/2",
+       "fr": "trop",
+       "de": "total, voll"
+      },
+      {
+       "fund": "4/2",
+       "fr": "bizarre",
+       "de": "merkwürdig"
+      },
+      {
+       "fund": "4/2",
+       "fr": "le cauchemar",
+       "de": "der Albtraum",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/2",
+       "fr": "la cour",
+       "de": "der Schulhof, der Hof",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/2",
+       "fr": "le terrain",
+       "de": "(hier:) der Platz",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/2",
+       "fr": "Ça dépend.",
+       "de": "Es kommt darauf an."
+      },
+      {
+       "fund": "4/2",
+       "fr": "avoir de la chance",
+       "de": "Glück haben"
+      },
+      {
+       "fund": "4/2",
+       "fr": "expliquer qc",
+       "de": "etw. erklären"
+      },
+      {
+       "fund": "4/2",
+       "fr": "raconter sa vie",
+       "de": "seine Lebensgeschichte erzählen"
+      },
+      {
+       "fund": "4/2",
+       "fr": "râler",
+       "de": "meckern, motzen"
+      },
+      {
+       "fund": "4/2",
+       "fr": "terminer (qc)",
+       "de": "enden, etw. beenden, aufhören"
+      },
+      {
+       "fund": "4/2",
+       "fr": "commencer qc",
+       "de": "etw. beginnen"
+      },
+      {
+       "fund": "4/2",
+       "fr": "la fois",
+       "de": "das Mal",
+       "pos": "Nomen, f.",
+       "hinweis": "Plural: les fois"
+      },
+      {
+       "fund": "4/2",
+       "fr": "Ça suffit !",
+       "de": "Es/Das reicht!"
+      },
+      {
+       "fund": "4/2",
+       "fr": "Quand… ?",
+       "de": "Wann … ?"
+      },
+      {
+       "fund": "4/2",
+       "fr": "avoir cours",
+       "de": "Unterricht haben"
+      },
+      {
+       "fund": "4/2",
+       "fr": "le cours",
+       "de": "der Unterricht, die Unterrichtsstunde",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "4/3",
+       "fr": "donner son avis (sur qc)",
+       "de": "seine Meinung (zu etw.) äußern"
+      },
+      {
+       "fund": "4/3",
+       "fr": "donner qc",
+       "de": "etw. geben, (hier:) etw. aufgeben"
+      },
+      {
+       "fund": "4/3",
+       "fr": "le commentaire",
+       "de": "der Kommentar",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/3",
+       "fr": "l'an",
+       "de": "das Jahr",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/3",
+       "fr": "l'ambiance",
+       "de": "die Stimmung, die Atmosphäre",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/3",
+       "fr": "beaucoup de qc",
+       "de": "viel/viele"
+      },
+      {
+       "fund": "4/3",
+       "fr": "trop de qc",
+       "de": "zu viel/viele"
+      },
+      {
+       "fund": "4/3",
+       "fr": "assez de qc",
+       "de": "genug, genügend"
+      },
+      {
+       "fund": "4/3",
+       "fr": "ne … pas assez de qc",
+       "de": "nicht genug, nicht genügend"
+      },
+      {
+       "fund": "4/3",
+       "fr": "ne … pas de qc",
+       "de": "kein/keine/keinen"
+      },
+      {
+       "fund": "4/3",
+       "fr": "ne … plus de qc",
+       "de": "kein/keine/keinen … mehr"
+      },
+      {
+       "fund": "4/3",
+       "fr": "je trouve que",
+       "de": "ich finde, dass"
+      },
+      {
+       "fund": "4/3",
+       "fr": "la rentrée",
+       "de": "der Schuljahresbeginn",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "4/3",
+       "fr": "l'ascenseur",
+       "de": "der Aufzug",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "4/3",
+       "fr": "le bruit",
+       "de": "der Lärm, das Geräusch",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/3",
+       "fr": "gaspiller qc",
+       "de": "etw. verschwenden"
+      },
+      {
+       "fund": "4/3",
+       "fr": "le pain",
+       "de": "das Brot",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/3",
+       "fr": "le plat",
+       "de": "das Hauptgericht, das Gericht",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "4/3",
+       "fr": "propre",
+       "de": "sauber"
+      },
+      {
+       "fund": "4/3",
+       "fr": "vite",
+       "de": "schnell"
+      },
+      {
+       "fund": "4/3",
+       "fr": "Au secours !",
+       "de": "Zu Hilfe!"
+      },
+      {
+       "fund": "4/3",
+       "fr": "nul/nulle",
+       "de": "miserabel, doof, schlecht"
+      },
+      {
+       "fund": "4/3",
+       "fr": "bon/bonne",
+       "de": "gut, lecker"
+      },
+      {
+       "fund": "4/3",
+       "fr": "être nul/nulle en qc",
+       "de": "in etw. schlecht sein, in etw. eine Niete sein"
+      },
+      {
+       "fund": "4/3",
+       "fr": "être bon/bonne en qc",
+       "de": "in etw. gut sein"
+      },
+      {
+       "fund": "4/3",
+       "fr": "le gâchimètre",
+       "de": "Messglas zur Bewusstmachung der Lebensmittelverschwendung",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "m4",
+     "name": "Module 4",
+     "woerter": [
+      {
+       "fund": "M4",
+       "fr": "le menu",
+       "de": "das Menü",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "l'entrée",
+       "de": "die Vorspeise",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M4",
+       "fr": "la soupe",
+       "de": "die Suppe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M4",
+       "fr": "la carotte",
+       "de": "die Karotte, die Möhre",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M4",
+       "fr": "le riz",
+       "de": "der Reis",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le légume / les légumes (m. pl.)",
+       "de": "das Gemüse",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le steak",
+       "de": "das Steak",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le gratin",
+       "de": "das Gratin, der Auflauf",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le potiron",
+       "de": "der Kürbis",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le dessert",
+       "de": "die Nachspeise, das Dessert",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le gâteau aux pommes",
+       "de": "der Apfelkuchen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "le gâteau",
+       "de": "der Kuchen",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les gâteaux"
+      },
+      {
+       "fund": "M4",
+       "fr": "la pomme",
+       "de": "der Apfel",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M4",
+       "fr": "le fruit",
+       "de": "die Frucht, das Obst",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M4",
+       "fr": "avoir faim",
+       "de": "Hunger haben"
+      },
+      {
+       "fund": "M4",
+       "fr": "avoir soif",
+       "de": "Durst haben"
+      },
+      {
+       "fund": "M4",
+       "fr": "prendre qc",
+       "de": "etw. nehmen"
+      },
+      {
+       "fund": "M4",
+       "fr": "orange",
+       "de": "orange"
+      },
+      {
+       "fund": "M4",
+       "fr": "comme ça",
+       "de": "so"
+      },
+      {
+       "fund": "M4",
+       "fr": "sans",
+       "de": "ohne"
+      },
+      {
+       "fund": "M4",
+       "fr": "la viande",
+       "de": "das Fleisch",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M4",
+       "fr": "végétarien/végétarienne",
+       "de": "vegetarisch"
+      },
+      {
+       "fund": "M4",
+       "fr": "Bon appétit !",
+       "de": "Guten Appetit!"
+      },
+      {
+       "fund": "M4",
+       "fr": "Tu me passes … ?",
+       "de": "Reichst du mir …?"
+      },
+      {
+       "fund": "M4",
+       "fr": "l'eau",
+       "de": "das Wasser",
+       "pos": "Nomen",
+       "hinweis": "Plural: les eaux"
+      },
+      {
+       "fund": "M4",
+       "fr": "beurk",
+       "de": "bäh"
+      },
+      {
+       "fund": "M4",
+       "fr": "le sel",
+       "de": "das Salz",
+       "pos": "Nomen, m."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u5",
+   "name": "Unité 5",
+   "teile": [
+    {
+     "id": "a",
+     "name": "Teil A",
+     "woerter": [
+      {
+       "fund": "5/A",
+       "fr": "le pique-nique",
+       "de": "das Picknick",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/A",
+       "fr": "au bord de qc",
+       "de": "am Ufer von etw."
+      },
+      {
+       "fund": "5/A",
+       "fr": "le festival",
+       "de": "das Festival",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/A",
+       "fr": "le marché",
+       "de": "der Markt",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/A",
+       "fr": "la Seine",
+       "de": "die Seine",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/A",
+       "fr": "la Folie",
+       "de": "(hier:) Bauwerke im parc de la Villette, (wörtlich:) der Wahnsinn, die Verrücktheit",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/A",
+       "fr": "la Villette Sonique",
+       "de": "Musikfestival im parc de la Villette",
+       "pos": "Nomen, f."
+      }
+     ]
+    },
+    {
+     "id": "voc",
+     "name": "Vocabulaire",
+     "woerter": [
+      {
+       "fund": "5/Voc",
+       "fr": "la liste",
+       "de": "die Liste",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "les courses",
+       "de": "die Einkäufe",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "il faut qc",
+       "de": "man braucht / wir brauchen etw."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "la farine",
+       "de": "das Mehl",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le lait",
+       "de": "die Milch",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "les chips",
+       "de": "die Kartoffelchips",
+       "pos": "Nomen, pl."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "l'œuf",
+       "de": "das Ei",
+       "pos": "Nomen",
+       "hinweis": "Plural: les œufs"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "la pomme de terre",
+       "de": "die Kartoffel",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "la fraise",
+       "de": "die Erdbeere",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le beurre",
+       "de": "die Butter",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "la banane",
+       "de": "die Banane",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le fromage",
+       "de": "der Käse",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le jambon",
+       "de": "der Schinken",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le miel",
+       "de": "der Honig",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le coca",
+       "de": "die Cola",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le biscuit",
+       "de": "der Keks",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le poivre",
+       "de": "der Pfeffer",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "la crème",
+       "de": "die Crème fraîche, die Sahne",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le jus",
+       "de": "der Saft",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "le sucre",
+       "de": "der Zucker",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "l'orange",
+       "de": "die Orange, die Apfelsine",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "la boisson",
+       "de": "das Getränk",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/Voc",
+       "fr": "miam",
+       "de": "lecker"
+      }
+     ]
+    },
+    {
+     "id": "1",
+     "name": "Teil 1",
+     "woerter": [
+      {
+       "fund": "5/1",
+       "fr": "on se retrouve à",
+       "de": "wir treffen uns (+ Ort/Zeit)"
+      },
+      {
+       "fund": "5/1",
+       "fr": "je voudrais",
+       "de": "ich möchte gern etw. tun"
+      },
+      {
+       "fund": "5/1",
+       "fr": "Ça te dit ? / Ça vous dit ?",
+       "de": "Sagt dir/euch das zu?"
+      },
+      {
+       "fund": "5/1",
+       "fr": "passer",
+       "de": "(hier:) verbringen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "apporter qc",
+       "de": "etw. mitbringen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'idée",
+       "de": "die Idee",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "Bonne idée !",
+       "de": "Gute Idee!"
+      },
+      {
+       "fund": "5/1",
+       "fr": "ce week-end",
+       "de": "an diesem Wochenende"
+      },
+      {
+       "fund": "5/1",
+       "fr": "vouloir qc/(+ inf.)",
+       "de": "etw. wollen / etw. tun wollen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "pouvoir",
+       "de": "etw. tun können"
+      },
+      {
+       "fund": "5/1",
+       "fr": "préférer qc/",
+       "de": "etw. (zu tun) bevorzugen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "le film",
+       "de": "der Film",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'atelier",
+       "de": "der Workshop, das Atelier",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "le jardin",
+       "de": "der Garten",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "cher/chère",
+       "de": "teuer"
+      },
+      {
+       "fund": "5/1",
+       "fr": "gratuit/gratuite",
+       "de": "kostenlos, gratis"
+      },
+      {
+       "fund": "5/1",
+       "fr": "le spectacle",
+       "de": "die Vorstellung, die Show",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "ne … pas trop",
+       "de": "nicht so sehr, nicht so gern"
+      },
+      {
+       "fund": "5/1",
+       "fr": "quelque chose",
+       "de": "etwas"
+      },
+      {
+       "fund": "5/1",
+       "fr": "quelqu'un",
+       "de": "jemand"
+      },
+      {
+       "fund": "5/1",
+       "fr": "appeler qn",
+       "de": "jdn anrufen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "tout le monde",
+       "de": "alle"
+      },
+      {
+       "fund": "5/1",
+       "fr": "le hip-hop",
+       "de": "der Hip-Hop",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/1",
+       "fr": "l'électro",
+       "de": "die Elektromusik",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "5/1",
+       "fr": "Attends !",
+       "de": "Warte!"
+      },
+      {
+       "fund": "5/1",
+       "fr": "maman",
+       "de": "Mama"
+      },
+      {
+       "fund": "5/1",
+       "fr": "papa",
+       "de": "Papa"
+      },
+      {
+       "fund": "5/1",
+       "fr": "la Recyclerie",
+       "de": "ökologischer städtischer Bauernhof entlang einer stillgelegten Bahnstrecke",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/1",
+       "fr": "le Centquatre (104)",
+       "de": "Kulturzentrum im 19. Pariser Arrondissement",
+       "pos": "Nomen, m."
+      }
+     ]
+    },
+    {
+     "id": "2",
+     "name": "Teil 2",
+     "woerter": [
+      {
+       "fund": "5/2",
+       "fr": "faire les courses",
+       "de": "einkaufen"
+      },
+      {
+       "fund": "5/2",
+       "fr": "acheter qc",
+       "de": "etw. kaufen"
+      },
+      {
+       "fund": "5/2",
+       "fr": "Combien de… ?",
+       "de": "Wie viel(e) … ?"
+      },
+      {
+       "fund": "5/2",
+       "fr": "Combien… ?",
+       "de": "Wie viel … ?"
+      },
+      {
+       "fund": "5/2",
+       "fr": "la bouteille",
+       "de": "die Flasche",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/2",
+       "fr": "la madeleine",
+       "de": "die Madeleine",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/2",
+       "fr": "le paquet",
+       "de": "die Packung, das Paket",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "le sandwich",
+       "de": "das Sandwich",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "l'argent",
+       "de": "das Geld",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "5/2",
+       "fr": "l'euro",
+       "de": "der Euro",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "5/2",
+       "fr": "cent",
+       "de": "hundert"
+      },
+      {
+       "fund": "5/2",
+       "fr": "le centime",
+       "de": "der Cent",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "le kilo",
+       "de": "das Kilo",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/2",
+       "fr": "Et avec ça ?",
+       "de": "Darf es sonst noch etwas sein?"
+      },
+      {
+       "fund": "5/2",
+       "fr": "C'est tout.",
+       "de": "Das ist alles."
+      },
+      {
+       "fund": "5/2",
+       "fr": "ça fait",
+       "de": "das macht (+ Preis)"
+      },
+      {
+       "fund": "5/2",
+       "fr": "ça coûte",
+       "de": "das kostet (+ Preis)"
+      },
+      {
+       "fund": "5/2",
+       "fr": "la baguette",
+       "de": "das Baguette",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/2",
+       "fr": "C'est quoi ?",
+       "de": "Was ist das?"
+      },
+      {
+       "fund": "5/2",
+       "fr": "sucré/sucrée",
+       "de": "süß, gezuckert"
+      },
+      {
+       "fund": "5/2",
+       "fr": "salé/salée",
+       "de": "salzig, gesalzen"
+      },
+      {
+       "fund": "5/2",
+       "fr": "la quiche",
+       "de": "die Quiche",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/2",
+       "fr": "la chouquette",
+       "de": "die Chouquette",
+       "pos": "Nomen, f."
+      }
+     ]
+    },
+    {
+     "id": "3",
+     "name": "Teil 3",
+     "woerter": [
+      {
+       "fund": "5/3",
+       "fr": "le secret",
+       "de": "das Geheimnis",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/3",
+       "fr": "le site (web)",
+       "de": "die (Web-)Seite",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/3",
+       "fr": "la cuisine",
+       "de": "(hier:) das Kochen",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "la chimie",
+       "de": "die Chemie",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "l'exemple",
+       "de": "das Beispiel",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "5/3",
+       "fr": "la forme",
+       "de": "die Form",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "la bosse",
+       "de": "die Beule",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "la température",
+       "de": "die Temperatur",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "le four",
+       "de": "der Backofen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/3",
+       "fr": "chaud/chaude",
+       "de": "warm, heiß"
+      },
+      {
+       "fund": "5/3",
+       "fr": "froid/froide",
+       "de": "kalt"
+      },
+      {
+       "fund": "5/3",
+       "fr": "la pâte",
+       "de": "der Teig",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "le choc",
+       "de": "der Schock",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/3",
+       "fr": "intéressant/intéressante",
+       "de": "interessant"
+      },
+      {
+       "fund": "5/3",
+       "fr": "la recette",
+       "de": "das (Koch-)Rezept",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "le gramme",
+       "de": "das Gramm",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "5/3",
+       "fr": "la levure",
+       "de": "das Backpulver, die Hefe",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "5/3",
+       "fr": "mille",
+       "de": "tausend"
+      }
+     ]
+    },
+    {
+     "id": "m5",
+     "name": "Module 5",
+     "woerter": [
+      {
+       "fund": "M5",
+       "fr": "Joyeux anniversaire !",
+       "de": "Herzlichen Glückwunsch zum Geburtstag!"
+      },
+      {
+       "fund": "M5",
+       "fr": "l'anniversaire",
+       "de": "der Geburtstag",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M5",
+       "fr": "premier/première",
+       "de": "erster/erste/erstes"
+      },
+      {
+       "fund": "M5",
+       "fr": "janvier",
+       "de": "Januar"
+      },
+      {
+       "fund": "M5",
+       "fr": "février",
+       "de": "Februar"
+      },
+      {
+       "fund": "M5",
+       "fr": "mars",
+       "de": "März"
+      },
+      {
+       "fund": "M5",
+       "fr": "avril",
+       "de": "April"
+      },
+      {
+       "fund": "M5",
+       "fr": "mai",
+       "de": "Mai"
+      },
+      {
+       "fund": "M5",
+       "fr": "juin",
+       "de": "Juni"
+      },
+      {
+       "fund": "M5",
+       "fr": "juillet",
+       "de": "Juli"
+      },
+      {
+       "fund": "M5",
+       "fr": "août",
+       "de": "August"
+      },
+      {
+       "fund": "M5",
+       "fr": "septembre",
+       "de": "September"
+      },
+      {
+       "fund": "M5",
+       "fr": "octobre",
+       "de": "Oktober"
+      },
+      {
+       "fund": "M5",
+       "fr": "novembre",
+       "de": "November"
+      },
+      {
+       "fund": "M5",
+       "fr": "décembre",
+       "de": "Dezember"
+      },
+      {
+       "fund": "M5",
+       "fr": "la fête",
+       "de": "die Feier",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "fêter qc",
+       "de": "etw. feiern"
+      },
+      {
+       "fund": "M5",
+       "fr": "inviter qn",
+       "de": "jdn einladen"
+      },
+      {
+       "fund": "M5",
+       "fr": "l'invitation",
+       "de": "die Einladung",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M5",
+       "fr": "le skate",
+       "de": "das Skateboard",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "la soirée",
+       "de": "der Abend",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M5",
+       "fr": "le camping",
+       "de": "das Zelten, (auch:) der Zeltplatz",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "le sac de couchage",
+       "de": "der Schlafsack",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M5",
+       "fr": "le cadeau",
+       "de": "das Geschenk",
+       "pos": "Nomen, m.",
+       "hinweis": "Plural: les cadeaux"
+      },
+      {
+       "fund": "M5",
+       "fr": "Je compte sur toi.",
+       "de": "Ich zähle auf dich."
+      }
+     ]
+    },
+    {
+     "id": "m6",
+     "name": "Module 6",
+     "woerter": [
+      {
+       "fund": "M6",
+       "fr": "la carte postale",
+       "de": "die Postkarte",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M6",
+       "fr": "la balade",
+       "de": "der Spaziergang, (auch:) die Spazierfahrt",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M6",
+       "fr": "le VTT (= le vélo tout-terrain)",
+       "de": "das Mountainbike",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "la montagne",
+       "de": "der Berg, das Gebirge",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M6",
+       "fr": "il pleut",
+       "de": "es regnet"
+      },
+      {
+       "fund": "M6",
+       "fr": "il fait (beau/froid/chaud)",
+       "de": "es ist (schön/kalt/warm)"
+      },
+      {
+       "fund": "M6",
+       "fr": "le soleil",
+       "de": "die Sonne",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "rester",
+       "de": "bleiben"
+      },
+      {
+       "fund": "M6",
+       "fr": "j'espère que",
+       "de": "ich hoffe, dass"
+      },
+      {
+       "fund": "M6",
+       "fr": "arriver",
+       "de": "ankommen"
+      },
+      {
+       "fund": "M6",
+       "fr": "bientôt",
+       "de": "bald"
+      },
+      {
+       "fund": "M6",
+       "fr": "À bientôt !",
+       "de": "Bis bald!"
+      },
+      {
+       "fund": "M6",
+       "fr": "cher/chère (+ Anrede)",
+       "de": "lieber/liebe (+ Anrede)"
+      },
+      {
+       "fund": "M6",
+       "fr": "le rêve",
+       "de": "der Traum",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "d'abord",
+       "de": "zuerst"
+      },
+      {
+       "fund": "M6",
+       "fr": "la plage",
+       "de": "der Strand",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M6",
+       "fr": "rentrer",
+       "de": "nach Hause fahren/gehen"
+      },
+      {
+       "fund": "M6",
+       "fr": "après",
+       "de": "danach"
+      },
+      {
+       "fund": "M6",
+       "fr": "c'est l'heure de qc",
+       "de": "es ist Zeit für etw."
+      },
+      {
+       "fund": "M6",
+       "fr": "la sieste",
+       "de": "der Mittagsschlaf, die Siesta",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M6",
+       "fr": "le portable",
+       "de": "das Handy",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "le soir",
+       "de": "der Abend, abends, am Abend",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "le jour",
+       "de": "der Tag, tagsüber, am Tag",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "la mer",
+       "de": "das Meer, die See",
+       "pos": "Nomen, f."
+      },
+      {
+       "fund": "M6",
+       "fr": "dehors",
+       "de": "draußen"
+      },
+      {
+       "fund": "M6",
+       "fr": "longtemps",
+       "de": "lange"
+      },
+      {
+       "fund": "M6",
+       "fr": "le volcan",
+       "de": "der Vulkan",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "facile",
+       "de": "leicht, einfach"
+      },
+      {
+       "fund": "M6",
+       "fr": "le bisou",
+       "de": "das Küsschen",
+       "pos": "Nomen, m."
+      },
+      {
+       "fund": "M6",
+       "fr": "l'Auvergne",
+       "de": "die Auvergne",
+       "pos": "Nomen"
+      },
+      {
+       "fund": "M6",
+       "fr": "le Tour de France",
+       "de": "die Tour de France",
+       "pos": "Nomen, m."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
