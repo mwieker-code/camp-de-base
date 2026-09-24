@@ -1,0 +1,39 @@
+/* Beispielsaetze: eigene, nicht aus dem Lehrwerk.
+
+   Klasse 7 traegt zu jedem Eintrag einen Satz aus
+   content/beispiele-aplus1.tsv. Die Seite muss genau diesen Satz zeigen,
+   ohne die eckigen Klammern der Luecke, und im Woerterbuch muss jeder
+   Satz auftauchen. Klassen ohne Saetze duerfen keine leeren Zeilen
+   zeigen. */
+const {JSDOM}=require('jsdom'),fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+const tabelle=band=>{
+  const p='content/beispiele-aplus'+band+'.tsv';
+  if(!fs.existsSync(p))return {};
+  const out={};
+  for(const z of fs.readFileSync(p,'utf8').split(/\r?\n/).slice(1)){
+    if(!z.trim())continue;
+    const [k,,satz]=z.split('\t');
+    if(satz!=='-')out[k]=satz.replace(/[\[\]]/g,'');
+  }
+  return out;
+};
+let count=0;
+for(const [year,band] of [['year7',1],['year8',2],['year9',3],['year10',4]]){
+ const html=fs.readFileSync(year+'/index.html','utf8');const dom=new JSDOM(html,{runScripts:'outside-only',url:'https://example.org/'+year+'/'}),w=dom.window,run=s=>vm.runInContext(s,dom.getInternalVMContext());w.scrollTo=()=>{};
+ for(const m of html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g))if(m[1].trim())run(m[1]);run(fs.readFileSync('assets/learning.js','utf8'));
+ const words=run('Object.values(SETS).flat()');
+ const buch=JSON.parse(fs.readFileSync('content/aplus'+band+'.json','utf8'));
+ const saetze=tabelle(band);
+ const erwartet=buch.einheiten.flatMap(e=>e.teile.flatMap(t=>t.woerter.map(x=>saetze[x.fund+'|'+x.fr]||'')));
+ assert.equal(words.length,erwartet.length,year+': Anzahl der Eintraege');
+ words.forEach((v,i)=>{
+  assert.equal(v.example_en||'',erwartet[i],year+': Satz zu "'+v.en+'"');
+  if(v.example_en){assert(!/[\[\]]/.test(v.example_en),year+': Klammer im Satz');assert(v.example_en.split(/\s+/).length>=2,year+': Satz zu kurz: '+v.example_en);}
+ });
+ const mit=words.filter(v=>v.example_en).length;
+ if(year==='year7')assert.equal(mit,words.length,'year7: nicht jedes Wort hat einen Satz');
+ const d=w.document;d.querySelector('#allBtn').click();assert.equal(d.querySelectorAll('.vex').length,mit,year+' example rows');
+ for(const el of d.querySelectorAll('.vex'))assert(el.textContent.trim());
+ count+=mit;console.log(year+': '+mit+' von '+words.length+' Eintraegen mit eigenem Beispielsatz, Woerterbuch zeigt sie');w.close();
+}
+console.log(count+' Beispielsaetze geprueft');

@@ -1,0 +1,129 @@
+body{background:var(--ground)}
+.wrap{max-width:1000px;padding-top:40px}
+.intro{font-size:16px;max-width:62ch;margin:20px 0 30px;line-height:1.7}
+#cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+#cards .card{--card-ink:#fff;position:relative;overflow:hidden;margin:0;padding:25px 112px 25px 25px;min-height:185px;border:1px solid transparent;border-radius:var(--radius-lg);background:var(--unit);color:var(--card-ink);box-shadow:0 4px 16px #173e4518;transition:box-shadow .18s,transform .18s}
+#cards .card[href="year6/"] .menu-art{color:#fff;opacity:1}
+#cards .card:hover{transform:translateY(-3px);box-shadow:0 9px 24px #173e4530}
+#cards .card:focus-visible{outline:3px solid var(--unit);outline-offset:4px}
+#cards .row{display:flex;align-items:flex-start;flex-direction:column;gap:9px}
+#cards .name{font-family:inherit;font-size:27px;font-weight:700;letter-spacing:-.025em;line-height:1.2;color:var(--card-ink)}
+#cards .meta{font-family:inherit;text-transform:none;letter-spacing:0;font-size:12px;font-weight:600;padding:4px 9px;border-radius:var(--radius-pill);background:#00000018;color:var(--card-ink);white-space:normal}
+#cards .desc{font-size:14px;line-height:1.6;color:var(--card-ink);margin-top:12px}
+.menu-art{position:absolute;right:20px;top:42px;width:76px;height:76px;color:var(--card-ink);opacity:.8}
+.menu-arrow{position:absolute;right:20px;bottom:18px;border-radius:50%;background:#00000018;width:28px;height:28px;display:grid;place-items:center;color:var(--card-ink)}
+#cards .card:last-child{grid-column:1/-1;min-height:160px}
+@media(max-width:620px){.wrap{padding-top:24px}#cards{grid-template-columns:1fr;gap:14px}#cards .card{min-height:170px;padding:22px 100px 22px 20px}#cards .name{font-size:25px}#cards .card:last-child{grid-column:auto}}
+@media(prefers-reduced-motion:reduce){#cards .card{transition:none}#cards .card:hover{transform:none}}
+@media print{#cards .card{box-shadow:none;break-inside:avoid}}
+
+/* Compact phone portrait menu; retain the spacious landscape layout. */
+@media(max-width:620px) and (orientation:portrait){
+ .wrap{padding:18px 14px 24px}
+ #cards{gap:9px;margin-top:18px}
+ #cards .card,#cards .card:last-child{min-height:70px;padding:14px 68px 14px 16px;border-radius:var(--radius-md)}
+ #cards .row{flex-direction:row;align-items:center;gap:6px 12px;flex-wrap:wrap}
+ #cards .name{font-size:21px;line-height:1.25}
+ #cards .meta{font-size:11px;padding:3px 6px}
+ #cards .desc{display:none}
+ #cards .menu-art{width:36px;height:36px;right:16px;top:50%;transform:translateY(-50%)}
+ #cards .menu-arrow{display:none}
+ .foot{margin-top:20px}
+}
+
+/* Bilingualer Unterricht: aufklappbarer Bereich unter den Jahrgangskacheln.
+   Eigene Klassen, damit die Kacheln der Startseite unberührt bleiben. */
+/* Der Bereich schliesst mit demselben Abstand an die Kacheln an wie die
+   Kacheln untereinander - die Werte entsprechen dem gap von #cards. */
+#bili{margin-top:18px}
+@media(max-width:620px){#bili{margin-top:14px}}
+@media(max-width:620px) and (orientation:portrait){#bili{margin-top:9px}}
+.bili-acc{border:1px solid var(--rule);border-radius:var(--radius-lg);background:var(--card);overflow:hidden}
+.bili-acc .bili-acc{border-radius:var(--radius-md)}
+.bili-acc .bili-acc+.bili-acc{margin-top:10px}
+.bili-head{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:18px 20px;border:0;
+  background:var(--unit);color:#fff;font-family:inherit;font-size:16px;cursor:pointer}
+.bili-acc .bili-acc .bili-head{padding:14px 18px}
+.bili-name{font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1.2}
+.bili-acc .bili-acc .bili-name{font-size:19px}
+.bili-meta{font-size:12px;font-weight:600;padding:4px 9px;border-radius:var(--radius-pill);background:#00000018;white-space:normal}
+.bili-art{width:34px;height:34px;flex:0 0 auto;opacity:.9}
+.bili-chev{margin-left:auto;font-size:20px;line-height:1;transition:transform .18s}
+.bili-head[aria-expanded="true"] .bili-chev{transform:rotate(90deg)}
+.bili-head:focus-visible{outline:3px solid #16232B;outline-offset:-4px}
+.bili-body{padding:16px 20px 20px}
+.bili-acc .bili-acc .bili-body{padding:14px 16px 16px}
+.bili-levels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+/* Die Faecher stehen nebeneinander, damit sie als eine Reihe lesbar sind
+   statt als Zweierblock mit einem Nachzuegler. */
+.bili-levels.is-subjects{grid-template-columns:repeat(3,minmax(0,1fr))}
+.bili-level .bili-art{width:30px;height:30px;color:var(--unit)}
+.bili-level{display:flex;align-items:center;gap:14px;padding:14px 16px;min-height:72px;text-decoration:none;
+  background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--unit);border-radius:var(--radius-md);color:var(--ink)}
+a.bili-level{transition:box-shadow .15s,border-color .15s}
+a.bili-level:hover{box-shadow:0 3px 12px #173e4518;border-color:var(--unit)}
+a.bili-level:focus-visible{outline:3px solid var(--unit);outline-offset:3px}
+.bili-level-text{flex:1 1 auto;min-width:0}
+.bili-level-name{display:block;font-size:17px;font-weight:600;letter-spacing:-.01em}
+.bili-level-meta{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ink-soft);margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bili-level-go{font-size:18px;color:var(--unit)}
+.bili-pill{font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:var(--radius-pill);white-space:nowrap;
+  background:#EDE7DC;color:#6B5320;border:1px solid #D8C9A8}
+/* Auf dem Telefon heisst der Bereich kurz "Bili". So traegt er dieselbe
+   Schriftgroesse und dieselbe Kachelhoehe wie die Jahrgangskacheln
+   darueber, statt sich mit dem langen Namen davon abzuheben. */
+@media(max-width:620px){.bili-levels,.bili-levels.is-subjects{grid-template-columns:1fr}
+  .bili-head{padding:15px 16px;gap:10px}
+  .bili-acc .bili-acc .bili-name{font-size:19px}
+  .bili-art{width:30px;height:30px}
+  .bili-body{padding:12px 14px 16px}}
+/* Auf dem Telefon im Hochformat sitzt die Kachel auf denselben Werten wie
+   die Jahrgangskacheln darueber: Name links, Beschriftung rechtsbuendig,
+   Symbol am rechten Rand. Der Pfeil entfaellt hier, weil die Kacheln an
+   dieser Stelle auch keinen tragen. */
+@media(max-width:620px) and (orientation:portrait){
+  #bili>.bili-acc{border-radius:var(--radius-md)}
+  #bili>.bili-acc>.bili-head{position:relative;min-height:68px;padding:14px 68px 14px 16px;gap:12px}
+  /* plus 1px Rahmen oben und unten = 70px wie die Kacheln */
+  #bili>.bili-acc>.bili-head .bili-art{position:absolute;right:16px;top:50%;transform:translateY(-50%);
+    width:36px;height:36px}
+  #bili>.bili-acc>.bili-head .bili-meta{margin-left:auto}
+  #bili>.bili-acc>.bili-head .bili-chev{display:none}}
+@media(prefers-reduced-motion:reduce){.bili-chev,a.bili-level{transition:none}}
+@media print{.bili-acc{break-inside:avoid;box-shadow:none}}
+/* Auftritt und Druckpunkt auch im Hauptmenü */
+@media (prefers-reduced-motion: no-preference){
+  #cards .card:active,.bili-head:active{transform:scale(.985);transition-duration:80ms}
+}
+
+/* =========================================================================
+   DIE STARTSEITE AUF EINEN BLICK
+   Gemessen am 22.09.: Die Startseite ist 1164 Punkte hoch. Ein MacBook
+   Air zeigt 900, ein MacBook Pro 14 zeigt 982 - der braune Bili-Streifen
+   unten wurde angeschnitten. Nur ein Studio Display zeigte alles.
+
+   Die Kacheln tragen 769 der 1164 Punkte. Ihre Mindesthoehe stand fest
+   auf 185, was auf einem hohen Bildschirm grosszuegig aussieht und auf
+   einem flachen die Seite sprengt. Sie waechst jetzt mit dem Fenster
+   mit: nach oben auf dem heutigen Wert begrenzt, damit sich auf grossen
+   Bildschirmen nichts aendert, nach unten begrenzt, damit die Kachel
+   nicht zum Streifen wird. Am MacBook Air passt die Seite danach mit 19
+   Punkten Luft.
+   ========================================================================= */
+@media (min-width:621px){
+  #cards .card{min-height:clamp(104px,13vh,185px);
+    padding-top:clamp(16px,2vh,25px);padding-bottom:clamp(16px,2vh,25px)}
+  #cards .card:last-child{min-height:clamp(88px,11vh,160px)}
+  #cards{gap:clamp(12px,1.6vh,18px)}
+  /* Die Zeichnung auf der Kachel steht fest bei 76 Punkten, 42 von
+     oben. In der niedrigeren Kachel stiesse sie mit dem Pfeil unten
+     rechts zusammen, also rueckt sie mit hoch und wird kleiner. */
+  #cards .card .menu-art{width:clamp(44px,7vh,76px);height:clamp(44px,7vh,76px);
+    top:clamp(16px,2.8vh,42px)}
+  /* Kopfzeile, Fusspolster und Fusszeile geben im flachen Fenster mit nach. */
+  .wrap{padding-top:clamp(20px,3vh,40px);padding-bottom:clamp(20px,4vh,64px)}
+  .masthead{margin-bottom:clamp(16px,2.6vh,28px);padding-bottom:clamp(6px,1.2vh,10px)}
+  .masthead .brandmark{width:clamp(52px,7vh,82px);height:clamp(52px,7vh,82px)}
+  .foot{margin-top:clamp(14px,2.4vh,36px)}
+}

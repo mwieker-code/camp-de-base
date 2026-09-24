@@ -1,0 +1,52 @@
+const {JSDOM}=require('jsdom');
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+const path=require('path');const root=path.resolve(__dirname,'..');let total=0;
+for(const year of ['year7','year8','year9','year10']){
+ const html=fs.readFileSync(path.join(root,year,'index.html'),'utf8');
+ const dom=new JSDOM(html,{runScripts:'outside-only',url:'https://example.org/'+year+'/'});dom.window.scrollTo=()=>{};
+ const run=s=>vm.runInContext(s,dom.getInternalVMContext());
+ for(const m of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g))if(m[1].trim())run(m[1]);
+ run(fs.readFileSync(path.join(root,'assets/learning.js'),'utf8'));
+ /* Der Lueckenmodus fehlte in year7 und year8 ueber Monate: Die Daten
+    waren da, die Logik auch, nur der Schalter in der Runde war beim
+    Anlegen der Seite vergessen worden. Von aussen sah alles heil aus -
+    dieser Test sieht hin. */
+ run("S.topicId=Object.keys(SETS)[0];S.queue=SETS[S.topicId].slice(0,1);S.i=0;"
+   +"S.view='session';S.mode='card';S.answered=null;render();");
+ const aus=dom.window.document.documentElement.classList.contains('ohne-luecken');
+ const modi=[...dom.window.document.querySelectorAll('.switches .switch[data-mode]')]
+   .map(b=>b.dataset.mode).filter(m=>!(aus&&m==='cloze'));
+ /* Camp de Base: Klassen ohne Beispielsaetze blenden den Lueckensatz aus. */
+ const mitSaetzen=run('Object.values(SETS).flat().some(v=>v.example_en)');
+ assert.equal(aus,!mitSaetzen,year+': Lueckensatz '+(mitSaetzen?'ausgeblendet, obwohl es Saetze gibt':'ohne Beispielsaetze angeboten'));
+ for(const m of ['card','mc','type'].concat(mitSaetzen?['cloze']:[]))
+  assert.ok(modi.includes(m),year+': die Uebungsart '+m+' fehlt in der Runde ('+modi.join(' ')+')');
+
+ const rows=run('Object.values(SETS).flat().map(v=>({v,cp:clozeParts(v)})).filter(x=>x.cp)');
+ for(const {v,cp} of rows){
+  const escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  /* Wortgrenzen fuer ganz Unicode: \b kennt kein "é". */
+  assert.ok(!new RegExp('(^|[^\\p{L}])'+escape(cp.word)+'(?![\\p{L}])','iu').test(cp.before+' '+cp.after),year+': answer repeated: '+v.en);
+  assert.equal(cp.before+cp.word+cp.after,v.example_en,year+': sentence preserved');
+  total++;
+ }
+ // Render real cards, including the reported adverb and verb forms.
+ for(const {v} of rows.filter(x=>/verb/.test(x.v.pos)).slice(0,12).concat(rows.filter(x=>x.v.en==='in progress'))){
+  run(`S.topicId=Object.keys(SETS).find(id=>SETS[id].some(v=>v.id===${JSON.stringify(v.id)}));S.queue=[SETS[S.topicId].find(v=>v.id===${JSON.stringify(v.id)})];S.i=0;S.view='session';S.mode='cloze';S.answered=null;render();`);
+  assert.ok(dom.window.document.querySelector('.cloze .gap'),year+': blank displayed');
+  assert.ok(!dom.window.document.querySelector('.cloze .basef'),year+': no English answer hint');
+ }
+ console.log(year+': '+rows.length+' cloze sentences checked');dom.window.close();
+}
+console.log(total+' cloze sentences: no repeated answer or generated base-form hint');
+
+/* Der Lueckensatz steht fett. Er ist die Aufgabe - in den anderen
+   Uebungsarten steht dort das gesuchte Wort in 38 Punkt, hier ein ganzer
+   Satz, und in Grundstaerke wirkte die Karte leer. Das Loesungswort geht
+   eine Stufe hoeher, damit es sich nach dem Pruefen weiter abhebt. */
+{
+  const blatt=fs.readFileSync(path.join(root,'assets/learning.css'),'utf8');
+  assert.match(blatt,/\.cloze\{[^}]*font-weight:600/,'der Lückensatz steht nicht mehr fett');
+  assert.match(blatt,/\.cloze b\{[^}]*font-weight:700/,'das Lösungswort hebt sich nicht mehr ab');
+  console.log('Lückensatz: fett, Lösungswort eine Stufe darüber');
+}

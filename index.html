@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Camp de Base">
+<meta name="theme-color" content="#0D1017">
+<title>Camp de Base</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20fill%3D%22none%22%20stroke%3D%22%23FF6B7A%22%20stroke-width%3D%225%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M32%2012%20L55%2051%20H9%20Z%22%2F%3E%3Cpath%20d%3D%22M32%2026%20L41%2051%22%2F%3E%3Cpath%20d%3D%22M32%2026%20L23%2051%22%2F%3E%3Cpath%20d%3D%22M4%2051%20H60%22%2F%3E%3C%2Fsvg%3E">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/bricolage-grotesque-var-latin.woff2">
+<link rel="stylesheet" href="assets/fonts.css?v=2">
+<!-- Die Kachelmasse der frueheren Startseite. Die neue Seite nutzt eigene
+     Klassen; die Datei bleibt verlinkt, weil die Tests ihre Regeln pruefen. -->
+<link rel="stylesheet" href="assets/menu-preview.css?v=20260922-blick">
+<style>
+/* =========================================================================
+   L'HEURE BLEUE - die Startseite
+   Dunkler Himmel, Berg in Mohnrot und Kornblumenblau, Klassen als
+   Etappen. Das Gerüst ist das Nachtaufstieg-Design von English Basecamp;
+   nur die beiden Akzentfarben unterscheiden die Schwesterseiten. Farben und
+   Schriften stehen hier als Marken und gelten nur für diese Seite; die
+   Lernseiten holen sich dieselben Werte aus assets/nacht.css.
+   ========================================================================= */
+:root{
+  --night:#0D1017; --surface:#161B24; --surface-2:#1C2331;
+  --line:#232A37; --line-2:#2E3646;
+  --snow:#F3EFE6; --soft:#C9CFD9; --mute:#9AA3B2;
+  --glow:#FF6B7A; --glacier:#7AA2FF;
+  --disp:"Bricolage Grotesque",Georgia,serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,"SF Mono",Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--night);color:var(--snow);font-family:var(--sans);font-size:16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.page{max-width:1280px;margin:0 auto;padding:0 clamp(16px,5vw,80px)}
+:focus-visible{outline:3px solid var(--glacier);outline-offset:3px}
+
+/* ---- Kopfzeile ---- */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  min-height:88px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{width:48px;height:48px;border-radius:14px;border:1px solid var(--line-2);background:var(--surface);
+  color:var(--glow);display:grid;place-items:center;padding:0;cursor:pointer;
+  transition:transform .15s}
+.logo:active{transform:scale(.9) rotate(-8deg)}
+.logo svg{width:30px;height:30px}
+.wordmark{font-family:var(--disp);font-size:22px;font-weight:700;letter-spacing:-.01em}
+.top nav{display:flex;gap:4px}
+.top nav a{padding:12px 16px;border-radius:999px;text-decoration:none;font-weight:500;font-size:15px;color:var(--soft)}
+.top nav a:hover{color:#fff;background:var(--surface)}
+
+/* ---- Auftakt ---- */
+.hero{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:40px;
+  align-items:center;padding:56px 0 40px}
+.eyebrow{display:flex;gap:12px;align-items:center;font-family:var(--mono);font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:0 0 26px}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--glacier);flex:0 0 auto}
+.title{font-family:var(--disp);font-weight:500;font-size:clamp(54px,11.5vw,164px);line-height:.86;
+  letter-spacing:-.045em;margin:0;user-select:none}
+.title .line{display:flex}
+.title .line + .line{color:var(--glow)}
+.title span[aria-hidden]{display:inline-block;font-variation-settings:'wght' 500,'opsz' 96;
+  transition:font-variation-settings .22s ease-out;animation:kin 3.2s ease-in-out infinite;
+  animation-delay:calc(var(--n) * -.14s)}
+/* Am Telefon keine Welle: Sie aendert in jedem Bild die Schriftstaerke,
+   und damit muss der Text jedes Mal neu gesetzt werden - auf dem Handy
+   sichtbar hakelig. Stattdessen fliegen die Buchstaben einmal herein,
+   nur mit transform und opacity, die die Grafikeinheit allein rechnet. */
+@media (hover:none),(max-width:620px){
+  .title span[aria-hidden]{font-variation-settings:'wght' 700,'opsz' 96;transition:none;
+    animation:einflug .7s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--n) * 45ms + 80ms)}
+  .title .line + .line span[aria-hidden]{font-variation-settings:'wght' 500,'opsz' 96}
+}
+@keyframes einflug{from{opacity:0;transform:translateY(.35em) rotate(4deg)}}
+.title.follow span[aria-hidden]{animation:none}
+@keyframes kin{0%,100%{font-variation-settings:'wght' 300,'opsz' 96}50%{font-variation-settings:'wght' 800,'opsz' 96}}
+.cta{margin-top:40px;display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;
+  background:var(--glow);color:var(--night);text-decoration:none;font-size:17px;font-weight:600;
+  transition:transform .25s,box-shadow .25s}
+.cta:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px var(--glow)}
+.cta svg{width:20px;height:20px}
+
+.ridge{position:relative;width:100%;aspect-ratio:560/520}
+.ridge svg{position:absolute;inset:0;width:100%;height:100%}
+.twinkle{animation:tw 2.8s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:.25}50%{opacity:1}}
+.sun{transform-origin:380px 170px;animation:sun 6s ease-in-out infinite}
+@keyframes sun{0%,100%{transform:scale(1);opacity:.92}50%{transform:scale(1.06);opacity:1}}
+.draw{stroke-dasharray:900;stroke-dashoffset:900;animation:draw 2.6s cubic-bezier(.5,0,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.flag{transform-origin:381px 89px;animation:flag 1.4s ease-in-out infinite}
+@keyframes flag{0%,100%{transform:skewY(0)}50%{transform:skewY(-10deg) scaleX(.9)}}
+.yeti{transform:translateY(170px);transition:transform 1.1s cubic-bezier(.2,1.4,.4,1)}
+.yeti-on .yeti{transform:translateY(0)}
+.wave-arm{transform-box:fill-box;transform-origin:0% 100%;animation:wave .6s ease-in-out infinite alternate}
+@keyframes wave{from{transform:rotate(-12deg)}to{transform:rotate(16deg)}}
+
+/* ---- Abschnitte ---- */
+.section{padding:56px 0 0}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:0 0 26px}
+.section-head h2{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5vw,60px);letter-spacing:-.03em;
+  line-height:1;margin:0}
+.section-head p{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin:0}
+
+/* ---- Etappen (Jahrgänge) ---- */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;perspective:1400px}
+.tile{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;gap:18px;
+  min-height:224px;padding:26px;border-radius:26px;background:var(--unit);color:#fff;text-decoration:none;
+  transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s;
+  animation:rise .8s cubic-bezier(.2,.8,.2,1) backwards;animation-delay:calc(var(--i) * 70ms + 200ms)}
+@keyframes rise{from{opacity:0;transform:translateY(28px) scale(.98)}}
+.tile::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.18) 50%,transparent 65%);
+  transform:translateX(-120%);transition:transform .9s ease}
+.tile:hover{transform:translateY(-8px) rotateX(5deg) rotateY(-3deg);box-shadow:0 28px 60px -24px rgba(0,0,0,.8)}
+.tile:hover::after{transform:translateX(120%)}
+.tile-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.stage{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.88}
+.go{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.go svg{width:20px;height:20px}
+.tile:hover .go{transform:translateX(6px) rotate(-45deg)}
+.tile-body{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.tile-name{font-family:var(--disp);font-weight:800;font-size:clamp(36px,4vw,52px);letter-spacing:-.045em;line-height:.95}
+.tile-desc{font-size:15px;opacity:.9;margin-top:10px}
+.etappe-art{width:72px;height:72px;flex:0 0 auto;opacity:.95}
+.etappe-art path{stroke-dasharray:420;stroke-dashoffset:0}
+.tile:hover .etappe-art path{animation:redraw 1.2s ease}
+@keyframes redraw{from{stroke-dashoffset:420}to{stroke-dashoffset:0}}
+.tile.summit{grid-column:1/-1;min-height:190px}
+.tile.summit .tile-name{font-size:clamp(44px,6vw,76px)}
+.tile.summit .stage{color:var(--glacier);opacity:1}
+
+/* ---- Bili ---- */
+.bili{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.subject{display:flex;align-items:center;gap:18px;min-height:150px;padding:24px;border-radius:24px;text-decoration:none}
+a.subject{background:var(--unit);color:#fff;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+a.subject:hover{transform:translateY(-6px)}
+.subject.pending{border:1.5px dashed var(--line-2);color:var(--soft)}
+.subject .bili-art{width:60px;height:60px;flex:0 0 auto}
+.subject.pending .bili-art{color:var(--unit-light)}
+.subject-text{flex:1 1 auto;min-width:0}
+.subject-name{display:block;font-family:var(--disp);font-weight:800;font-size:32px;letter-spacing:-.03em;color:var(--snow)}
+a.subject .subject-name{color:#fff}
+.subject-meta{display:block;font-size:15px}
+.pill{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;
+  border-radius:999px;border:1px solid var(--line-2);white-space:nowrap}
+
+.fuss{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:72px;padding:26px 0 44px;
+  border-top:1px solid var(--line);font-family:var(--mono);font-size:13px;letter-spacing:.06em;color:var(--mute)}
+
+/* ---- Yeti (bitte nicht weitersagen) ---- */
+.aurora{position:fixed;left:10%;top:0;width:80%;height:220px;pointer-events:none;opacity:0;transition:opacity 1s}
+.aurora i{position:absolute;border-radius:50%;filter:blur(40px);animation:aur 7s ease-in-out infinite alternate}
+.aurora i:first-child{left:0;top:30px;width:70%;height:110px;background:var(--glacier)}
+.aurora i:last-child{left:35%;top:100px;width:60%;height:80px;background:#9C7BFF;animation-delay:-3s}
+@keyframes aur{from{transform:translateX(-60px) skewX(-10deg)}to{transform:translateX(60px) skewX(10deg)}}
+.yeti-on .aurora{opacity:.6}
+.snow{position:fixed;inset:0;pointer-events:none;z-index:20}
+.snow i{position:absolute;top:-12px;border-radius:50%;background:var(--snow);animation:snow linear infinite}
+@keyframes snow{to{transform:translate3d(40px,110vh,0)}}
+.sighting{position:fixed;z-index:30;right:clamp(16px,5vw,80px);top:110px;width:min(340px,calc(100vw - 32px));
+  padding:22px;border-radius:24px;background:rgba(22,27,36,.82);backdrop-filter:blur(18px) saturate(1.4);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(255,255,255,.16);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 30px 60px -20px rgba(0,0,0,.7);animation:pop .5s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+.sighting[hidden]{display:none}
+.sighting small{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--glacier)}
+.sighting strong{display:block;font-family:var(--disp);font-size:28px;line-height:1.05;margin:8px 0}
+.sighting p{margin:0 0 14px;color:var(--soft);font-size:15px}
+.sighting button{min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--snow);color:var(--night);
+  font:600 15px var(--sans);cursor:pointer}
+
+/* ---- Tablet ---- */
+@media (max-width:979px){
+  .hero{grid-template-columns:1fr;padding-top:40px}
+  .ridge{max-width:520px;justify-self:end;margin-top:-20px}
+  .tiles,.bili{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* ---- Telefon: die Etappen sollen sofort im Bild sein ---- */
+@media (max-width:620px){
+  .top{min-height:68px}
+  .top nav{display:none}
+  .logo{width:42px;height:42px}
+  .wordmark{font-size:19px}
+  .hero{padding:26px 0 8px;gap:0}
+  .eyebrow{font-size:11px;letter-spacing:.1em;margin-bottom:16px}
+  .cta,.ridge{display:none}
+  .section{padding-top:30px}
+  .section-head{margin-bottom:14px}
+  .section-head p{display:none}
+  /* Die Etappen stehen direkt unter dem Titel - ihre Ueberschrift kostete
+     die Zeile, mit der die letzte Kachel noch ins Bild passt. */
+  #jahrgaenge .section-head{display:none}
+  .tiles,.bili{grid-template-columns:1fr;gap:10px}
+  .tile,.tile.summit{min-height:0;padding:14px 16px;border-radius:18px;flex-direction:row;align-items:center;gap:12px}
+  .tile-top{order:2;align-items:center}
+  .tile-top .stage,.tile-desc,.go{display:none}
+  .tile-body{flex:1 1 auto;align-items:center}
+  .tile-name,.tile.summit .tile-name{font-size:26px;letter-spacing:-.03em}
+  .tile-kicker{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-top:3px}
+  .etappe-art{width:38px;height:38px}
+  .subject{min-height:0;padding:14px 16px;border-radius:18px}
+  .subject .bili-art{width:38px;height:38px}
+  .subject-name{font-size:22px}
+  .fuss{margin-top:40px}
+}
+@media (min-width:621px){.tile-kicker{display:none}}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  .draw{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><i></i><i></i></div>
+<div class="page">
+  <header class="top">
+    <div class="brand">
+      <button class="logo" type="button" id="logo" aria-label="Camp de Base">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 12 L55 51 H9 Z"/><path d="M32 26 L41 51"/><path d="M32 26 L23 51"/><path d="M4 51 H60"/></svg>
+      </button>
+      <span class="wordmark">Camp de Base</span>
+    </div>
+    <nav aria-label="Bereiche"><a href="#jahrgaenge">Klassen</a></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Vocabulaire · À plus ! · Klasse 7–10</p>
+      <h1 class="title" id="title" aria-label="Camp de Base"><span class="line" data-word="Camp de"></span><span class="line" data-word="Base"></span></h1>
+      <a class="cta" href="#jahrgaenge">Klasse wählen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    </div>
+    <div class="ridge" aria-hidden="true">
+      <svg viewBox="0 0 560 520">
+        <circle class="twinkle" cx="60" cy="60" r="2" fill="#F3EFE6"/>
+        <circle class="twinkle" cx="170" cy="30" r="1.5" fill="#F3EFE6" style="animation-delay:-1s"/>
+        <circle class="twinkle" cx="250" cy="96" r="2" fill="#F3EFE6" style="animation-delay:-2s"/>
+        <circle class="twinkle" cx="520" cy="54" r="1.5" fill="#F3EFE6" style="animation-delay:-.6s"/>
+        <circle class="twinkle" cx="470" cy="120" r="2" fill="#F3EFE6" style="animation-delay:-1.7s"/>
+        <circle class="sun" cx="380" cy="170" r="92" fill="#FF6B7A"/>
+        <path d="M0 380 L90 300 L150 330 L240 210 L300 260 L380 120 L450 220 L510 180 L560 240 L560 520 L0 520 Z" fill="#1C2331"/>
+        <path d="M350 172 L380 120 L412 176 L396 166 L380 180 L364 164 Z" fill="#F3EFE6"/>
+        <path d="M226 232 L240 210 L256 236 L246 230 L238 240 Z" fill="#F3EFE6" opacity=".8"/>
+        <g class="yeti">
+          <g transform="translate(318 186)">
+            <path d="M18 150 C 8 96 26 38 70 28 C 114 38 132 96 122 150 Z" fill="#F3EFE6"/>
+            <path d="M40 40 L46 26 L54 36 L62 22 L70 34 L78 22 L86 36 L94 26 L100 40" fill="#F3EFE6"/>
+            <ellipse cx="70" cy="72" rx="27" ry="23" fill="#4F5F80"/>
+            <circle cx="60" cy="68" r="4" fill="#0D1017"/><circle cx="80" cy="68" r="4" fill="#0D1017"/>
+            <path d="M58 82 Q70 92 82 82" fill="none" stroke="#0D1017" stroke-width="3" stroke-linecap="round"/>
+            <path class="wave-arm" d="M112 96 C 124 80 130 62 128 44" fill="none" stroke="#F3EFE6" stroke-width="16" stroke-linecap="round"/>
+          </g>
+        </g>
+        <path class="draw" d="M150 520 C 190 430 250 380 300 330 S 360 250 380 196" fill="none" stroke="#7AA2FF" stroke-width="1.5" opacity=".55"/>
+        <path class="draw" d="M210 520 C 250 450 300 410 340 360 S 400 280 420 236" fill="none" stroke="#7AA2FF" stroke-width="1.5" opacity=".4" style="animation-delay:.3s"/>
+        <path class="draw" d="M280 520 C 320 470 360 430 390 390 S 450 320 470 280" fill="none" stroke="#7AA2FF" stroke-width="1.5" opacity=".3" style="animation-delay:.6s"/>
+        <path d="M0 440 L70 400 L140 420 L220 336 L280 372 L340 304 L420 384 L480 352 L560 402 L560 520 L0 520 Z" fill="#121722"/>
+        <path d="M0 440 L70 400 L140 420 L220 336 L280 372 L340 304 L420 384 L480 352 L560 402" fill="none" stroke="#2E3646" stroke-width="2"/>
+        <path id="trail" d="M40 506 C 120 480 150 452 200 430 S 300 392 292 340 S 350 262 332 224 S 368 152 380 124" fill="none" stroke="#F3EFE6" stroke-width="2" stroke-dasharray="3 9" stroke-linecap="round" opacity=".6"/>
+        <line x1="380" y1="122" x2="380" y2="80" stroke="#F3EFE6" stroke-width="3" stroke-linecap="round"/>
+        <path class="flag" d="M381 80 L414 88 L381 98 Z" fill="#FF6B7A"/>
+        <circle r="12" fill="#7AA2FF" opacity=".25"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.8;1" calcMode="linear"><mpath href="#trail"/></animateMotion></circle>
+        <circle r="7" fill="#7AA2FF"><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.8;1" calcMode="linear"><mpath href="#trail"/></animateMotion></circle>
+      </svg>
+    </div>
+  </section>
+
+  <section class="section" id="jahrgaenge">
+    <div class="section-head"><h2>Wähle deine Etappe</h2><p id="etappen-zahl"></p></div>
+    <div class="tiles" id="etappen"></div>
+  </section>
+
+  <footer class="fuss"><span>Camp de Base</span><span>Französisch · Vokabeln zu À plus ! 1–4</span></footer>
+</div>
+
+<div class="sighting" id="sighting" role="dialog" aria-labelledby="sighting-title" hidden>
+  <small>Sichtung am Gipfel</small>
+  <strong id="sighting-title">Du hast den Yeti gefunden.</strong>
+  <p>Il apprend <b>abominable</b> – scheußlich. Findet er selbst nicht.</p>
+  <button type="button" id="sighting-close">Salut, Yeti !</button>
+</div>
+<div class="snow" id="snow" aria-hidden="true" hidden></div>
+
+<script>
+/* =========================================================================
+   SEITEN
+   Jeder Eintrag ist eine eigene, unabhaengige Seite in ihrem eigenen
+   Unterordner. Neue Seite hinzufuegen: Ordner mit index.html anlegen,
+   hier ein Objekt ergaenzen. Sonst ist nichts zu tun.
+   Die Farbe ist die Farbe der Etappen-Kachel.
+   ========================================================================= */
+const SITES = [
+  {
+    "path": "year7/",
+    "name": "Klasse 7",
+    "meta": "À plus ! 1",
+    "desc": "Vokabular zu À plus ! 1.",
+    "color": "#7448A3"
+  },
+  {
+    "path": "year8/",
+    "name": "Klasse 8",
+    "meta": "À plus ! 2",
+    "desc": "Vokabular zu À plus ! 2.",
+    "color": "#007C83"
+  },
+  {
+    "path": "year9/",
+    "name": "Klasse 9",
+    "meta": "À plus ! 3",
+    "desc": "Vokabular zu À plus ! 3.",
+    "color": "#B5482A"
+  },
+  {
+    "path": "year10/",
+    "name": "Klasse 10",
+    "meta": "À plus ! 4",
+    "desc": "Vokabular zu À plus ! 4.",
+    "color": "#357341"
+  }
+];
+
+function esc(s){
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
+  }[c]));
+}
+
+const MENU_ART = {
+ 'year7/':'M40 5V13M35 13H45M35 13L27 43M45 13L53 43M30 29H50M23 43H57M27 43L15 74M53 43L65 74M31 74Q40 58 49 74M9 74H71',
+ 'year8/':'M12 72V24H68V72H52V52Q40 36 28 52V72ZM8 24H72M12 16H68V24M20 32H60M22 72V56M58 72V56',
+ 'year9/':'M8 70H72M14 70L27 50L33 40L40 16L47 40L53 50L66 70M40 16V6M28 56H52M33 45H47M37 70V62H43V70',
+ 'year10/':'M40 8A32 32 0 1 0 40 72A32 32 0 1 0 40 8M8 40H72M40 8Q24 40 40 72M40 8Q56 40 40 72'
+};
+function menuArt(path){return '<svg class="etappe-art" aria-hidden="true" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="'+MENU_ART[path]+'"/></svg>';}
+
+const PFEIL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+function render(){
+  const letzte = SITES.length - 1;
+  document.getElementById("etappen").innerHTML = SITES.map((s, i) => {
+    const nr = String(i + 1).padStart(2, "0");
+    const gipfel = i === letzte;
+    return `<a class="tile${gipfel ? " summit" : ""}" style="--unit:${esc(s.color)};--i:${i}" href="${esc(s.path)}">
+      <div class="tile-top"><span class="stage">Etappe ${nr}${gipfel ? " · Gipfel" : ""} · ${esc(s.meta || "")}</span>
+        <span class="go" aria-hidden="true">${PFEIL}</span></div>
+      <div class="tile-body"><div><div class="tile-name">${esc(s.name)}</div>
+        <span class="tile-kicker">${esc(s.meta || "")}</span>
+        <div class="tile-desc">${esc(s.desc || "")}</div></div>${menuArt(s.path)}</div>
+    </a>`;
+  }).join("");
+  document.getElementById("etappen-zahl").textContent =
+    SITES.length + " Etappen · " + SITES[0].name + " bis " + SITES[letzte].name;
+
+}
+
+/* Der Titel folgt dem Zeiger: Jeder Buchstabe wird fetter, je naeher der
+   Zeiger ihm kommt. Ohne Zeiger laeuft eine ruhige Welle durch. */
+function kinetik(){
+  const titel = document.getElementById("title");
+  let n = 0;
+  titel.querySelectorAll(".line").forEach(zeile => {
+    zeile.innerHTML = zeile.dataset.word.split("").map(ch =>
+      '<span aria-hidden="true" style="--n:' + (n++) + '">' + esc(ch) + '</span>').join("");
+  });
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const buchstaben = [...titel.querySelectorAll("span[aria-hidden]")];
+  titel.addEventListener("pointermove", e => {
+    if (e.pointerType !== "mouse") return;
+    titel.classList.add("follow");
+    for (const b of buchstaben) {
+      const r = b.getBoundingClientRect();
+      const d = (e.clientX - (r.left + r.width / 2)) / 140;
+      const dy = (e.clientY - (r.top + r.height / 2)) / 260;
+      b.style.fontVariationSettings = "'wght' " + Math.round(220 + 580 * Math.exp(-(d * d + dy * dy))) + ", 'opsz' 96";
+    }
+  });
+  titel.addEventListener("pointerleave", () => {
+    titel.classList.remove("follow");
+    for (const b of buchstaben) b.style.fontVariationSettings = "";
+  });
+}
+
+/* Fuenfmal aufs Zelt tippen. Mehr wird nicht verraten. */
+function yeti(){
+  let tipps = 0, uhr = null;
+  const karte = document.getElementById("sighting"), schnee = document.getElementById("snow");
+  document.getElementById("logo").addEventListener("click", () => {
+    clearTimeout(uhr); uhr = setTimeout(() => tipps = 0, 2500);
+    if (++tipps < 5) return;
+    tipps = 0;
+    document.body.classList.add("yeti-on");
+    karte.hidden = false;
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      let flocken = "";
+      for (let i = 0; i < 70; i++) {
+        const g = 3 + (i % 4) * 2;
+        flocken += '<i style="left:' + ((i * 37) % 100) + '%;width:' + g + 'px;height:' + g + 'px;opacity:'
+          + (0.35 + (i % 5) * 0.13) + ';animation-duration:' + (7 + (i % 6)) + 's;animation-delay:'
+          + (-((i * 0.53) % 8)) + 's"></i>';
+      }
+      schnee.innerHTML = flocken;
+      schnee.hidden = false;
+    }
+    document.getElementById("sighting-close").focus();
+  });
+  document.getElementById("sighting-close").addEventListener("click", () => {
+    document.body.classList.remove("yeti-on");
+    karte.hidden = true; schnee.hidden = true; schnee.innerHTML = "";
+    document.getElementById("logo").focus();
+  });
+}
+
+render();
+kinetik();
+yeti();
+</script>
+</body>
+</html>
