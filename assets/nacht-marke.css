@@ -490,3 +490,11 @@ button.lw-schwer:hover{background:color-mix(in srgb,var(--no) 22%,transparent)}
   .heute-zeile .lw-schwer{padding:6px 12px}
   .heute-kopf{flex-wrap:nowrap}
 }
+
+/* Karteikarte DE -> FR, aufgedeckt: Franzoesisch gross, Deutsch klein.
+   Sonst stuende die deutsche Frage in Plakatgroesse ueber der kleinen
+   franzoesischen Loesung - umgekehrt gewichtet, als es gelernt wird. */
+.vcard .prompt.prompt-klein{font-size:clamp(22px,3.6vw,28px);font-weight:600;letter-spacing:-.02em;color:var(--soft)}
+.answer.fr-gross .de{font-size:clamp(38px,7.5vw,60px);font-weight:700;letter-spacing:-.04em;line-height:1.05;
+  color:var(--snow);overflow-wrap:anywhere}
+body.platz-karte .answer.fr-gross .de{font-size:32px}
