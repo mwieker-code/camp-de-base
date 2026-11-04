@@ -87,10 +87,20 @@ for(const [folder,zeiten] of [['year7',1],['year8',2],['year9',4],['year10',4]])
   /* le ou la ? */
   s.d.getElementById('practiceAcross').click();
   s.d.getElementById('startGenus').click();
+  const ohneKlammer=x=>x.replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
+  /* Jedes Nomen im Spiel, nicht nur das zufaellig erste */
+  for(let i=0;i<s.lauf('S.gv.pool.length');i++){
+    s.lauf('S.gv.queue=S.gv.pool.slice();S.gv.i='+i+';S.gv.wahl=null;render()');
+    const n=JSON.parse(s.lauf('JSON.stringify(S.gv.pool['+i+'])'));
+    const w=s.d.querySelector('.gv-wort').textContent;
+    assert.ok(w&&!/^(le|la|un|une|l['’])(\s|$)/i.test(w),folder+': '+n.en+' zeigt "'+w+'"');
+    assert.equal(ohneKlammer(n.en).replace(/^(le|la|un|une|l['’])\s*/i,''),w,folder+': '+n.en);
+  }
+  s.lauf('S.gv.queue=S.gv.pool.slice();S.gv.i=0;S.gv.wahl=null;render()');
   const v=JSON.parse(s.lauf('JSON.stringify(S.gv.queue[0])'));
   const richtig=/(^|[\s,])m\./.test(v.pos)?'m':'f';
   const wort=s.d.querySelector('.gv-wort').textContent;
-  assert.ok(!/^(le|la|l')/i.test(wort)&&v.en.endsWith(wort.split(' ').pop()),folder+': Wort ohne Artikel: '+wort+' / '+v.en);
+  assert.equal(ohneKlammer(v.en).replace(/^(le|la|un|une|l['’])\s*/i,''),wort,folder+': Wort ohne Artikel: '+wort+' / '+v.en);
   s.d.querySelector('.gv-wahl[data-g="'+richtig+'"]').click();
   assert.equal(s.lauf('S.gv.punkte'),1,folder+': Treffer zaehlt');
   assert.ok(s.d.querySelector('.gv-wahl.gv-richtig'),folder+': Treffer markiert');
