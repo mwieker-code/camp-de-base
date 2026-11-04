@@ -328,7 +328,7 @@ body.ascent-active .eyebrow .ascent-direction-label{background:var(--w-3);border
 body.eb-tippen .eb-tasten[data-schieben="an"] .tk,
 body.eb-tippen .eb-tasten[data-schieben="an"] .tk.senden{background:var(--taste-weit)}
 body.eb-tippen .typebox::after{background:var(--glow)}
-body.eb-tippen .controls{background:var(--leiste);border-top:1px solid var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+body.eb-tippen .controls,body.eb-runde #view>.controls:has(button){background:var(--leiste);border-top:1px solid var(--line);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
 body.eb-runde #back{background:var(--glow);color:var(--auf-glut);border-radius:14px}
 
 /* ------------------------------------------------------------ Nachschlagen */
