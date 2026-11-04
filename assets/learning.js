@@ -104,6 +104,10 @@
       wrap.innerHTML='<button class="topic pv-blitz-start" id="startBlitz">Blitzrunde – 60 Sekunden<br><span class="t-count">So viele Vokabeln wie möglich in einer Minute</span></button>';
       view.querySelector('.scope-options').after(wrap);
       document.getElementById('startBlitz').onclick=()=>startBlitz(topicId);
+      if(genusPool(words).length>=4){
+        wrap.insertAdjacentHTML('beforeend','<button class="topic gv-start" id="startGenus"><span lang="fr">le ou la ?</span> – Genus-Spiel<br><span class="t-count">'+genusPool(words).length+' Nomen ohne Artikel: männlich oder weiblich? 60 Sekunden</span></button>');
+        document.getElementById('startGenus').onclick=()=>startGenus(topicId);
+      }
     }
   }
   window.addEventListener('pagehide',checkpoint);
@@ -546,7 +550,7 @@ ${vocabulary}`;
      franzoesische Genus, nicht das deutsche. "Haus" ist so richtig wie
      "das Haus".
      ========================================================================= */
-  const zielFranz = () => S.view === 'pvblitz' || S.mode === 'cloze' || S.dir === 'de2en';
+  const zielFranz = () => S.view === 'pvblitz' || S.view === 'verben' || S.mode === 'cloze' || S.dir === 'de2en';
   const ligatur = x => x.replace(/œ/g, 'oe').replace(/æ/g, 'ae');
   const ohneAkzent = x => ligatur(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const ARTIKEL_FR = /^(?:le|la|les|l['\u2019]|un|une|des|du|de la|de l['\u2019])\s*/i;
@@ -1198,6 +1202,289 @@ ${vocabulary}`;
     render();
   }
   /* =========================================================================
+     LE OU LA ?  –  das Genus-Spiel
+     Ein Nomen ohne Artikel, zwei Knoepfe: le oder la. Sechzig Sekunden,
+     gezaehlt werden Treffer und die laengste Serie. Wie die Blitzrunde
+     ruehrt es die Lernfaecher nicht an.
+
+     Abgefragt werden nur Nomen, deren Genus eindeutig ist: Einzahl, kein
+     "m./f.", kein Schraegstrich ("le copain / la copine"), und der
+     Artikel der Liste passt zur Wortart. Gerade die Woerter mit l' sind
+     der Kern - an ihnen sieht man das Genus nicht.
+     ========================================================================= */
+  function genusVon(v){
+    const pos=String(v.pos||'');
+    if(!/Nomen/.test(pos)||/\bpl\./.test(pos)||/m\.\s*\/\s*f\./.test(pos))return null;
+    const g=/(^|[\s,])m\./.test(pos)?'m':/(^|[\s,])f\./.test(pos)?'f':null;
+    if(!g)return null;
+    const ohne=String(v.en||'').replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
+    if(/\//.test(ohne))return null;
+    const m=/^(le|la|un|une|l['’])\s*(\S.*)$/i.exec(ohne);
+    if(!m)return null;
+    const art=m[1].toLowerCase();
+    if((art==='le'||art==='un')&&g!=='m')return null;
+    if((art==='la'||art==='une')&&g!=='f')return null;
+    return {g,wort:m[2]};
+  }
+  const genusPool=woerter=>woerter.filter(v=>genusVon(v));
+  const ohneDeArtikel=s=>String(s||'').replace(/^(?:der|die|das)(?:\/(?:der|die|das))*\s+/i,'');
+
+  function startGenus(topicId,woerter){
+    stopGenusUhr();
+    const pool=genusPool(woerter||wordsFor(topicId));
+    if(!pool.length)return;
+    S.gv={topicId,pool,eigene:!!woerter,queue:shuffle(pool),i:0,punkte:0,serie:0,beste:0,
+          falsch:[],richtig:[],zeit:60,uhr:null,wahl:null,done:false};
+    S.view='genus';
+    render();
+    S.gv.uhr=setInterval(()=>{
+      const gv=S.gv;if(!gv||S.view!=='genus'){stopGenusUhr();return;}
+      gv.zeit--;
+      const el=document.getElementById('gvZeit');if(el)el.textContent=gv.zeit+'s';
+      if(gv.zeit<=0){stopGenusUhr();gv.done=true;if(!gv.wahl)render();}
+    },1000);
+  }
+  function stopGenusUhr(){ if(S.gv&&S.gv.uhr){clearInterval(S.gv.uhr);S.gv.uhr=null;} }
+  function exitGenus(){ stopGenusUhr(); S.gv=null; home(); }
+  function genusAktuell(){
+    const gv=S.gv;
+    if(gv.i>=gv.queue.length){
+      /* Neu gemischt, aber nicht dasselbe Wort zweimal hintereinander. */
+      let neu=shuffle(gv.pool);
+      if(neu.length>1&&neu[0]===gv.queue[gv.queue.length-1])neu.push(neu.shift());
+      gv.queue=gv.queue.concat(neu);
+    }
+    return gv.queue[gv.i];
+  }
+  function renderGenus(){
+    const gv=S.gv;
+    if(!gv){S.view='home';return render();}
+    if(gv.done)return renderGenusDone();
+    const v=genusAktuell(),info=genusVon(v),w=gv.wahl;
+    const knopf=(g,text,unter)=>'<button class="gv-wahl'+(w?(g===info.g?' gv-richtig':(g===w?' gv-falsch':'')):'')+'" data-g="'+g+'"'+(w?' disabled':'')+'>'
+      +'<span class="gv-art" lang="fr">'+text+'</span><span class="gv-unter">'+unter+'</span></button>';
+    view.innerHTML='<div class="sessionbar"><button class="linkbtn" id="back">← Übersicht</button>'
+      +'<div class="switches"><span class="switch pv-tag" aria-disabled="true">le ou la ?</span></div></div>'
+      +'<div class="pv-blitz-bar"><span class="pv-blitz-time" id="gvZeit" role="timer" aria-live="off">'+gv.zeit+'s</span>'
+      +'<span class="pv-blitz-score" role="status">'+gv.punkte+' richtig'+(gv.serie>1?' · Serie '+gv.serie:'')+'</span></div>'
+      +'<div class="stage"><div class="vcard deal gv-karte"><h2 class="prompt gv-wort" lang="fr">'+safe(info.wort)+'</h2>'
+      +'<div class="gv-de">'+safe(ohneDeArtikel(v.de))+'</div>'
+      +'<div class="gv-loesung" aria-live="polite">'+(w?'<span lang="fr">'+safe(v.en)+'</span> · '+(info.g==='m'?'masculin':'féminin'):'')+'</div>'
+      +'</div></div>'
+      +'<div class="controls gv-knoepfe">'+knopf('m','le','masculin')+knopf('f','la','féminin')+'</div>';
+    document.getElementById('back').onclick=exitGenus;
+    view.querySelectorAll('.gv-wahl').forEach(b=>b.onclick=()=>genusWaehlen(b.dataset.g));
+  }
+  function genusWaehlen(g){
+    const gv=S.gv;
+    if(!gv||gv.done||gv.wahl||S.view!=='genus')return;
+    const v=genusAktuell(),ok=genusVon(v).g===g;
+    gv.wahl=g;
+    if(ok){gv.punkte++;gv.serie++;gv.beste=Math.max(gv.beste,gv.serie);gv.richtig.push(v);}
+    else{gv.serie=0;gv.falsch.push(v);}
+    lerntagZaehlen();
+    render();
+    window.LearningFeedback?.signal(ok?'ok':'no');
+    setTimeout(()=>{
+      if(S.gv!==gv)return;
+      gv.wahl=null;gv.i++;
+      if(S.view==='genus')render();
+    },ok?450:1300);
+  }
+  function renderGenusDone(){
+    const gv=S.gv;
+    const einmal=list=>[...new Set(list)];
+    const falsch=einmal(gv.falsch),richtig=einmal(gv.richtig).filter(v=>!falsch.includes(v));
+    view.innerHTML='<div class="done"><div class="summary-number">'+gv.punkte+'</div><h2>Zeit um</h2>'
+      +'<p>'+gv.punkte+' richtig, '+gv.falsch.length+' falsch in 60 Sekunden'
+      +(gv.beste>1?'<br>Längste Serie: '+gv.beste:'')+'</p>'+rueckblick(falsch,richtig)
+      +'<div class="controls"><button class="primary" id="gvAgain">Nochmal</button><button id="gvHome">Zur Übersicht</button></div></div>';
+    document.getElementById('gvAgain').onclick=()=>startGenus(gv.topicId,gv.eigene?gv.pool:null);
+    document.getElementById('gvHome').onclick=exitGenus;
+    const ueben=document.getElementById('missedPractice');
+    if(ueben){
+      ueben.textContent=falsch.length===1?'Dieses Nomen noch einmal':'Diese '+falsch.length+' Nomen noch einmal';
+      ueben.onclick=()=>startGenus(gv.topicId,falsch);
+    }
+  }
+
+  /* =========================================================================
+     VERBEN KONJUGIEREN
+     Ein eigener Bereich auf der Klassenseite. Die Formen bildet
+     assets/verben.js; abgefragt werden die Verben der Klassenliste und
+     einige Grundverben, die jede Klasse koennen soll. Welche Zeitformen
+     es gibt, haengt an der Klasse. Wie die Blitzrunde ohne Lernfaecher:
+     Konjugieren ist Regelwissen, kein Vokabelwissen.
+     ========================================================================= */
+  const VB=window.Verben;
+  const KLASSE=Number((/^fr(\d+):/.exec(typeof KEY==='string'?KEY:'')||[])[1])||0;
+  let verbCache=null;
+  function verbListe(){
+    if(verbCache)return verbCache;
+    const liste=new Map();
+    if(VB&&KLASSE){
+      for(const v of allWords()){
+        if(!/Verb/.test(v.pos||''))continue;
+        const z=VB.zerlege(v.en);
+        if(!z||!VB.abfragbar(z))continue;
+        const inf=VB.infinitiv(z);
+        if(!liste.has(inf))liste.set(inf,{z,inf,de:v.de});
+      }
+      for(const [inf,de,ab] of VB.KERN)
+        if(ab<=KLASSE&&!liste.has(inf))liste.set(inf,{z:VB.zerlege(inf),inf,de});
+    }
+    return verbCache=[...liste.values()];
+  }
+  const verbZeiten=()=>(VB&&VB.ZEITEN_JE_KLASSE[KLASSE])||[];
+  const vbWahl={zeiten:null,nur:'alle'};
+
+  function verbenKachel(){
+    const verben=verbListe(),zeiten=verbZeiten();
+    if(!verben.length||!zeiten.length||view.querySelector('.verben-kachel'))return;
+    const html='<button class="topic verben-kachel" id="verbenStart"><span class="t-row">'
+      +'<span class="t-name">Verben konjugieren</span>'
+      +'<span class="t-count">'+verben.length+' Verben · '+zeiten.map(z=>VB.ZEIT_NAME[z]).join(', ')+'</span></span></button>';
+    const vor=view.querySelector('.unit-heading');
+    if(vor)vor.insertAdjacentHTML('beforebegin',html); else view.insertAdjacentHTML('beforeend',html);
+    document.getElementById('verbenStart').onclick=()=>{S.view='verbwahl';render();};
+  }
+
+  function renderVerbwahl(){
+    const verben=verbListe(),zeiten=verbZeiten();
+    if(!vbWahl.zeiten)vbWahl.zeiten=new Set(zeiten);
+    const unregel=verben.filter(v=>!VB.regelmaessig(v.z)).length;
+    view.innerHTML='<div class="sessionbar"><button class="linkbtn" id="vbBack">← Übersicht</button></div>'
+      +'<h2>Verben konjugieren</h2><p>Die Form zum Subjekt eintragen – zum Beispiel <span lang="fr">nous</span> → <span lang="fr">allons</span>.</p>'
+      +'<h3 class="vb-kopf">Zeitformen</h3><div class="switches vb-wahl">'
+      +zeiten.map(z=>'<button class="switch" data-zeit="'+z+'" aria-pressed="'+vbWahl.zeiten.has(z)+'" lang="fr">'+VB.ZEIT_NAME[z]+'</button>').join('')+'</div>'
+      +'<h3 class="vb-kopf">Verben</h3><div class="switches vb-wahl">'
+      +'<button class="switch" data-nur="alle" aria-pressed="'+(vbWahl.nur==='alle')+'">Alle · '+verben.length+'</button>'
+      +'<button class="switch" data-nur="unregel" aria-pressed="'+(vbWahl.nur==='unregel')+'">Nur unregelmäßige · '+unregel+'</button></div>'
+      +'<div class="scope-options"><button class="topic primary" data-anzahl="10">Kurze Runde · 10 Formen</button>'
+      +'<button class="topic" data-anzahl="20">Lange Runde · 20 Formen</button></div>';
+    document.getElementById('vbBack').onclick=home;
+    view.querySelectorAll('[data-zeit]').forEach(b=>b.onclick=()=>{
+      const z=b.dataset.zeit;
+      if(vbWahl.zeiten.has(z)){ if(vbWahl.zeiten.size>1)vbWahl.zeiten.delete(z); }
+      else vbWahl.zeiten.add(z);
+      render();
+    });
+    view.querySelectorAll('[data-nur]').forEach(b=>b.onclick=()=>{vbWahl.nur=b.dataset.nur;render();});
+    view.querySelectorAll('[data-anzahl]').forEach(b=>b.onclick=()=>startVerben(Number(b.dataset.anzahl)));
+  }
+
+  function verbAufgaben(anzahl){
+    let verben=verbListe();
+    if(vbWahl.nur==='unregel'){const u=verben.filter(v=>!VB.regelmaessig(v.z));if(u.length)verben=u;}
+    const zeiten=[...vbWahl.zeiten];
+    const out=[],gesehen=new Set();
+    let reihe=[];
+    for(let versuch=0;out.length<anzahl&&versuch<anzahl*20;versuch++){
+      if(!reihe.length)reihe=shuffle(verben);
+      const v=reihe.shift(),zeit=zeiten[Math.floor(Math.random()*zeiten.length)];
+      const person=Math.floor(Math.random()*6);
+      const subjekte=['je','tu',Math.random()<.5?'il':'elle','nous','vous',Math.random()<.5?'ils':'elles'];
+      const schluessel=v.inf+'|'+zeit+'|'+person;
+      if(gesehen.has(schluessel))continue;
+      const formen=VB.konjugiere(v.z,zeit,subjekte);
+      if(!formen)continue;
+      gesehen.add(schluessel);
+      out.push({verb:v,zeit,person,...formen[person]});
+    }
+    return out;
+  }
+  function startVerben(anzahl,aufgaben){
+    const liste=aufgaben||verbAufgaben(anzahl);
+    if(!liste.length)return;
+    S.vb={anzahl,aufgaben:liste,i:0,antwort:null,falsch:[],richtig:[]};
+    S.view='verben';
+    render();
+  }
+  function renderVerben(){
+    const vb=S.vb;
+    if(!vb){S.view='verbwahl';return render();}
+    if(vb.i>=vb.aufgaben.length)return renderVerbenDone();
+    const a=vb.aufgaben[vb.i],r=vb.antwort;
+    const urteil=!r?'':r.ergebnis==='ok'?'<div class="vb-loesung ok">✓ Richtig: <b lang="fr">'+safe(a.anzeige)+'</b></div>'
+      :r.ergebnis==='akzent'?'<div class="vb-loesung near">Fast – achte auf die Akzente: <b lang="fr">'+safe(a.anzeige)+'</b></div>'
+      :'<div class="vb-loesung no">✗ Richtig ist: <b lang="fr">'+safe(a.anzeige)+'</b></div>';
+    view.innerHTML='<div class="sessionbar"><button class="linkbtn" id="back">← Übersicht</button>'
+      +'<div class="switches"><span class="switch pv-tag" aria-disabled="true">Verben</span></div></div>'
+      +'<div class="round-progress"><span>'+(vb.i+1)+' / '+vb.aufgaben.length+'</span>'
+      +'<progress max="'+vb.aufgaben.length+'" value="'+vb.i+'"></progress></div>'
+      +'<div class="stage"><div class="vcard deal vb-karte">'
+      +'<div class="vb-zeit" lang="fr">'+VB.ZEIT_NAME[a.zeit]+'</div>'
+      +'<h2 class="prompt" lang="fr">'+safe(a.verb.inf)+'</h2>'
+      +'<div class="vb-de">'+safe(a.verb.de)+'</div>'
+      +'<div class="vb-zeile"><span class="vb-subjekt" lang="fr">'+safe(a.subjekt)+'</span>'
+      +'<div class="typebox"><input id="typeIn" lang="fr" placeholder="Form eintragen" aria-label="Form zu '+safe(a.subjekt)+'" autocomplete="off" autocapitalize="off" spellcheck="false"'
+      +(r?' disabled value="'+safe(r.eingabe)+'"':'')+'></div></div>'
+      +urteil+'</div></div>'
+      +'<div class="controls">'+(r?'<button class="primary" id="vbWeiter">Weiter (Enter)</button>'
+        :'<button class="primary" id="submit">Prüfen (Enter)</button>')+'</div>';
+    document.getElementById('back').onclick=()=>{S.vb=null;S.view='verbwahl';render();};
+    const feld=document.getElementById('typeIn');
+    if(!r){
+      document.getElementById('submit').onclick=verbPruefen;
+      feld.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); verbPruefen(); } };
+      if(!feld.readOnly)try{feld.focus({preventScroll:true});}catch(e){}
+    } else document.getElementById('vbWeiter').onclick=verbWeiter;
+  }
+  function verbPruefen(){
+    const vb=S.vb;if(!vb||vb.antwort)return;
+    const feld=document.getElementById('typeIn');
+    const eingabe=feld?feld.value:'';
+    if(!eingabe.trim())return;
+    const a=vb.aufgaben[vb.i],ergebnis=VB.pruefe(eingabe,a.richtig);
+    vb.antwort={eingabe,ergebnis};
+    (ergebnis==='ok'?vb.richtig:vb.falsch).push(a);
+    lerntagZaehlen();
+    render();
+    window.LearningFeedback?.signal(ergebnis==='ok'?'ok':ergebnis==='akzent'?'near':'no');
+  }
+  function verbWeiter(){
+    const vb=S.vb;if(!vb||!vb.antwort)return;
+    vb.antwort=null;vb.i++;render();
+  }
+  function renderVerbenDone(){
+    const vb=S.vb;
+    const zeile=a=>({en:a.anzeige,de:a.verb.inf+' · '+VB.ZEIT_NAME[a.zeit]});
+    view.innerHTML='<div class="done"><div class="summary-number">'+vb.richtig.length+' / '+vb.aufgaben.length+'</div><h2>Runde geschafft</h2>'
+      +'<p>'+vb.richtig.length+' Formen richtig, '+vb.falsch.length+' zum Weiterüben</p>'
+      +rueckblick(vb.falsch.map(zeile),vb.richtig.map(zeile))
+      +'<div class="controls"><button class="primary" id="vbNeu">Neue Runde</button><button id="vbWahl">Andere Auswahl</button><button id="vbHome">Zur Übersicht</button></div></div>';
+    document.getElementById('vbNeu').onclick=()=>startVerben(vb.anzahl);
+    document.getElementById('vbWahl').onclick=()=>{S.vb=null;S.view='verbwahl';render();};
+    document.getElementById('vbHome').onclick=()=>{S.vb=null;home();};
+    const ueben=document.getElementById('missedPractice');
+    if(ueben){
+      ueben.textContent=vb.falsch.length===1?'Diese Form noch einmal':'Diese '+vb.falsch.length+' Formen noch einmal';
+      ueben.onclick=()=>startVerben(vb.anzahl,shuffle(vb.falsch));
+    }
+    window.LearningFeedback?.tone('done');
+  }
+
+  const vorUebungen=render;
+  render=function(){
+    if(S.view!=='genus')stopGenusUhr();
+    if(S.view==='genus')return renderGenus();
+    if(S.view==='verbwahl')return renderVerbwahl();
+    if(S.view==='verben')return renderVerben();
+    return vorUebungen();
+  };
+  const vorKachel=renderHome;
+  renderHome=function(){ vorKachel(); verbenKachel(); };
+  document.addEventListener('keydown',e=>{
+    if(e.defaultPrevented||e.altKey||e.ctrlKey||e.metaKey)return;
+    if(S.view==='genus'){
+      if(e.key==='1'||e.key==='ArrowLeft'){e.preventDefault();genusWaehlen('m');}
+      else if(e.key==='2'||e.key==='ArrowRight'){e.preventDefault();genusWaehlen('f');}
+    }else if(S.view==='verben'&&S.vb&&S.vb.antwort&&e.key==='Enter'&&!(e.target&&e.target.tagName==='BUTTON')){
+      e.preventDefault();verbWeiter();
+    }
+  });
+
+  /* =========================================================================
      LERNAUFTRAG  –  eine Vokabelauswahl als Link weitergeben.
      Der Link trägt die Auswahl selbst (Bitmaske über alle Wörter des
      Jahrgangs, lauflängenkodiert) und eine Prüfsumme des Vokabulars. Ändert
@@ -1710,7 +1997,7 @@ ${vocabulary}`;
     const antwortsprache = () =>
       /* In der Blitzrunde steht immer Deutsch da und Franzoesisch wird
          getippt, ganz gleich, was in der Runde eingestellt war. */
-      S.view === 'pvblitz' ? 'fr'
+      (S.view === 'pvblitz' || S.view === 'verben') ? 'fr'
         : S.mode === 'cloze' ? 'fr' : (S.dir === 'en2de' ? 'de' : 'fr');
     const belegung = () => wahl || antwortsprache();
 
@@ -1774,7 +2061,7 @@ ${vocabulary}`;
         Math.round(feld.offsetTop + (feld.offsetHeight - hoehe) / 2) + 'px');
       box.style.setProperty('--eb-marke-links', Math.round(feld.offsetLeft) + 'px');
     }
-    const tippt = () => (S.view === 'session' || blitz()) && !!feldVon();
+    const tippt = () => (S.view === 'session' || blitz() || S.view === 'verben') && !!feldVon();
 
     /* Die Karte stand oben, das Tastenfeld unten, dazwischen bis zu 301
        Punkte Leere - der Blick musste ueber den halben Bildschirm
@@ -2072,7 +2359,8 @@ ${vocabulary}`;
          Dann gibt es nichts mehr zu pflegen. */
       if(typeof document === 'undefined' || !document.body) return;
       document.body.classList.toggle('eb-app', alsApp());
-      const runde = klein.matches && (S.view === 'session' || blitz());
+      const runde = klein.matches && (S.view === 'session' || blitz()
+        || S.view === 'genus' || S.view === 'verben');
       document.body.classList.toggle('eb-runde', runde);
 
       /* Der Richtungsschalter zieht auf dem Telefon in die

@@ -20,6 +20,8 @@ Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden
 - **KI-Prompt** für Vokabeltests auf Französisch: Lückentext (in Klasse 7 mit alphabetischer Wortliste), Übersetzen DE → FR, Gegensätze, eigene Sätze; Zeitformen présent bis futur simple.
 - **Speicher:** Die Schlüssel beginnen mit `fr7:` … `fr10:` statt `vt…`. Beide Trainer liegen auf derselben GitHub-Pages-Domain und teilen sich den Browserspeicher, deshalb überschreiben sie sich so nicht gegenseitig.
 - **Gestaltung „L'heure bleue“:** das Nachtaufstieg-Gerüst mit Mohnrot (`#FF6B7A`) und Kornblumenblau (`#7AA2FF`) statt Alpenglühen und Gletscher; eigene Symbole auf der Startseite und ein eigenes App-Symbol.
+- **Verben konjugieren** (`assets/verben.js`): eigene Kachel auf jeder Klassenseite. Abgefragt werden die Verben der Klassenliste und einige Grundverben (Klasse 7: être, avoir, aller, faire; ab Klasse 8 zwanzig Grundverben). Zeitformen nach Klasse: 7 présent, 8 dazu passé composé, 9 und 10 dazu imparfait und futur simple. Regelmäßige Verben auf -er werden nach Regel gebildet (mit mangeons, commençons, achète, appelle, préfère, paie), alle anderen nach ihrer Familie oder einzeln. Ein Verb ohne bekannte Familie wird nicht abgefragt.
+- **le ou la ?** – Genus-Spiel neben der Blitzrunde: 60 Sekunden, Nomen ohne Artikel, Knopf „le“ oder „la“. Nur Nomen mit eindeutigem Genus (keine Mehrzahl, kein m./f., kein Schrägstrich).
 - **Hell oder Nacht** (`assets/thema.js`, wie im Englisch-Trainer): Automatisch folgt dem Gerät, dazu Hell und Nacht fest. Der Schalter sitzt auf der Startseite oben rechts und im Menü der Lernseiten. Die Wahl wird unter `fr:thema` gespeichert, getrennt vom Englisch-Trainer. Helle Akzente: Mohnrot `#EE5A6C`, Kornblumenblau `#3563D6`.
 
 ## Vokabular pflegen
@@ -67,6 +69,7 @@ Lokal: `python3 -m http.server 8765`, danach http://localhost:8765 öffnen. Für
 
 ## Noch offen
 
+- Durchsicht der Verbformen (`assets/verben.js`) und der Zeitformen je Klasse durch die Fachschaft.
 - Sprachliche Durchsicht der Beispielsätze für Klasse 7–10 durch die Fachschaft.
 - Echte Titel der Unités: Die Seiten zeigen bisher „Unité 1“, „Teil A“, „Vocabulaire“, „Module 1“, abgeleitet aus der Fundstelle.
 - Wortarten in Band 1: Die Excel-Liste hat keine Wortart-Spalte; sie sind beim Schreiben der Beispielsätze ergänzt worden und sollten mitgeprüft werden.
