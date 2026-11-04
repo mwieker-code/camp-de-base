@@ -498,3 +498,33 @@ button.lw-schwer:hover{background:color-mix(in srgb,var(--no) 22%,transparent)}
 .answer.fr-gross .de{font-size:clamp(38px,7.5vw,60px);font-weight:700;letter-spacing:-.04em;line-height:1.05;
   color:var(--snow);overflow-wrap:anywhere}
 body.platz-karte .answer.fr-gross .de{font-size:32px}
+
+/* ------------------------------------------------------------ le ou la ? */
+.preview-modes .gv-start{width:100%;text-align:left;margin-top:10px;background:radial-gradient(120% 140% at 100% 0%,#7AA2FF2E,transparent 60%),var(--glas);border:1px solid var(--glas-rand)}
+.gv-karte{text-align:center}
+.gv-karte .gv-wort{font-size:clamp(40px,9vw,64px);font-weight:700;letter-spacing:-.03em;margin:8px 0 6px;overflow-wrap:anywhere}
+.gv-de{color:var(--mute);font-size:17px}
+.gv-loesung{min-height:28px;margin-top:14px;font-size:18px;font-weight:600;color:var(--soft)}
+.controls.gv-knoepfe{display:flex;gap:10px}
+.gv-wahl{flex:1 1 0;min-width:0;min-height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;
+  border-radius:18px;background:var(--glas);border:1px solid var(--glas-rand);color:var(--snow);cursor:pointer}
+.gv-wahl .gv-art{font-family:var(--serif);font-size:34px;font-weight:700;line-height:1}
+.gv-wahl .gv-unter{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute)}
+.gv-wahl:disabled{cursor:default;opacity:.55}
+.gv-wahl.gv-richtig{opacity:1;background:var(--ok-tint);border-color:var(--ok);color:var(--ok)}
+.gv-wahl.gv-falsch{opacity:1;background:var(--no-tint);border-color:var(--no);color:var(--no)}
+
+/* ------------------------------------------------------- Verben konjugieren */
+.verben-kachel{width:100%;text-align:left;margin:0 0 18px;background:radial-gradient(120% 140% at 100% 0%,#FF6B7A2E,transparent 60%),var(--glas);border:1px solid var(--glas-rand)}
+.vb-kopf{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:20px 0 8px}
+.vb-wahl{flex-wrap:wrap}
+.vb-wahl + .scope-options,.vb-kopf + .vb-wahl + .scope-options{margin-top:22px}
+.vb-zeit{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--glacier);font-weight:600}
+.vb-karte .prompt{margin:6px 0 2px}
+.vb-de{color:var(--mute);font-size:16px;margin-bottom:18px}
+.vb-zeile{display:flex;align-items:center;gap:12px}
+.vb-subjekt{font-family:var(--serif);font-size:24px;font-weight:600;color:var(--snow);white-space:nowrap}
+.vb-zeile .typebox{flex:1 1 auto;min-width:0;margin:0}
+.vb-loesung{margin-top:14px;font-size:17px;line-height:1.45}
+.vb-loesung.ok{color:var(--ok)}.vb-loesung.near{color:var(--amber)}.vb-loesung.no{color:var(--no)}
+.vb-loesung b{color:var(--snow)}
