@@ -563,6 +563,20 @@ body{-webkit-tap-highlight-color:transparent}
     display:flex;gap:8px;box-shadow:0 -4px 14px #16232b14}
   body.eb-tippen .controls button{flex:1 1 0;min-width:0}
 
+  /* Auch in den anderen Uebungsarten steht der Streifen unten fest.
+     Frueher lief er am Ende der Karte mit - und die aufgedeckte
+     Karteikarte ist um Lautsprecher und Beispielsatz hoeher als die
+     verdeckte. Die Bewertungsknoepfe rutschten dann unter die schwebende
+     Adressleiste von Safari, "Umdrehen" davor nicht. Ein leerer Streifen
+     (Auswahl vor der Antwort) bleibt fort. */
+  body.eb-runde #view>.controls:has(button){position:fixed;left:0;right:0;bottom:0;z-index:51;margin:0;
+    padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+    background:var(--card);border-top:1px solid var(--rule);
+    display:flex;gap:8px;box-shadow:0 -4px 14px #16232b14}
+  body.eb-runde #view>.controls button{flex:1 1 0;min-width:0}
+  body.eb-runde:not(.eb-tippen):has(#view>.controls button){
+    padding-bottom:calc(100px + env(safe-area-inset-bottom))}
+
   /* ---- Vom Startbildschirm gestartet ----
      Nur hier, nie im Browser: Die Klasse setzt das Skript ausschliesslich,
      wenn die Seite als eigene App laeuft.
@@ -590,7 +604,8 @@ body{-webkit-tap-highlight-color:transparent}
      sonst schneidet er sie an. Erst ab 700 Punkten Fensterhoehe: Geraete
      mit Home-Knopf haben keinen solchen Streifen und keinen Platz uebrig. */
   @media (min-height:700px){
-    body.eb-app .controls{padding-bottom:max(calc(10px + env(safe-area-inset-bottom)),34px)}
+    body.eb-app .controls,
+    body.eb-app.eb-runde #view>.controls:has(button){padding-bottom:max(calc(10px + env(safe-area-inset-bottom)),34px)}
     body.eb-app .eb-tasten{padding-bottom:max(calc(6px + env(safe-area-inset-bottom)),34px)}
   }
 
