@@ -22,6 +22,7 @@ Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden
 - **Gestaltung „L'heure bleue“:** das Nachtaufstieg-Gerüst mit Mohnrot (`#FF6B7A`) und Kornblumenblau (`#7AA2FF`) statt Alpenglühen und Gletscher; eigene Symbole auf der Startseite und ein eigenes App-Symbol.
 - **Verben konjugieren** (`assets/verben.js`): eigene Kachel auf jeder Klassenseite. Abgefragt werden die Verben der Klassenliste und einige Grundverben (Klasse 7: être, avoir, aller, faire; ab Klasse 8 zwanzig Grundverben). Zeitformen nach Klasse: 7 présent, 8 dazu passé composé, 9 und 10 dazu imparfait und futur simple. Regelmäßige Verben auf -er werden nach Regel gebildet (mit mangeons, commençons, achète, appelle, préfère, paie), alle anderen nach ihrer Familie oder einzeln. Ein Verb ohne bekannte Familie wird nicht abgefragt.
 - **le ou la ?** – Genus-Spiel neben der Blitzrunde: 60 Sekunden, Nomen ohne Artikel, Knopf „le“ oder „la“. Nur Nomen mit eindeutigem Genus (keine Mehrzahl, kein m./f., kein Schrägstrich).
+- **Spiele** (aus dem Englisch-Trainer): Kachel „Spiele“ auf jeder Klassenseite mit *Descente en luge* (Sled Run), *Vers le sommet* (Summit Climb) und *Tour des coups francs* (Free Kick Tour). Code in `spiele/`, die Seiten je Klasse (`yearN/games/`, `sled/`, `climb/`, `kick/`) schreibt `node tools/spiele.cjs`. Bestwerte unter `fr7:sled:v1` usw.; die Lernfächer bleiben unberührt.
 - **Hell oder Nacht** (`assets/thema.js`, wie im Englisch-Trainer): Automatisch folgt dem Gerät, dazu Hell und Nacht fest. Der Schalter sitzt auf der Startseite oben rechts und im Menü der Lernseiten. Die Wahl wird unter `fr:thema` gespeichert, getrennt vom Englisch-Trainer. Helle Akzente: Mohnrot `#EE5A6C`, Kornblumenblau `#3563D6`.
 
 ## Vokabular pflegen
@@ -56,6 +57,7 @@ Die Lücke darf eine gebeugte Form sein. Gefragt wird im Lückensatz genau das, 
 ```
 node tools/seiten.cjs    # schreibt year7–year10 neu
 node tools/nacht.cjs     # dunkle Farben
+node tools/spiele.cjs    # Spieleseiten und ihre Vokabeln
 npm test
 ```
 

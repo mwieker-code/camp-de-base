@@ -1473,7 +1473,17 @@ ${vocabulary}`;
     return vorUebungen();
   };
   const vorKachel=renderHome;
-  renderHome=function(){ vorKachel(); verbenKachel(); };
+  /* Spiele: eine Kachel je Klasse, die Spieleseite liegt in games/
+     (tools/spiele.cjs). Die Spiele stammen aus dem Englisch-Trainer. */
+  function spieleKachel(){
+    if(!KLASSE||view.querySelector('.spiele-kachel'))return;
+    const html='<a class="topic spiele-kachel" href="games/"><svg class="g-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 15h18c5.5 0 9 4 10 10l1.5 8c.6 3.6-2 6-5 6-2.2 0-3.6-1.2-4.8-3l-2.4-3.6H15.7l-2.4 3.6C12.1 37.8 10.7 39 8.5 39c-3 0-5.6-2.4-5-6L5 25c1-6 4.5-10 10-10z"/><path d="M14 22v8M10 26h8"/><circle cx="32" cy="24" r="1.7" fill="currentColor"/><circle cx="36.5" cy="28.5" r="1.7" fill="currentColor"/><path d="M21 21h6"/></svg>'
+      +'<span class="t-row"><span class="t-name">Spiele</span>'
+      +'<span class="t-count">Descente en luge, Vers le sommet und Tour des coups francs</span></span></a>';
+    const vor=view.querySelector('.unit-heading');
+    if(vor)vor.insertAdjacentHTML('beforebegin',html); else view.insertAdjacentHTML('beforeend',html);
+  }
+  renderHome=function(){ vorKachel(); verbenKachel(); spieleKachel(); };
   document.addEventListener('keydown',e=>{
     if(e.defaultPrevented||e.altKey||e.ctrlKey||e.metaKey)return;
     if(S.view==='genus'){

@@ -528,3 +528,8 @@ body.platz-karte .answer.fr-gross .de{font-size:32px}
 .vb-loesung{margin-top:14px;font-size:17px;line-height:1.45}
 .vb-loesung.ok{color:var(--ok)}.vb-loesung.near{color:var(--amber)}.vb-loesung.no{color:var(--no)}
 .vb-loesung b{color:var(--snow)}
+
+/* ------------------------------------------------------------------ Spiele */
+.spiele-kachel{display:block;position:relative;width:100%;text-align:left;text-decoration:none;color:inherit;margin:0 0 18px;padding-right:76px;
+  background:radial-gradient(120% 140% at 100% 0%,#7AA2FF2E,transparent 60%),var(--glas);border:1px solid var(--glas-rand)}
+.spiele-kachel .g-icon{position:absolute;right:20px;top:50%;width:40px;height:40px;transform:translateY(-50%);color:var(--glacier)}
