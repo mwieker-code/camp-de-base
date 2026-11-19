@@ -1,0 +1,29 @@
+/* Automatisch erzeugt von tools/nacht.cjs aus spiele/kick/style.css - nicht von Hand aendern.
+   Dunkle Gegenstuecke der Farbregeln, nur fuer den Bildschirm. */
+:root:where(:not([data-thema="hell"])){--night:#DFE3EC;--pitch:#CFE4D6;--snow:#1F1C16;--glacier:#00312B;--sun:#352400}
+:where(html:not([data-thema="hell"])) #menu h1{background:linear-gradient(90deg,#151A22,#352400 60%,#502A20)}
+:where(html:not([data-thema="hell"])) #menu ol.how{background:#151A220D;border:1px solid #292E381A}
+:where(html:not([data-thema="hell"])) #levels button{background:#151A220F;border:1px solid #292E3824}
+:where(html:not([data-thema="hell"])) #levels button:hover{background:#151A221A}
+:where(html:not([data-thema="hell"])) #levels button.all{background:#3524001A}
+:where(html:not([data-thema="hell"])) #modes button,:where(html:not([data-thema="hell"])) #players button,:where(html:not([data-thema="hell"])) #keepers button{background:#151A220F;border:1px solid #292E3824}
+:where(html:not([data-thema="hell"])) #modes button[aria-pressed="true"],:where(html:not([data-thema="hell"])) #players button[aria-pressed="true"],:where(html:not([data-thema="hell"])) #keepers button[aria-pressed="true"]{background:#1C3F2629}
+:where(html:not([data-thema="hell"])) #modes button[data-modus="profi"][aria-pressed="true"]{background:#392D4F29;border-color:#504568}
+:where(html:not([data-thema="hell"])) #players .p-bild{background:radial-gradient(60% 50% at 50% 70%,#1C3F2659,#1C3F2600)}
+:where(html:not([data-thema="hell"])) .musik-menu{border:1px solid #292E382E;background:#151A2212}
+:where(html:not([data-thema="hell"])) .bar button{border:1px solid #292E382E;background:#151A2212}
+:where(html:not([data-thema="hell"])) .bar .stat{background:#151A2212;border:1px solid #292E381F}
+:where(html:not([data-thema="hell"])) #feld{border:1px solid #292E3824}
+:where(html:not([data-thema="hell"])) #chips button{color:#D8E0F2}
+:where(html:not([data-thema="hell"])) #chips button span{color:#C3CDE2}
+:where(html:not([data-thema="hell"])) #chips button:nth-child(2){border-left-color:#19534B}
+:where(html:not([data-thema="hell"])) #chips button:nth-child(4){border-left-color:#504568}
+:where(html:not([data-thema="hell"])) #chips button.right{border-left-color:#43664B;color:#CEE8D3}
+:where(html:not([data-thema="hell"])) #over .unlock{background:#00312B24}
+:where(html:not([data-thema="hell"])) .actions button{border:1px solid #292E3833;background:#151A2212}
+:where(html:not([data-thema="hell"])) ul.missed{border:1px solid #292E381F}
+:where(html:not([data-thema="hell"])) ul.missed li{border-top:1px solid #292E381A}
+:where(html:not([data-thema="hell"])) footer button,:where(html:not([data-thema="hell"])) [data-feedback-pref]{border:1px solid #292E3829;background:#151A220F}
+:where(html:not([data-thema="hell"])) #keepers button[data-torwart="stark"][aria-pressed="true"]{border-color:#7B4F4A}
+:where(html:not([data-thema="hell"])) #units button{border:1px solid #292E382E;background:#151A220F}
+:where(html:not([data-thema="hell"])) #units button[aria-pressed="true"]{background:#1C3F262E}
