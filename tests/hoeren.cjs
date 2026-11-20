@@ -19,7 +19,7 @@ function seite(folder,stimmen){
   const gesprochen=[];
   w.SpeechSynthesisUtterance=function(t){this.text=t;};
   w.speechSynthesis={speaking:false,pending:false,paused:false,getVoices:()=>stimmen,
-    speak(u){gesprochen.push({text:u.text,rate:u.rate,lang:u.lang});},cancel(){},resume(){},addEventListener(){}};
+    speak(u){gesprochen.push({text:u.text,rate:u.rate,lang:u.lang});},cancel(){gesprochen.abgebrochen=(gesprochen.abgebrochen||0)+1;this.speaking=false;},resume(){},addEventListener(){}};
   const c=dom.getInternalVMContext();
   for(const m of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g))if(m[1].trim())vm.runInContext(m[1],c);
   vm.runInContext(fs.readFileSync(path.join(root,'assets/verben.js'),'utf8'),c);
@@ -27,6 +27,8 @@ function seite(folder,stimmen){
   return {w,d:w.document,gesprochen,lauf:code=>vm.runInContext(code,c)};
 }
 const FR=[{name:'Thomas',lang:'fr-FR',localService:true}];
+const warte=ms=>new Promise(r=>setTimeout(r,ms));
+(async()=>{
 for(const folder of ['year7','year8','year9','year10']){
   const s=seite(folder,FR);
   s.d.getElementById('practiceAcross').click();
@@ -43,6 +45,15 @@ for(const folder of ['year7','year8','year9','year10']){
   assert.ok(s.gesprochen.at(-1).rate<0.9,folder+': langsam ist langsamer');
   s.d.getElementById('hrNochmal').click();
   assert.equal(s.gesprochen.at(-1).rate,0.9);
+  /* iOS meldet manchmal noch "spricht", obwohl die Stimme fertig ist.
+     Dann darf "Langsam" nicht nur anhalten, sondern muss neu sprechen. */
+  const w=s.w.speechSynthesis;w.speaking=true;
+  const vorher=s.gesprochen.length;
+  s.d.getElementById('hrLangsam').click();
+  assert.equal(s.gesprochen.abgebrochen,1,folder+': haengende Stimme wird abgebrochen');
+  await warte(320);
+  assert.equal(s.gesprochen.length,vorher+1,folder+': danach wird langsam neu gesprochen');
+  assert.equal(s.gesprochen.at(-1).rate,0.5,folder+': langsam heisst 0,5');
   for(let i=0;i<10;i++){
     const v=woerter[i];
     const feld=s.d.getElementById('typeIn');
@@ -74,4 +85,4 @@ for(const folder of ['year7','year8','year9','year10']){
  s.d.getElementById('practiceAcross').click();
  assert.ok(s.d.getElementById('startHoeren'),'leere Stimmenliste: Hoerrunde trotzdem da');
  s.w.close();}
-console.log('Hörrunde: zehn Wörter, sprechen beim Start, Weiter und auf Knopfdruck, prüfen wie beim Tippen, in allen vier Klassen');
+})().then(()=>console.log('Hörrunde: zehn Wörter, sprechen beim Start, Weiter und auf Knopfdruck, prüfen wie beim Tippen, in allen vier Klassen; Langsam auch bei hängender Stimme')).catch(e=>{console.error(e);process.exit(1);});

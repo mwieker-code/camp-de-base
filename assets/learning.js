@@ -925,7 +925,7 @@ ${vocabulary}`;
     let last='noch nichts abgespielt';
     /* Aufbau wie in der Seite: niemals cancel() direkt vor speak(), sonst
        bleibt iOS stumm. Einziger Unterschied ist die gewaehlte Stimme. */
-    Speech.say=function(text,btn,tempo){
+    Speech.say=function(text,btn){
       try{
         if(synth.speaking||synth.pending){
           synth.cancel(); last='abgebrochen';
@@ -936,7 +936,7 @@ ${vocabulary}`;
         const voice=chosenVoice();
         u.lang='fr-FR';
         if(voice){ try{ u.voice=voice; u.lang=voice.lang||'fr-FR'; }catch(e){} }
-        u.rate=tempo||0.9;
+        u.rate=0.9;
         last='gestartet';
         u.onstart=()=>{last='spricht';};
         u.onend=()=>{last='fertig'; if(btn)btn.classList.remove('on');};
@@ -1502,11 +1502,36 @@ ${vocabulary}`;
     let alle=[];try{alle=synth.getVoices()||[];}catch(e){}
     return !alle.length||enVoices().length>0;
   };
+  /* Die Hoerrunde spricht selbst, statt Speech.say zu nehmen: Dort ist
+     ein Tipp waehrend des Sprechens ein Stopp. Auf iOS meldet die Stimme
+     aber manchmal noch "spricht", wenn sie laengst fertig ist - dann tat
+     "Langsam" gar nichts. Hier wird abgebrochen und nach einer kurzen
+     Pause neu gesprochen (cancel() direkt vor speak() liesse iOS stumm).
+     Langsam ist 0,5 statt 0,9: 0,6 war kaum zu unterscheiden. */
+  const TEMPO_NORMAL=0.9,TEMPO_LANGSAM=0.5;
+  let sprichUhr=null;
   function sprich(text,langsam,btn){
-    if(typeof Speech==='undefined'||!Speech.say)return;
-    /* Kein cancel() davor - danach bliebe iOS stumm. Spricht die Stimme
-       noch, haelt Speech.say sie an; der naechste Tipp spielt ab. */
-    Speech.say(text,btn,langsam?0.6:0.9);
+    if(!synth||typeof SpeechSynthesisUtterance==='undefined')return;
+    const los=()=>{
+      sprichUhr=null;
+      try{
+        const u=new SpeechSynthesisUtterance(sprechbar(text));
+        const voice=chosenVoice();
+        u.lang='fr-FR';
+        if(voice){ try{ u.voice=voice; u.lang=voice.lang||'fr-FR'; }catch(e){} }
+        u.rate=langsam?TEMPO_LANGSAM:TEMPO_NORMAL;
+        document.querySelectorAll('.hr-hoeren.on').forEach(b=>b.classList.remove('on'));
+        if(btn)btn.classList.add('on');
+        u.onend=u.onerror=()=>{ if(btn)btn.classList.remove('on'); };
+        synth.speak(u);
+        if(synth.paused){ try{ synth.resume(); }catch(e){} }
+      }catch(e){ if(btn)btn.classList.remove('on'); }
+    };
+    if(sprichUhr){clearTimeout(sprichUhr);sprichUhr=null;}
+    let laeuft=false;
+    try{ laeuft=synth.speaking||synth.pending; }catch(e){}
+    if(laeuft){ try{ synth.cancel(); }catch(e){} sprichUhr=setTimeout(los,250); }
+    else los();
   }
 
   function startHoeren(topicId,woerter){
