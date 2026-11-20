@@ -108,6 +108,10 @@
         wrap.insertAdjacentHTML('beforeend','<button class="topic gv-start" id="startGenus"><span lang="fr">le ou la ?</span> – Genus-Spiel<br><span class="t-count">'+genusPool(words).length+' Nomen ohne Artikel: männlich oder weiblich? 60 Sekunden</span></button>');
         document.getElementById('startGenus').onclick=()=>startGenus(topicId);
       }
+      if(hoerenMoeglich()&&hoerPool(words).length>=4){
+        wrap.insertAdjacentHTML('beforeend','<button class="topic hr-start" id="startHoeren">Hörrunde – 10 Wörter<br><span class="t-count">Die Seite spricht ein Wort, du schreibst es auf</span></button>');
+        document.getElementById('startHoeren').onclick=()=>startHoeren(topicId);
+      }
     }
   }
   window.addEventListener('pagehide',checkpoint);
@@ -550,7 +554,7 @@ ${vocabulary}`;
      franzoesische Genus, nicht das deutsche. "Haus" ist so richtig wie
      "das Haus".
      ========================================================================= */
-  const zielFranz = () => S.view === 'pvblitz' || S.view === 'verben' || S.mode === 'cloze' || S.dir === 'de2en';
+  const zielFranz = () => S.view === 'pvblitz' || S.view === 'verben' || S.view === 'hoeren' || S.mode === 'cloze' || S.dir === 'de2en';
   const ligatur = x => x.replace(/œ/g, 'oe').replace(/æ/g, 'ae');
   const ohneAkzent = x => ligatur(x).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const ARTIKEL_FR = /^(?:le|la|les|l['\u2019]|un|une|des|du|de la|de l['\u2019])\s*/i;
@@ -921,7 +925,7 @@ ${vocabulary}`;
     let last='noch nichts abgespielt';
     /* Aufbau wie in der Seite: niemals cancel() direkt vor speak(), sonst
        bleibt iOS stumm. Einziger Unterschied ist die gewaehlte Stimme. */
-    Speech.say=function(text,btn){
+    Speech.say=function(text,btn,tempo){
       try{
         if(synth.speaking||synth.pending){
           synth.cancel(); last='abgebrochen';
@@ -932,7 +936,7 @@ ${vocabulary}`;
         const voice=chosenVoice();
         u.lang='fr-FR';
         if(voice){ try{ u.voice=voice; u.lang=voice.lang||'fr-FR'; }catch(e){} }
-        u.rate=0.9;
+        u.rate=tempo||0.9;
         last='gestartet';
         u.onstart=()=>{last='spricht';};
         u.onend=()=>{last='fertig'; if(btn)btn.classList.remove('on');};
@@ -1464,12 +1468,129 @@ ${vocabulary}`;
     window.LearningFeedback?.tone('done');
   }
 
+  /* =========================================================================
+     HOERRUNDE
+     Die Seite spricht ein Wort, man schreibt es auf. Zehn Woerter aus der
+     gewaehlten Auswahl; jedes laesst sich wieder und langsamer anhoeren.
+     Geprueft wird wie beim Tippen DE -> FR: Fehlt der Artikel oder ein
+     Akzent, ist es "fast". Wie Blitzrunde und "le ou la ?" ohne
+     Lernfaecher.
+
+     Gesprochen wird nur aus einem Tipp heraus (Start, Weiter, Anhoeren),
+     nie aus einem Zeitgeber: iOS spielt sonst nichts ab. Ohne
+     franzoesische Stimme gibt es die Runde nicht.
+
+     Nicht abgefragt werden Eintraege mit Schraegstrich oder
+     Auslassungspunkten ("le copain / la copine", "ne ... pas") und lange
+     Wendungen - beim Hoeren laesst sich nicht erraten, welche Variante
+     oder welcher Teil gemeint ist.
+     ========================================================================= */
+  const hoerbar=v=>{
+    /* Stumme Zusaetze wie (fam.) oder (qn/qc) fallen weg; jede andere
+       Klammer wird mitgesprochen ("le carton (jaune/rouge)") und macht
+       das Wort zum Raten. */
+    const t=String(v.en||'').replace(/\((?:fam\.|=[^)]*|\+[^)]*|[mf]\.[^)]*|pl\.|(?:à |de )?(?:qn|qc)(?:\/(?:qn|qc))?)\)/gi,' ')
+      .replace(/\b(?:qn|qc)(?:\/(?:qn|qc))?\b/g,' ').replace(/\s+/g,' ').trim();
+    return !!t&&!/[\/…()]|\.\.\./.test(t)&&t.split(' ').length<=4&&t.length<=32;
+  };
+  const hoerPool=woerter=>woerter.filter(hoerbar);
+  /* Auf iOS ist die Stimmenliste anfangs leer - dann wird die Runde
+     angeboten. Ausgeblendet wird sie nur, wenn das Geraet Stimmen meldet,
+     aber keine franzoesische: Dann laese eine englische Stimme vor. */
+  const hoerenMoeglich=()=>{
+    if(typeof Speech==='undefined'||!Speech.available||!synth)return false;
+    let alle=[];try{alle=synth.getVoices()||[];}catch(e){}
+    return !alle.length||enVoices().length>0;
+  };
+  function sprich(text,langsam,btn){
+    if(typeof Speech==='undefined'||!Speech.say)return;
+    /* Kein cancel() davor - danach bliebe iOS stumm. Spricht die Stimme
+       noch, haelt Speech.say sie an; der naechste Tipp spielt ab. */
+    Speech.say(text,btn,langsam?0.6:0.9);
+  }
+
+  function startHoeren(topicId,woerter){
+    const pool=hoerPool(woerter||wordsFor(topicId));
+    if(!pool.length)return;
+    S.hr={topicId,eigene:!!woerter,woerter:shuffle(pool).slice(0,10),i:0,antwort:null,falsch:[],richtig:[]};
+    S.view='hoeren';
+    render();
+    sprich(S.hr.woerter[0].en);
+  }
+  function renderHoeren(){
+    const hr=S.hr;
+    if(!hr){S.view='home';return render();}
+    if(hr.i>=hr.woerter.length)return renderHoerenDone();
+    const v=hr.woerter[hr.i],r=hr.antwort;
+    const grund=r&&r.ergebnis==='near'?(r.grund==='artikel'?'Fast – der Artikel fehlt':r.grund==='akzent'?'Fast – achte auf die Akzente':'Fast – ein kleiner Tippfehler'):'';
+    const urteil=!r?'':'<div class="hr-loesung '+r.ergebnis+'">'
+      +(r.ergebnis==='ok'?'✓ Richtig':r.ergebnis==='near'?grund:'✗ Gesprochen wurde')
+      +': <b lang="fr">'+safe(v.en)+'</b><span class="hr-de">'+safe(v.de)+'</span></div>';
+    view.innerHTML='<div class="sessionbar"><button class="linkbtn" id="back">← Übersicht</button>'
+      +'<div class="switches"><span class="switch pv-tag" aria-disabled="true">Hörrunde</span></div></div>'
+      +'<div class="round-progress"><span>'+(hr.i+1)+' / '+hr.woerter.length+'</span>'
+      +'<progress max="'+hr.woerter.length+'" value="'+hr.i+'"></progress></div>'
+      +'<div class="stage"><div class="vcard deal hr-karte">'
+      +'<h2 class="prompt hr-frage">Was hörst du?</h2>'
+      +'<div class="hr-knoepfe"><button type="button" class="hr-hoeren" id="hrNochmal" aria-label="Noch einmal anhören">'+SPK+'<span>Anhören</span></button>'
+      +'<button type="button" class="hr-hoeren hr-langsam" id="hrLangsam" aria-label="Langsam anhören">'+SPK+'<span>Langsam</span></button></div>'
+      +'<div class="typebox"><input id="typeIn" lang="fr" placeholder="mot français" aria-label="Was du gehört hast, auf Französisch" autocomplete="off" autocapitalize="off" spellcheck="false"'
+      +(r?' disabled value="'+safe(r.eingabe)+'"':'')+'></div>'
+      +urteil+'</div></div>'
+      +'<div class="controls">'+(r?'<button class="primary" id="hrWeiter">Weiter (Enter)</button>'
+        :'<button class="primary" id="submit">Prüfen (Enter)</button>')+'</div>';
+    document.getElementById('back').onclick=exitHoeren;
+    document.getElementById('hrNochmal').onclick=e=>sprich(v.en,false,e.currentTarget);
+    document.getElementById('hrLangsam').onclick=e=>sprich(v.en,true,e.currentTarget);
+    const feld=document.getElementById('typeIn');
+    if(!r){
+      document.getElementById('submit').onclick=hoerenPruefen;
+      feld.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); e.stopPropagation(); hoerenPruefen(); } };
+      try{feld.focus({preventScroll:true});}catch(e){}
+    } else document.getElementById('hrWeiter').onclick=hoerenWeiter;
+  }
+  function hoerenPruefen(){
+    const hr=S.hr;if(!hr||hr.antwort)return;
+    const feld=document.getElementById('typeIn'),eingabe=feld?feld.value:'';
+    const v=hr.woerter[hr.i];
+    /* Leeres Feld: noch einmal hoeren statt pruefen. */
+    if(!eingabe.trim()){sprich(v.en);return;}
+    const ergebnis=checkTyped(eingabe,v.en);
+    hr.antwort={eingabe,ergebnis,grund:nahGrund};
+    (ergebnis==='ok'?hr.richtig:hr.falsch).push(v);
+    lerntagZaehlen();
+    render();
+    window.LearningFeedback?.signal(ergebnis);
+  }
+  function hoerenWeiter(){
+    const hr=S.hr;if(!hr||!hr.antwort)return;
+    hr.antwort=null;hr.i++;
+    render();
+    if(hr.i<hr.woerter.length)sprich(hr.woerter[hr.i].en);
+  }
+  function exitHoeren(){ try{ if(synth&&(synth.speaking||synth.pending))synth.cancel(); }catch(e){} S.hr=null; home(); }
+  function renderHoerenDone(){
+    const hr=S.hr,falsch=[...new Set(hr.falsch)],richtig=[...new Set(hr.richtig)].filter(v=>!falsch.includes(v));
+    view.innerHTML='<div class="done"><div class="summary-number">'+hr.richtig.length+' / '+hr.woerter.length+'</div><h2>Hörrunde geschafft</h2>'
+      +'<p>'+hr.richtig.length+' Wörter richtig aufgeschrieben, '+hr.falsch.length+' zum Weiterüben</p>'+rueckblick(falsch,richtig)
+      +'<div class="controls"><button class="primary" id="hrNeu">Neue Hörrunde</button><button id="hrHome">Zur Übersicht</button></div></div>';
+    document.getElementById('hrNeu').onclick=()=>startHoeren(hr.topicId,hr.eigene?hr.woerter:null);
+    document.getElementById('hrHome').onclick=exitHoeren;
+    const ueben=document.getElementById('missedPractice');
+    if(ueben){
+      ueben.textContent=falsch.length===1?'Dieses Wort noch einmal hören':'Diese '+falsch.length+' Wörter noch einmal hören';
+      ueben.onclick=()=>startHoeren(hr.topicId,falsch);
+    }
+    window.LearningFeedback?.tone('done');
+  }
+
   const vorUebungen=render;
   render=function(){
     if(S.view!=='genus')stopGenusUhr();
     if(S.view==='genus')return renderGenus();
     if(S.view==='verbwahl')return renderVerbwahl();
     if(S.view==='verben')return renderVerben();
+    if(S.view==='hoeren')return renderHoeren();
     return vorUebungen();
   };
   const vorKachel=renderHome;
@@ -1491,6 +1612,8 @@ ${vocabulary}`;
       else if(e.key==='2'||e.key==='ArrowRight'){e.preventDefault();genusWaehlen('f');}
     }else if(S.view==='verben'&&S.vb&&S.vb.antwort&&e.key==='Enter'&&!(e.target&&e.target.tagName==='BUTTON')){
       e.preventDefault();verbWeiter();
+    }else if(S.view==='hoeren'&&S.hr&&S.hr.antwort&&e.key==='Enter'&&!(e.target&&e.target.tagName==='BUTTON')){
+      e.preventDefault();hoerenWeiter();
     }
   });
 
@@ -2007,7 +2130,7 @@ ${vocabulary}`;
     const antwortsprache = () =>
       /* In der Blitzrunde steht immer Deutsch da und Franzoesisch wird
          getippt, ganz gleich, was in der Runde eingestellt war. */
-      (S.view === 'pvblitz' || S.view === 'verben') ? 'fr'
+      (S.view === 'pvblitz' || S.view === 'verben' || S.view === 'hoeren') ? 'fr'
         : S.mode === 'cloze' ? 'fr' : (S.dir === 'en2de' ? 'de' : 'fr');
     const belegung = () => wahl || antwortsprache();
 
@@ -2071,7 +2194,7 @@ ${vocabulary}`;
         Math.round(feld.offsetTop + (feld.offsetHeight - hoehe) / 2) + 'px');
       box.style.setProperty('--eb-marke-links', Math.round(feld.offsetLeft) + 'px');
     }
-    const tippt = () => (S.view === 'session' || blitz() || S.view === 'verben') && !!feldVon();
+    const tippt = () => (S.view === 'session' || blitz() || S.view === 'verben' || S.view === 'hoeren') && !!feldVon();
 
     /* Die Karte stand oben, das Tastenfeld unten, dazwischen bis zu 301
        Punkte Leere - der Blick musste ueber den halben Bildschirm
@@ -2370,7 +2493,7 @@ ${vocabulary}`;
       if(typeof document === 'undefined' || !document.body) return;
       document.body.classList.toggle('eb-app', alsApp());
       const runde = klein.matches && (S.view === 'session' || blitz()
-        || S.view === 'genus' || S.view === 'verben');
+        || S.view === 'genus' || S.view === 'verben' || S.view === 'hoeren');
       document.body.classList.toggle('eb-runde', runde);
 
       /* Der Richtungsschalter zieht auf dem Telefon in die
