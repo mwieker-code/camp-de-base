@@ -1507,15 +1507,21 @@ ${vocabulary}`;
      aber manchmal noch "spricht", wenn sie laengst fertig ist - dann tat
      "Langsam" gar nichts. Hier wird abgebrochen und nach einer kurzen
      Pause neu gesprochen (cancel() direkt vor speak() liesse iOS stumm).
-     Langsam ist 0,5 statt 0,9: 0,6 war kaum zu unterscheiden. */
-  const TEMPO_NORMAL=0.9,TEMPO_LANGSAM=0.5;
+
+     Langsam: Am iPhone gemessen (iOS 18, Stimme Thomas) dauerte ein Satz
+     bei Tempo 1 2,9 s, bei 0,5 3,8 s, bei 0,3 4,1 s - unter 1 bremst iOS
+     kaum noch. Deshalb das langsamste Tempo und dazu eine kurze Pause
+     zwischen den Woertern ("la, salle, de, bains"). */
+  const TEMPO_NORMAL=0.9,TEMPO_LANGSAM=0.1;
+  const mitWortpausen=t=>t.split(' ').filter(Boolean).join(', ');
   let sprichUhr=null;
   function sprich(text,langsam,btn){
     if(!synth||typeof SpeechSynthesisUtterance==='undefined')return;
     const los=()=>{
       sprichUhr=null;
       try{
-        const u=new SpeechSynthesisUtterance(sprechbar(text));
+        const gesagt=sprechbar(text);
+        const u=new SpeechSynthesisUtterance(langsam?mitWortpausen(gesagt):gesagt);
         const voice=chosenVoice();
         u.lang='fr-FR';
         if(voice){ try{ u.voice=voice; u.lang=voice.lang||'fr-FR'; }catch(e){} }
