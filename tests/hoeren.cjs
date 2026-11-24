@@ -53,7 +53,14 @@ for(const folder of ['year7','year8','year9','year10']){
   assert.equal(s.gesprochen.abgebrochen,1,folder+': haengende Stimme wird abgebrochen');
   await warte(320);
   assert.equal(s.gesprochen.length,vorher+1,folder+': danach wird langsam neu gesprochen');
-  assert.equal(s.gesprochen.at(-1).rate,0.5,folder+': langsam heisst 0,5');
+  assert.equal(s.gesprochen.at(-1).rate,0.1,folder+': langsam ist das langsamste Tempo');
+  /* Mehrteilige Eintraege bekommen langsam Pausen zwischen den Woertern */
+  {const mehr=woerter.find(v=>/\s/.test(v.en.replace(/\([^)]*\)/g,'').replace(/\b(?:qn|qc)(?:\/(?:qn|qc))?\b/g,'').trim()));
+   if(mehr){s.lauf('S.hr.i='+woerter.indexOf(mehr)+';render()');s.d.getElementById('hrLangsam').click();
+     assert.match(s.gesprochen.at(-1).text,/, /,folder+': Wortpausen bei '+mehr.en);
+     s.d.getElementById('hrNochmal').click();
+     assert.doesNotMatch(s.gesprochen.at(-1).text,/, /,folder+': normal ohne Wortpausen');
+     s.lauf('S.hr.i=0;render()');}}
   for(let i=0;i<10;i++){
     const v=woerter[i];
     const feld=s.d.getElementById('typeIn');
