@@ -1649,6 +1649,111 @@ ${vocabulary}`;
   });
 
   /* =========================================================================
+     SACHFELDER IM WOERTERBUCH
+     Jedes Wort traegt sein Sachfeld (content/sachfelder-klasseN.tsv). Im
+     Woerterbuch steht eine Reihe Knoepfe, einer je Sachfeld; ein Tipp
+     zeigt nur dieses Feld, die Suche wirkt darin weiter.
+
+     Die Suche kennt die Felder auch: "Arbeit" findet alle Woerter aus
+     "Arbeit & Beruf", dazu die Woerter, in deren Bedeutung "Arbeit"
+     steht. Jedes Feld hat ein paar Suchwoerter mehr ("Job", "Hobby").
+     Ueber den Treffern steht dann ein Hinweis, mit dem man nur das Feld
+     ansehen kann.
+     ========================================================================= */
+  if(typeof SACHFELDER!=='undefined'&&Array.isArray(SACHFELDER)&&SACHFELDER.length){
+    const SF=new Map(SACHFELDER.map(f=>[f.id,f]));
+    let sfAktiv=null;
+    const kl=x=>String(x||'').toLowerCase();
+    /* Ein Feld passt, wenn ein Wort seines Namens oder eines seiner
+       Suchwoerter mit dem Gesuchten beginnt - "arb" findet "Arbeit",
+       "job" findet "Job". Unter drei Buchstaben nie: "an" steckt in fast
+       allem. */
+    function feldTreffer(raw){
+      const t=kl(raw).trim();
+      if(t.length<3)return [];
+      return SACHFELDER.filter(f=>[f.name,...(f.such||[])].some(w=>
+        kl(w).split(/[^a-zäöüß]+/).some(teil=>teil&&teil.startsWith(t))||kl(w)===t));
+    }
+    const zeilenVon=box=>[...box.querySelectorAll('details.lsec')].flatMap(sec=>
+      [...sec.querySelectorAll('.vrow')].map((row,i)=>({sec,row,v:(SETS[sec.dataset.sec]||[])[i]})));
+    const imFeld=(v,id)=>!!(v&&Array.isArray(v.sf)&&v.sf.includes(id));
+
+    const vorFilter=filterList;
+    filterList=function(box,raw){
+      vorFilter(box,raw);
+      const term=String(raw||'').trim();
+      const treffer=feldTreffer(term);
+      const ids=treffer.map(f=>f.id);
+      let hits=0;
+      const proSec=new Map();
+      for(const {sec,row,v} of zeilenVon(box)){
+        let an=!row.classList.contains('off');
+        if(!an&&ids.some(id=>imFeld(v,id)))an=true;
+        if(sfAktiv&&!imFeld(v,sfAktiv))an=false;
+        row.classList.toggle('off',!an);
+        if(an){hits++;proSec.set(sec,(proSec.get(sec)||0)+1);}
+      }
+      box.querySelectorAll('details.lsec').forEach(sec=>{
+        const n=proSec.get(sec)||0;
+        sec.classList.toggle('off',!n);
+        if(term||sfAktiv)sec.open=n>0;
+      });
+      const nichts=document.getElementById('lnone');
+      if(nichts)nichts.hidden=!((term||sfAktiv)&&hits===0);
+      const zahl=document.getElementById('lcount');
+      if(zahl&&(term||sfAktiv)){
+        const feld=sfAktiv?' im Sachfeld „'+SF.get(sfAktiv).name+'“':'';
+        zahl.textContent=term?hits+' Treffer für „'+term+'“'+feld:hits+(hits===1?' Wort':' Wörter')+feld;
+      }
+      const hinweis=document.getElementById('sfHinweis');
+      if(hinweis){
+        const zeigen=treffer.filter(f=>f.id!==sfAktiv);
+        hinweis.hidden=!zeigen.length;
+        hinweis.innerHTML=zeigen.length?'Sachfeld: '+zeigen.map(f=>'<button type="button" class="sf-hinweis" data-sf="'+f.id+'">'
+          +safe(f.name)+' · '+anzahl(f.id)+'</button>').join(' ')+'<span class="sf-hinweis-text">– nur dieses Feld zeigen</span>':'';
+        hinweis.querySelectorAll('[data-sf]').forEach(b=>b.onclick=()=>waehle(b.dataset.sf,true));
+      }
+      document.querySelectorAll('#sfLeiste [data-sf]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.sf===(sfAktiv||''))));
+    };
+    function anzahl(id){
+      let n=0;for(const t of TOPICS)for(const v of (SETS[t.id]||[]))if(imFeld(v,id))n++;return n;
+    }
+    function waehle(id,sucheLeeren){
+      sfAktiv=id||null;
+      const q=document.getElementById('lq'),box=document.getElementById('vlist');
+      if(!q||!box)return;
+      if(sucheLeeren)q.value='';
+      /* Ueber das Eingabefeld, damit auch Auswahl und Zaehler mitziehen. */
+      if(typeof q.oninput==='function')q.oninput.call(q); else filterList(box,q.value);
+    }
+
+    const vorListe=renderList;
+    renderList=function(){
+      vorListe.apply(this,arguments);
+      const box=document.getElementById('vlist'),ctl=document.querySelector('.listctl');
+      if(!box||!ctl)return;
+      /* Das Sachfeld steht klein unter jedem Wort - auch fuer die
+         Durchsicht der Zuordnung. */
+      for(const {row,v} of zeilenVon(box)){
+        if(!v||!Array.isArray(v.sf)||row.querySelector('.vsf'))continue;
+        const ziel=(row.querySelector('.ven')||{}).parentElement;
+        if(ziel)ziel.insertAdjacentHTML('beforeend','<span class="vsf">'+v.sf.map(id=>safe((SF.get(id)||{}).name||id)).join(' · ')+'</span>');
+      }
+      const leiste=document.createElement('div');
+      leiste.className='sf-leiste';leiste.id='sfLeiste';
+      leiste.setAttribute('role','group');leiste.setAttribute('aria-label','Nach Sachfeld filtern');
+      leiste.innerHTML='<span class="sf-titel">Sachfelder</span><button type="button" class="sf-knopf" data-sf="" aria-pressed="'+!sfAktiv+'">Alle</button>'
+        +SACHFELDER.map(f=>{const n=anzahl(f.id);return n?'<button type="button" class="sf-knopf" data-sf="'+f.id+'" aria-pressed="'+(sfAktiv===f.id)+'">'
+          +safe(f.name)+' <span class="sf-zahl">'+n+'</span></button>':'';}).join('');
+      ctl.after(leiste);
+      const hinweis=document.createElement('div');hinweis.id='sfHinweis';hinweis.className='sf-hinweis-zeile';hinweis.hidden=true;
+      leiste.after(hinweis);
+      leiste.querySelectorAll('[data-sf]').forEach(b=>b.onclick=()=>waehle(sfAktiv===b.dataset.sf?null:b.dataset.sf,false));
+      if(sfAktiv)waehle(sfAktiv,false);
+    };
+  }
+
+  /* =========================================================================
      LERNAUFTRAG  –  eine Vokabelauswahl als Link weitergeben.
      Der Link trägt die Auswahl selbst (Bitmaske über alle Wörter des
      Jahrgangs, lauflängenkodiert) und eine Prüfsumme des Vokabulars. Ändert

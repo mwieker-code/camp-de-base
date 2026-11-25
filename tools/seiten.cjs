@@ -7,6 +7,9 @@
 
      content/klasseN.json           Stichwort, Bedeutung, Wortart, Fundstelle
                                     (aus den Excel-Listen, tools/import-liste.py)
+     content/sachfelder.json        die Sachfelder (Kuerzel, Name, Suchwoerter)
+     content/sachfelder-klasseN.tsv Sachfelder je Wort, Schluessel wie unten,
+                                    Kuerzel durch Komma getrennt
      content/beispiele-klasseN.tsv  eigene Beispielsaetze, Luecke in [ ], und
                                     Wortarten, wo die Liste keine nennt.
                                     Tabulatorgetrennt - laesst sich in Excel
@@ -78,9 +81,28 @@ function beispiel(satz) {
   return { example_en: satz.replace(/\[([^\]]+)\]/g, '$1'), luecke: m[1], luecke_bei: m.index };
 }
 
+/* Sachfelder je Wort: "Schluessel<TAB>kuerzel,kuerzel". */
+function sachfeldTabelle(datei, kuerzel) {
+  const p = path.join(ROOT, 'content', datei);
+  if (!fs.existsSync(p)) return {};
+  const out = {};
+  fs.readFileSync(p, 'utf8').replace(/^\uFEFF/, '').split(/\r?\n/).slice(1).forEach((z, i) => {
+    if (!z.trim()) return;
+    const [schluessel, felder] = z.split('\t');
+    const liste = String(felder || '').split(',').map(x => x.trim()).filter(Boolean);
+    if (!schluessel || !liste.length) throw new Error(datei + ', Zeile ' + (i + 2) + ': Schluessel und Sachfeld erwartet');
+    const fremd = liste.filter(x => !kuerzel.has(x));
+    if (fremd.length) throw new Error(datei + ', Zeile ' + (i + 2) + ': unbekanntes Sachfeld ' + fremd.join(', '));
+    out[schluessel] = liste;
+  });
+  return out;
+}
+
 function daten(j) {
   const buch = lies('klasse' + j + '.json');
   const saetze = tabelle('beispiele-klasse' + j + '.tsv');
+  const SF = lies('sachfelder.json', { felder: [] }).felder;
+  const felder = sachfeldTabelle('sachfelder-klasse' + j + '.tsv', new Set(SF.map(f => f.id)));
   const years = [{ id: 'y' + j, label: 'Klasse ' + j, book: '', units: [] }];
   const topics = [];
   const sets = {};
@@ -100,6 +122,9 @@ function daten(j) {
         const v = { id: tid + '-' + String(i + 1).padStart(3, '0'), en: w.fr, de: w.de,
                     pos: [(extra && extra.wortart) || w.pos, w.hinweis].filter(Boolean).join(' · ') };
         if (extra && extra.satz) Object.assign(v, beispiel(extra.satz));
+        const sf = felder[w.fund + '|' + w.fr];
+        if (SF.length && !sf) throw new Error('Klasse ' + j + ': kein Sachfeld fuer ' + w.fund + '|' + w.fr);
+        if (sf) v.sf = sf;
         return v;
       });
     }
@@ -109,13 +134,15 @@ function daten(j) {
   const bekannt = new Set(buch.einheiten.flatMap(e => e.teile.flatMap(t => t.woerter.map(w => w.fund + '|' + w.fr))));
   const fremd = Object.keys(saetze).filter(k => !bekannt.has(k));
   if (fremd.length) throw new Error('Klasse ' + j + ': Schluessel ohne Eintrag: ' + fremd.slice(0, 5).join(' ; '));
-  return { j, years, topics, sets };
+  const fremdSf = Object.keys(felder).filter(k => !bekannt.has(k));
+  if (fremdSf.length) throw new Error('Klasse ' + j + ': Sachfeld-Schluessel ohne Eintrag: ' + fremdSf.slice(0, 5).join(' ; '));
+  return { j, years, topics, sets, sachfelder: SF.map(f => ({ id: f.id, name: f.name, such: f.such || [] })) };
 }
 
 function datenblock(d) {
   const js = x => JSON.stringify(x, null, 1);
   return 'const YEARS = ' + js(d.years) + ';\n\nconst TOPICS = ' + js(d.topics)
-    + ';\n\nconst SETS = ' + js(d.sets) + ';\n';
+    + ';\n\nconst SETS = ' + js(d.sets) + ';\n\nconst SACHFELDER = ' + JSON.stringify(d.sachfelder) + ';\n';
 }
 
 function farbregeln(d) {

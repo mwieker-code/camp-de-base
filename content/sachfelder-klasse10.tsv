@@ -1,0 +1,351 @@
+Schluessel	Sachfelder
+1/A|le projet	arbeit
+1/A|le métier	arbeit
+1/A|le domaine	arbeit
+1/A|la technologie	arbeit,medien
+1/A|la santé	koerper
+1/A|l'alimentation	essen
+1/A|l'art	kultur
+1/A|l'éducation	schule,gesell
+1/Voc|réfléchir (à qc)	gefuehl
+1/Voc|professionnel/professionnelle	arbeit
+1/Voc|autonome	arbeit,gefuehl
+1/Voc|être assis/assise	koerper
+1/Voc|la main	koerper
+1/Voc|s'organiser	arbeit
+1/Voc|la formation	arbeit,schule
+1/Voc|l'entreprise	arbeit
+1/Voc|utile	klein
+1/Voc|l'horaire	zeit,arbeit
+1/Voc|flexible	arbeit
+1/Voc|s'occuper de qn/qc	arbeit,fam
+1/Voc|la responsabilité	arbeit
+1/Voc|dangereux/dangereuse	gefuehl
+1/Voc|s'adapter (à qc)	arbeit
+1/Voc|la situation	klein
+1/Voc|être doué/douée	arbeit,gefuehl
+1/1|le conseiller / la conseillère d'orientation	arbeit,schule
+1/1|n'avoir aucune idée (de qc)	gefuehl
+1/1|ne… aucun/e	klein
+1/1|plaire (à qn)	gefuehl
+1/1|le petit boulot	arbeit
+1/1|garder qn/qc	arbeit,fam
+1/1|le stage	arbeit
+1/1|on dirait (que)	klein
+1/1|supporter qn/qc	gefuehl
+1/1|l'homme	gesell
+1/1|handicapé/handicapée	koerper,gesell
+1/1|le contact	arbeit,fam
+1/1|faire du bien (à qn/qc)	gefuehl
+1/1|intéresser qn	gefuehl
+1/1|l'avantage	arbeit
+1/1|l'inconvénient	arbeit
+1/1|être prêt/prête (à + inf.)	klein
+1/1|l'éducateur / l'éducatrice	arbeit
+1/1|l'infirmier / l'infirmière	arbeit,koerper
+1/1|se renseigner sur qn/qc	arbeit,medien
+1/1|aller (à qn / avec qc)	kleid
+1/1|la qualité	arbeit,gefuehl
+1/1|envoyer qc à qn	medien
+1/1|le rendez-vous	zeit,arbeit
+1/2|forcément	klein
+1/2|depuis que	zeit
+1/2|nettoyer qc	wohn
+1/2|faire peur (à qn)	gefuehl
+1/2|au contraire	klein
+1/2|poser sa candidature (pour qc)	arbeit
+1/2|physiquement	koerper
+1/2|ne… que	klein
+1/2|prouver qc (à qn)	klein
+1/2|le robot	medien,arbeit
+1/2|de plus en plus	klein
+1/2|programmer qc	medien,arbeit
+1/2|l'informatique	medien,schule
+1/2|se spécialiser (dans qc)	arbeit
+1/2|sauver qn/qc	klein
+1/2|rater qc	schule
+1/2|l'examen	schule
+1/2|motivé/motivée	gefuehl
+1/2|le début	zeit
+1/2|permettre (à qn) de	klein
+1/2|la lune	natur
+1/2|le nombre	zeit
+2/A|le mode de vie	gesell,stadt
+2/A|le lycée	schule
+2/A|l'hôpital	koerper,stadt
+2/A|la banlieue	stadt,gesell
+2/A|la campagne	natur,wohn
+2/A|les transports en commun	stadt
+2/Voc|l'effet	klein
+2/Voc|mettre qn en colère	gefuehl
+2/Voc|déranger qn	gefuehl
+2/Voc|surprendre qn	gefuehl
+2/Voc|être égal à qn	gefuehl
+2/Voc|influencer qn	medien,gefuehl
+2/Voc|faire	klein
+2/Voc|rire	gefuehl
+2/Voc|pleurer	gefuehl
+2/Voc|rendre qn/qc	klein
+2/Voc|triste	gefuehl
+2/Voc|agressif/agressive	gefuehl
+2/Voc|donner envie (à qn) de	gefuehl
+2/Voc|empêcher qn/qc de	klein
+2/Voc|mentir (à qn)	gefuehl
+2/Voc|se moquer de qn/qc	gefuehl
+2/1|les quatre coins	klein
+2/1|voici	klein
+2/1|le vent	natur,zeit
+2/1|prochain/prochaine	zeit
+2/1|spécial/spéciale/spéciaux/spéciales	klein
+2/1|le produit	kauf
+2/1|produire qc	arbeit
+2/1|se plaindre (de qn/qc)	gefuehl
+2/1|l'immeuble	wohn,stadt
+2/1|pauvre	gesell
+2/1|riche	gesell
+2/1|la réputation	gesell
+2/1|tous/toutes	klein
+2/1|l'étage	wohn
+2/1|se passer	klein
+2/1|espérer que	gefuehl
+2/1|moderniser qc	stadt
+2/1|arrêter de	klein
+2/1|faux/fausse	klein
+2/1|libre	klein
+2/1|la mobylette	stadt
+2/1|ailleurs	klein
+2/1|être à table	essen,fam
+2/1|stressé/stressée	gefuehl
+2/1|sentir qc	koerper
+2/2|la pub / la publicité	medien,kauf
+2/2|la marque	kauf,kleid
+2/2|pousser qn à	klein
+2/2|le consommateur / la consommatrice	kauf
+2/2|décoder qc	medien
+2/2|séduire qn/qc	medien
+2/2|la terre	natur
+2/2|associer qn/qc à qn/qc	klein
+2/2|le slogan	medien
+2/2|croire qn/qc	gefuehl
+2/2|le label	kauf,natur
+2/2|se laver	koerper
+2/2|le logo	medien
+2/2|à la fois	klein
+2/2|l'énergie	natur
+2/2|économique	arbeit,gesell
+2/2|soutenir qn/qc	gefuehl
+2/2|le chômage	arbeit,gesell
+2/2|l'élément	klein
+2/2|la manière (de)	klein
+2/2|attirer l'attention (de qn sur qn/qc)	medien
+2/2|le jeu de mots	medien,kultur
+2/2|le savoir-faire	arbeit,kultur
+3/A|le Maroc	gesell,reise
+3/A|le désert	natur,reise
+3/A|la vallée	natur
+3/A|le souk	kauf,reise
+3/A|la côte	natur,reise
+3/A|le panneau solaire	natur
+3/Voc|le royaume	gesell
+3/Voc|l'Afrique	gesell,reise
+3/Voc|la population	gesell
+3/Voc|amazigh	gesell
+3/Voc|arabe	gesell
+3/Voc|le protectorat	gesell
+3/Voc|occuper qc	gesell
+3/Voc|le pouvoir	gesell
+3/Voc|indépendant/indépendante	gesell
+3/Voc|la réforme	gesell
+3/Voc|l'ONG (l'organisation non gouvernementale)	gesell
+3/Voc|la loi	gesell
+3/Voc|la religion	gesell
+3/Voc|la majorité	gesell
+3/Voc|musulman/musulmane	gesell
+3/Voc|juif/juive	gesell
+3/Voc|chrétien/chrétienne	gesell
+3/Voc|historique	gesell
+3/Voc|le tiers	zeit
+3/Voc|la moitié	zeit
+3/Voc|l'agriculture	natur,arbeit
+3/Voc|le tourisme	reise
+3/1|l'aéroport	reise
+3/1|avoir hâte (de)	gefuehl
+3/1|venir chercher qn/qc	reise
+3/1|avoir le temps (de)	zeit
+3/1|la mosquée	gesell,stadt
+3/1|le palais	stadt,reise
+3/1|pendant que	klein
+3/1|boire qc	essen
+3/1|le thé	essen
+3/1|la menthe	essen
+3/1|avoir du mal à	gefuehl
+3/1|imaginer qc	gefuehl
+3/1|accueillir qn	reise,fam
+3/1|marchander (qc)	kauf
+3/1|la lampe	wohn
+3/1|le cheval	natur
+3/1|il s'agit de	klein
+3/1|le toit	wohn
+3/1|le meuble	wohn
+3/1|agréable	gefuehl
+3/1|inchallah	gesell
+3/1|la médina	stadt,reise
+3/1|le couscous	essen
+3/2|sec/sèche	natur
+3/2|ocre	kleid
+3/2|le palmier	natur
+3/2|la chaleur	natur,zeit
+3/2|grâce à	klein
+3/2|cultiver qc	natur,arbeit
+3/2|la datte	essen
+3/2|l'olive	essen
+3/2|le blé	natur,essen
+3/2|les remparts	stadt,gesell
+3/2|la caravane	reise,gesell
+3/2|le commerce	kauf,arbeit
+3/2|avant de	zeit
+3/2|le voleur / la voleuse	gesell
+3/2|au-dessus (de qn/qc)	klein
+3/2|en dessous (de qn/qc)	klein
+3/2|par hasard	klein
+3/2|le décor	kultur
+3/2|tourner (qc)	kultur,medien
+3/2|la clim (fam.) / la climatisation	wohn
+MA|l'enquête	gesell
+MA|la disparition	gesell
+MA|disparaître	klein
+MA|incroyable	gefuehl
+MA|la police	gesell,arbeit
+MA|interroger qn	gesell
+MA|le témoin	gesell
+MA|le témoignage	gesell
+MA|le vol	gesell
+MA|voler qc (à qn)	gesell
+MA|le gardien / la gardienne	arbeit
+MA|déclarer qc	klein
+MA|arrêter qn	gesell
+MA|le commissaire / la commissaire	gesell,arbeit
+MA|le suspect / la suspecte	gesell
+MA|le cadre	kultur
+MA|la toile	kultur
+MA|le mystère	gefuehl
+MA|le/la peintre	kultur
+MA|représenter qn/qc	kultur
+MA|le directeur / la directrice	arbeit
+MA|le chef-d'œuvre	kultur
+MA|être sûr/sûre de	gefuehl
+MA|exactement	klein
+MA|l'alcoolique	koerper,gesell
+MA|rose	kleid
+MA|la dame	fam
+MA|la béquille	koerper
+MA|le bras	koerper
+MA|l'alarme	wohn
+MA|le/la spécialiste	arbeit
+MA|lourd/lourde	klein
+MA|tranquille	gefuehl
+MA|l'horloge	zeit
+MA|le tissu	kleid
+MA|la possibilité	klein
+MA|rendre visite à qn	fam,frei
+MA|la sortie	stadt
+MA|en ce moment	zeit
+MA|difficile à	klein
+MA|avant que + subj.	zeit
+MA|se refermer	klein
+MA|lequel/laquelle/lesquels/lesquelles	klein
+MA|la sécurité	gesell
+MA|contrôler qc	klein
+MA|la chaise roulante	koerper
+MA|se séparer de qn/qc	fam
+MA|juste	klein
+MA|à part ça	klein
+MA|l'indice	gesell
+MA|le mètre pliant	arbeit
+MB|le zoom	medien
+MB|la science-fiction	kultur,medien
+MB|la comédie	kultur,medien
+MB|documentaire	medien
+MB|idéal/idéale/idéaux/idéales	gefuehl
+MB|battre qn/qc	sport
+MB|se battre	gefuehl
+MB|le super-pouvoir	kultur
+MB|voler	natur
+MB|invisible	klein
+MB|la pensée	gefuehl
+MB|inspirer qn/qc	kultur
+MB|la réalité (virtuelle)	medien
+MB|rimer (avec qc)	kultur
+MB|le gag	kultur
+MB|la case	kultur
+MB|le dessinateur / la dessinatrice	kultur,arbeit
+MB|le dessin	kultur
+MB|le passé	zeit
+MB|le futur	zeit
+MB|autobiographique	kultur
+MB|le suspense	kultur
+MB|humain/humaine	gesell
+MB|le chiffre	zeit
+MB|la production	arbeit
+MB|franco-belge	gesell,kultur
+MB|japonais/japonaise	gesell
+MB|publier qc	medien,kultur
+MB|le visiteur / la visiteuse	frei,kultur
+MB|la tonne	zeit
+MB|dédicacer qc (à qn)	kultur
+MB|attribuer qc à qn	kultur
+MB|récompenser qn (pour qc)	kultur
+MB|suivant/suivante	klein
+MB|l'évènement	frei,kultur
+MB|le cosplay	frei,kultur
+MB|la rencontre	fam,frei
+MB|le parc d'attractions	frei
+MC|respirer	koerper
+MC|le rythme	kultur
+MC|les paroles	kultur
+MC|quelques	klein
+MC|le slam	kultur
+MC|la voix	koerper,kultur
+MC|mélanger qc	klein
+MC|passer qc (à qn)	medien
+MC|le clip (vidéo)	medien,kultur
+MC|la strophe	kultur
+MC|se ressembler	fam
+MC|le vers	kultur
+MC|résumer qc	schule
+MC|d'après qn/qc	klein
+MC|le titre	kultur,medien
+MC|le refrain	kultur
+MC|attendre qc (de qn/qc)	gefuehl
+MC|la souffrance	gefuehl,koerper
+MC|ça se voit	klein
+MC|le besoin	gefuehl
+MD|le portrait	kultur
+MD|le pionnier / la pionnière	gesell
+MD|naître	fam
+MD|mourir	fam,koerper
+MD|se marier	fam
+MD|le mari	fam
+MD|s'installer	wohn
+MD|faire la connaissance de qn	fam,gruss
+MD|publier qc	medien,kultur
+MD|changer de qc	klein
+MD|le divorce	fam
+MD|inspirer qn	gefuehl
+MD|représenter qn/qc	gesell
+MD|le modèle	gesell
+MD|la découverte	schule,gesell
+MD|quelques	klein
+MD|scientifique	schule
+MD|l'université	schule,arbeit
+MD|le risque	gefuehl
+MD|prendre un risque	gefuehl
+MD|à la mode	kleid
+MD|non seulement… mais surtout	klein
+MD|développer qc	arbeit
+MD|l'invention	gesell,arbeit
+MD|la possibilité	klein
+MD|suivre qn/qc	klein
+MD|recevoir qc	klein
+MD|à partir de	zeit
+MD|entier/entière	klein

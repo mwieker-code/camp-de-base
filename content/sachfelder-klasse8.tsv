@@ -1,0 +1,514 @@
+Schluessel	Sachfelder
+1/A|le château	stadt,kultur
+1/A|l'éléphant	natur
+1/A|la machine	klein
+1/A|l'île	natur,reise
+1/A|le centre-ville	stadt
+1/A|le skatepark	sport,stadt
+1/Voc|le bâtiment	stadt
+1/Voc|la maison	wohn
+1/Voc|le monument	stadt,kultur
+1/Voc|l'œuvre d'art	kultur
+1/Voc|le port	stadt,reise
+1/Voc|le pont	stadt
+1/Voc|le fleuve	natur
+1/Voc|la place	stadt
+1/Voc|la rue piétonne	stadt
+1/Voc|le tram	stadt
+1/Voc|l'arrêt	stadt
+1/Voc|le carrefour	stadt
+1/Voc|présenter qn/qc	gruss
+1/Voc|qui	klein
+1/Voc|il/elle se trouve	stadt
+1/Voc|traverser qc	stadt
+1/1|célèbre	gefuehl
+1/1|l'auteur / l'auteure	kultur
+1/1|le voyage	reise
+1/1|extraordinaire	gefuehl
+1/1|où	klein
+1/1|la spécialité	essen,reise
+1/1|le parcours	stadt,reise
+1/1|le/la jeune	fam
+1/1|sortir	frei
+1/1|chiller	frei
+1/1|l'arbre	natur
+1/1|le ping-pong	sport
+1/1|ils/elles se trouvent	stadt
+1/1|(être) né/née	fam,zeit
+1/1|partir	reise
+1/1|partir en week-end	reise,frei
+1/1|le vélo	sport,stadt
+1/1|à vélo	stadt
+1/1|le bateau	stadt,reise
+1/1|moderne	gefuehl
+1/1|la chaîne	natur
+1/1|sur	klein
+1/2|prendre (à gauche / à droite)	stadt
+1/2|continuer	stadt
+1/2|tout droit	stadt
+1/2|jusqu'à	klein
+1/2|deuxième	zeit
+1/2|en face	klein
+1/2|venir	klein
+1/2|important/importante	gefuehl
+1/2|beaucoup de monde	stadt
+1/2|quel/quelle/quels/quelles	klein
+1/2|le nom	gruss
+1/2|le trampoline	sport
+1/2|la longueur	zeit
+1/2|la hauteur	zeit
+1/2|le mètre	zeit
+1/2|la couleur	kleid
+1/2|À vous, maintenant !	schule
+1/2|C’est ça.	gefuehl
+1/2|vrai/vraie	gefuehl
+1/2|le/la touriste	reise
+1/2|marcher	stadt
+1/2|non ?	klein
+1/2|la fin	zeit
+1/3|le départ	reise
+1/3|pour	klein
+1/3|content/contente	gefuehl
+1/3|le train	reise,stadt
+1/3|quand	klein
+1/3|attendre (qn/qc)	reise
+1/3|le billet	reise,stadt
+1/3|la valise	reise
+1/3|l'annonce	reise,medien
+1/3|la voie	reise
+1/3|répéter qc	schule
+1/3|Allez !	klein
+1/3|On y va !	klein
+1/3|la minute	zeit
+1/3|arriver	reise
+1/3|il faut	klein
+1/3|il ne faut pas	klein
+1/3|rater qn/qc	reise
+1/3|le message	medien
+1/3|le quai	reise
+1/3|répondre (à qn/qc)	schule
+1/3|Zut !	gefuehl
+1/3|la batterie	medien
+1/3|descendre	reise,stadt
+M1|corriger qc	schule
+M1|lire (qc)	schule,kultur
+M1|Est-ce que je peux ouvrir la fenêtre ?	schule
+M1|la tablette	medien
+M1|les écouteurs	medien
+M1|l'exercice	schule
+M1|le numéro	zeit
+M1|en groupe	schule
+M1|la page	schule,medien
+M1|Ça y est !	klein
+M1|Vous avez fini ?	schule
+M1|c'est à …	schule
+M1|apprendre qc	schule
+M1|le vocabulaire	schule
+M1|l'unité	schule
+M1|le contrôle	schule
+2/A|l'aventure	frei,reise
+2/A|le tour	reise
+2/A|le bunker	gesell
+2/A|le sous-marin	natur,gesell
+2/A|le passage	stadt
+2/Voc|tôt	zeit
+2/Voc|tard	zeit
+2/Voc|en ville	stadt
+2/Voc|l'excursion	reise,frei
+2/Voc|danser	frei,kultur
+2/Voc|chanter	frei,kultur
+2/Voc|faire la fête	frei
+2/Voc|composer qc	kultur
+2/Voc|la chanson	kultur
+2/Voc|plein de	klein
+2/Voc|jouer au/à la/à l'/aux	sport,frei
+2/Voc|jouer du/de la/de l'/des	kultur,frei
+2/Voc|les boules	sport,frei
+2/1|l'aventurier/l'aventurière	reise
+2/1|français/française	gesell
+2/1|en	zeit
+2/1|l'année	zeit
+2/1|à … ans	zeit
+2/1|voyager	reise
+2/1|le pays	reise,gesell
+2/1|surtout	klein
+2/1|la tête	koerper
+2/1|le monde	gesell
+2/1|le roman	kultur
+2/1|le héros / l'héroïne	kultur
+2/1|l'artiste	kultur,arbeit
+2/1|seulement	klein
+2/1|gagner (qc)	sport
+2/1|le prix	sport,kauf
+2/1|la mécanique	arbeit
+2/1|la passion	gefuehl
+2/1|imiter qn/qc	klein
+2/1|inventer qc	arbeit
+2/1|la saison	zeit,medien
+2/1|la dent	koerper
+2/1|le centimètre	zeit
+2/1|le trou	klein
+2/2|au début (de qc)	zeit
+2/2|et puis	klein
+2/2|avant	zeit
+2/2|tout à coup	zeit
+2/2|finalement	klein
+2/2|tout le temps	zeit
+2/2|faire un tour	frei
+2/2|monter	natur,sport
+2/2|tomber	koerper
+2/2|avoir peur	gefuehl
+2/2|avoir mal	koerper
+2/2|c'était	klein
+2/2|l'aviron	sport
+2/2|la course-poursuite	kultur,medien
+2/2|Aïe !	gefuehl
+2/3|la nuit	zeit
+2/3|hier	zeit
+2/3|après	klein
+2/3|la marée haute	natur
+2/3|la marée basse	natur
+2/3|la balise	natur
+2/3|rencontrer qn	fam
+2/3|rigoler (bien)	gefuehl
+2/3|comprendre qn/qc	klein
+2/3|au milieu (de qc)	klein
+2/3|la pause	schule
+2/3|ramasser qc	natur
+2/3|le coquillage	natur
+2/3|le bus	stadt
+2/3|crier	gefuehl
+2/3|retourner	reise
+2/3|la route	stadt,reise
+2/3|la surprise	gefuehl
+2/3|retrouver qn	fam
+2/3|tout de suite	zeit
+M2|le record	sport
+M2|haut/haute	klein
+M2|l'Europe	gesell,reise
+M2|l'ouest	gesell
+M2|les Alpes	natur,reise
+M2|court/courte	klein
+M2|long/longue	klein
+M2|le village	natur,stadt
+M2|rapide	klein
+M2|rouler	stadt
+M2|le kilomètre	zeit
+M2|moins … que	klein
+M2|plus … que	klein
+M2|aussi … que	klein
+M2|meilleur/meilleure … que	klein
+M2|l'or	kauf
+M2|l'argent	kauf
+M2|la femme	fam
+M2|l'homme	fam
+M2|puissant/puissante	gesell
+M2|le/la chef	arbeit
+M2|le/la chef de cuisine	arbeit,essen
+M2|devenir	klein
+M2|le meilleur / la meilleure	klein
+M2|impressionnant/impressionnante	gefuehl
+3/A|le moment	zeit
+3/A|compter (pour qn)	gefuehl
+3/Voc|le conflit	gefuehl,gesell
+3/Voc|discuter (de qc)	gefuehl
+3/Voc|C'est quoi, cette histoire ?	gefuehl
+3/Voc|être en colère	gefuehl
+3/Voc|Et alors ?	gefuehl
+3/Voc|Tu ne comprends rien.	gefuehl
+3/Voc|exagérer	gefuehl
+3/Voc|N'importe quoi !	gefuehl
+3/Voc|Tu m'énerves !	gefuehl
+3/Voc|avoir raison	gefuehl
+3/Voc|grave	gefuehl
+3/Voc|Qu'est-ce que tu en penses ?	gefuehl
+3/1|fier/fière (de qn/qc)	gefuehl
+3/1|différent/différente	klein
+3/1|ça explose	gefuehl
+3/1|le souvenir	gefuehl
+3/1|partager qc	fam
+3/1|rapprocher qn/qc	fam
+3/1|accompagner qn	fam
+3/1|aider (qn)	fam
+3/1|énerver qn	gefuehl
+3/1|parler de qc	klein
+3/1|c'est normal	gefuehl
+3/1|faire la cuisine	essen
+3/1|le travail	arbeit
+3/1|filmer qn/qc	medien
+3/1|La Réunion	gesell,reise
+3/1|la chose	klein
+3/1|du coup	klein
+3/1|si	klein
+3/1|par	klein
+3/1|le vide-grenier	kauf
+3/1|trier qc	wohn
+3/1|vendre qc (à qn)	kauf
+3/1|échanger qc (contre qc)	kauf
+3/2|la carrière	arbeit
+3/2|le succès	arbeit,gefuehl
+3/2|jeune	fam
+3/2|d'ailleurs	klein
+3/2|appeler qn	klein
+3/2|la mélodie	kultur
+3/2|que	klein
+3/2|créatif/créative	gefuehl
+3/2|le message	medien
+3/2|le champion / la championne	sport
+3/2|l'entraîneur / l'entraîneuse	sport
+3/2|sportif/sportive	sport
+3/2|le ski	sport
+3/2|le ski de bosses	sport
+3/2|l'équipe	sport
+3/2|remarquer qn/qc	klein
+3/2|le talent	sport,gefuehl
+3/2|compter sur qn	gefuehl
+3/2|la médaille	sport
+3/2|courageux/courageuse	gefuehl
+3/2|heureux/heureuse	gefuehl
+3/3|ce/cet/cette/ces	klein
+3/3|le fer à repasser	wohn
+3/3|ne ... rien	klein
+3/3|ne … jamais	klein
+3/3|l'appli (fam.) / l'application	medien
+3/3|l'échange	kauf
+3/3|Quoi ?	klein
+3/3|mettre qc	kleid,klein
+3/3|en ligne	medien
+3/3|utiliser qc	klein
+3/3|prêter qc (à qn)	kauf
+3/3|le gaspillage	natur
+3/3|tu sais	klein
+3/3|écolo (fam.) / écologique	natur
+3/3|emprunter qc	kauf
+3/3|coûter	kauf
+3/3|Ce n'est pas pareil !	gefuehl
+3/3|commander qc	kauf,essen
+3/3|la poubelle	natur,wohn
+3/3|mettre qc à la poubelle	natur
+3/3|l'emballage	natur,kauf
+M3|la finale	sport
+M3|le match	sport
+M3|le/la Croate	gesell,sport
+M3|fort/forte	sport,gefuehl
+M3|le but	sport
+M3|tirer	sport
+M3|défendre (qn/qc)	sport
+M3|marquer un but	sport
+M3|contre	klein
+M3|mener	sport
+M3|(1) à (0)	sport
+M3|l'arbitre	sport
+M3|le carton (jaune/rouge)	sport
+M3|le score	sport
+M3|le score est de … à …	sport
+M3|partout	sport
+M3|attaquer (qn)	sport
+M3|la faute	sport
+M3|parler à qn	klein
+M3|le penalty	sport
+M3|la mi-temps	sport
+M3|le ballon	sport
+M3|passer le ballon à qn	sport
+M3|le gardien / la gardienne (de but)	sport
+M3|faire attention	klein
+M3|il reste…	zeit
+4/A|la planète	natur
+4/A|le médiateur / la médiatrice	schule
+4/A|l'intello	schule,gefuehl
+4/A|la brute	gefuehl
+4/A|le bavard / la bavarde	gefuehl
+4/A|le geek	medien
+4/A|le clown	gefuehl
+4/A|les inséparables	fam
+4/A|le chouchou / la chouchoute	schule,fam
+4/Voc|seul/seule	gefuehl
+4/Voc|poser une question (à qn)	schule
+4/Voc|l'excuse	schule
+4/Voc|la pression	gefuehl
+4/Voc|mettre la pression à qn	gefuehl
+4/Voc|le temps	zeit
+4/Voc|dernier/dernière	klein
+4/Voc|réviser (qc)	schule
+4/Voc|participer en cours	schule
+4/Voc|rendre qc (à qn)	klein
+4/Voc|mauvais/mauvaise	gefuehl
+4/Voc|la note	schule
+4/Voc|la moyenne	schule
+4/1|écrire qc (à qn)	schule,medien
+4/1|laisser qn tranquille	gefuehl
+4/1|sérieux/sérieuse	gefuehl
+4/1|débrouillard/débrouillarde	gefuehl
+4/1|populaire	gefuehl
+4/1|malade	koerper
+4/1|le voisin / la voisine	schule,fam
+4/1|le sac	schule
+4/1|le bulletin	schule
+4/1|le conseil	gefuehl
+4/1|le résultat	schule
+4/1|le test	schule
+4/1|le genre (de qc)	klein
+4/1|le réveil	wohn,zeit
+4/1|sonner	klein
+4/1|plus	klein
+4/1|sans	klein
+4/2|stresser qn	gefuehl
+4/2|dire qc (à qn)	klein
+4/2|que	klein
+4/2|devoir	klein
+4/2|au moins	klein
+4/2|à cause de	klein
+4/2|l'impression	gefuehl
+4/2|à la place de (qn/qc)	klein
+4/2|passer du temps (avec qn)	frei,fam
+4/2|le contraire	klein
+4/2|demander (qc à qn)	klein
+4/2|demander si	klein
+4/2|avoir besoin de qn/qc	klein
+4/2|l'aide	klein
+4/2|oh là là	gefuehl
+4/2|vouloir savoir si	klein
+4/2|Je te jure !	gefuehl
+4/2|le reste	klein
+4/2|faire confiance à qn	gefuehl
+4/2|à mon avis	gefuehl
+4/3|le système	klein
+4/3|sur	klein
+4/3|le stress	gefuehl
+4/3|la lettre	schule
+4/3|comme	klein
+4/3|calculer qc	schule
+4/3|précis/précise	klein
+4/3|exister	klein
+4/3|le/la même	klein
+4/3|juste	gesell,gefuehl
+4/3|autre	klein
+4/3|penser	klein
+4/3|motivant/motivante	gefuehl
+4/3|les gens	gesell
+4/3|dur/dure	gefuehl
+4/3|ça veut dire	klein
+4/3|la catastrophe	gefuehl
+4/3|par contre	klein
+4/3|entendre qn/qc	klein
+4/3|avoir la moyenne	schule
+M4|le handball	sport
+M4|la batterie	kultur
+M4|le repas	essen
+M4|presque	klein
+M4|sauf	klein
+M4|végan/végane	essen
+M4|les céréales	essen
+M4|le petit-déjeuner	essen
+M4|porter qc	kleid
+M4|les vêtements	kleid
+M4|les sneakers	kleid
+M4|les lunettes	koerper,kleid
+M4|le mois	zeit
+M4|l'appareil dentaire	koerper
+M4|le caractère	gefuehl
+M4|plutôt	klein
+M4|timide	gefuehl
+M4|l'avenir	zeit,arbeit
+M4|plus tard	zeit
+M4|le gamer / la gameuse	medien,frei
+M4|gagner de l'argent	arbeit,kauf
+M4|la blague	gefuehl
+5/A|liker qn/qc	medien
+5/A|le youtubeur / la youtubeuse	medien,arbeit
+5/A|l'acteur / l'actrice	kultur,arbeit
+5/A|engagé/engagée	gefuehl,gesell
+5/A|l'astronaute	arbeit
+5/Voc|l'activité	frei
+5/Voc|télécharger qc	medien
+5/Voc|cliquer sur qc	medien
+5/Voc|le lien	medien
+5/Voc|laisser qc	klein
+5/Voc|poster qc	medien
+5/Voc|le tuto (fam.) / le tutoriel	medien
+5/Voc|enregistrer qc	medien
+5/Voc|les réseaux sociaux	medien
+5/Voc|être accro à qc	medien,koerper
+5/Voc|la victime	gesell
+5/Voc|le cyberharcèlement	medien,gesell
+5/Voc|créer qc	klein
+5/Voc|avoir … vues	medien
+5/Voc|le million	zeit
+5/Voc|l'abonné/l'abonnée	medien
+5/1|intelligent/intelligente	gefuehl
+5/1|normal (m.) / normale (f.) / normaux (m. pl.) / normales (f. pl.)	klein
+5/1|la culture	kultur,gesell
+5/1|le cliché	gesell
+5/1|chinois/chinoise	gesell
+5/1|génial (m.) / géniale (f.) / géniaux (m. pl.) / géniales (f. pl.)	gefuehl
+5/1|voir qn/qc	klein
+5/1|être d'origine (f.) (allemande/française)	gesell
+5/1|asiatique	gesell
+5/1|l'Asie	gesell
+5/1|le thème	schule
+5/1|critiquer (qn/qc)	gefuehl
+5/1|national (m.) / nationale (f.) / nationaux (m. pl.) / nationales (f. pl.)	gesell
+5/1|l'humour	gefuehl
+5/1|avant	zeit
+5/1|faire des études	schule,arbeit
+5/1|l'ingénieur / l'ingénieure	arbeit
+5/1|original (m.) / originale (f.) / originaux (m. pl.) / originales (f. pl.)	gefuehl
+5/1|adulte	fam
+5/1|polonais/polonaise	gesell
+5/1|séparé/séparée	fam
+5/1|la beauté	koerper
+5/1|le policier / la policière	arbeit,gesell
+5/1|l'émission	medien
+5/1|l'avis	gefuehl
+5/1|autre chose	klein
+5/2|finir qc	klein
+5/2|grandir	fam
+5/2|réussir (qc)	gefuehl
+5/2|choisir qn/qc	klein
+5/2|quitter qn/qc	klein
+5/2|participer à qc	frei
+5/2|baisser les bras	gefuehl
+5/2|encourager qn	gefuehl
+5/2|perdre (qn/qc)	klein
+5/2|les médias	medien
+5/2|l'album	kultur
+5/2|le concert	kultur
+5/2|les hauts et les bas	gefuehl
+5/2|marocain/marocaine	gesell
+5/2|tout le / toute la, tous les / toutes les	klein
+5/2|tomber amoureux/amoureuse (de qn)	gefuehl
+5/2|difficile	gefuehl
+5/2|le jury	kultur
+5/2|la perruque	kleid
+5/2|le bac (fam.) / le baccalauréat	schule
+5/2|homosexuel/homosexuelle	gesell
+M5|le blog	medien
+M5|l'avion	reise
+M5|durer	zeit
+M5|préparer qc	essen
+M5|la personne	klein
+M5|le bonbon	essen
+M5|le piment	essen
+M5|le Réunionnais / la Réunionnaise	gesell
+M5|le Français / la Française	gesell
+M5|le continent	gesell
+M5|créole	gesell
+M5|ça sent	natur,essen
+M5|nager	sport
+M5|beau/bel (m.) / belle (f.) / beaux (m. pl.) / belles (f. pl.)	gefuehl
+M5|la cascade	natur
+M5|la forêt	natur
+M5|vieux/vieil (m.) / vieille (f.) / vieux (m. pl.) / vieilles (f. pl.)	klein
+M5|nouveau/nouvel (m.) / nouvelle (f.) / nouveaux (m. pl.) / nouvelles (f. pl.)	klein
+M5|le paysage	natur,reise
+M5|la course	sport
+M5|fou/folle	gefuehl
+M5|la région	reise,gesell
+M5|la capitale	stadt,gesell
+M5|l'habitant / l'habitante	gesell
+M5|l'été	zeit
+M5|le printemps	zeit
+M5|l'automne	zeit
+M5|l'hiver	zeit
+M5|actif/active	gefuehl
+M5|le centre	stadt
