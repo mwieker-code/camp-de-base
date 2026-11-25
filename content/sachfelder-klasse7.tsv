@@ -1,0 +1,729 @@
+Schluessel	Sachfelder
+C|C'est parti !	schule
+C|Salut !	gruss
+C|Tu t'appelles comment ?	gruss
+C|je m'appelle	gruss
+C|Et toi ?	gruss
+C|et	klein
+C|toi	klein
+C|À plus !	gruss
+C|Ça va ?	gruss
+C|bof	gefuehl
+C|Ça va.	gruss
+C|super	gefuehl
+C|ah	klein
+C|Ça sonne !	schule
+C|À demain !	gruss
+C|Bonjour !	gruss
+C|la classe	schule
+C|Madame/Mme	gruss
+C|Monsieur/M.	gruss
+C|Au revoir !	gruss
+C|Tu as quel âge ?	gruss
+C|j'ai … ans	gruss,zeit
+C|zéro	zeit
+C|un	zeit
+C|deux	zeit
+C|trois	zeit
+C|quatre	zeit
+C|cinq	zeit
+C|six	zeit
+C|sept	zeit
+C|huit	zeit
+C|neuf	zeit
+C|dix	zeit
+C|onze	zeit
+C|douze	zeit
+C|treize	zeit
+C|quatorze	zeit
+C|quinze	zeit
+C|seize	zeit
+C|dix-sept	zeit
+C|dix-huit	zeit
+C|dix-neuf	zeit
+C|vingt	zeit
+C|Tu habites où ?	gruss,wohn
+C|j'habite	gruss,wohn
+C|en	klein
+C|à	klein
+C|l'Allemagne	gesell,reise
+C|la France	gesell,reise
+C|Paris	stadt,reise
+C|moi	klein
+C|j'aime	gefuehl
+C|je n'aime pas	gefuehl
+C|mais	klein
+C|les jeux vidéo	frei,medien
+C|le shopping	frei,kauf
+C|le sport	sport
+C|la musique	kultur,frei
+C|la nature	natur
+C|le chocolat	essen
+C|les spaghettis	essen
+C|la pizza	essen
+C|les tomates	essen
+C|la salade	essen
+C|le jaune	kleid
+C|le rouge	kleid
+C|le bleu	kleid
+C|le vert	kleid
+C|le noir	kleid
+C|les chats	natur
+C|les chiens	natur
+C|les rats	natur
+C|les poissons	natur
+C|les tortues	natur
+C|Tu aimes… ?	gefuehl
+C|oui	klein
+C|non	klein
+C|ou	klein
+1/A|Bienvenue !	gruss
+1/A|la Tour Eiffel	stadt,reise
+1/A|le Louvre	stadt,kultur
+1/A|la Villette	stadt,reise
+1/A|le Sacré-Cœur	stadt,reise
+1/Voc|la ville	stadt
+1/Voc|le cinéma	stadt,frei
+1/Voc|le parc	stadt,natur
+1/Voc|le théâtre	kultur,stadt
+1/Voc|le café	essen,stadt
+1/Voc|le restaurant	essen,stadt
+1/Voc|l'hôtel	reise
+1/Voc|le musée	kultur,stadt
+1/Voc|le métro	stadt
+1/Voc|la tour	stadt
+1/Voc|le supermarché	kauf,stadt
+1/Voc|le collège	schule
+1/Voc|le stade	sport,stadt
+1/Voc|pardon	gruss
+1/Voc|Où est … ?	stadt
+1/Voc|Où… ?	klein
+1/Voc|c'est	klein
+1/Voc|là	klein
+1/Voc|merci	gruss
+1/1|ce sont	klein
+1/1|C'est qui ?	gruss
+1/1|moi, c'est	gruss
+1/1|Comment… ?	klein
+1/1|voilà	klein
+1/1|la fille	fam
+1/1|le garçon	fam
+1/1|l'ami/l'amie	fam
+1/1|de	klein
+1/1|mon ami / mon amie	fam
+1/1|il/elle s'appelle	gruss
+1/1|le/la/l'	klein
+1/1|les	klein
+1/1|le jeu vidéo	frei,medien
+1/1|la tomate	essen
+1/1|le rat	natur
+1/1|le chat	natur
+1/1|le chien	natur
+1/1|le poisson	natur
+1/1|la tortue	natur
+1/1|avec	klein
+1/1|d'accord	gefuehl
+1/1|Je ne sais pas.	schule
+1/1|ici	klein
+1/1|depuis	klein
+1/1|samedi	zeit
+1/1|cool	gefuehl
+1/1|alors	klein
+1/1|dans	klein
+1/1|le quartier	stadt
+1/2|coucou	gruss
+1/2|c'est nous	gruss
+1/2|c'est moi	gruss
+1/2|être	klein
+1/2|de	klein
+1/2|la rue	stadt
+1/2|la Tunisie	gesell
+1/2|sympa (fam.) / sympathique	gefuehl
+1/2|dans la même classe	schule
+1/2|aussi	klein
+1/2|ensemble	klein
+1/2|le club	frei,schule
+1/2|le drone	frei,medien
+1/2|le club de drones	frei,schule
+1/2|la sixième	schule
+1/2|la cinquième	schule
+1/2|le basket	sport
+1/2|la série	medien
+1/2|la danse	frei,kultur
+1/2|souvent	zeit
+1/2|en retard	zeit
+1/2|c'est un peu compliqué	gefuehl
+1/2|Tu es d'où ?	gruss
+1/3|Qu'est-ce qu'il y a … ?	klein
+1/3|il y a	klein
+1/3|la question	schule
+1/3|la réponse	schule
+1/3|la cathédrale	stadt,kultur
+1/3|un/une	klein
+1/3|des	klein
+1/3|comme	klein
+1/3|la gare	stadt,reise
+1/3|par exemple / p. ex.	klein
+1/3|pour	klein
+1/3|le/la fan	frei
+1/3|la science	schule
+1/3|le/la fan de sciences	frei,schule
+1/3|le magasin	kauf,stadt
+1/3|le centre commercial	kauf,stadt
+1/3|la boulangerie	kauf,essen
+1/3|en plus	klein
+1/3|entre	klein
+1/3|Notre-Dame de Paris	stadt,kultur
+1/3|la Tour Montparnasse	stadt,reise
+1/3|le Stade de France	sport,stadt
+1/3|Bercy	stadt
+1/3|le Musée des Arts forains	kultur,stadt
+1/3|Bastille	stadt,gesell
+1/3|le Bois de Vincennes	stadt,natur
+1/3|la Coulée verte	stadt,natur
+M1|en cours	schule
+M1|le français	schule
+M1|Qu'est-ce que c'est ?	schule
+M1|l'alphabet	schule
+M1|C'est terminé !	schule
+M1|Comment on dit … ?	schule
+M1|On dit …	schule
+M1|Comment on écrit … ?	schule
+M1|On écrit …	schule
+M1|en français/allemand	schule
+M1|l'allemand	schule
+M1|le cahier	schule
+M1|le stylo	schule
+M1|la feuille	schule
+2/A|mon/ma/mes	klein
+2/A|la famille	fam
+2/Voc|les parents	fam
+2/Voc|le père	fam
+2/Voc|la mère	fam
+2/Voc|les grands-parents	fam
+2/Voc|le grand-père	fam
+2/Voc|la grand-mère	fam
+2/Voc|les frères et sœurs	fam
+2/Voc|le frère	fam
+2/Voc|la sœur	fam
+2/Voc|le demi-frère	fam
+2/Voc|la demi-sœur	fam
+2/Voc|l'oncle	fam
+2/Voc|la tante	fam
+2/Voc|le cousin / la cousine	fam
+2/Voc|l'enfant	fam
+2/Voc|le fils	fam
+2/Voc|la fille	fam
+2/Voc|le copain / la copine	fam
+2/Voc|l'animal	natur,fam
+2/Voc|le lapin	natur
+2/1|avoir	klein
+2/1|avoir … ans	gruss
+2/1|Je n'ai pas de frères et sœurs.	fam
+2/1|la moto	stadt
+2/1|être fan de qn/qc	gefuehl
+2/1|comme moi	klein
+2/1|à la maison	wohn
+2/1|ils/elles s'appellent	gruss
+2/1|c'est vrai	gefuehl
+2/1|c'est drôle	gefuehl
+2/1|chez	klein
+2/1|moi aussi	klein
+2/1|je voudrais	gefuehl
+2/1|le beau-père	fam
+2/1|la belle-mère	fam
+2/1|être contre (qn/qc)	gefuehl
+2/1|l'allergie	koerper
+2/1|c'est nul	gefuehl
+2/1|oui et non	gefuehl
+2/1|Je n'ai pas d'animal.	natur,fam
+2/1|chou	gefuehl
+2/1|encore	klein
+2/1|c'est dommage	gefuehl
+2/2|Qui… ?	klein
+2/2|ton/ta/tes	klein
+2/2|son/sa/ses	klein
+2/2|le week-end	zeit,frei
+2/2|il/elle m'énerve	gefuehl
+2/2|l'arrière-grand-mère	fam
+2/2|l'arrière-grand-père	fam
+2/2|il/elle habite	wohn
+2/2|ils/elles habitent	wohn
+2/2|près	klein
+2/2|près de	klein
+2/2|la pâtisserie	essen,kauf
+2/2|Mes parents sont séparés.	fam
+2/2|la Guadeloupe	gesell,reise
+2/2|parfois	zeit
+2/2|un peu	klein
+2/2|quand même	klein
+2/2|la chambre	wohn
+2/2|un week-end sur deux	zeit,fam
+2/2|le problème	gefuehl
+2/2|C'est l'horreur !	gefuehl
+2/2|pour moi	gefuehl
+2/2|pendant	klein
+2/2|les vacances	reise
+2/2|la Bretagne	reise,gesell
+2/3|Qu'est-ce que tu fais ?	frei
+2/3|Qu'est-ce que … ?	klein
+2/3|est-ce que	klein
+2/3|travailler	arbeit,schule
+2/3|écouter (qn/qc)	frei,kultur
+2/3|écouter de la musique	frei,kultur
+2/3|regarder qn/qc	frei
+2/3|la vidéo	medien,frei
+2/3|raconter qc	frei,kultur
+2/3|dessiner qc	frei,kultur
+2/3|le manga	kultur,frei
+2/3|rigoler	gefuehl
+2/3|aimer qn/qc	gefuehl
+2/3|le foot(ball)	sport
+2/3|jouer	frei
+2/3|jouer à	frei
+2/3|parler	medien
+2/3|parler de tout et de rien	medien,frei
+2/3|chatter	medien
+2/3|Internet	medien
+2/3|sur Internet	medien
+2/3|l'école	schule
+2/3|toujours	zeit
+2/3|la semaine	zeit
+2/3|beaucoup	klein
+2/3|habiter	wohn
+2/3|loin	klein
+M2|le/la prof (fam.) / le professeur / la professeure	schule
+M2|l'élève	schule
+M2|bien	gefuehl
+M2|Répète ! / Répétez !	schule
+M2|Vous comprenez ?	schule
+M2|la phrase	schule
+M2|plus fort	schule
+M2|s'il te plaît	gruss
+M2|s'il vous plaît	gruss
+M2|encore une fois	schule
+M2|bravo	gefuehl
+M2|continuer (qc)	schule
+M2|Je ne comprends pas.	schule
+M2|Vous pouvez répéter ?	schule
+M2|Prends ! / Prenez !	schule
+M2|Lis ! / Lisez !	schule
+M2|le texte	schule
+M2|Réponds ! / Répondez !	schule
+M2|chercher qn/qc	klein
+M2|le mot	schule
+M2|trouver qn/qc	klein
+M2|Écris ! / Écrivez !	schule
+M2|fermer qc	klein
+M2|le livre	schule,kultur
+M2|maintenant	zeit
+M2|les devoirs	schule
+M2|la fenêtre	wohn
+M2|la porte	wohn
+M2|la table	wohn,schule
+M2|la chaise	wohn,schule
+M2|le tableau	schule
+3/Voc|le bureau	wohn,schule
+3/Voc|l'étagère	wohn
+3/Voc|l'armoire	wohn
+3/Voc|le lit	wohn
+3/Voc|le coin	wohn
+3/Voc|la photo	medien,frei
+3/Voc|le coin (photo)	wohn
+3/Voc|le mur	wohn
+3/Voc|l'ordinateur	medien,schule
+3/Voc|la plante	wohn,natur
+3/Voc|la guitare	kultur,frei
+3/Voc|la console	medien,frei
+3/Voc|l'enceinte	medien
+3/Voc|le poster	wohn
+3/Voc|sur	klein
+3/Voc|sous	klein
+3/Voc|devant	klein
+3/Voc|derrière	klein
+3/Voc|à gauche (de)	klein
+3/Voc|à droite (de)	klein
+3/1|aujourd'hui	zeit
+3/1|visiter qc	reise
+3/1|l'appartement	wohn
+3/1|l'entrée	wohn
+3/1|le couloir	wohn
+3/1|la salle de bains	wohn
+3/1|les toilettes	wohn
+3/1|la cuisine	wohn,essen
+3/1|le salon	wohn
+3/1|chez moi	wohn
+3/1|bien sûr	klein
+3/1|le bazar	wohn
+3/1|l'endroit	klein
+3/1|l'endroit préféré	frei
+3/1|pour	klein
+3/1|rêver	gefuehl
+3/1|la vue	reise
+3/1|la télé (fam.) / la télévision	medien,wohn
+3/1|Chut !	schule
+3/1|ce n'est pas mon truc	gefuehl
+3/1|adorer qn/qc/(+ inf.)	gefuehl
+3/1|ça (fam.) / cela	klein
+3/1|en face de qn/qc	klein
+3/1|à côté de	klein
+3/1|la douche	wohn,koerper
+3/1|très	klein
+3/1|design	kleid
+3/2|le truc	klein
+3/2|aimer	gefuehl
+3/2|aimer bien qn/qc/(+ inf.)	gefuehl
+3/2|détester qn/qc/(+ inf.)	gefuehl
+3/2|le joueur / la joueuse	sport,frei
+3/2|le joueur préféré / la joueuse préférée	sport,frei
+3/2|le chanteur / la chanteuse	kultur
+3/2|le chanteur préféré / la chanteuse préférée	kultur
+3/2|le groupe	kultur
+3/2|le groupe préféré	kultur
+3/2|faire qc	klein
+3/2|faire du/de la/de l'/des	frei
+3/2|le piano	kultur,frei
+3/2|la bédé / BD (bande dessinée)	kultur,frei
+3/2|les arts martiaux	sport
+3/2|moi non	gefuehl
+3/2|moi non plus	gefuehl
+3/2|moi si	gefuehl
+3/2|l'escalade	sport,frei
+3/2|parce que	klein
+3/2|l'activité	frei
+3/2|le rap	kultur
+3/2|le look	kleid
+3/2|le PSG (le Paris-Saint-Germain)	sport
+3/3|la vie	gefuehl
+3/3|petit/petite	klein
+3/3|grand/grande	klein
+3/3|l'instrument	kultur
+3/3|la star	kultur
+3/3|préféré/préférée	gefuehl
+3/3|joli/jolie	koerper,kleid
+3/3|moche	koerper,kleid
+3/3|bleu/bleue	kleid
+3/3|noir/noire	kleid
+3/3|blanc/blanche	kleid
+3/3|jaune	kleid
+3/3|rouge	kleid
+3/3|vert/verte	kleid
+3/3|ne … pas	klein
+3/3|ne … plus	klein
+3/3|les affaires	wohn,schule
+3/3|trop	klein
+3/3|vraiment	klein
+3/3|drôle	gefuehl
+3/3|faire les devoirs	schule
+3/3|surfer (sur Internet)	medien
+3/3|la pancarte	stadt
+3/3|entrer	klein
+M3|l'heure	zeit
+M3|Il est quelle heure ?	zeit
+M3|et quart	zeit
+M3|le quart	zeit
+M3|et demi/demie	zeit
+M3|moins	klein
+M3|moins le quart	zeit
+M3|midi	zeit
+M3|minuit	zeit
+M3|Allô ?	medien,gruss
+M3|passer (chez qn)	frei
+M3|demain	zeit
+M3|À quelle heure ?	zeit
+M3|à … heure(s)	zeit
+M3|on pourrait	frei
+M3|Ça marche !	gefuehl
+4/Voc|lundi	zeit
+4/Voc|mardi	zeit
+4/Voc|mercredi	zeit
+4/Voc|jeudi	zeit
+4/Voc|vendredi	zeit
+4/Voc|dimanche	zeit
+4/Voc|le matin	zeit
+4/Voc|l'après-midi	zeit
+4/Voc|l'emploi du temps	schule,zeit
+4/Voc|l'histoire-géo	schule
+4/Voc|l'histoire	schule,gesell
+4/Voc|la géographie	schule
+4/Voc|la récré (fam.) / la récréation	schule
+4/Voc|l'anglais	schule
+4/Voc|l'EPS (= l'Éducation physique et sportive)	schule,sport
+4/Voc|les maths (fam.) / les mathématiques	schule
+4/Voc|les SVT (= les sciences de la vie et de la Terre)	schule
+4/Voc|la techno(logie)	schule
+4/Voc|les sciences physiques	schule
+4/Voc|le latin	schule
+4/Voc|les arts plastiques	schule,kultur
+4/Voc|en	klein
+4/Voc|la cantine	schule,essen
+4/Voc|la permanence	schule
+4/Voc|je ne peux pas	gefuehl
+4/Voc|Mais non !	gefuehl
+4/Voc|compliqué/compliquée	gefuehl
+4/1|la salle	schule
+4/1|la salle des profs	schule
+4/1|le bureau	arbeit
+4/1|le CDI (= le Centre de Documentation et d'Information)	schule
+4/1|l'info (fam.) / l'information	medien
+4/1|le/la CPE (= le/la Conseiller/-ère principal/e d'Éducation)	schule
+4/1|la mission	frei
+4/1|le papier	schule
+4/1|aller	klein
+4/1|le billet de retard	schule
+4/1|la solution	schule
+4/1|le point faible	gefuehl
+4/1|sévère	gefuehl
+4/1|le principal / la principale	schule
+4/1|organiser qc	arbeit
+4/1|être pressé/pressée	gefuehl
+4/1|le/la documentaliste	schule
+4/1|ranger qc	wohn
+4/1|préparer qc	arbeit
+4/1|l'exposé	schule
+4/1|oublier qc	schule
+4/1|tout	klein
+4/1|le surveillant / la surveillante	schule
+4/1|surveiller qn/qc	schule
+4/1|Attention !	gefuehl
+4/1|téléphoner	medien
+4/1|manger qc	essen
+4/1|même	klein
+4/1|partout	klein
+4/2|notre/nos	klein
+4/2|votre/vos	klein
+4/2|leur/leurs	klein
+4/2|Pourquoi… ?	klein
+4/2|la carte	reise
+4/2|allemand/allemande	gesell
+4/2|le/la corres (fam.) / le correspondant / la correspondante	fam,schule
+4/2|déjà	zeit
+4/2|la journée	zeit
+4/2|ensuite	klein
+4/2|la matière	schule
+4/2|trop	gefuehl
+4/2|bizarre	gefuehl
+4/2|le cauchemar	gefuehl
+4/2|la cour	schule
+4/2|le terrain	sport,schule
+4/2|Ça dépend.	gefuehl
+4/2|avoir de la chance	gefuehl
+4/2|expliquer qc	schule
+4/2|raconter sa vie	fam
+4/2|râler	gefuehl
+4/2|terminer (qc)	klein
+4/2|commencer qc	klein
+4/2|la fois	zeit
+4/2|Ça suffit !	gefuehl
+4/2|Quand… ?	klein
+4/2|avoir cours	schule
+4/2|le cours	schule
+4/3|donner son avis (sur qc)	gefuehl
+4/3|donner qc	klein
+4/3|le commentaire	medien,gefuehl
+4/3|l'an	zeit
+4/3|l'ambiance	gefuehl
+4/3|beaucoup de qc	klein
+4/3|trop de qc	klein
+4/3|assez de qc	klein
+4/3|ne … pas assez de qc	klein
+4/3|ne … pas de qc	klein
+4/3|ne … plus de qc	klein
+4/3|je trouve que	gefuehl
+4/3|la rentrée	schule
+4/3|l'ascenseur	wohn
+4/3|le bruit	stadt
+4/3|gaspiller qc	essen,natur
+4/3|le pain	essen
+4/3|le plat	essen
+4/3|propre	wohn
+4/3|vite	klein
+4/3|Au secours !	gefuehl
+4/3|nul/nulle	gefuehl
+4/3|bon/bonne	gefuehl,essen
+4/3|être nul/nulle en qc	schule
+4/3|être bon/bonne en qc	schule
+4/3|le gâchimètre	essen,natur
+M4|le menu	essen
+M4|l'entrée	essen
+M4|la soupe	essen
+M4|la carotte	essen
+M4|le riz	essen
+M4|le légume / les légumes (m. pl.)	essen
+M4|le steak	essen
+M4|le gratin	essen
+M4|le potiron	essen
+M4|le dessert	essen
+M4|le gâteau aux pommes	essen
+M4|le gâteau	essen
+M4|la pomme	essen
+M4|le fruit	essen
+M4|avoir faim	essen,koerper
+M4|avoir soif	essen,koerper
+M4|prendre qc	klein
+M4|orange	kleid
+M4|comme ça	klein
+M4|sans	klein
+M4|la viande	essen
+M4|végétarien/végétarienne	essen
+M4|Bon appétit !	essen
+M4|Tu me passes … ?	essen
+M4|l'eau	essen
+M4|beurk	gefuehl
+M4|le sel	essen
+5/A|le pique-nique	essen,frei
+5/A|au bord de qc	natur
+5/A|le festival	kultur,frei
+5/A|le marché	kauf,essen
+5/A|la Seine	natur,stadt
+5/A|la Folie	stadt,kultur
+5/A|la Villette Sonique	kultur
+5/Voc|la liste	klein
+5/Voc|les courses	kauf
+5/Voc|il faut qc	klein
+5/Voc|la farine	essen
+5/Voc|le lait	essen
+5/Voc|les chips	essen
+5/Voc|l'œuf	essen
+5/Voc|la pomme de terre	essen
+5/Voc|la fraise	essen
+5/Voc|le beurre	essen
+5/Voc|la banane	essen
+5/Voc|le fromage	essen
+5/Voc|le jambon	essen
+5/Voc|le miel	essen
+5/Voc|le coca	essen
+5/Voc|le biscuit	essen
+5/Voc|le poivre	essen
+5/Voc|la crème	essen
+5/Voc|le jus	essen
+5/Voc|le sucre	essen
+5/Voc|l'orange	essen
+5/Voc|la boisson	essen
+5/Voc|miam	essen,gefuehl
+5/1|on se retrouve à	frei
+5/1|je voudrais	gefuehl
+5/1|Ça te dit ? / Ça vous dit ?	gefuehl
+5/1|passer	zeit
+5/1|apporter qc	frei
+5/1|l'idée	gefuehl
+5/1|Bonne idée !	gefuehl
+5/1|ce week-end	frei,zeit
+5/1|vouloir qc/(+ inf.)	gefuehl
+5/1|pouvoir	klein
+5/1|préférer qc/	gefuehl
+5/1|le film	kultur,medien
+5/1|l'atelier	kultur
+5/1|le jardin	wohn,natur
+5/1|cher/chère	kauf
+5/1|gratuit/gratuite	kauf
+5/1|le spectacle	kultur
+5/1|ne … pas trop	gefuehl
+5/1|quelque chose	klein
+5/1|quelqu'un	klein
+5/1|appeler qn	medien
+5/1|tout le monde	klein
+5/1|le hip-hop	kultur
+5/1|l'électro	kultur
+5/1|Attends !	klein
+5/1|maman	fam
+5/1|papa	fam
+5/1|la Recyclerie	natur,stadt
+5/1|le Centquatre (104)	kultur,stadt
+5/2|faire les courses	kauf
+5/2|acheter qc	kauf
+5/2|Combien de… ?	kauf
+5/2|Combien… ?	kauf
+5/2|la bouteille	kauf,essen
+5/2|la madeleine	essen
+5/2|le paquet	kauf
+5/2|le sandwich	essen
+5/2|l'argent	kauf
+5/2|l'euro	kauf
+5/2|cent	zeit,kauf
+5/2|le centime	kauf
+5/2|le kilo	kauf
+5/2|Et avec ça ?	kauf
+5/2|C'est tout.	kauf
+5/2|ça fait	kauf
+5/2|ça coûte	kauf
+5/2|la baguette	essen
+5/2|C'est quoi ?	klein
+5/2|sucré/sucrée	essen
+5/2|salé/salée	essen
+5/2|la quiche	essen
+5/2|la chouquette	essen
+5/3|le secret	klein
+5/3|le site (web)	medien
+5/3|la cuisine	essen
+5/3|la chimie	schule
+5/3|l'exemple	klein
+5/3|la forme	klein
+5/3|la bosse	koerper
+5/3|la température	natur,zeit
+5/3|le four	essen,wohn
+5/3|chaud/chaude	zeit,natur
+5/3|froid/froide	zeit,natur
+5/3|la pâte	essen
+5/3|le choc	gefuehl
+5/3|intéressant/intéressante	gefuehl
+5/3|la recette	essen
+5/3|le gramme	essen,zeit
+5/3|la levure	essen
+5/3|mille	zeit
+M5|Joyeux anniversaire !	fam,frei
+M5|l'anniversaire	fam,frei
+M5|premier/première	zeit
+M5|janvier	zeit
+M5|février	zeit
+M5|mars	zeit
+M5|avril	zeit
+M5|mai	zeit
+M5|juin	zeit
+M5|juillet	zeit
+M5|août	zeit
+M5|septembre	zeit
+M5|octobre	zeit
+M5|novembre	zeit
+M5|décembre	zeit
+M5|la fête	frei
+M5|fêter qc	frei
+M5|inviter qn	frei
+M5|l'invitation	frei
+M5|le skate	sport,frei
+M5|la soirée	zeit
+M5|le camping	reise,frei
+M5|le sac de couchage	reise
+M5|le cadeau	frei,fam
+M5|Je compte sur toi.	gefuehl
+M6|la carte postale	reise,medien
+M6|la balade	frei,natur
+M6|le VTT (= le vélo tout-terrain)	sport,frei
+M6|la montagne	natur,reise
+M6|il pleut	zeit
+M6|il fait (beau/froid/chaud)	zeit
+M6|le soleil	zeit,natur
+M6|rester	klein
+M6|j'espère que	gefuehl
+M6|arriver	reise
+M6|bientôt	zeit
+M6|À bientôt !	gruss
+M6|cher/chère (+ Anrede)	gruss
+M6|le rêve	gefuehl
+M6|d'abord	zeit
+M6|la plage	reise,natur
+M6|rentrer	reise
+M6|après	zeit
+M6|c'est l'heure de qc	zeit
+M6|la sieste	koerper,frei
+M6|le portable	medien
+M6|le soir	zeit
+M6|le jour	zeit
+M6|la mer	natur,reise
+M6|dehors	klein
+M6|longtemps	zeit
+M6|le volcan	natur
+M6|facile	klein
+M6|le bisou	fam,gefuehl
+M6|l'Auvergne	reise,gesell
+M6|le Tour de France	sport,gesell

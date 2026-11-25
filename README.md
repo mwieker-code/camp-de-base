@@ -23,6 +23,7 @@ Einträge der Wortart „civ“ (Landeskunde: Städte, Flüsse, Bauwerke) werden
 - **Verben konjugieren** (`assets/verben.js`): eigene Kachel auf jeder Klassenseite. Abgefragt werden die Verben der Klassenliste und einige Grundverben (Klasse 7: être, avoir, aller, faire; ab Klasse 8 zwanzig Grundverben). Zeitformen nach Klasse: 7 présent, 8 dazu passé composé, 9 und 10 dazu imparfait und futur simple. Regelmäßige Verben auf -er werden nach Regel gebildet (mit mangeons, commençons, achète, appelle, préfère, paie), alle anderen nach ihrer Familie oder einzeln. Ein Verb ohne bekannte Familie wird nicht abgefragt.
 - **le ou la ?** – Genus-Spiel neben der Blitzrunde: 60 Sekunden, Nomen ohne Artikel, Knopf „le“ oder „la“. Nur Nomen mit eindeutigem Genus (keine Mehrzahl, kein m./f., kein Schrägstrich).
 - **Hörrunde** neben Blitzrunde und „le ou la ?“: Die Seite spricht zehn Wörter aus der gewählten Auswahl, man schreibt sie auf (Anhören; Langsam mit dem langsamsten Tempo, das iOS zulässt, und Pausen zwischen den Wörtern). Geprüft wird wie beim Tippen DE → FR. Einträge mit Schrägstrich, Auslassung oder gesprochener Klammer werden nicht abgefragt. Meldet das Gerät Stimmen, aber keine französische, fehlt der Knopf.
+- **Sachfelder** im Wörterbuch: 20 Felder (Essen & Trinken, Arbeit & Beruf, …). Eine Knopfreihe filtert nach Feld, die Suche findet Felder auch über Namen und Suchwörter („Arbeit“, „Job“). Unter jedem Wort steht sein Sachfeld.
 - **Spiele** (aus dem Englisch-Trainer): Kachel „Spiele“ auf jeder Klassenseite mit *Descente en luge* (Sled Run), *Vers le sommet* (Summit Climb) und *Tour des coups francs* (Free Kick Tour). Code in `spiele/`, die Seiten je Klasse (`yearN/games/`, `sled/`, `climb/`, `kick/`) schreibt `node tools/spiele.cjs`. Bestwerte unter `fr7:sled:v1` usw.; die Lernfächer bleiben unberührt.
 - **Hell oder Nacht** (`assets/thema.js`, wie im Englisch-Trainer): Automatisch folgt dem Gerät, dazu Hell und Nacht fest. Der Schalter sitzt auf der Startseite oben rechts und im Menü der Lernseiten. Die Wahl wird unter `fr:thema` gespeichert, getrennt vom Englisch-Trainer. Helle Akzente: Mohnrot `#EE5A6C`, Kornblumenblau `#3563D6`.
 
@@ -34,6 +35,8 @@ Die Klassenseiten tragen ihre Vokabeln selbst, werden aber aus `content/` geschr
 content/klasseN.json           Stichwort, Bedeutung, Wortart, Fundstelle
                                (aus den Excel-Listen des Lehrwerks)
 content/beispiele-klasseN.tsv  eigene Beispielsätze und fehlende Wortarten
+content/sachfelder.json        die Sachfelder mit Kürzel, Name und Suchwörtern
+content/sachfelder-klasseN.tsv Sachfeld je Wort: Schlüssel wie oben, Kürzel durch Komma
 ```
 
 **Excel-Liste neu einlesen** (die Excel-Dateien gehören nicht ins Repository):
@@ -72,6 +75,7 @@ Lokal: `python3 -m http.server 8765`, danach http://localhost:8765 öffnen. Für
 
 ## Noch offen
 
+- Durchsicht der Sachfeld-Zuordnung (`content/sachfelder-klasseN.tsv`, im Wörterbuch unter jedem Wort sichtbar).
 - Durchsicht der Verbformen (`assets/verben.js`) und der Zeitformen je Klasse durch die Fachschaft.
 - Sprachliche Durchsicht der Beispielsätze für Klasse 7–10 durch die Fachschaft.
 - Echte Titel der Unités: Die Seiten zeigen bisher „Unité 1“, „Teil A“, „Vocabulaire“, „Module 1“, abgeleitet aus der Fundstelle.

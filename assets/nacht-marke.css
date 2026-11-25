@@ -554,3 +554,21 @@ body.platz-karte .answer.fr-gross .de{font-size:32px}
   .hr-knoepfe{margin-bottom:12px}
   .hr-hoeren{min-height:46px;padding:0 16px}
 }
+
+/* ------------------------------------------------------- Sachfelder (Liste) */
+.sf-leiste{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 8px}
+.sf-titel{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-right:4px}
+.sf-knopf{min-height:34px;padding:0 12px;border-radius:999px;border:1px solid var(--glas-rand);background:var(--glas);color:var(--soft);font-size:14px;cursor:pointer}
+.sf-knopf .sf-zahl{color:var(--mute);font-size:12px;margin-left:2px}
+.sf-knopf[aria-pressed="true"]{background:var(--snow);color:var(--night);border-color:var(--snow);font-weight:600}
+.sf-knopf[aria-pressed="true"] .sf-zahl{color:inherit;opacity:.7}
+.sf-hinweis-zeile{margin:4px 0 8px;font-size:14px;color:var(--soft)}
+.sf-hinweis{min-height:32px;padding:0 12px;border-radius:999px;border:1px solid var(--glacier);background:transparent;color:var(--glacier);font-weight:600;cursor:pointer;margin:2px 4px 2px 0}
+.sf-hinweis-text{color:var(--mute);margin-left:2px}
+.vrow .vsf{display:block;font-size:12px;color:var(--mute);margin-top:2px}
+@media print{.sf-leiste,.sf-hinweis-zeile{display:none}}
+@media (max-width:620px){
+  .sf-leiste{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin-left:-16px;margin-right:-16px;padding:0 16px}
+  .sf-leiste::-webkit-scrollbar{display:none}
+  .sf-knopf,.sf-titel{flex:0 0 auto;white-space:nowrap}
+}

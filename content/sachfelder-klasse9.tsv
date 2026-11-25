@@ -1,0 +1,312 @@
+Schluessel	Sachfelder
+1/A|francophone	gesell
+1/A|la Belgique	gesell,reise
+1/A|la Suisse	gesell,reise
+1/A|le lac	natur
+1/A|le Luxembourg	gesell,reise
+1/A|le luxembourgeois	gesell
+1/Voc|les Pays-Bas	gesell,reise
+1/Voc|la partie	klein
+1/Voc|faire partie de qc	klein
+1/Voc|l'Union européenne (l'UE)	gesell
+1/Voc|la monnaie	kauf,gesell
+1/Voc|le symbole	gesell
+1/Voc|la langue	schule,gesell
+1/Voc|officiel/officielle	gesell
+1/Voc|on y parle	gesell
+1/Voc|le néerlandais	gesell
+1/Voc|dépendre de qn/qc	klein
+1/Voc|bilingue	schule,gesell
+1/Voc|typique (de qc)	gesell
+1/Voc|les frites	essen
+1/Voc|le drapeau	gesell
+1/Voc|la fête nationale	gesell,frei
+1/1|découvrir qn/qc	reise
+1/1|se lever	zeit,wohn
+1/1|se trouver	klein
+1/1|se dépêcher	zeit
+1/1|avoir qc	klein
+1/1|ouvrir qc	klein
+1/1|se reposer	koerper,frei
+1/1|se coucher	zeit,wohn
+1/1|vers	zeit
+1/1|s'appeler	gruss
+1/1|mettre… minutes	zeit,stadt
+1/1|à pied	stadt
+1/1|se préparer	schule,zeit
+1/1|comme	klein
+1/1|s'entraîner	sport
+1/1|en	klein
+1/1|la voiture	stadt
+1/1|le cœur	koerper,gefuehl
+1/1|faire son sac	schule
+1/1|se baigner	natur,frei
+1/2|la tradition	gesell
+1/2|traditionnel/traditionnelle	gesell
+1/2|avoir lieu	frei
+1/2|y	klein
+1/2|proposer qc (à qn)	klein
+1/2|le défilé	frei,gesell
+1/2|le feu d'artifice	frei,gesell
+1/2|le lecteur / la lectrice	kultur
+1/2|s'amuser	frei,gefuehl
+1/2|ressembler à qn/qc	koerper
+1/2|si	klein
+1/2|offrir qc à qn	fam,frei
+1/2|se défendre	gefuehl
+1/2|le courage	gefuehl
+1/2|jeter qc	klein
+1/2|en	klein
+1/2|la clé	wohn
+1/2|casser qc	klein
+1/2|se déguiser (en qn/qc)	frei
+1/2|chaque	klein
+2/A|plusieurs	klein
+2/A|le visage	koerper
+2/A|le champ	natur
+2/A|la lavande	natur
+2/A|le temps	zeit
+2/Voc|décrire qn/qc	schule,kultur
+2/Voc|l'image	kultur
+2/Voc|le tableau	kultur
+2/Voc|dater de	zeit,gesell
+2/Voc|le siècle	zeit,gesell
+2/Voc|montrer qc (à qn)	klein
+2/Voc|le premier plan	kultur
+2/Voc|l'arrière-plan	kultur
+2/Voc|la rivière	natur
+2/Voc|le rocher	natur
+2/Voc|l'escalier	wohn
+2/Voc|vers	klein
+2/Voc|autour de	klein
+2/Voc|le chemin	stadt,natur
+2/Voc|assez	klein
+2/Voc|le ciel	natur,zeit
+2/Voc|le nuage	natur,zeit
+2/Voc|la lumière	natur
+2/Voc|peut-être	klein
+2/1|le gladiateur	gesell
+2/1|romain/romaine	gesell
+2/1|l'action	kultur
+2/1|autrefois	zeit
+2/1|le Moyen-Âge	gesell
+2/1|les arènes	gesell,stadt
+2/1|l'époque	zeit,gesell
+2/1|connaître qn/qc	klein
+2/1|gigantesque	klein
+2/1|le tapis	wohn
+2/1|magique	gefuehl
+2/1|réparer qc	klein
+2/1|le paddle	sport
+2/1|la prison	gesell
+2/1|mystérieux/mystérieuse	gefuehl
+2/1|toujours	zeit
+2/1|le roi / la reine	gesell
+2/1|l'expérience	gefuehl
+2/2|le concours	frei
+2/2|la colo (fam.) / la colonie (de vacances)	reise,frei
+2/2|le canoë	sport
+2/2|l'animateur / l'animatrice	reise,arbeit
+2/2|s'arrêter	stadt
+2/2|d'habitude	zeit
+2/2|(bien) s'entendre (avec qn)	fam
+2/2|être de bonne/mauvaise humeur	gefuehl
+2/2|se disputer	fam
+2/2|bref	klein
+2/2|à cause de ça	klein
+2/2|l'autre	klein
+2/2|la grotte	natur
+2/2|l'équilibre	koerper
+2/2|ne… personne	klein
+2/2|j'en ai marre	gefuehl
+2/2|l'oiseau	natur
+2/2|malheureusement	gefuehl
+2/2|courir	sport
+2/2|Vas-y !	gefuehl
+2/2|enfin	zeit
+2/2|Qu'est-ce qui s'est passé ?	klein
+3/A|Vive…	gefuehl
+3/A|franco-allemand/franco-allemande	gesell
+3/A|l'habitude	klein
+3/A|la famille d'accueil	reise,fam
+3/A|le malentendu	gefuehl
+3/Voc|l'objet	klein
+3/Voc|le pansement	koerper
+3/Voc|le sèche-cheveux	koerper
+3/Voc|le cheveu	koerper
+3/Voc|le couteau	essen,wohn
+3/Voc|le dentifrice	koerper
+3/Voc|le volet	wohn
+3/Voc|l'oreiller	wohn
+3/Voc|dormir	koerper,wohn
+3/Voc|le métal	klein
+3/Voc|couper qc	klein
+3/Voc|se couper	koerper
+3/Voc|quelque chose de	klein
+3/Voc|le plastique	natur
+3/Voc|une sorte de	klein
+3/Voc|la crème	koerper
+3/Voc|Tu vois ce que je veux dire ?	gefuehl
+3/1|le coffre	stadt
+3/1|mal	klein
+3/1|dire à qn de	klein
+3/1|demander à qn de	klein
+3/1|arriver à	klein
+3/1|Tu en veux ?	essen
+3/1|l'œil	koerper
+3/1|avoir l'air	koerper
+3/1|le progrès	schule
+3/1|décider qc / de	klein
+3/1|l'expression	schule
+3/1|mot à mot	schule
+3/1|essayer qc / de	klein
+3/1|fatigué/fatiguée	koerper
+3/1|tenir	klein
+3/1|râler contre qn/qc	gefuehl
+3/1|en fait	klein
+3/1|manquer (à qn)	gefuehl
+3/1|savoir qc	klein
+3/1|possible	klein
+3/1|même si	klein
+3/2|la vie de tous les jours	zeit
+3/2|la différence	klein
+3/2|de manière	klein
+3/2|typiquement	gesell
+3/2|environ	klein
+3/2|correctement	klein
+3/2|en général	klein
+3/2|c'est pourquoi	klein
+3/2|le morceau	essen
+3/2|sévèrement	klein
+3/2|recommencer	klein
+3/2|payer (qc)	kauf
+3/2|rapporter qc	kauf
+3/2|réutiliser qc	natur
+3/2|garder qc	klein
+3/2|laver qc	wohn
+3/2|protéger qn/qc	natur
+3/2|l'environnement	natur
+3/2|heureusement	gefuehl
+3/2|autrement	klein
+3/2|s'énerver	gefuehl
+3/2|curieux/curieuse	gefuehl
+4/A|le Québec	gesell,reise
+4/A|le Canada	gesell,reise
+4/A|peint/peinte	kultur
+4/A|la baleine	natur
+4/A|le panneau	stadt
+4/A|l'ours	natur
+4/Voc|la province	gesell
+4/Voc|l'est	reise
+4/Voc|le nord	reise
+4/Voc|le sud	reise
+4/Voc|l'océan	natur,reise
+4/Voc|le kilomètre carré	zeit
+4/Voc|pour cent	zeit
+4/Voc|le territoire	gesell
+4/Voc|le Québécois / la Québécoise	gesell
+4/Voc|coloniser qn/qc	gesell
+4/Voc|le peuple	gesell
+4/Voc|autochtone	gesell
+4/Voc|le degré (Celsius)	natur,zeit
+4/Voc|le climat	natur,zeit
+4/Voc|la neige	natur,zeit
+4/Voc|la glace	natur,essen
+4/Voc|la plupart (de)	klein
+4/1|l'explorateur / l'exploratrice	reise,gesell
+4/1|par	klein
+4/1|fonder qc	gesell
+4/1|entrer en guerre avec qn	gesell
+4/1|le bout du monde	reise
+4/1|observer qn/qc	natur
+4/1|vivre (qc)	klein
+4/1|le traîneau à chiens	natur,reise
+4/1|se souvenir de qn/qc	gefuehl
+4/1|peu (de)	klein
+4/1|la réserve	gesell
+4/1|la chasse	natur
+4/1|la pêche	natur,frei
+4/1|l'Européen / l'Européenne	gesell
+4/1|en échange	klein
+4/1|la vieille ville	stadt,reise
+4/1|la patinoire	sport
+4/2|le hockey sur glace	sport
+4/2|l'érable	natur
+4/2|symboliser qn/qc	gesell
+4/2|canadien/canadienne	gesell
+4/2|autant de	klein
+4/2|le sirop	essen
+4/2|on en met partout	essen
+4/2|fabriquer qc	arbeit
+4/2|la motoneige	natur,reise
+4/2|plus de	klein
+4/2|moins de	klein
+4/2|transporter qc	stadt
+4/2|construire qc	arbeit
+4/2|la cabane	natur,wohn
+4/2|conduire qc	stadt
+4/2|la liberté	gesell
+4/2|l'amitié	fam,gefuehl
+4/2|la paix	gesell
+4/2|la ligne	stadt
+4/2|le respect	gesell
+5/A|réaliser qc	klein
+5/A|lutter (pour/contre qc)	gesell
+5/A|l'inégalité	gesell
+5/A|s'engager (pour qc)	gesell
+5/Voc|l'argument	gefuehl
+5/Voc|la discussion	gefuehl
+5/Voc|sûr/sûre	gefuehl
+5/Voc|d'un côté	klein
+5/Voc|d'un autre côté	klein
+5/Voc|horrible	gefuehl
+5/Voc|donc	klein
+5/Voc|il (ne) suffit (pas) de	klein
+5/Voc|changer (qc)	klein
+5/Voc|(ne…) pas du tout	klein
+5/Voc|réaliste	gefuehl
+5/Voc|justement	klein
+5/Voc|la société	gesell
+5/Voc|Ce n'est pas ce que je veux dire.	gefuehl
+5/1|injuste	gesell
+5/1|réagir	gefuehl
+5/1|être exclu/exclue (de qc)	gesell
+5/1|la génération	gesell
+5/1|la conséquence	klein
+5/1|le réchauffement climatique	natur
+5/1|l'adulte	fam
+5/1|la maladie	koerper
+5/1|obliger qn à	klein
+5/1|le médecin	koerper,arbeit
+5/1|se sentir	gefuehl
+5/1|se sentir (mal) à l'aise	gefuehl
+5/1|la peau	koerper
+5/1|avoir envie de qc / de	gefuehl
+5/1|le préjugé	gesell
+5/1|raciste	gesell
+5/1|le racisme	gesell
+5/1|faire le ménage	wohn
+5/1|avoir le droit de	gesell
+5/1|la règle	schule,gesell
+5/1|l'égalité	gesell
+5/2|admirer qn/qc	gefuehl
+5/2|ennuyeux/ennuyeuse	gefuehl
+5/2|ouvert/ouverte	gefuehl
+5/2|(ne…) même pas	klein
+5/2|la chaussure	kleid
+5/2|ce que je préfère	gefuehl
+5/2|ce qui (ne) me plaît (pas)	gefuehl
+5/2|la relation	fam,gefuehl
+5/2|la scène	kultur
+5/2|touchant/touchante	gefuehl
+5/2|la chance	gefuehl
+5/2|traiter qn comme qc	gesell
+5/2|accepter qc / de	klein
+5/2|interdire à qn de	klein
+5/2|le contraste	kultur
+5/2|refuser qc / de	klein
+5/2|le comportement	gefuehl
+5/2|en tout cas	klein
+5/2|le rôle	kultur
+5/2|principal/principale/principaux (m. pl.)	klein
+5/2|le personnage	kultur

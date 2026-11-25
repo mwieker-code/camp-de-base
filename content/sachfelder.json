@@ -1,0 +1,25 @@
+{
+  "hinweis": "Sachfelder fuer Suche und Filter im Woerterbuch. Zuordnung je Wort in sachfelder-klasseN.tsv (Kuerzel, durch Komma getrennt). 'such' sind zusaetzliche Suchwoerter, die zu diesem Feld fuehren.",
+  "felder": [
+    {"id": "gruss",   "name": "Begrüßen & Vorstellen",          "such": ["Begrüßung", "begrüßen", "vorstellen", "Gruß", "Hallo", "kennenlernen"]},
+    {"id": "fam",     "name": "Familie & Freunde",              "such": ["Familie", "Freund", "Freunde", "Freundschaft", "Verwandte", "Beziehung"]},
+    {"id": "wohn",    "name": "Wohnen & Zuhause",               "such": ["Wohnen", "Wohnung", "Haus", "Zuhause", "Zimmer", "Möbel", "Haushalt"]},
+    {"id": "schule",  "name": "Schule & Unterricht",            "such": ["Schule", "Unterricht", "Klassenzimmer", "Schulfach", "Fächer", "lernen"]},
+    {"id": "frei",    "name": "Freizeit & Hobbys",              "such": ["Freizeit", "Hobby", "Hobbys", "Feier", "Fest", "Party", "Ausflug"]},
+    {"id": "sport",   "name": "Sport",                          "such": ["Sport", "Fußball", "Spiel", "Training", "Verein"]},
+    {"id": "essen",   "name": "Essen & Trinken",                "such": ["Essen", "Trinken", "Lebensmittel", "Nahrung", "Getränke", "Kochen", "Mahlzeit"]},
+    {"id": "kauf",    "name": "Einkaufen & Geld",               "such": ["Einkaufen", "Einkauf", "Geld", "kaufen", "Preis", "Geschäft", "shoppen"]},
+    {"id": "koerper", "name": "Körper, Gesundheit & Aussehen",  "such": ["Körper", "Gesundheit", "Aussehen", "krank", "Krankheit", "Arzt"]},
+    {"id": "kleid",   "name": "Kleidung",                       "such": ["Kleidung", "Klamotten", "Mode", "anziehen", "Farben", "Farbe"]},
+    {"id": "stadt",   "name": "Stadt & Verkehr",                "such": ["Stadt", "Verkehr", "Verkehrsmittel", "Orientierung", "Gebäude", "Straße"]},
+    {"id": "reise",   "name": "Reisen & Ferien",                "such": ["Reisen", "Reise", "Ferien", "Urlaub", "Tourismus", "unterwegs"]},
+    {"id": "natur",   "name": "Natur, Tiere & Umwelt",          "such": ["Natur", "Tiere", "Tier", "Umwelt", "Landschaft", "Klima", "Pflanzen"]},
+    {"id": "zeit",    "name": "Zeit, Wetter & Zahlen",          "such": ["Zeit", "Uhrzeit", "Wetter", "Zahlen", "Zahl", "Datum", "Wochentage", "Monate", "Jahreszeiten"]},
+    {"id": "medien",  "name": "Medien & Kommunikation",         "such": ["Medien", "Kommunikation", "Internet", "Handy", "Computer", "soziale Netzwerke", "Werbung"]},
+    {"id": "kultur",  "name": "Kultur & Kunst",                 "such": ["Kultur", "Kunst", "Musik", "Film", "Literatur", "Comic", "Theater", "Buch"]},
+    {"id": "gefuehl", "name": "Gefühle, Charakter & Meinung",   "such": ["Gefühle", "Gefühl", "Charakter", "Meinung", "Emotionen", "Eigenschaften", "Stimmung"]},
+    {"id": "arbeit",  "name": "Arbeit & Beruf",                 "such": ["Arbeit", "Beruf", "Berufe", "Job", "Praktikum", "Ausbildung", "Bewerbung", "Arbeitswelt"]},
+    {"id": "gesell",  "name": "Gesellschaft, Geschichte & Frankophonie", "such": ["Gesellschaft", "Geschichte", "Frankophonie", "Politik", "Länder", "Landeskunde", "Frankreich"]},
+    {"id": "klein",   "name": "Kleine Wörter",                  "such": ["kleine Wörter", "Grammatik", "Präpositionen", "Konjunktionen", "Pronomen", "Adverbien"]}
+  ]
+}
